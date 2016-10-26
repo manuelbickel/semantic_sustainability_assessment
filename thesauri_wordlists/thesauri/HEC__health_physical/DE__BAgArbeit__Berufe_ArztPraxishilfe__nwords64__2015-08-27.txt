@@ -1,0 +1,108 @@
+~~meta: ~~resource: Bundesagentur f?r Arbeit ~~additional_info: Bundesagentur für Arbeit, Klassifikation der Berufe
+Arzt- und Praxishilfe
+Arbeitsmedizinische/r Assistent/in
+Arbeitsmedizinische/r Fachassistent/in
+Arztfachhelfer/in
+Arzthelfer/in
+Augenarztgehilfe/-gehilfin
+Besamer/in
+Besamungsbeauftragte/r
+Besamungstechniker/in
+Beschneider/in
+Dentalassistent/in
+Dental-Fachkraft
+Dentalhygieniker/in
+Fußpfleger/in
+HNO-Arzthelfer/in
+Kastrierer/in
+Kieferorthopaedische/r Fachhelfer/in
+Kieferorthopaedische/r Helfer/in
+Kinderarzthelfer/in
+Medizinische/r Fachangestellte/r
+Medizinische/r Fachhelfer/in
+Medizinische/r Fußpfleger/in
+Medizinische/r Praxisassistent/in
+Medizinisch-orthopaedische/r Fußpfleger/in
+Medizinisch-technische/r Assistent/in
+Orthoptist/in
+Praxishelfer/in
+Praxishilfe
+Prophylaxeassistent/in
+Prophylaxehelfer/in
+Rinderbesamer/in
+Schiffsschwester/-pfleger
+Schweinebesamer/in
+Sprechstundenhelfer/in
+Sprechstunden-/Praxishelfer/in
+Sprechstundenhilfe
+Sprechstundenschwester
+Podologe/Podologin
+Stationsassistent/in
+Sterilisationsassistent/in
+Stomatologische Schwester
+Technische/r Sterilisationsassistent/in
+Therapeut/in
+Tierarztfachhelfer/in
+Tierarzthelfer/in
+Tierarzthelfer/in in Forschung u. Lehre
+Tierarzthelfer/in in Großtierpraxen
+Tierarzthelfer/in in Kleintierpraxen
+Tierarzthelfer/in in Tierkliniken
+Tierarzthilfe
+Tiermedizinische/r Fachangestellte/r
+Tiermedizinische/r Praxisassistent/in
+Tierversuchstechniker/in
+Veterinaergehilfe/-gehilfin
+Werkpfleger/-schwester
+Zahnarztfachhelfer/in
+Zahnarzthelfer/in
+Zahnarzthilfe
+Zahnaerztliche Helferin
+Zahnmedizinische/r Assistent/in
+Zahnmedizinische/r Fachangestellte/r
+Zahnmedizinische/r Fachassistent/in
+Zahnmedizinische/r Fachhelfer/in
+Zahnmedizinische/r Prophylaxeassistent/in
+Zahnmedizinische
+Zahnmedizinisch-technische/r Assistent/in
+Zootechniker/in/Mechanisator/in
+Arbeitsmedizinische
+Arztfachhelfer
+Arzthelfer
+Augenarztgehilfe
+Besamer
+Besamungsbeauftragte
+Besamungstechniker
+Beschneider
+Dentalassistent
+Dentalhygieniker
+Fußpfleger
+HNO-Arzthelfer
+Kastrierer
+Kieferorthopaedische
+Kinderarzthelfer
+Medizinisch-orthopaedische
+Medizinisch-technische
+Orthoptist
+Praxishelfer
+Prophylaxeassistent
+Prophylaxehelfer
+Rinderbesamer
+Schiffsschwester
+Schweinebesamer
+Sprechstundenhelfer
+Sprechstunden
+Podologe
+Stationsassistent
+Sterilisationsassistent
+Therapeut
+Tierarztfachhelfer
+Tierarzthelfer
+Tiermedizinische
+Tierversuchstechniker
+Veterinaergehilfe
+Werkpfleger
+Zahnarztfachhelfer
+Zahnarzthelfer
+Zahnmedizinisch-technische
+Zootechniker

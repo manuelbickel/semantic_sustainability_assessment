@@ -1,0 +1,62 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der gueter 2008
+Schuhe
+Wasserdichte Schuhe mit Laufsohlen und Oberteil aus Kautschuk oder Kunststoff
+Andere Schuhe mit Laufsohlen und Oberteil aus Kautschuk oder Kunststoff
+Sandalen
+Straßenschuhe
+Pantoffeln und andere Hausschuhe
+Schuhe mit Oberteil aus Leder
+mit einer Hauptsohle aus Holz, weder mit Innensohle noch mit einem Metallschutz in der Vorderkappe, mit Oberteil aus Leder
+Schuhe mit Laufsohlen aus Kautschuk, Kunststoff, Leder oder rekonstituiertem Leder
+fuer Maenner
+fuer Frauen; Schuhe, die nicht als Maenner- und Frauenschuhe erkennbar sind
+fuer Frauen
+Unisex-Schuhe
+fuer Kinder
+fuer Frauen, einschl. Sandalen, die nicht als Maenner- und Frauensandalen erkennbar sind
+Schuhe mit Oberteil aus Spinnstoffen
+Pantoffeln u.a. Hausschuhe; Schuhe mit Oberteil aus Spinnstoffen
+Pantoffeln u.a. Hausschuhe
+Schuhe mit Laufsohlen aus Kautschuk, Kunststoff, aus Leder oder rekonstituiertem Leder
+Sportschuhe
+Sportschuhe; Tennis-, Basketball-, Turn-, Trainings- u.ae. Schuhe, mit Laufsohlen aus Kautschuk oder Kunststoff und Oberteil aus Spinnstoffen
+Andere Sportschuhe
+Sicherheitsschuhe u.a. Schuhe, a.n.g
+Schuhe mit einem Metallschutz in der Vorderkappe
+mit Laufsohlen oder Oberteil aus Kautschuk oder Kunststoff
+mit Oberteil aus Leder und mit Laufsohlen aus Kautschuk, Kunstoff oder Leder
+Andere Schuhe, a.n.g
+Schuhteile aus Leder; Einlegesohlen, Fersenstuecke und aehnliche herausnehmbare Waren; Gamaschen und aehnliche Waren sowie Teile davon
+Schuhoberteile und Teile dafuer
+aus Leder
+aus anderen Stoffen
+Einlegesohlen
+Fersenstuecke
+Frauen
+Frauensandalen
+Frauenschuhe
+Gamaschen
+Hauptsohle
+Hausschuhe
+Holz
+Innensohle
+Kautschuk
+Kinder
+Kunstoff
+Kunststoff
+Laufsohlen
+Leder
+Maenner
+Maenner- und Frauensandalen
+Maenner- und Frauenschuhe
+Metallschutz
+Oberteil
+Pantoffeln
+Schuhoberteile
+Schuhteile
+Sicherheitsschuhe
+Spinnstoffen
+Tennis-, Basketball-, Turn-, Trainings
+UnisexSchuhe
+Vorderkappe
+Wasserdichte

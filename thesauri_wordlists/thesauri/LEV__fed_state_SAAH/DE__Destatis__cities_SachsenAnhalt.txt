@@ -1,0 +1,221 @@
+SachsenAnhalt
+Dessau-Roßlau
+Halle (Saale)
+Magdeburg
+Apenburg-Winterfeld
+Arendsee (Altmark)
+Beetzendorf
+Dähre
+Diesdorf
+Gardelegen
+Jübar
+Kalbe (Milde)
+Klötze
+Kuhfelde
+Rohrberg
+Salzwedel
+Wallstawe
+Aken (Elbe)
+Bitterfeld-Wolfen
+Köthen (Anhalt)
+Muldestausee
+Osternienburger Land
+Raguhn-Jeßnitz
+Sandersdorf-Brehna
+Südliches Anhalt
+Zerbst/Anhalt
+Zörbig
+Altenhausen
+Am Großen Bruch
+Angern
+Ausleben
+Barleben
+Beendorf
+Bülstringen
+Burgstall
+Calvörde
+Colbitz
+Eilsleben
+Erxleben
+Flechtingen
+Gröningen
+Haldensleben
+Harbke
+Hohe Börde
+Hötensleben
+Ingersleben
+Kroppenstedt
+Loitsche-Heinrichsberg
+Niedere Börde
+Oebisfelde-Weferlingen
+Oschersleben (Bode)
+Rogätz
+Sommersdorf
+Sülzetal
+Süplingen
+Ummendorf
+Völpke
+Wanzleben-Börde
+Wefensleben
+Westheide
+Wolmirstedt
+Zielitz
+An der Poststraße
+Meineweh
+Bad Bibra
+Balgstädt
+Droyßig
+Eckartsberga
+Elsteraue
+Finne
+Finneland
+Freyburg (Unstrut)
+Gleina
+Goseck
+Gutenborn
+Hohenmölsen
+Kaiserpfalz
+Karsdorf
+Kretzschau
+Lanitz-Hassel-Tal
+Laucha an der Unstrut
+Lützen
+Mertendorf
+Molauer Land
+Naumburg (Saale)
+Nebra (Unstrut)
+Osterfeld
+Schnaudertal
+Schönburg
+Stößen
+Teuchern
+Weißenfels
+Wethau
+Wetterzeube
+Zeitz
+Ballenstedt
+Blankenburg (Harz)
+Ditfurt
+Falkenstein/Harz
+Groß Quenstedt
+Halberstadt
+Harsleben
+Harzgerode
+Hedersleben
+Huy
+Ilsenburg (Harz)
+Nordharz
+Oberharz am Brocken
+Osterwieck
+Quedlinburg
+Schwanebeck
+Selke-Aue
+Thale
+Wegeleben
+Wernigerode
+Biederitz
+Burg
+Elbe-Parey
+Genthin
+Gommern
+Jerichow
+Möckern
+Möser
+Schopsdorf
+Ahlsdorf
+Allstedt
+Arnstein
+Benndorf
+Berga
+Blankenheim
+Bornstedt
+Brücken-Hackpfüffel
+Edersleben
+Eisleben
+Gerbstedt
+Helbra
+Hergisdorf
+Hettstedt
+Kelbra (Kyffhäuser)
+Klostermansfeld
+Mansfeld
+Sangerhausen
+Seegebiet Mansfelder Land
+Südharz
+Wallhausen
+Wimmelburg
+Bad Dürrenberg
+Bad Lauchstädt
+Barnstädt
+Braunsbedra
+Farnstädt
+Kabelsketal
+Landsberg
+Leuna
+Wettin-Löbejün
+Merseburg
+Mücheln (Geiseltal)
+Nemsdorf-Göhrendorf
+Obhausen
+Petersberg
+Querfurt
+Salzatal
+Schkopau
+Schraplau
+Steigra
+Teutschenthal
+Alsleben (Saale)
+Aschersleben
+Barby
+Bernburg (Saale)
+Bördeaue
+Bördeland
+Börde-Hakel
+Borne
+Calbe (Saale)
+Egeln
+Giersleben
+Güsten
+Hecklingen
+Ilberstedt
+Könnern
+Nienburg (Saale)
+Plötzkau
+Schönebeck (Elbe)
+Seeland
+Staßfurt
+Wolmirsleben
+Aland
+Altmärkische Höhe
+Altmärkische Wische
+Arneburg
+Bismark (Altmark)
+Eichstedt (Altmark)
+Goldbeck
+Hassel
+Havelberg
+Hohenberg-Krusemark
+Iden
+Kamern
+Klietz
+Osterburg (Altmark)
+Rochau
+Sandau (Elbe)
+Schollene
+Schönhausen (Elbe)
+Seehausen (Altmark)
+Stendal
+Tangerhütte
+Tangermünde
+Werben (Elbe)
+Wust-Fischbeck
+Zehrental
+Annaburg
+Bad Schmiedeberg
+Coswig (Anhalt)
+Gräfenhainichen
+Jessen (Elster)
+Kemberg
+Oranienbaum-Wörlitz
+Wittenberg
+Zahna-Elster

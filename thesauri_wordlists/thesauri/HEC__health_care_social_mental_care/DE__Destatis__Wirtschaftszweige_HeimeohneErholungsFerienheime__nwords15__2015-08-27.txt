@@ -1,0 +1,15 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
+Heime (ohne Erholungs- und Ferienheime
+Pflegeheime
+Stationaere Einrichtungen zur psychosozialen Betreuung, Suchtbekaempfung u. Ae
+Altenheime; Alten- und Behindertenwohnheime
+Sonstige Heime (ohne Erholungs- und Ferienheime
+Alten- und Behindertenwohnheime
+Altenheime
+Behindertenwohnheime
+Betreuung
+Erholungs- und Ferienheime
+Ferienheime
+Heime
+Stationaere
+Suchtbekaempfung

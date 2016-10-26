@@ -1,0 +1,45 @@
+﻿~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der gueter 2008
+Back- und Teigwaren
+Backwaren
+Frisches Brot, Broetchen u.ae., ohne Zusatz von Honig, Eiern, Kaese oder Fruechten
+Feine Backwaren , gesueßt, auch gefroren
+Dauerbackwaren
+Knaeckebrot, Zwieback, geroestetes Brot u.ae. geroestete Waren
+Knaeckebrot
+Zwieback, geroestetes Brot u.ae. geroestete Waren
+Leb- und Honigkuchen u.ae.; Kekse u.ae. Kleingebaeck, gesueßt; Waffeln
+Leb- und Honigkuchen u.ae. Waren
+Kekse u.ae. Kleingebaeck, gesueßt; Waffeln
+Kekse u.ae. Kleingebaeck, gesueßt, ganz oder teilweise mit Schokolade oder kakaohaltigen Ueberzugsmassen ueberzogen oder bedeckt
+Kekse u.ae. Kleingebaeck, gesueßt, gefuellt, auch kakaohaltig
+Waffeln mit einem Wassergehalt von mehr als 10
+Waffeln, gesalzen, gesueßt, auch gefuellt oder kakaohaltig, mit einem Wassergehalt von 10 % oder weniger
+Andere Dauerbackwaren und Backwaren mit Zusatz von Eiern, Kaese, Fruechten u.ae., nicht gesueßt
+Ungesaeuertes Brot
+Hostien und aehnliche Waren
+Kekse u.ae. Kleingebaeck, nicht gesueßt, auch gesalzen
+Extrudierte oder expandierte Erzeugnisse, gesalzen oder aromatisiert
+Teigwaren
+Makkaroni, Nudeln und aehnliche Teigwaren, weder gekocht oder gefuellt noch in anderer Weise zubereitet; Couscous
+Makkaroni, Nudeln und aehnliche Teigwaren, weder gekocht oder gefuellt noch in anderer Weise zubereitet
+Eier enthaltend
+keine Eier enthaltend
+Couscous
+Broetchen
+Brot
+Eier
+Eiern
+Fruechten
+Honig
+Honigkuchen
+Hostien
+Kaese
+Kekse
+Kleingebaeck
+Leb- und Honigkuchen
+Makkaroni
+Nudeln
+Schokolade
+Ueberzugsmassen
+Waffeln
+Zwieback

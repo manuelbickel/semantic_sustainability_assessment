@@ -1,0 +1,44 @@
+﻿~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der gueter 2008
+Gießereierzeugnisse
+Eisengießereierzeugnisse
+Teile aus Temperguss
+fuer Straßenfahrzeuge und Maschinenbauerzeugnisse
+fuer sonstige Verwendungszwecke
+Teile aus Gusseisen mit Kugelgraphit
+fuer Straßenfahrzeuge
+Wellen; Lagerschalen
+fuer Motoren und Antriebselemente
+fuer sonstige Maschinenbauerzeugnisse
+Teile aus nicht verformbarem Gusseisen
+Rohre und Hohlprofile, aus Gusseisen
+Rohrform-, Rohrverschluss- und Rohrverbindungsstuecke , aus Gusseisen
+aus nicht verformbarem Gusseisen
+aus verformbarem Gusseisen
+Stahlgießereierzeugnisse
+Teile aus Stahlguss
+Lagerschalen
+fuer sonstige Erzeugnisse
+Rohre aus Stahlschleuderguss
+Rohre, Rohrform-, Rohrverschluss- und Rohrverbindungsstuecke , aus Gussstahl
+Leichtmetallgießereierzeugnisse
+Teile aus Leichtmetallguss
+Wellen, Lagerschalen
+Buntmetall-/Schwermetallgießereierzeugnisse
+Teile aus Buntmetall-/Schwermetallguss
+BuntmetallSchwermetallgießereierzeugnisse
+BuntmetallSchwermetallguss
+Gusseisen
+Gussstahl
+Hohlprofile
+Kugelgraphit
+Leichtmetallguss
+Maschinenbauerzeugnisse
+Rohre
+Rohrform-, Rohrverschluss- und Rohrverbindungsstuecke
+Rohrverbindungsstuecke
+Stahlguss
+Stahlschleuderguss
+Straßenfahrzeuge
+Temperguss
+Wellen
+Buntmetall-/Schwermetallguss

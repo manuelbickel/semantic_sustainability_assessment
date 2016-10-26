@@ -1,0 +1,47 @@
+local_public_utilities
+BSENERGY
+BS|ENERGY
+Stadtwerkeeige
+SWDAngebots
+SWHAnteil
+EnercityEnergiespartipps
+EnercityKlimaschutzfonds
+SWD
+SWD Netz
+SWE
+SWE Netz
+Stadtwerke Emden
+SWH
+SWH Netz
+Stadtwerke
+Stadtwerk
+LandEStadtwerke
+Stadtwer
+Stadtwerke
+StadtwerkeGebaeudes
+StadtwerkeLandwirtschaftskammerN
+StadtwerkeLiegenschaften
+Stadtwerken
+StadtwerkeZentrale
+EWE Oldenburg
+EWE
+EWE Netz
+NVB
+NVB Netz
+Nordhorner Versorgungsbetriebe
+Versorgungsbetriebe
+Stadtwerke Lingen
+Stadtwerke Celle
+Stadtwerke Onsabrück
+Stadtwerke Wolfsburg
+LSW Energie
+LSW Netz
+WEVG
+WEVG Salzgitter
+Stadtwerke Hannover
+StadtWerkegruppe Delmenhorst
+Stadtwerkegruppe Delmenhorst
+Gws Stadtwerke Hameln
+Gws
+Stadtwerke Göttingen
+Stadtwerke Lingen

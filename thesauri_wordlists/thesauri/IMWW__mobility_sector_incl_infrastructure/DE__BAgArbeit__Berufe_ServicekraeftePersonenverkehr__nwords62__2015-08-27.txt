@@ -1,0 +1,120 @@
+~~meta: ~~resource: Bundesagentur f?r Arbeit ~~additional_info: Bundesagentur für Arbeit, Klassifikation der Berufe
+Servicekraefte im Personenverkehr
+Air Hostess
+Ansager/in
+Aufklarer/in, Pantryman/-woman
+Auskunftsbeamter/in
+Bahnhofsschaffner/in
+Bahnschaffner/in
+Bodensteward/-stewardess
+Busschaffner/in
+Cabin Attendant
+Check-in-Agent/in
+Checksteward/-stewardess
+Chef de cabine
+Chefsteward/-stewardess
+Chief Purser/Purserette
+Communicator/in
+Decksteward/-stewardess
+Eisenbahnschaffner/in
+Fahrgastbetreuer/in
+Fahrkartenkontrolleur/in
+Flight Attendant
+Flugansager/in
+Flugbegleiter/in
+Fluggastabfertiger/in
+Flugscheinverkaeufer/in
+Flugsteward/-stewardess
+Gondelschaffner/in
+Groundhostess
+Ground-Steward/Stewardess
+Kabinenbegleiter/in
+Kabinenchef/in
+Kabinensteward/-stewardess
+Kajuetsteward/-stewardess
+Kapitaensteward/-stewardess
+Liegewagenschaffner/in
+Luftsteward/-stewardess
+Mannschaftssteward/-stewardess
+Offizierssteward/-stewardess
+Omnibusschaffner/in
+Passage-Angestellte/r
+Purser/Purserette
+Purser/Purserette, Zahlmeister/in
+Reiseberater/in
+Salonsteward/-stewardess
+Schaffner/in
+Schalterangestellte/r
+Schiffssteward/-stewardess
+Schlafwagenschaffner/in
+Seilbahnschaffner/in
+Servicekaufmann/-frau
+Internationale/r Luftverkehrsassistent/in
+Steward/Stewardess
+Straßenbahnschaffner/in
+Triebwagenschaffner/in
+Untergrundbahnschaffner/in
+VIP-Betreuer/in
+Zahlmeister/in
+Zugabfertiger/in
+Zugbegleiter/in
+Zugchef/in
+Zugfuehrer/in
+Zugrevisor/in
+Zugschaffner/in
+Ansager
+Aufklarer
+Auskunftsbeamter
+Bahnhofsschaffner
+Bahnschaffner
+Bodensteward
+Busschaffner
+Check-in-Agent
+Checksteward
+Chefsteward
+Chief Purser
+Communicator
+Decksteward
+Eisenbahnschaffner
+Fahrgastbetreuer
+Fahrkartenkontrolleur
+Flugansager
+Flugbegleiter
+Fluggastabfertiger
+Flugscheinverkaeufer
+Flugsteward
+Gondelschaffner
+Ground-Steward
+Kabinenbegleiter
+Kabinenchef
+Kabinensteward
+Kajuetsteward
+Kapitaensteward
+Liegewagenschaffner
+Luftsteward
+Mannschaftssteward
+Offizierssteward
+Omnibusschaffner
+Passage-Angestellte
+Purser
+Reiseberater
+Salonsteward
+Schaffner
+Schalterangestellte
+Schiffssteward
+Schlafwagenschaffner
+Seilbahnschaffner
+Servicekaufmann
+Internationale
+Steward
+Straßenbahnschaffner
+Triebwagenschaffner
+Untergrundbahnschaffner
+VIP-Betreuer
+Zahlmeister
+Zugabfertiger
+Zugbegleiter
+Zugchef
+Zugfuehrer
+Zugrevisor
+Zugschaffner

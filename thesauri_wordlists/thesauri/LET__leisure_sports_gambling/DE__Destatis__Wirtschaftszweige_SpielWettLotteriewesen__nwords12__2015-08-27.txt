@@ -1,0 +1,10 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
+Spiel-, Wett- und Lotteriewesen
+Spielhallen und Betrieb von Spielautomaten
+Spielbanken und Spielklubs
+Wett-, Toto- und Lotteriewesen
+Lotteriewesen
+Spielautomaten
+Spielbanken
+Spielhallen
+Spielklubs

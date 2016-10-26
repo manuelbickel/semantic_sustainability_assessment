@@ -1,0 +1,27 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
+Sonstiger Fahrzeugbau
+Schiff- und Bootsbau
+Schiffbau (ohne Boots- und Yachtbau
+Boots- und Yachtbau
+Schienenfahrzeugbau
+Herstellung von Lokomotiven und anderen Schienenfahrzeugen
+Herstellung von Eisenbahninfrastruktur
+Luft- und Raumfahrzeugbau
+Herstellung von militaerischen Kampffahrzeugen
+Herstellung von Fahrzeugen a. n. g
+Herstellung von Kraftraedern
+Herstellung von Fahrraedern sowie von Behindertenfahrzeugen
+Herstellung von sonstigen Fahrzeugen a. n. g
+Behindertenfahrzeugen
+Bootsbau
+Eisenbahninfrastruktur
+Fahrraedern
+Fahrzeugbau
+Fahrzeugen
+Kampffahrzeugen
+Kraftraedern
+Lokomotiven
+Raumfahrzeugbau
+Schienenfahrzeugen
+Schiffbau
+Yachtbau

@@ -1,0 +1,212 @@
+ï»¿~~meta: ~~resource: Bundesagentur f?r Arbeit ~~additional_info: Bundesagentur für Arbeit, Klassifikation der Berufe
+Theater-, Film- und Fernsehproduktion
+Audio-Producer/in
+Aufnahmeleiterassistent/in
+Aufnahmeleiter/in
+Ballett- und Tanzdramaturg
+Ballettdirektor/in
+Ballettinspizient/in
+Ballettregisseur/in
+Buehneninspizient/in
+Buehnenleiterassistent/in
+Buehnenregisseur/in
+Buehnenvermittler/in
+Casting-Direktor/in
+Chefdisponent/in
+Chefdramaturg/in
+Company Manager/in
+Continuity-Person
+Diplomfernsehwirtschaftler/in
+Diplomfilm- und Fernsehdramaturg
+Diplomfilmwirtschaftler/in
+Diplomregisseur/in
+Dramatiker/in
+Dramaturg/in
+Dramaturgieassistent/in
+Erste/r Aufnahmeleiter/in
+Erste/r Regieassistent/in
+Fernsehaufnahmeleiter/in
+Fernsehdramaturg/in
+Fernsehproduktionsleiter/in
+Fernsehproduzent/in
+Fernsehregisseur/in
+Fernsehwirt/in
+Festspielintendant/in
+Fiction-Producer/in
+Film- und Fernsehproduktionsleiter
+Film- und Fernsehregisseur
+Film- und Fernsehwirt
+Film- und Medienmanager
+Film- und Videoproduzent
+Filmdramaturg/in
+Filmemacher/in
+Filmgeschaeftsfuehrer/in
+Filmkaufmann/-frau
+Filmmanager/in
+Filmproduktionsleiter/in
+Filmproduzent/in
+Filmregisseur/in
+Filmwirt/in
+Filmwirtschaftler/in
+Herstellungsleiter/in
+Hoerfunkdramaturg/in
+Hoerfunkproduzent/in
+Inspizient/in
+Intendant/in
+Konzerthausbesitzer/in
+Konzertunternehmer/in
+Kuenstlerische/r Betriebsdirektor/in
+Kuenstlerische/r Betriebsleiter/in
+Kuenstlerische/r Leiter/in Ballett
+Kuenstlerische/r Leiter/in
+Kuenstlervermittler/in
+Leiter/in der Schauspielmusik
+Leiter/in des Kuenstlerischen Betriebsbueros
+Mediendramaturg/in
+Motivaufnahmeleiter/in
+Multimedia-Producer
+Multimedia-Produzent/in
+Musikdramaturg/in
+Musikproduzent/in
+Musiktheaterregisseur/in
+Oberspielleiter/in
+Operndirektor/in
+Opernintendant/in
+Opernregisseur/in
+Opernsouffleur/-souffleuse
+Orchesterdirektor/in/Orchestergeschaeftsfuehrer/in
+Orchesterintendant/in
+Orchesterleiter/in
+Persoenliche/r Referent/in
+Producer/in
+Produktionsassistent/in
+Produktionsdramaturg/in
+Produktionsfahrer/in
+Produzent/in
+Programmberufe
+Programmgestalter/in
+Programmleiter/in
+Regie-Anfaenger/in
+Regieassistent/in
+Regisseur/in
+Rundfunkdramaturg/in
+Schallplattenproduzent/in
+Schauspieldirektor/in
+Schauspieldramaturg/in
+Schauspielregisseur/in
+Script-man/Script-girl
+Showproduzent/in
+Souffleur/Souffleuse
+Spielleiterassistent/in
+Spielleiter/in
+Theateragent/in
+Theaterbesitzer/in
+Theaterdirektor/in
+Theaterdramaturg/in
+Theaterinspizient/in
+Theaterintendant/in
+Theaterleiter/in
+Theatermanager/in
+Theater-Regisseur/in/Spielleiter/in
+TV-Assistent/in
+TV-Produktionsmanager/in
+Videoproduzent/in
+Werbefilmproduzent/in
+Zweite/r Aufnahmeleiter/in
+Zweite/r Regieassistent/in
+Audio-Producer
+Aufnahmeleiterassistent
+Aufnahmeleiter
+Ballettdirektor
+Ballettinspizient
+Ballettregisseur
+Buehneninspizient
+Buehnenleiterassistent
+Buehnenregisseur
+Buehnenvermittler
+Casting-Direktor
+Chefdisponent
+Chefdramaturg
+Company Manager
+Diplomfernsehwirtschaftler
+Diplomfilmwirtschaftler
+Diplomregisseur
+Dramatiker
+Dramaturg
+Dramaturgieassistent
+Fernsehaufnahmeleiter
+Fernsehdramaturg
+Fernsehproduktionsleiter
+Fernsehproduzent
+Fernsehregisseur
+Fernsehwirt
+Festspielintendant
+Fiction-Producer
+Filmdramaturg
+Filmemacher
+Filmgeschaeftsfuehrer
+Filmkaufmann
+Filmmanager
+Filmproduktionsleiter
+Filmproduzent
+Filmregisseur
+Filmwirt
+Filmwirtschaftler
+Herstellungsleiter
+Hoerfunkdramaturg
+Hoerfunkproduzent
+Inspizient
+Intendant
+Konzerthausbesitzer
+Konzertunternehmer
+Kuenstlerische
+Kuenstlervermittler
+Mediendramaturg
+Motivaufnahmeleiter
+Multimedia-Produzent
+Musikdramaturg
+Musikproduzent
+Musiktheaterregisseur
+Oberspielleiter
+Operndirektor
+Opernintendant
+Opernregisseur
+Opernsouffleur
+Orchesterdirektor
+Orchesterintendant
+Orchesterleiter
+Producer
+Produktionsassistent
+Produktionsdramaturg
+Produktionsfahrer
+Produzent
+Programmgestalter
+Programmleiter
+Regie-Anfaenger
+Regieassistent
+Regisseur
+Rundfunkdramaturg
+Schallplattenproduzent
+Schauspieldirektor
+Schauspieldramaturg
+Schauspielregisseur
+Script-man
+Showproduzent
+Souffleur
+Spielleiterassistent
+Spielleiter
+Theateragent
+Theaterbesitzer
+Theaterdirektor
+Theaterdramaturg
+Theaterinspizient
+Theaterintendant
+Theaterleiter
+Theatermanager
+Theater-Regisseur
+TV-Assistent
+TV-Produktionsmanager
+Videoproduzent
+Werbefilmproduzent
+Tanzdramaturg
+Medienmanager

@@ -1,0 +1,82 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der gueter 2008
+Pharmazeutische Spezialitaeten und sonstige pharmazeutische Erzeugnisse
+Arzneiwaren, die aus ungemischten oder aus zwei oder mehr Bestandteilen bestehen, zu therapeutischen oder prophylaktischen Zwecken
+Arzneiwaren, Penicilline, Streptomycine oder andere Antibiotika enthaltend
+Penicilline oder ihre Derivate oder Streptomycine oder ihre Derivate enthaltend, weder dosiert noch i.A.E
+andere Antibiotika enthaltend, weder dosiert noch i.A.E
+Penicilline oder ihre Derivate oder Streptomycine oder ihre Derivate enthaltend, dosiert oder i.A.E
+andere Antibiotika enthaltend, dosiert oder i.A.E
+Arzneiwaren, Hormone enthaltend
+Insulin enthaltend, weder dosiert noch i.A.E
+andere Hormone enthaltend , weder dosiert noch i.A.E
+Insulin enthaltend, dosiert oder i.A.E
+Corticosteroidhormone, deren Derivate und strukturverwandte Verbindungen enthaltend; andere Hormone enthaltend ; dosiert oder i.A.E
+Arzneiwaren, Alkaloide oder ihre Derivate, Jod, Jodverbindungen, Vitamine u.a. gemischte Bestandteile enthaltend
+Alkaloide oder ihre Derivate enthaltend , weder dosiert noch i.A.E
+Jod oder Jodverbindungen oder gemischte Bestandteile enthaltend, a.n.g., weder dosiert noch i.A.E
+Alkaloide oder ihre Derivate enthaltend , dosiert oder i.A.E
+Vitamine, Provitamine oder Mischungen derselben enthaltend, dosiert oder i.A.E
+Jod oder Jodverbindungen oder gemischte Bestandteile enthaltend, a.n.g., dosiert oder i.A.E
+Andere pharmazeutische Erzeugnisse fuer medizinische oder chirurgische Zwecke
+Antisera und andere Blutbestandteile; Vaccine
+Antisera und andere Blutfraktionen
+Vaccine fuer die Humanmedizin
+Vaccine fuer die Veterinaermedizin
+Empfaengnisverhuetende chemische Zubereitungen auf der Grundlage von Hormonen oder Spermiziden
+Reagenzien zum Bestimmen der Blutgruppen oder Blutfaktoren; Roentgenkontrastmittel; diagnostische Reagenzien zur Verwendung am Patienten
+Reagenzien zum Bestimmen der Blutgruppen oder Blutfaktoren
+Roentgenkontrastmittel; diagnostische Reagenzien zur Verwendung am Patienten
+Heftpflaster, Watte, Gaze, Binden; steriles Catgut und aehnliches Material; Taschen und andere Behaeltnisse mit Apothekenausstattung fuer Erste Hilfe
+Heftpflaster und andere Waren mit Klebeschicht, fuer medizinische Zwecke aufgemacht
+Pflaster mit medikamentoesen Wirkstoffen
+Steriles chirurgisches Catgut
+Watte, Gaze, Binden u.dgl., mit medikamentoesen Stoffen getraenkt oder ueberzogen oder i.A.E. zu medizinischen, chirurgischen, zahnaerztlichen oder tieraerztlichen Zwecken
+Taschen und andere Behaeltnisse mit Apothekenausstattung fuer Erste Hilfe
+Alkaloide
+Antibiotika
+Antisera
+Apothekenausstattung
+Arzneiwaren
+Behaeltnisse
+Bestandteile
+Bestandteilen
+Bestimmen
+Binden
+Blutbestandteile
+Blutfaktoren
+Blutfraktionen
+Blutgruppen
+Catgut
+Corticosteroidhormone
+Derivate
+Empfaengnisverhuetende
+Erste
+Gaze
+Heftpflaster
+Hilfe
+Hormone
+Hormonen
+Humanmedizin
+Insulin
+Jod
+Jodverbindungen
+Klebeschicht
+Material
+Patienten
+Penicilline
+Pflaster
+Pharmazeutische
+Provitamine
+Reagenzien
+Roentgenkontrastmittel
+Spermiziden
+Spezialitaeten
+Steriles
+Streptomycine
+Taschen
+Vaccine
+Verbindungen
+Veterinaermedizin
+Vitamine
+Watte
+Wirkstoffen

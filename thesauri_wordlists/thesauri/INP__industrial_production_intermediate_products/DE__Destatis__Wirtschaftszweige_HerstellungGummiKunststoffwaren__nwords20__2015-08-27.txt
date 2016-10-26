@@ -1,0 +1,14 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
+Herstellung von Gummi- und Kunststoffwaren
+Herstellung von Gummiwaren
+Herstellung und Runderneuerung von Bereifungen
+Herstellung von sonstigen Gummiwaren
+Herstellung von Kunststoffwaren
+Herstellung von Platten, Folien, Schlaeuchen und Profilen aus Kunststoffen
+Herstellung von Verpackungsmitteln aus Kunststoffen
+Herstellung von Baubedarfsartikeln aus Kunststoffen
+Herstellung von sonstigen Kunststoffwaren
+Bereifungen
+Gummi- und Kunststoffwaren
+Gummiwaren
+Kunststoffwaren

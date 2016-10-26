@@ -1,0 +1,216 @@
+~~meta: ~~resource: Bundesagentur f?r Arbeit ~~additional_info: Bundesagentur für Arbeit, Klassifikation der Berufe
+Hotellerie
+Aufsichtsdame
+Baudenbesitzer/in
+Beherbergungswirt/in
+Bellboy
+Bellman
+Boy
+Chef de reception
+Chefportier
+Chief Concierge
+Concierge
+Direktionsassistent/in
+Empfangsassistent/in
+Empfangschef/in
+Empfangsdirektor/in
+Empfangsherr/-dame
+Empfangskassierer/in
+Empfangskraft
+Empfangsmitarbeiter/in
+Empfangs-Schichtfuehrer/in
+Empfangssekretaer/in
+Erholungsheimbesitzer/in
+Erholungsheiminhaber/in
+Etagendiener/in
+Etagenhausdame
+Etagenhilfe
+Executive Housekeeper
+Fachmann/frau fuer Euro-Hotelmanagement
+Fahrstuhlfahrer/in
+Fahrstuhlfuehrer/in
+Ferienheimbesitzer/in
+Floor Supervisor/in
+Fremdenheimbesitzer/in
+Fremdenheimleiter/in
+Front Office Cashier
+Front Office Clerk
+Front Office Manager/in
+Gastmeister/in
+Generaldirektor/in
+Geschaeftsfuehrende/r Direktor/in
+Gesellschafter/in
+Hallengehilfe/-gehilfin
+Hausdame/Housekeeper
+Hausdamenassistent/in
+Herbergsmutter/-vater
+Herbergsverwalter/in
+Herbergswirt/in
+Hotel- und Gastronomiemanagement
+Hotel- und Gaststaettenbetriebswirt
+Hotel- u. Gaststaettengehilfe/-gehilfin
+Hotel- und Gaststaettenhelfer
+Hotelangestellte/r
+Hotelassistent/in
+Hotelbesitzer/in
+Hotelbetriebsleiter/in
+Hotelbetriebswirt/in
+Hotelbuerosachbearbeiter/in
+Hoteldiener/in
+Hoteldirektionsassistent/in
+Hoteldirektor/in
+Hoteldirektrice
+Hotelfachassistent/in
+Hotelfachkraft
+Hotelfachmann/-frau
+Hotelgehilfe/-gehilfin
+Hotelgeschaeftsfuehrer/in
+Hotelier
+Hotelinhaber/in
+Hotelkaufmann/-frau
+Hotelkurier/in
+Hotelleiter/in
+Hotelmanagementbetriebswirt/in
+Hotelmanager/in
+Hotelmeister/in
+Hotelpaechter/in
+Hotelportier
+Hotelreservierungssachbearbeiter/in
+Hotelsekretaer/in
+Hotelverkaufssachbearbeiter/in
+Hotelzimmermaedchen
+Huettenpaechter/in
+Huettenwirt/in
+Info-Hostess
+Jugendherbergsvater/-mutter
+Kaufmannsgehilfe/in
+Kurhausbesitzer/in
+Kurhotelbesitzer/in
+Kurwart/in
+Leiter/in Ferieneinrichtung
+Liftbediener/in
+Liftboy
+Liftfuehrer/in
+Maitre d'hotel
+Minibar-Checker/in
+Motelbesitzer/in
+Motelier
+Motelinhaber/in
+Nacht-Manager/in
+Nachtportier
+Night Manager/in
+Night-Auditor
+Ordertaker
+Paechter/in
+Page
+Pensionsbesitzer/in
+Pensionsgehilfe/-gehilfin
+Pensionsinhaber/in
+Pensionsleiter/in
+Pensionswirt/in
+Portier
+Portierassistent/in
+Pre-Opening Manager/in
+Receptionist/in
+Reservation Supervisor
+Reservierungskraft
+Reservierungsleiter/in
+Reservierungssachbearbeiter/in
+Reservierungssekretaer/in
+Rezeptionist/in
+Rezeptionshelfer/in
+Rooms-Division-Manager/in
+Betriebsoekonom/in
+Tagesportier
+Tuerportier
+Verkaufsbuerosekretaer/in
+Zimmermaedchen/Roomboy
+Baudenbesitzer
+Beherbergungswirt
+Direktionsassistent
+Empfangsassistent
+Empfangschef
+Empfangsdirektor
+Empfangsherr
+Empfangskassierer
+Empfangsmitarbeiter
+Empfangs-Schichtfuehrer
+Empfangssekretaer
+Erholungsheimbesitzer
+Erholungsheiminhaber
+Etagendiener
+Fahrstuhlfahrer
+Fahrstuhlfuehrer
+Ferienheimbesitzer
+Floor Supervisor
+Fremdenheimbesitzer
+Fremdenheimleiter
+Front Office Manager
+Gastmeister
+Generaldirektor
+Gesellschafter
+Hallengehilfe
+Hausdame
+Hausdamenassistent
+Herbergsmutter
+Herbergsverwalter
+Herbergswirt
+Hotel- u. Gaststaettengehilfe
+Hotelangestellte
+Hotelassistent
+Hotelbesitzer
+Hotelbetriebsleiter
+Hotelbetriebswirt
+Hotelbuerosachbearbeiter
+Hoteldiener
+Hoteldirektionsassistent
+Hoteldirektor
+Hotelfachassistent
+Hotelfachmann
+Hotelgehilfe
+Hotelgeschaeftsfuehrer
+Hotelinhaber
+Hotelkaufmann
+Hotelkurier
+Hotelleiter
+Hotelmanagementbetriebswirt
+Hotelmanager
+Hotelmeister
+Hotelpaechter
+Hotelreservierungssachbearbeiter
+Hotelsekretaer
+Hotelverkaufssachbearbeiter
+Huettenpaechter
+Huettenwirt
+Jugendherbergsvater
+Kaufmannsgehilfe
+Kurhausbesitzer
+Kurhotelbesitzer
+Kurwart
+Liftbediener
+Liftfuehrer
+Minibar-Checker
+Motelbesitzer
+Motelinhaber
+Nacht-Manager
+Night Manager
+Paechter
+Pensionsbesitzer
+Pensionsgehilfe
+Pensionsinhaber
+Pensionsleiter
+Pensionswirt
+Portierassistent
+Pre-Opening Manager
+Receptionist
+Reservierungsleiter
+Reservierungssachbearbeiter
+Reservierungssekretaer
+Rezeptionist
+Rezeptionshelfer
+Rooms-Division-Manager
+Betriebsoekonom
+Verkaufsbuerosekretaer
+Zimmermaedchen
+Gaststaettenbetriebswirt
+Gaststaettenhelfer

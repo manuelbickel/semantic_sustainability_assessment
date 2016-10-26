@@ -1,0 +1,36 @@
+home_appliances
+Stromsteuerung
+SmartHomeLoesungen
+EcoTopTenGeraeten
+SleepSchaltung
+Erdgasherd
+Erdgasherden
+Erdgasherdes
+Elektroherden
+Elektroherdes
+Grill- und Gargeraete
+Altgeraete
+Altgeraetes
+StandbyModus
+StandByVerbrauch
+Kuehl- und Gefriergeraete
+#Messgeraeteverleih
+Multifunktionsgeraeten
+#Messgeraete
+Buerogeraete
+Kuehlgeraeten
+Kommunikationsgeraete
+OfficeKommunikationsgeraete
+Strommessgeraeten
+Buerogeraeten
+Arbeitsplatzdruckerkonsolidierung
+Unterhaltungsgeraeten
+Groﬂgeraeten
+Stromspargeraete
+Aulabeleuchtung
+LED-Beleuchtung
+HallengrundBeleuchtung
+Hallenbeleuchtung
+Buerobeleuchtung
+Energiesparbeleuchtung
+Geschaeftsbeleuchtung

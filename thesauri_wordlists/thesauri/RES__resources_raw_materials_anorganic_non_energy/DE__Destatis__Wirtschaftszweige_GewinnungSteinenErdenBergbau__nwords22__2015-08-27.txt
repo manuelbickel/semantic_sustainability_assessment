@@ -1,0 +1,20 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
+Gewinnung von Steinen und Erden, sonstiger Bergbau
+Gewinnung von Natursteinen, Kies, Sand, Ton und Kaolin
+Gewinnung von Naturwerksteinen und Natursteinen, Kalk- und Gipsstein , Kreide und Schiefer
+Gewinnung von Kies, Sand, Ton und Kaolin
+Sonstiger Bergbau; Gewinnung von Steinen und Erden a. n. g
+Bergbau auf chemische und Duengemittelminerale
+Torfgewinnung
+Gewinnung von Salz
+Gewinnung von Steinen und Erden a. n. g
+Duengemittelminerale
+Gipsstein
+Kalk- und Gipsstein
+Kaolin
+Kies
+Kreide
+Natursteinen
+Naturwerksteinen
+Sand
+Schiefer

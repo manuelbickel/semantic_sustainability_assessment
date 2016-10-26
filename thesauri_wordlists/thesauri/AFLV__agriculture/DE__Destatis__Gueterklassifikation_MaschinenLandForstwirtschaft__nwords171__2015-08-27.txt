@@ -1,0 +1,137 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der gueter 2008
+Maschinen fuer die Land- und Forstwirtschaft
+Einachsschlepper
+Acker- und Forstschlepper , sonstige Zugmaschinen
+Acker- und Forstschlepper , mit einer Motorleistung von 37 kW oder weniger
+Acker- und Forstschlepper , mit einer Motorleistung von mehr als 37 kW bis 59 kW
+Acker- und Forstschlepper , mit einer Motorleistung von mehr als 59 kW
+mit einer Motorleistung von mehr als 59 kW bis 75 kW
+mit einer Motorleistung von mehr als 75 kW bis 90 kW
+mit einer Motorleistung von mehr als 90 kW
+Bodenbearbeitungsmaschinen
+Pfluege
+Scharpfluege
+Eggen, Grubber , Jaetmaschinen und Hackmaschinen
+Grubber
+Scheibeneggen
+Motorhacken
+Bodenbearbeitungsmaschinen fuer die Land- und Forstwirtschaft , a.n.g
+Saemaschinen, Pflanz- und Setzmaschinen
+Einzelkorndrillgeraete und -maschinen, andere Saemaschinen
+Einzelkorndrillgeraete und -maschinen mit Zentralantrieb
+Pflanz- und Setzmaschinen
+Duengerstreuer
+fuer mineralische und chemische Duengemittel, auch Anhaenge-Schleuderduengestreuer
+Andere Maschinen, Apparate und Geraete fuer die Land- und Forstwirtschaft oder den Gartenbau, zum Bearbeiten oder Bestellen des Bodens oder zur Pflege der Pflanzen; Walzen fuer Rasenflaechen oder Sportplaetze
+Rasenmaeher
+mit Elektromotor
+mit Verbrennungsmotor, mit horizontal rotierendem Schneidwerk
+selbstfahrend
+nicht selbstfahrend
+mit Verbrennungsmotor, mit anderem Schneidwerk
+ohne Motor
+Erntemaschinen, -apparate und -geraete
+Maehmaschinen a.n.g
+Motormaeher
+Maehmaschinen fuer Schlepperanbau und -zug
+mit horizontal rotierendem Schneidwerk
+mit anderem Schneidwerk
+Heuerntemaschinen, -apparate und -geraete
+Rech- und Zettwender , einschl. Kreiselzettwender
+Sammelpressen, Stroh- und Futterpressen
+Sammelpressen
+Stroh- und Futterpressen
+Maschinen zum Ernten von Wurzeln oder Knollenfruechten
+Kartoffelerntemaschinen
+Ruebenkoepf- und andere Ruebenerntemaschinen
+Andere Erntemaschinen, -apparate und -geraete; Dreschmaschinen und -geraete
+Maehdrescher
+Feldhaecksler, Traubenerntemaschinen
+Feldhaecksler fuer Schlepperanbau
+Feldhaecksler, selbstfahrend
+Traubenerntemaschinen
+Apparate und Geraete zum Verteilen von Fluessigkeiten oder Pulver, fuer die Landwirtschaft oder den Gartenbau
+Apparate zum Besprengen
+Tragbare Apparate mit oder ohne Motor, zum Verteilen von Fluessigkeiten usw. , fuer die Landwirtschaft oder den Gartenbau
+Spritz-, Sprueh- und Staeubegeraete , fuer Schlepperanbau oder Schlepperzug
+Anhaenger fuer landwirtschaftliche Zwecke, mit Selbstlade- und Selbstentladevorrichtungen
+Stalldungstreuer
+Andere Maschinen fuer die Land- und Forstwirtschaft , a.n.g
+Maschinen zum Reinigen und Sortieren von Eiern, Obst u.a. landwirtschaftlichen Erzeugnissen
+Melkmaschinen
+Maschinen, Apparate und Geraete fuer die Futterbereitung
+Schrot- und andere Muehlen fuer Getreide, Huelsenfruechte u.ae. Erzeugnisse
+Brut- und Aufzuchtapparate fuer die Gefluegelhaltung
+Andere Maschinen, Apparate und Geraete fuer die Gefluegelhaltung
+Andere Maschinen, Apparate und Geraete fuer die Land- und Forstwirtschaft oder den Gartenbau
+Holz-Ernte- und -Bearbeitungsmaschinen
+Selbsttaetige Traenkebecken
+Maschinen und Geraete zum Fuettern und Traenken
+Teile fuer Maschinen, Apparate und Geraete fuer die Land- und Forstwirtschaft
+Teile fuer Ernte- und Dreschmaschinen , a.n.g
+fuer Maehdrescher und Maiserntemaschinen
+fuer Rasenmaeher
+fuer andere Erntemaschinen, -apparate und -geraete
+Teile fuer Maschinen, Apparate und Geraete fuer die Land- und Forstwirtschaft oder den Gartenbau, zum Bearbeiten oder Bestellen des Bodens oder zur Pflege der Pflanzen
+Pflugschare und andere Teile aus Eisen oder Stahl, gegossen, fuer Maschinen fuer die Land- und Forstwirtschaft oder den Gartenbau
+Teile fuer sonstige landwirtschaftliche Maschinen
+fuer Maschinen, Apparate und Geraete fuer die Gefluegelhaltung und -zucht
+fuer Holz-Ernte- und -Bearbeitungsmaschinen
+Teile fuer Melk- und Molkereimaschinen , a.n.g
+Bearbeitungsmaschinen
+Acker- und Forstschlepper
+AnhaengeSchleuderduengestreuer
+Aufzuchtapparate
+Brut- und Aufzuchtapparate
+Dreschmaschinen und -geraete
+Dreschmaschinen
+Duengemittel
+Eggen
+Einzelkorndrillgeraete und -maschinen
+Ernte- und Dreschmaschinen
+Erntemaschinen
+Ernten
+Feldhaecksler
+Fuettern
+Futterbereitung
+Futterpressen
+Gartenbau
+Gefluegelhaltung
+Gefluegelhaltung und -zucht
+Getreide
+Hackmaschinen
+Heuerntemaschinen
+Huelsenfruechte
+Jaetmaschinen
+Knollenfruechten
+Kreiselzettwender
+Land- und Forstwirtschaft
+Landwirtschaft
+Maehmaschinen
+Maiserntemaschinen
+Melk- und Molkereimaschinen
+Molkereimaschinen
+Einzelkorndrillgeraete
+Schlepperanbau
+Pflugschare
+Rasenflaechen
+Rech- und Zettwender
+Ruebenerntemaschinen
+Ruebenkoepf
+Saemaschinen
+Schlepperanbau und -zug
+Schlepperzug
+Schneidwerk
+Schrot
+Selbstentladevorrichtungen
+Selbstlade- und Selbstentladevorrichtungen
+Selbsttaetige
+Setzmaschinen
+Spritz-, Sprueh- und Staeubegeraete
+Staeubegeraete
+Traenkebecken
+Traenken
+Zettwender
+Zugmaschinen
+Anhaenge-Schleuderduengestreuer
+Holz-Ernte

@@ -1,0 +1,71 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der gueter 2008
+Kraftwagen und Kraftwagenmotoren
+Kolbenverbrennungsmotoren fuer Kraftwagen
+Hubkolbenverbrennungsmotoren mit Fremdzuendung, fuer Zugmaschinen, Kraftwagen, Fahrraeder mit Hilfsmotor und andere nicht schienengebundene Landfahrzeuge mit einem Hubraum von 1 000 cm³ oder weniger
+Hubkolbenverbrennungsmotoren mit Fremdzuendung, fuer Zugmaschinen, Kraftwagen, Fahrraeder mit Hilfsmotor und andere nicht schienengebundene Landfahrzeuge mit einem Hubraum von mehr als 1 000 cm³
+Rumpf- bzw. halbfertige Motoren
+fertige Motoren
+Kolbenverbrennungsmotoren mit Selbstzuendung , fuer Zugmaschinen, Kraftwagen u.a. nicht schienengebundene Landfahrzeuge
+Kolbenverbrennungsmotoren mit Selbstzuendung , fuer Zugmaschinen, Kraftwagen und andere nicht schienengebundene Landfahrzeuge
+Personenkraftwagen und Wohnmobile, mit Hubkolben- und Kolbenverbrennungsmotor , mit Fremd- oder mit Selbstzuendung
+Personenkraftwagen und Wohnmobile, mit Hubkolbenverbrennungsmotor mit Fremdzuendung, mit einem Hubraum von 1 500 cm³ oder weniger
+Personenkraftwagen und Wohnmobile, mit Hubkolbenverbrennungsmotor mit Fremdzuendung, mit einem Hubraum von mehr als 1 500 cm³
+Personenkraftwagen, mit einem Hubraum von mehr als 1 500 cm³; Wohnmobile mit einem Hubraum von mehr als 3 000 cm³
+Personenkraftwagen mit einem Hubraum von mehr als 1 500 cm³ bis 2 500 cm³
+Personenkraftwagen mit einem Hubraum von mehr als 2 500 cm³
+Wohnmobile mit einem Hubraum von mehr als 3 000 cm³
+Wohnmobile mit einem Hubraum von mehr als 1 500 cm³ bis 3 000 cm³
+Personenkraftwagen und Wohnmobile, mit Kolbenverbrennungsmotor mit Selbstzuendung
+Personenkraftwagen, mit einem Hubraum von 1 500 cm³ oder weniger
+Personenkraftwagen, mit einem Hubraum von mehr als 1 500 cm³ bis 2 500 cm³
+mit einem Hubraum von mehr als 1 500 cm³ bis 2 000 cm³
+mit einem Hubraum von mehr als 2 000 cm³ bis 2 500 cm³
+Wohnmobile
+mit einem Hubraum von mehr als 1 500 cm³ bis 2 500 cm³
+mit einem Hubraum von mehr als 2 500 cm³
+Personenkraftwagen mit Elektro- sowie mit anderem Motor
+Omnibusse mit Kolbenverbrennungsmotor sowie mit anderem Motor
+Lastkraftwagen; Sattel-Straßenzugmaschinen; Fahrgestelle fuer Zugmaschinen, Omnibusse, Personen-, Lastkraftwagen, Kraftwagen zu besonderen Zwecken
+Lastkraftwagen mit Kolbenverbrennungsmotor, mit Selbstzuendung
+mit einem zulaessigen Gesamtgewicht von 5 t oder weniger
+mit einem zulaessigen Gesamtgewicht von mehr als 5 t bis 20 t
+mit einem zulaessigen Gesamtgewicht von mehr als 20 t
+Lastkraftwagen mit Kolbenverbrennungsmotor mit Fremdzuendung sowie mit anderem Motor
+Sattel-Straßenzugmaschinen
+Fahrgestelle fuer Zugmaschinen, Omnibusse, Personenkraftwagen, Lastkraftwagen, Kraftfahrzeuge zu besonderen Zwecken, mit Motor
+Kranwagen, Schneespezialfahrzeuge und andere Kraftfahrzeuge zu besonderen Zwecken
+Kranwagen
+Schneespezialfahrzeuge ; Spezialfahrzeuge zur Personenbefoerderung auf Golfplaetzen sowie aehnliche Fahrzeuge
+Andere Kraftfahrzeuge zu besonderen Zwecken
+Feuerwehrwagen
+Betonmischwagen
+Elektro
+Fahrgestelle
+Fahrraeder
+Fahrzeuge
+Fremd
+Fremdzuendung
+Gesamtgewicht
+Golfplaetzen
+Hilfsmotor
+Hubkolben- und Kolbenverbrennungsmotor
+Hubkolbenverbrennungsmotor
+Hubkolbenverbrennungsmotoren
+Hubraum
+Kolbenverbrennungsmotor
+Kolbenverbrennungsmotoren
+Kraftfahrzeuge
+Kraftwagen
+Kraftwagenmotoren
+Landfahrzeuge
+Lastkraftwagen
+Omnibusse
+Personenbefoerderung
+Personen-, Lastkraftwagen
+Personenkraftwagen
+Rumpf
+SattelStraßenzugmaschinen
+Schneespezialfahrzeuge
+Selbstzuendung
+Spezialfahrzeuge
+Zugmaschinen

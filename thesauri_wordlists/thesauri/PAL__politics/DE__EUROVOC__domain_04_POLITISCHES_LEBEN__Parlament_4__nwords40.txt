@@ -1,0 +1,40 @@
+~~meta: ~~language: DE ~~resource: http://eurovoc.europa.eu/drupal/ ~~additionalinfo: derived from a download of the -multilingual list- and the -domain- list in all languages ~~Eurovocfileheadmeta: Thesaurus EUROVOC ISSN 1725-4396 ~ Ausgabe 4.4 (2012) - Deutsch ~ Thematische Fassung ~ Bereich 04 ~ POLITISCHES LEBEN ~ DE ~ © Europäische Union, 2015 ~~chapter/category: Politischer_Rahmen ~~subcategory: politische_Befugnis ~~chapter/category: Politischer_Rahmen ~~subcategory: politische_Ideologie ~~chapter/category: Politischer_Rahmen ~~subcategory: politische_Institution ~~chapter/category: Politischer_Rahmen ~~subcategory: politische_Philosophie ~~chapter/category: Politischer_Rahmen ~~subcategory: Regierungssystem ~~chapter/category: Politischer_Rahmen ~~subcategory: Staat ~~chapter/category: Politische_Partei ~~subcategory: Parteiorganisation ~~chapter/category: Politische_Partei ~~subcategory: politische_Parteien ~~chapter/category: Politische_Partei ~~subcategory: politische_Richtung ~~chapter/category: Wahlverfahren ~~subcategory: Parlamentssitz ~~chapter/category: Wahlverfahren ~~subcategory: Stimmabgabe ~~chapter/category: Wahlverfahren ~~subcategory: Stimmenmehrheit ~~chapter/category: Wahlverfahren ~~subcategory: Wahl ~~chapter/category: Wahlverfahren ~~subcategory: Wahlmodus ~~chapter/category: Wahlverfahren ~~subcategory: Wahlorganisation ~~chapter/category: Wahlverfahren ~~subcategory: Wahlrecht ~~chapter/category: Wahlverfahren ~~subcategory: Wahlsystem ~~chapter/category: Parlament ~~subcategory: interparlamentarische_Beziehungen ~~chapter/category: Parlament ~~subcategory: Parlament ~~chapter/category: Parlament ~~subcategory: Parlamentarier ~~chapter/category: Parlament ~~subcategory: Zusammensetzung_des_Parlaments
+Zusammensetzung des Parlaments
+Fraktion
+Fraktion (EP)
+Interessengruppe
+politische Mehrheit
+politische Parteien
+Wählerwille
+fraktionsloser Abgeordneter
+Konferenz der Vorsitzenden
+parlamentarischer Ausschuss
+Ausschuss EP
+Ausschussbericht
+Ad-hoc-Ausschuss
+Fachausschuss
+ständiger Ausschuss
+Untersuchungsausschuss
+Beurteilungsspielraum
+Kontrollbefugnis
+parlamentarische Kontrolle
+parlamentarische Untersuchung
+Zusammensetzung eines parlamentarischen Ausschusses
+Parlamentsdelegation
+Delegation EP
+interparlamentarische Delegation
+Parlamentskammer
+Einkammersystem
+Zweikammersystem
+Bundesparlament
+direkt gewählte Kammer
+allgemeines Wahlrecht
+Zweite Kammer
+Parlamentspräsidium
+Präsidium des Europäischen Parlaments
+Parlamentsdirektor
+Quästor EP
+Präsident des Parlaments
+Präsident EP
+Vizepräsident des Parlaments
+Vizepräsident EP
