@@ -1,10 +1,9 @@
 The R code was solely developed by Manuel W. Bickel and is free software.
 
-The thesauri stored in this repository were compiled by Manuel W. Bickel
+The thesauri stored in this repository as data were compiled by Manuel W. Bickel
 by integrating parts of thesauri from other sources (particularly openthesaurus.de and EUROVOC)
-and extracting words from book chapters. These sources are listed in the following. 
-In case the thesauri of this repository are used, one should make sure that the purpose of use
-complies with these external sources.
+and extracting words from book chapters. The sources used for this purpose are listed in the following. 
+Using the thesauri stored in this repository requires compliance with the terms of these external sources.
 
 Professional literature
 Diekmann B, Rosenthal E (2014) Energie. Physikalische Grundlagen ihrer Erzeugung, Umwandlung und Nutzung, 3., vollst. überarb. u. erw. Aufl. 2014. Springer Fachmedien Wiesbaden, Wiesbaden
