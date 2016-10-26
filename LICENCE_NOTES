@@ -1,0 +1,61 @@
+The R code was solely developed by Manuel W. Bickel and is free software.
+
+The thesauri stored in this repository were compiled by Manuel W. Bickel
+by integrating parts of thesauri from other sources (particularly openthesaurus.de and EUROVOC)
+and extracting words from book chapters. These sources are listed in the following. 
+In case the thesauri of this repository are used, one should make sure that the purpose of use
+complies with these external sources.
+
+Professional literature
+Diekmann B, Rosenthal E (2014) Energie. Physikalische Grundlagen ihrer Erzeugung, Umwandlung und Nutzung, 3., vollst. überarb. u. erw. Aufl. 2014. Springer Fachmedien Wiesbaden, Wiesbaden
+
+Kaltschmitt M (ed) (2013) Erneuerbare Energien. Systemtechnik, Wirtschaftlichkeit, Umweltaspekte, 5., erw. Aufl. Springer, Berlin
+
+Reich G, Reppich M (2013) Regenerative Energietechnik. Überblick über ausgewählte Technologien zur nachhaltigen Energieversorgung. Springer Fachmedien Wiesbaden, Wiesbaden
+
+Schabbach T, Wesselak V (2012) Energie. Die Zukunft wird erneuerbar. Technik im Fokus. Springer Vieweg, Berlin
+
+Strauß K (2006) Kraftwerkstechnik. Zur Nutzung fossiler, nuklearer und regenerativer Energiequellen, 5., völlig aktualisierte und erg. Aufl. VDI-Buch. Springer, Berlin, Heidelberg, New York
+
+Usemann KW (2005) Energieeinsparende Gebäude und Anlagentechnik. Grundlagen. VDI-Buch. Springer, Berlin
+
+Public institutions or public thesauri
+OpenThesaurus 
+www.openthesuarus.de. Accessed 12 Aug 2015
+
+European Union (2015): EuroVoc-Thesaurus. 
+http://eurovoc.europa.eu. Accessed 05 Aug 2015
+
+Bundesanstalt für Geowissenschaften und Rohstoffe (BGR) Energierohstoffe 2009: Reserven, Ressourcen, Verfügbarkeit. Enthält Teil 1 bis 3. Stand: 10.11.2009, Hannover. Accessed 20 Aug 2015
+
+Bundesnetzagentur (2012) Bestätigung Netzentwicklungsplan Strom 2012. data.netzausbau.de/2022/NEP/NEP2022_Bestaetigung.pdf. Accessed 20 Aug 2015
+
+Bundesnetzagentur (2015) Veröffentlichung Anlagenregister Erneuerbare Energien. August 2014 bis April 2015. Accessed 20 Aug 2015
+
+Bundesnetzagentur (2015) Liste deutscher Elektrizitätsversorgungsunternehmen, Bonn. Accessed 20 Aug 2015
+
+Bundesnetzagentur (2015) Liste deutscher Gasversorgungsunternehmen, Bonn. Accessed 20 Aug 2015
+
+Der Bundeswahlleiter (2015): Parteiunterlagen zum Download. https://www.bundeswahlleiter.de/de/parteien/parteien_downloads.html. Accessed 19 Aug 2015
+
+Deutsche Energie-Agentur GmbH - dena (2014) Technologieübersicht.  Das deutsche Höchstspannungsnetz: Technologien und Rahmenbedingungen. Berlin, 2014. Accessed 20 Aug 2015
+
+Deutscher Bundestag, Parlamentsarchiv (2015): Ständig aktualisierte Fassung der öffentlichen Liste über die Registrierung von Verbänden und deren Vertretern - Stand: 17.07.2015. http://www.bundestag.de/dokumente/lobbyliste. Accessed 19 Aug 2015
+
+FNB Gas – Die Fernleitungsnetzbetreiber (2015): Anlage 6 zum Entwurf Netzentwicklungsplan Gas 2015 - Projekt-Steckbriefe. http://www.bundesnetzagentur.de/DE/Sachgebiete/ElektrizitaetundGas/Unternehmen_Institutionen/NetzentwicklungundSmartGrid/Gas/NEP2012-2015/NEP_Gas2015/Konsultation2015/Netzentwicklungsplan_Gas_2015_Konsultation_node.html. Accessed 20 Aug 2015.
+
+Statistik der Bundesagentur für Arbeit (2013): Klassifikation der Berufe 2010 - Systematisches Verzeichnis. http://statistik.arbeitsagentur.de/Navigation/Statistik/Grundlagen/Klassifikation-der-Berufe/KldB2010/KldB2010-Nav.html. Accessed 19 Aug 2015
+
+Statistik der Bundesagentur für Arbeit (2015): Klassifikation der Berufe 2010 - alphabetisches Verzeichnis der Berufsbenennungen. http://statistik.arbeitsagentur.de/Navigation/Statistik/Grundlagen/Klassifikation-der-Berufe/KldB2010/KldB2010-Nav.html. Accessed 19 Aug 2015
+
+Statistik der Bundesagentur für Arbeit (2015): Berufssektoren und Berufssegmente nach den Berufshauptgruppen der Klassifikation der Berufe 2010 (KldB 2010). http://statistik.arbeitsagentur.de/Navigation/Statistik/Grundlagen/Klassifikation-der-Berufe/KldB2010/KldB2010-Nav.html. Accessed 19 Aug 2015
+
+Statistisches Bundesamt (2007): Klassifikation der Wirtschaftszweige, Ausgabe 2008 (WZ 2008).https://www.destatis.de/DE/Methoden/Klassifikationen/GueterWirtschaftklassifikationen/Content75/KlassifikationWZ08.html. Accessed 19 Aug 2015
+
+Statistisches Bundesamt (2009): Güterverzeichnis für Produktionsstatistiken GP 2009, systematischer Teil. https://www.destatis.de/DE/Methoden/Klassifikationen/GueterWirtschaftklassifikationen/Content75/KlassifikationGP09.html. Accessed 19 Aug 2015
+
+Statistisches Bundesamt (2013): Gemeindeverzeichnis – Sonderveröffentlichung – 
+Alle politisch selbständigen Gemeinden in Deutschland nach Bevölkerung am 31.12.2011 auf Grundlage des Zensus 2011 und früherer Zählungen. https://www.destatis.de/DE/ZahlenFakten/LaenderRegionen/Regionales/Gemeindeverzeichnis/Administrativ/Aktuell/Zensus_Gemeinden.html. Accessed 19 Aug 2015
+
+Statistisches Bundesamt (2015): Staats- und Gebietssystematik, Stand 01.01.2015.
+https://www.destatis.de/DE/Methoden/Klassifikationen/Bevoelkerung/StaatsangehoerigkeitGebietsschluessel.html. Accessed 19 Aug 2015
