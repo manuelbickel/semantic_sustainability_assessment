@@ -6,6 +6,8 @@ This repository contains the data and basic R code of a study conducted to asses
 
 The background of the repository is, that the goal of the author was primarily to produce results for a scientific article which is currently under submission. The primary goal was not to develop a perfect code. Thus, the code is not optimized and may be advanced in many directions. The documentation and structuration for public use is in process. Please contact me, in case questions should arise before this process is finished.
 
+In a nutshell text files are split into text windows and the (co-)occurrence of pre-defined categories in these windows is calculated on basis of categorized words for assessimg the main topics and semantic networks in the text files. The categorization of words has been performed semi-manually.
+
 ## Content
 Structure and content of this repository are as follows:
 
