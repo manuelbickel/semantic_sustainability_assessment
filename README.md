@@ -9,18 +9,18 @@ The background of the repository is, that the goal of the author was primarily t
 ## Content
 Structure and content of this repository are as follows:
 
-# code
+### code
 R code for separating text files into text windows on basis of repeating marker phrases, counting the occurrence of categorized words and creating networ data, plotting occurrence as box plot and and co-occurrence values as co-occurrence plot (chess pattern) - two different scaling options, variations of the degree centrality, are applied to the co-occurrence plot.
 
-# data
+### data
 Original pdf documents that were downloaded from the respective homepages of the municipalities or the public municipal information system and the .txt version of these files. The .txt files were manually adapted to allow extracting text windows and generate network data.
 
 One sub-folder contains interim results such as the information on the occurrence of categorized words per document and another the final results mostly in form of figures.
 
-# encoding
+### encoding
 List of symbols in different encodings for harmonization of .txt files to a uniform encodig.
 
-# thesauri wordlists
+### thesauri wordlists
 Collection of general German stopwords and stopwords defined for this study manually. 
 
 The wordlists compiled for this study as thesauri. Wordlists are stored in folders that are named with the categories that the wordlists shall represent.
