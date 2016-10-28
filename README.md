@@ -1,10 +1,31 @@
 # semantic_sustainability_assessment
-# !!incomplete - repository still under construction!!
+# repository still under construction! - please contact me in case of any questions
 
 ## Introduction
 This repository contains the data and basic R code of a study conducted to assess the sustainability content and semantic societal networks in climate action plans of sixteen regional centers in the Federal State of Lower Saxony (Germany).
 
 The background of the repository is, that the goal of the author was primarily to produce results for a scientific article which is currently under submission. The primary goal was not to develop a perfect code. Thus, the code is not optimized and may be advanced in many directions. The documentation and structuration for public use is in process. Please contact me, in case questions should arise before this process is finished.
+
+## Content
+Structure and content of this repository are as follows:
+
+# code
+R code for separating text files into text windows on basis of repeating marker phrases, counting the occurrence of categorized words and creating networ data, plotting occurrence as box plot and and co-occurrence values as co-occurrence plot (chess pattern) - two different scaling options, variations of the degree centrality, are applied to the co-occurrence plot.
+
+# data
+Original pdf documents that were downloaded from the respective homepages of the municipalities or the public municipal information system and the .txt version of these files. The .txt files were manually adapted to allow extracting text windows and generate network data.
+
+One sub-folder contains interim results such as the information on the occurrence of categorized words per document and another the final results mostly in form of figures.
+
+# encoding
+List of symbols in different encodings for harmonization of .txt files to a uniform encodig.
+
+# thesauri wordlists
+Collection of general German stopwords and stopwords defined for this study manually. 
+
+The wordlists compiled for this study as thesauri. Wordlists are stored in folders that are named with the categories that the wordlists shall represent.
+
+The nouns that have not been matched in the study and not yet been defined either as stopwords or assigned to categories (a quick manual screening shows that the largest part may be assumed as stopwords and therefore irrelevant for results of the study).
 
 ## Workflow
 0. Check if your documents have a suitable structure for the analysis, i.e. text windows of similar structure that shall be used in the network analysis and that may be separated for example by marker phrases at their beginning and end or in the worst case by introducing suitable marker phrases manually
