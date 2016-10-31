@@ -8,8 +8,8 @@ AFLV__forestry;Agriculture#forestry;1#SOC#;1#SOC#Agriculture#forestry;1--SOC--Ag
 BC__building_parts;Construction#building_part;1#SOC#;1#SOC#Infrastructure#building_parts_materials;1--SOC--Infrastructure--building_parts_materials
 BC__buildings_unspecific;Construction#buildings_unspecific;1#SOC#;2#ENG#End_Use#building#unspecific_reference;2--ENG--End_Use--building--unspecific_reference
 BC__construction_craft_sector;Construction#construction_craft_sector;1#SOC#;1#SOC#Infrastructure#construction_craft_sector;1--SOC--Infrastructure--construction_craft_sector
-CE__climate_protection_general_and_strategy;Climate_Protection#unspecified_action;1#SOC#;1#SOC#Climate_Protection#unspecific_action;1--SOC--Climate_Protection--unspecific_action
-CE__climate_protection_tools_measures_aspects;Climate_Protection#tool_measure_aspect;1#SOC#;1#SOC#Climate_Protection#tool_measure_aspect;1--SOC--Climate_Protection--tool_measure_aspect
+CE__climate_protection_general_and_strategy;Climate_Protection#unspecified_action;1#SOC#;1#SOC#Climate_Protection#unspecific_action;1--SOC--Climate_Protection--general_and_strategy
+CE__climate_protection_tools_measures_aspects;Climate_Protection#tool_measure_aspect;1#SOC#;1#SOC#Climate_Protection#tool_measure_aspect;1--SOC--Climate_Protection--general_and_strategy
 CE__ecological_action;Environment#ecological_action;1#SOC#;1#SOC#Environment#ecological_action;1--SOC--Environment--ecological_action
 CE__emissions_harmful_substances_immissions;Environment#harmful_emission;1#SOC#;1#SOC#Environment#harmful_emission;1--SOC--Environment--harmful_emission
 CE__environment_physical;Environment#environment_physical;1#SOC#;1#SOC#Environment#environment_physical;1--SOC--Environment--environment_physical

@@ -2,6 +2,8 @@
 #Set main working directory
 wd.main <- c("M:/Science/Programmierung/Github/semantic_sustainability_assessment/")
 
+
+
 ######  README  **************************************************************************************************
 
 #This code assumes a semi-automatic approach and has to be run stepwise if other documents than the ones for
@@ -998,7 +1000,7 @@ for (f in 1:length(dirs)) {
     x <- unique(Cleantext(x))  #here not Uniquewords() is applied as suitable splitting has been done in the process of preparing the wordlists
     
     #for exceot for word referring to sustainability categories only nouns are considered
-    if (grepl("_SUST_", names(wordlists)[[i]]) == FALSE) {
+    if (grepl("3--SUS--", names(wordlists)[[i]]) == FALSE) {
       
       x <- x[grep("[[:upper:]]", x)]
       
@@ -1219,7 +1221,7 @@ occurrence.filename.tag <- c("__w_occ_mat__MR")
 #sustainability vocabulary shall be matched also within words 
 #therefore their row numbers are identified
 #in order to adjust the matching command for these rows
-sustainability.rows <- grep("_SUST_", wordcategorylist[,2])
+sustainability.rows <- grep("3--SUS--", wordcategorylist[,2])
 sustainability.words <- as.character(wordcategorylist[sustainability.rows,1])
 
 
@@ -1993,3 +1995,673 @@ write.csv(cooccurrence.matrix.mean, filename)
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##~<<<<<<<<<<<<<<<<<<< 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+
+
+library("ggplot2")
+library("reshape2")
+library("plyr")
+
+
+##+ INITIALIZE VARIABLE NAMES ETC.--------------------------
+#delete words
+#in case stopwords which were only identified during an analytical step 
+#and should be removed in addition to the previously defined stopwordlist
+stopwords.additional <- c("dummy_stopword")
+
+categories <- list.dirs(wd.wordlists, recursive=F, full.names = F)
+categories.num <-length(categories)
+
+occurrence.filename.tag <- c("__w_occ_mat__MR")
+files <- list.files(wd.interim, pattern = paste("^.*", occurrence.filename.tag, "[[:digit:]]+.csv$", sep=""))
+
+results.occ.final <- matrix(rep(0, categories.num*length(files)), nrow = categories.num)
+row.names(results.occ.final) <- categories
+colnames(results.occ.final) <- rep("dummy_casename", ncol(results.occ.final))
+##~-------------------------------------------------------------
+
+
+##+ COUNT OCCURRENCE OF CATEGORIES IN TEXT WINDOWS ON BASIS OF OCCURRENCE OF CATEGORIZED WORDS--------------
+for (t in seq(length(files))) {
+  
+  
+  evaluationmatrix <- read.csv(files[t], header = TRUE)
+  #head(evaluationmatrix)
+  
+  #if reading in of the csv generates leading columns with numbers 
+  #(old rownumbers) these columns are deleted
+  if (grepl("^X", colnames(evaluationmatrix)[1])==TRUE) {
+    columns.delete <- 1:(grep("^word$", colnames(evaluationmatrix))-1)
+    evaluationmatrix <- evaluationmatrix[,-columns.delete]
+  }
+  
+  #count the number of text windows
+  meas.totalnum <- ncol(evaluationmatrix)-2
+  
+  #find additional stopwords to be deleted and
+  #specific combinations of words and categories
+  #that emerged as unsuitable combinations during analysis of data
+  delete.rows <- c(which(as.character(evaluationmatrix[,"word"]) %in% stopwords.additional),
+                   
+                   intersect(grep("spar", evaluationmatrix[,"word"]), 
+                             grep("c161", evaluationmatrix[,"category"])),
+                   
+                   intersect(grep("^Haushalt$|^Kind$|^Verbind$|^Materiali$|^Zusammenstell$|^Raeum$|^Unterlag$|^Buero$|^Bueros$|^Lieg$|^Tier$|^Abnehm$", evaluationmatrix[,"word"]), 
+                             grep("CF", evaluationmatrix[,"category"])),
+                   
+                   intersect(grep("^Bau$|^Werk$", evaluationmatrix[,"word"]), 
+                             grep("Agriculture", evaluationmatrix[,"category"])),
+                   
+                   intersect(grep("^Baeum$", evaluationmatrix[,"word"]), 
+                             grep("intermediate_products", evaluationmatrix[,"category"])),
+                   
+                   intersect(grep("Vermi", evaluationmatrix[,"word"]), 
+                             grep("sufficiency_avoidance", evaluationmatrix[,"category"]))
+                   
+  )
+  
+  #delete
+  if (length(delete.rows)>0) {
+    delete.rows <- unique(delete.rows)
+    evaluationmatrix <- evaluationmatrix[-delete.rows,]
+  }
+  
+  
+  #delete the words column since from this point only categories will be analyzed
+  evaluationmatrix <- evaluationmatrix[,-c(1)]
+  
+  #aggregate the category lines -> count the overall occurrence of the categories
+  evaluationmatrix <- aggregate(evaluationmatrix[2:ncol(evaluationmatrix)], by=list(category=evaluationmatrix$category), FUN=sum)
+  
+  #make matrix boolean (yes/no occurrence)
+  evaluationmatrix[,c(2:ncol(evaluationmatrix))] <- ifelse(evaluationmatrix[,c(2:ncol(evaluationmatrix))]>0,1,0)
+  
+  #extract case name from filename and write it into the overall results matrix
+  colnames(results.occ.final)[t] <- gsub(paste("(^.*GER__)([A-Za-z]+)(__.*$)"), "\\2",files[t])
+  
+  
+  for(i in seq(length(categories))) {
+    
+    
+    category <- categories[i]
+    
+    category.subset <- evaluationmatrix[which(evaluationmatrix[,"category"] %in% category),]
+    
+    category.subset.counts <- category.subset[,c(2:ncol(category.subset))]
+    
+    count <- colSums(category.subset.counts)
+    #only "boolean-counting"/"occurrence at all" applied, 
+    #word frequency within a measure is not used for evaluation
+    #therefore all numbers larger than 0 are converted to 1
+    count <- ifelse(count>0,1,0)
+    result <- round(sum(count)/meas.totalnum, digits=4)
+    
+    results.occ.final[category,t] <- result
+  }
+}
+
+#add MEAN over all columns as last column 
+results.occ.final  <- cbind(results.occ.final, round((rowSums(results.occ.final)/ncol(results.occ.final)), digits=4))
+colnames(results.occ.final)[ncol(results.occ.final)] <- "mean"
+
+##~-----------------------------------------
+
+
+
+
+##+ RENAME CATEGORIES AND SELECT CATEGORY SETS FOR PLOTTING---------------------------------
+
+#change category names to thesaurus style with angle quotes
+row.names(results.occ.final) <- gsub("--","><",row.names(results.occ.final) )
+row.names(results.occ.final) <- paste0("<",row.names(results.occ.final) )
+row.names(results.occ.final) <- paste0(row.names(results.occ.final), ">" )
+
+
+##+ THESAURUS 1 - SOCIAL SYSTEM
+categories.exclude <- grep("<fed_state><ger>", rownames(results.occ.final), ignore.case = T)
+results.occ.final <- results.occ.final[-categories.exclude,]
+
+categories.select1 <- grep("<1>", rownames(results.occ.final), ignore.case = T)
+results.occ.social <- results.occ.final[categories.select1,]
+##~
+
+##+ THESAURUS 2 - ENERGY SYSTEM
+categories.select2 <- grep("<2>|<economy>|<industry>|<commerce>|<mobility_sector>|<local_administration_bodies>|<infrastructure>|<Food>|<Residents>", rownames(results.occ.final), ignore.case = T)
+results.occ.energy <- results.occ.final[categories.select2,]
+
+#rename categories that have been included from <1> into <2>
+row.names(results.occ.energy) <- gsub("<1><SOC>","",row.names(results.occ.energy))
+row.names(results.occ.energy) <- gsub("<2><ENG>","",row.names(results.occ.energy))
+
+#exclude some categories not suitable or important for analysis
+categories.exclude <- grep("<carrier>|<rental_of_houses>|<social_groups>|<general_reference><saving>|<building_parts_materials>|<Energy><unspecific_reference>|<Energy_Form><unspecific_reference>|<Economy><commerce><sector_unspecific>|<Infrastructure><disposal_unspecific>|<detailed_PPtechnology>|<alternative_wo_bike>|<tariffs_standing_orders>|<Economy><general_reference><employment_workplace>|<Infrastructure><unspecific>|<Infrastructure><supply_unspecific>|<Economy><general_reference><economic_viability>|<Economy><service><personal_services_crafting>", rownames(results.occ.energy), ignore.case = T)
+results.occ.energy <- results.occ.energy[-categories.exclude,]
+
+##+  THESAURUS 3 - SUSTAINABILITY
+categories.select3 <- grep("<3>|biofuels|renewable|pedestrian|insulation|car_sharing|public_transport|storage", rownames(results.occ.final), ignore.case = T)
+results.occ.sustainability <- results.occ.final[categories.select3,]
+##~
+
+##~-----------------------------------
+
+
+
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##+<<<<<<<<<<<<< BOXPLOT OF OCCURRENCES OF CATEGORIES IN ENERGY SYSTEM THESAURUS
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+##+ SET ORDER OF CATEGORIES FOR PLOTTING-------------------------
+main.categories <- c("<resources><unsp",
+                     "(<resources>)(?!<unsp)",
+                     "<conversion><unsp", 
+                     "(<conversion>)(?!<unsp)",
+                     "<distribution><unsp", 
+                     "(<distribution>)(?!<unsp)",
+                     "<sales_contracts><unsp",
+                     "(<sales_contracts>)(?!<unsp)",
+                     "<Technology_Option>",
+                     "<Energy_Form>",
+                     "<end_use><consumption>",
+                     "<mobility>",
+                     "<building><unsp",
+                     "(<building>)(?!<unsp)",
+                     "<electric_application>",
+                     "<local_administration_bodies>",
+                     "<Mobility_Sector>",
+                     "<Infrastructure>",
+                     "<Residents>",
+                     "<Food>",
+                     "<Economy><unspec",
+                     "<Economy><service>",
+                     "<commerce>",
+                     "<industry><unsp",
+                     "(<industry>)(?!<unsp)"
+)
+
+main.categories.order <- unlist(lapply(main.categories, function(item) {
+  
+  grep(item, rownames(results.occ.energy), ignore.case=T, perl=T)
+  
+}))
+
+results.occ.energy <- results.occ.energy[main.categories.order,]
+##~------------------------------
+
+
+##+ WRITE ORDERED ENERGY SYSTEM CATEGORY NAMES INTO FILE----------------------------
+categories.ENG <- rownames(results.occ.energy)
+
+categories.ENG <- gsub("(^<[\\d]>)(<[\\w]{3}>)(.*$)", "\\3", categories.ENG, perl=T)
+categories.ENG <- gsub("(^<[\\w]+>)(<.*$)", "\\1~#~\\2", categories.ENG, perl=T)
+
+separator <- "~#~"
+categories.ENG <- do.call(rbind,strsplit(categories.ENG, separator, perl=T))
+
+wd <- getwd()
+setwd(wd.final)
+write.csv(categories.ENG, paste("categories_ENG_nMeta_",
+                                length(unique(categories.ENG[,1])),
+                                "_nCat_",
+                                length(categories.ENG[,2]),
+                                ".csv"))
+setwd(wd)
+##~----------------------------
+
+
+
+##+ CHECK MEDIAN VALUES OF CATEGORIES------------------------
+results.occ.energy.median <-  results.occ.energy[, setdiff(colnames(results.occ.energy), c("mean"))]
+results.occ.energy.median <- as.data.frame(apply(results.occ.energy.median,1,function(x) median(x)))
+colnames(results.occ.energy.median) <- "median"
+
+rownames(results.occ.energy[which(results.occ.energy[,"mean"] < 0.01),])
+
+wd <- getwd()
+setwd(wd.interim)
+oc_lower_1p <- rownames(results.occ.energy[which(results.occ.energy[,"mean"] < 0.01),])
+writeLines(noquote(oc_lower_1p), "categories_occurrence_lower_1_percent.txt")
+setwd(wd.final)
+write.csv(results.occ.energy.median, "categories_energy_occurrence_median.csv")
+setwd(wd)
+##~----------------------------
+
+
+##+ FORMAT RESULTS TO BE PLOTTED WITH GGPLOT (LONG FORMAT, ROWNAMES)---------------------------
+results.occ.energy.plotformat <- t(results.occ.energy)
+
+results.occ.energy.plotformat  <- as.data.frame(results.occ.energy.plotformat )
+
+results.occ.energy.plotformat  <- cbind(rownames(results.occ.energy.plotformat ), results.occ.energy.plotformat )
+colnames(results.occ.energy.plotformat )[1] <- "case"
+rownames(results.occ.energy.plotformat ) <- NULL
+
+results.occ.energy.plotformat <- melt(results.occ.energy.plotformat , id.vars= c("case"))
+
+colnames(results.occ.energy.plotformat)[2] <- "category"
+
+results.occ.energy.plotformat <- subset(results.occ.energy.plotformat, results.occ.energy.plotformat$case != "mean")
+
+row.names(results.occ.energy.plotformat) <- 1:nrow(results.occ.energy.plotformat)
+
+results.occ.energy.plotformat$category <- factor(results.occ.energy.plotformat$category, levels = unique(results.occ.energy.plotformat$category))
+
+
+results.occ.energy.plotformat <- results.occ.energy.plotformat[nrow(results.occ.energy.plotformat):1,]
+##~-------------------------
+
+
+
+##+ CALCULATE ADDITIONAL PLOTTING PARAMETERS (POSITION OF VERTICAL LINES)---------------
+vertical.line <- unlist(lapply(main.categories, function(item) {
+  
+  max(grep(item, unique(results.occ.energy.plotformat$category), perl=T, ignore.case=T))
+  
+})) 
+vertical.line <- vertical.line[-length(vertical.line)]
+vertical.line  <- vertical.line+0.5
+
+##~---------------
+
+
+##~ CREATE BOXPLOT VIA GGPLOT AS GRAPHICAL OBJECT------------------------------
+x.axis.label.size <- c(10)
+y.axis.label.size <- c(11)
+y.axis.title.size <- c(11)
+
+p <- ggplot(results.occ.energy.plotformat, aes(factor(category), value), stat = "identity") +
+  
+  geom_boxplot(outlier.colour = "black") +
+  
+  ylab("average normalized occurrence")+
+  xlab("") +
+  
+  
+  #theme black and white
+  theme_bw() +
+  
+  #don´t show legend
+  theme(legend.position = "none") +
+  
+  #eliminates background, gridlines, chart border
+  theme(plot.background = element_blank()
+        ,panel.grid.major = element_blank()
+        ,panel.grid.minor = element_blank()
+        ,panel.border = element_rect(colour = "black")
+        ,axis.line = element_line(colour = "black")
+        ,plot.title = element_blank()
+        ,plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+        
+  ) +
+  
+  
+  # Rotate x-axis labels
+  theme(axis.text.x = element_text(angle = 90, hjust = 0, vjust = 0.15, size=10)
+        ,axis.title.x = element_text(size=10)
+        
+        #set y-axis tick sizes
+        ,axis.text.y = element_text(size=10, angle=0, vjust=0.25, hjust=0)
+        #,axis.title.y = element_text(size=5)
+        
+  ) +
+  
+  #set limits of the y axis
+  scale_y_continuous(expand = c(0,0), limits = c(0,1)) + 
+  
+  #set distance of y axis label to the axis
+  theme(axis.title.y = element_text(vjust=1.1, size=11)) +
+  
+  
+  theme(aspect.ratio=3) +
+  coord_flip() +
+  scale_x_discrete(limits = rev(levels(results.occ.energy.plotformat$category))) +
+  
+  #draw vertical lines, desired lines have to be turned off/on manually
+  # geom_vline(aes(xintercept = c(rep(vertical.line[1],  nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+  geom_vline(aes(xintercept = c(rep(vertical.line[2], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+  geom_vline(aes(xintercept = c(rep(vertical.line[3], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+  geom_vline(aes(xintercept = c(rep(vertical.line[4], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+  geom_vline(aes(xintercept = c(rep(vertical.line[5], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+  geom_vline(aes(xintercept = c(rep(vertical.line[6], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+  geom_vline(aes(xintercept = c(rep(vertical.line[7], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+  geom_vline(aes(xintercept = c(rep(vertical.line[8], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+  geom_vline(aes(xintercept = c(rep(vertical.line[9], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+  geom_vline(aes(xintercept = c(rep(vertical.line[10], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+  geom_vline(aes(xintercept = c(rep(vertical.line[11], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+  geom_vline(aes(xintercept = c(rep(vertical.line[12], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+  geom_vline(aes(xintercept = c(rep(vertical.line[13], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+  geom_vline(aes(xintercept = c(rep(vertical.line[14], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+  geom_vline(aes(xintercept = c(rep(vertical.line[15], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+  geom_vline(aes(xintercept = c(rep(vertical.line[16], nrow(results.occ.energy.plotformat)))), linetype= "dashed")
+#geom_vline(aes(xintercept = c(rep(vertical.line[17], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+#geom_vline(aes(xintercept = c(rep(vertical.line[18], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
+
+p
+##~---------------------------------------------------------------
+
+##+ WRITE RESULT PLOTS INTO FILE------------------------
+setwd(wd.final)
+
+par(mar=c(0.5,0.5,0.5,0.5))
+scale_figure <- c(9,6.5)
+
+win.metafile("Figure_1_energy_system_occurrence_boxplot.emf", height=scale_figure[1] ,width=scale_figure[2])
+p
+dev.off()
+
+
+postscript("Figure_1_energy_system_occurrence_boxplot.eps", height=scale_figure[1] ,width=scale_figure[2])
+p
+dev.off()
+##~-----------------------------------------------
+
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##~<<<<<<<<<<<<<
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##+<<<<<<<<<<<<< BOXPLOT THESAURUS ONE; SOCIAL SYSTEM
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+##+ BOXPLOT THESAURUS ONE-----------------------------------------------
+#details on the following code steps are given above section concerning the
+#BOXPLOT ENERGY SYSTEM
+#the following lines are analogous
+
+results.occ.social.plotformat <- results.occ.social[order(rownames(results.occ.social)),]
+
+results.occ.social.plotformat <- t(results.occ.social.plotformat)
+
+results.occ.social.plotformat <- as.data.frame(results.occ.social.plotformat)
+
+results.occ.social.plotformat <- cbind(rownames(results.occ.social.plotformat), results.occ.social.plotformat)
+colnames(results.occ.social.plotformat)[1] <- "case"
+rownames(results.occ.social.plotformat) <- NULL
+
+results.occ.social.plotformat <- melt(results.occ.social.plotformat, id.vars= c("case"))
+
+colnames(results.occ.social.plotformat)[2] <- "category"
+
+results.occ.social.plotformat <- subset(results.occ.social.plotformat, results.occ.social.plotformat$case != "mean")
+
+row.names(results.occ.social.plotformat) <- 1:nrow(results.occ.social.plotformat)
+
+results.occ.social.plotformat$category <- factor(results.occ.social.plotformat$category, levels = unique(results.occ.social.plotformat$category))
+
+
+results.occ.social.plotformat <- results.occ.social.plotformat[nrow(results.occ.social.plotformat):1,]
+
+
+vertical.line <- unlist(lapply(main.categories, function(item) {
+  
+  max(grep(item, unique(results.occ.social.plotformat$category), perl=T, ignore.case=T))
+  
+})) 
+vertical.line <- vertical.line[-length(vertical.line)]
+vertical.line  <- vertical.line+0.5
+
+
+x.axis.label.size <- c(10)
+
+y.axis.label.size <- c(10)
+y.axis.title.size <- c(10)
+
+
+p <- ggplot(results.occ.social.plotformat, aes(factor(category), value), stat = "identity") +
+  
+  geom_boxplot(outlier.colour = "black") + 
+  
+  
+  ylab("average normalized occurrence")+
+  xlab("") +
+  
+  
+  #theme black and white
+  theme_bw() +
+  
+  #eliminates background, gridlines, and chart border
+  theme(plot.background = element_blank()
+        ,panel.grid.major = element_blank()
+        ,panel.grid.minor = element_blank()
+        ,panel.border = element_rect(colour = "black")
+        ,axis.line = element_line(colour = "black")
+        ,plot.title = element_blank()
+        ,plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+        
+  ) +
+  
+  
+  # Rotate x-axis labels
+  theme(axis.text.x = element_text(angle = 90, hjust = 0, vjust = 0.15, size=7)
+        ,axis.title.x = element_text(size=7)
+        
+        #set y-axis tick sizes
+        ,axis.text.y = element_text(size=7, angle=0, vjust=0.25, hjust=0)
+        
+        
+  ) +
+  
+  #set the limits of the y axis
+  scale_y_continuous(expand = c(0,0), limits = c(0,1)) + 
+  
+  #set distance of y axis label to the axis
+  theme(axis.title.y = element_text(vjust=1.1, size=10)) +
+  
+  theme(aspect.ratio=4.5) +
+  coord_flip() +
+  scale_x_discrete(limits = rev(levels(results.occ.social.plotformat$category))) + #this generally works but the color bars that were introduced are not reversed
+  
+  #don´t show legend
+  theme(legend.position = "none")
+
+p
+
+
+
+setwd(wd.final)
+
+par(mar=c(0.5,0.5,0.5,0.5))
+scale_figure <- c(9,5.5)
+
+
+win.metafile("ESM_S9_societal_subsystems_occurrence_boxplot.emf", height=scale_figure[1] ,width=scale_figure[2])
+p
+dev.off()
+
+
+postscript("ESM_S9_societal_subsystems_occurrence_boxplot.eps", height=scale_figure[1] ,width=scale_figure[2])
+p
+dev.off()
+##~-----------------------------------------------
+
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##~<<<<<<<<<<<<< BOXPLOT THESAURUS ONE; SOCIAL SYSTEM
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##+<<<<<<<<<<<<< BOXPLOT THESAURUS THREE , SUSTAINABILITY
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+##+ BOXPLOT THESAURUS THREE--------------------------
+#details on code see
+#BOXPLOT ENERGY SYSTEM
+
+results.occ.sustainability.plotformat <- results.occ.sustainability[order(rownames(results.occ.sustainability)),]
+
+
+#rename categories that have been included from the second thesaurus
+rownames(results.occ.sustainability.plotformat) <- gsub("<2><ENG><Resources><renewable>" , 
+                                                        "<3><SUS><Consistency><Resources><renewable>",
+                                                        rownames(results.occ.sustainability.plotformat))
+
+rownames(results.occ.sustainability.plotformat) <- gsub("<2><ENG><Conversion><renewable>", 
+                                                        "<3><SUS><Consistency><Conversion><renewable>",
+                                                        rownames(results.occ.sustainability.plotformat))
+
+rownames(results.occ.sustainability.plotformat) <- gsub("<2><ENG><Sales_Contracts><renewable>" , 
+                                                        "<3><SUS><Consistency><Sales_Contracts><renewable>",
+                                                        rownames(results.occ.sustainability.plotformat))
+
+rownames(results.occ.sustainability.plotformat) <- gsub("<2><ENG><End_Use><mobility><biofuels>", 
+                                                        "<3><SUS><Consistency><End_Use><mobility><biofuels>",
+                                                        rownames(results.occ.sustainability.plotformat))
+
+rownames(results.occ.sustainability.plotformat) <- gsub("<2><ENG><Technology_Option><storage>", 
+                                                        "<3><SUS><Efficiency><Technology_Option><storage>",
+                                                        rownames(results.occ.sustainability.plotformat))
+
+rownames(results.occ.sustainability.plotformat) <- gsub("<2><ENG><End_Use><building><insulation>" , 
+                                                        "<3><SUS><Efficiency><End_Use><building><insulation>",
+                                                        rownames(results.occ.sustainability.plotformat))
+
+rownames(results.occ.sustainability.plotformat) <- gsub("<2><ENG><End_Use><mobility><car_sharing>" , 
+                                                        "<3><SUS><Sufficiency><End_Use><mobility><car_sharing>",
+                                                        rownames(results.occ.sustainability.plotformat))
+
+
+rownames(results.occ.sustainability.plotformat) <- gsub("<2><ENG><End_Use><mobility><bike_pedestrian>", 
+                                                        "<3><SUS><Sufficiency><End_Use><mobility><bike_pedestrian>",
+                                                        rownames(results.occ.sustainability.plotformat))
+
+rownames(results.occ.sustainability.plotformat) <- gsub("<2><ENG><End_Use><mobility><public_transport>", 
+                                                        "<3><SUS><Sufficiency><End_Use><mobility><public_transport>",
+                                                        rownames(results.occ.sustainability.plotformat))
+
+
+
+categories.exclude <- grep("<Sustainability><unspecific_reference>|Uncertainty><Uncertainty_Risks_Accidents>", rownames(results.occ.sustainability.plotformat), ignore.case = T)
+results.occ.sustainability.plotformat <- results.occ.sustainability.plotformat[-categories.exclude,]
+
+
+
+sust.categories <- c("<Sufficiency", "<Efficiency", "<Consistency")
+
+sust.categories.order <- unlist(lapply(sust.categories, function(item) {
+  
+  grep(item, rownames(results.occ.sustainability.plotformat), perl=T, ignore.case = T)
+  
+  
+}))
+
+results.occ.sustainability.plotformat <- results.occ.sustainability.plotformat[sust.categories.order,]
+
+row.names(results.occ.sustainability.plotformat) <- gsub("<3><SUS>","",row.names(results.occ.sustainability.plotformat))
+
+
+
+
+results.occ.sustainability.plotformat <- t(results.occ.sustainability.plotformat)
+
+results.occ.sustainability.plotformat <- as.data.frame(results.occ.sustainability.plotformat)
+
+results.occ.sustainability.plotformat <- cbind(rownames(results.occ.sustainability.plotformat), results.occ.sustainability.plotformat)
+colnames(results.occ.sustainability.plotformat)[1] <- "case"
+rownames(results.occ.sustainability.plotformat) <- NULL
+
+results.occ.sustainability.plotformat <- melt(results.occ.sustainability.plotformat, id.vars= c("case"))
+
+colnames(results.occ.sustainability.plotformat)[2] <- "category"
+
+results.occ.sustainability.plotformat <- subset(results.occ.sustainability.plotformat, results.occ.sustainability.plotformat$case != "mean")
+
+row.names(results.occ.sustainability.plotformat) <- 1:nrow(results.occ.sustainability.plotformat)
+
+results.occ.sustainability.plotformat$category <- factor(results.occ.sustainability.plotformat$category, levels = unique(results.occ.sustainability.plotformat$category))
+
+
+results.occ.sustainability.plotformat <- results.occ.sustainability.plotformat[nrow(results.occ.sustainability.plotformat):1,]
+
+
+
+vertical.line <- unlist(lapply(sust.categories, function(item) {
+  
+  max(grep(item, unique(results.occ.sustainability.plotformat$category), perl=T, ignore.case=T))
+  
+})) 
+vertical.line <- vertical.line[-length(vertical.line)]
+vertical.line  <- vertical.line+0.5
+
+
+x.axis.label.size <- c(10)
+
+y.axis.label.size <- c(10)
+y.axis.title.size <- c(10)
+
+p <- ggplot(results.occ.sustainability.plotformat, aes(factor(category), value), stat = "identity") +
+  
+  geom_boxplot(outlier.colour = "black") +
+  
+  
+  ylab("average normalized occurrence")+
+  xlab("") +
+  
+  #theme black and white
+  theme_bw() +
+  
+  #eliminates background, gridlines, and chart border
+  theme(plot.background = element_blank()
+        ,panel.grid.major = element_blank()
+        ,panel.grid.minor = element_blank()
+        ,panel.border = element_rect(colour = "black")
+        ,axis.line = element_line(colour = "black")
+        ,plot.title = element_blank()
+        ,plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+        
+  ) +
+  
+  
+  # Rotate x-axis labels
+  theme(axis.text.x = element_text(angle = 90, hjust = 0, vjust = 0.15, size=14)
+        ,axis.title.x = element_text(size=14)
+        
+        #set y-axis tick sizes
+        ,axis.text.y = element_text(size=14, angle=0, vjust=0.25, hjust=0)
+        
+        
+  ) +
+  
+  
+  
+  #set the limits of the y axis
+  scale_y_continuous(expand = c(0,0), limits = c(0,1)) + 
+  
+  #set distance of y axis label to the axis
+  theme(axis.title.y = element_text(vjust=1.1, size=10)) +
+  
+  
+  
+  theme(aspect.ratio=4.5) +
+  coord_flip() +
+  scale_x_discrete(limits = rev(levels(results.occ.sustainability.plotformat$category))) + #this generally works but the color bars that were introduced are not reversed
+  
+  #don´t show legend
+  theme(legend.position = "none")
+
+p
+
+
+
+setwd(wd.final)
+
+par(mar=c(0.5,0.5,0.5,0.5))
+scale_figure <- c(10,8)
+
+
+win.metafile("sustainability_aspects_occurrence_boxplot.emf", height=scale_figure[1] ,width=scale_figure[2])
+p
+dev.off()
+
+
+postscript("sustainability_aspects_occurrence_boxplot.eps", height=scale_figure[1] ,width=scale_figure[2])
+p
+dev.off()
+##~-----------------------------------
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##~<<<<<<<<<<<<< 
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
