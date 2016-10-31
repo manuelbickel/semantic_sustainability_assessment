@@ -1,0 +1,4 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der gueter 2008
+Eisenerze
+Eisenerze und ihre Konzentrate
+Konzentrate

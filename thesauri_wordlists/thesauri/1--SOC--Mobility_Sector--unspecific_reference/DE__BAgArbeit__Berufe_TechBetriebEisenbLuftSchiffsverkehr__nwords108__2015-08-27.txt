@@ -1,0 +1,196 @@
+~~meta: ~~resource: Bundesagentur f?r Arbeit ~~additional_info: Bundesagentur für Arbeit, Klassifikation der Berufe
+Tech.Betrieb Eisenb.,Luft,Schiffsverkehr
+Achslagerpruefer/in
+Alleiningenieur/in
+Alleinmaschinist/in
+Alleinmatrose/-matrosin
+Alleinmotorenwaerter/in
+Bahnbetriebsschlosser/in
+Bestmann
+Bodenfunker/in
+Bootsmann/-frau
+Bootsmann/-frau/Pumpenmann/-frau
+Bootsmaschinist/in
+Bordarbeiter/in
+Bordfunker/in
+Bordingenieur/in
+Bordmonteur/in
+Bremsenschlosser/in
+Bremser/in
+Deckschlosser/in
+Decksingenieur/in
+Decksmeister/in
+Dritte/r Techn. Schiffsoffizier/in
+Dritte
+Eisenbahnschlosser/in
+Erste/r Techn. Schiffsoffizier/in
+Fastmoker/in
+Festmacher/in
+Flugfunker/in
+Flugmesstechniker/in
+Funker/in
+Funkgehilfe/-gehilfin
+Funkmeister/in
+Funkoffizier/in
+Funkstellenleiter/in
+Funktechniker/in Seefunk
+Funkwart/in
+Flugzeugabfertiger/in
+Geraetefuehrer/in
+Jachtmatrose/-matrosin
+Jungmann auf Schiff
+Kleinmaschinist/in
+Lagerhalter/in
+Leichtmatrose/-matrosin
+Luftfahrtgeraetepruefer/in
+Maschinenassistent/in
+Maschinendienstoffizier/in
+Maschinenfacharbeiter/in
+Maschinenunteroffizier/in
+Maschinenwart/in
+Matrose/Matrosin
+Matrosenmotorenwaerter/in
+Mehrzweckbesatzungsmann/-frau
+Motorenwart/in
+Motorfuehrer/in
+Motorist/in
+Nautische/r Offiziersassistent/in
+Naut. Wachoffizier/in
+Offizier/in
+Offiziersassistent/in
+Peilmatrose/-matrosin
+Pruefer/in von Luftfahrtgeraet / Certifying Staff
+Quartermeister/in
+Rettungsbootsmann/-frau
+Schiffsbefestiger/in
+Schiffsbetriebsassistent/in
+Schiffsbetriebsingenieur/in
+Schiffsbetriebsmechaniker/in
+Schiffsbetriebsmeister/in
+Schiffsbetriebsschlosser/in
+Schiffsbetriebstechniker/in
+Schiffsbetriebstechn. Assistent/in
+Schiffselektrotechniker/in
+Schiffsfunker/in
+Schiffsingenieur/in
+Schiffsinspektor/in
+Schiffsjunge
+Schiffsmann/-frau
+Schiffsmaschinenassistent/in
+Schiffsmaschineningenieur/in
+Schiffsmaschinenmeister/in
+Schiffsmaschinenwaerter/in
+Schiffsmaschinist/in
+Schiffsmotorfuehrer/in
+Schiffsoffizier/in
+Schleppermaschinist/in
+Seefunker/in
+Seemann/-frau
+Seemaschinist/in
+Seemotorfuehrer/in
+Seezeichenmatrose/-matrosin
+Technische/r Flugzeugkontrolleur/in
+Techn. Offiziersanwaerter/in
+Technisch-nautische/r Offiziersassistent/in
+Technische/r Offiziersassistent/in
+Technische/r Schiffsoffizier/in
+Technische/r Wachoffizier/in
+Vollmatrose/-matrosin Handelsschifffahrt
+Vollmatrose/-matrosin
+Wachingenieur/in
+Wachkapitaen/in
+Wachmaschinist/in
+Wachoffizier/in
+Wagenmeister/in
+Wagenuntersucher/in
+Zweite/r Technische/r Offizier/in
+Zweite/r Technische/r Schiffsoffizier/in
+Zweite/r Techn. Schiffsoffizier/in
+Achslagerpruefer
+Alleiningenieur
+Alleinmaschinist
+Alleinmatrose
+Alleinmotorenwaerter
+Bahnbetriebsschlosser
+Bodenfunker
+Bootsmaschinist
+Bordarbeiter
+Bordfunker
+Bordingenieur
+Bordmonteur
+Bremsenschlosser
+Bremser
+Deckschlosser
+Decksingenieur
+Decksmeister
+Eisenbahnschlosser
+Fastmoker
+Festmacher
+Flugfunker
+Flugmesstechniker
+Funker
+Funkgehilfe
+Funkmeister
+Funkoffizier
+Funkstellenleiter
+Funktechniker
+Funkwart
+Flugzeugabfertiger
+Geraetefuehrer
+Jachtmatrose
+Kleinmaschinist
+Lagerhalter
+Leichtmatrose
+Luftfahrtgeraetepruefer
+Maschinenassistent
+Maschinendienstoffizier
+Maschinenfacharbeiter
+Maschinenunteroffizier
+Maschinenwart
+Matrosenmotorenwaerter
+Mehrzweckbesatzungsmann
+Motorenwart
+Motorfuehrer
+Motorist
+Nautische
+Naut. Wachoffizier
+Offiziersassistent
+Peilmatrose
+Quartermeister
+Rettungsbootsmann
+Schiffsbefestiger
+Schiffsbetriebsassistent
+Schiffsbetriebsingenieur
+Schiffsbetriebsmechaniker
+Schiffsbetriebsmeister
+Schiffsbetriebsschlosser
+Schiffsbetriebstechniker
+Schiffsbetriebstechn. Assistent
+Schiffselektrotechniker
+Schiffsfunker
+Schiffsingenieur
+Schiffsinspektor
+Schiffsmann
+Schiffsmaschinenassistent
+Schiffsmaschineningenieur
+Schiffsmaschinenmeister
+Schiffsmaschinenwaerter
+Schiffsmaschinist
+Schiffsmotorfuehrer
+Schiffsoffizier
+Schleppermaschinist
+Seefunker
+Seemann
+Seemaschinist
+Seemotorfuehrer
+Seezeichenmatrose
+Techn. Offiziersanwaerter
+Technisch-nautische
+Vollmatrose
+Wachingenieur
+Wachkapitaen
+Wachmaschinist
+Wachoffizier
+Wagenmeister
+Wagenuntersucher
+Zweite

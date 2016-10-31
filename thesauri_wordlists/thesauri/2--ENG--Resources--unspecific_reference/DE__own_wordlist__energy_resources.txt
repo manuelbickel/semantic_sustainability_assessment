@@ -1,0 +1,7 @@
+energy_resources
+Energiequelle
+Brennstoffgewinnung
+Brennstoffverfuegbarkeit
+Energiequellen
+Geoenergy Celle
+Geoenergy Celle e.V.

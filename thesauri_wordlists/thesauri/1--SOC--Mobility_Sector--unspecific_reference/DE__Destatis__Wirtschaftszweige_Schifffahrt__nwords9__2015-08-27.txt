@@ -1,0 +1,9 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
+Schifffahrt
+Personenbefoerderung in der See- und Kuestenschifffahrt
+Gueterbefoerderung in der See- und Kuestenschifffahrt
+Personenbefoerderung in der Binnenschifffahrt
+Gueterbefoerderung in der Binnenschifffahrt
+Binnenschifffahrt
+Kuestenschifffahrt
+See- und Kuestenschifffahrt

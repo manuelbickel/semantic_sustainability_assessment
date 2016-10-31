@@ -1,0 +1,29 @@
+~~meta: ~~language: DE ~~resource: http://eurovoc.europa.eu/drupal/ ~~additionalinfo: derived from a download of the -multilingual list- and the -domain- list in all languages ~~Eurovocfileheadmeta: Thesaurus EUROVOC ISSN 1725-4396 ~ Ausgabe 4.4 (2012) - Deutsch ~ Thematische Fassung ~ Bereich 60 ~ AGRARERZEUGNISSE UND LEBENSMITTEL ~ DE ~ © Europäische Union, 2015 ~~chapter/category: Pflanzliches_Erzeugnis ~~subcategory: Futterpflanze ~~chapter/category: Pflanzliches_Erzeugnis ~~subcategory: Gemüse ~~chapter/category: Pflanzliches_Erzeugnis ~~subcategory: Getreide ~~chapter/category: Pflanzliches_Erzeugnis ~~subcategory: Hackfrucht ~~chapter/category: Pflanzliches_Erzeugnis ~~subcategory: industriell_angebaute_Pflanze ~~chapter/category: Pflanzliches_Erzeugnis ~~subcategory: Obst ~~chapter/category: Pflanzliches_Erzeugnis ~~subcategory: Ölpflanze ~~chapter/category: Pflanzliches_Erzeugnis ~~subcategory: Textilpflanze ~~chapter/category: Pflanzliches_Erzeugnis ~~subcategory: tropische_Pflanze ~~chapter/category: Tierisches_Erzeugnis ~~subcategory: tierisches_Erzeugnis ~~chapter/category: Landwirtschaftliches_Verarbeitungserzeugnis ~~subcategory: ätherisches_Öl ~~chapter/category: Landwirtschaftliches_Verar ~~subcategory: Eiweißerzeugnis ~~chapter/category: Landwirtschaftliches_Vera ~~subcategory: Fettkörper ~~chapter/category: Landwirtschaftliches_Vera ~~subcategory: Milcherzeugnis ~~chapter/category: Getränk_und_Zucker ~~subcategory: Getränk ~~chapter/category: Getränk_und_Zucker ~~subcategory: Zucker ~~chapter/category: Nahrungsmittel ~~subcategory: behandeltes_Lebensmittel
+behandeltes Lebensmittel
+Lebensmittelverarbeitung
+bestrahltes Lebensmittel
+Bestrahlung
+dehydriertes Lebensmittel
+Milchpulver
+Wasserentzug
+eingesalzenes Lebensmittel
+gedörrtes Lebensmittel
+Traube
+gefriergetrocknetes Lebensmittel
+Gefriertrocknung
+gefrorenes Lebensmittel
+Gefrieren
+gekühltes Lebensmittel
+geräuchertes Lebensmittel
+Instantlebensmittel
+Kaffee
+Kakao
+Tee
+Konservenerzeugnis
+Konservenfabrik
+Nahrungsmittelkonzentrat
+Kondensmilch
+rekombiniertes Lebensmittel
+tiefgefrorenes Lebensmittel
+Tiefgefrieren
+verzehrfertiges Lebensmittel

@@ -1,0 +1,492 @@
+﻿elec_home_appliances
+Kopierer
+Waschgaengen
+Waschgang
+BTO Hannover
+BTO Bürotechnik
+Saturn
+Neugeraete
+Neugeraeten
+Steckdose
+Praesenzmelder
+Standby
+StandBy
+Praesenzmeldern
+Zeitschaltuhren
+TVAbschalter
+BueroKommunikationsgeraete
+Steckerleiste
+Steckerleisten
+MasterSlaveSteckdosen
+Steckerleistenmit
+TintenstrahlUNDLaserdrucker
+Kopierern
+Arbeitsplatzdrucker
+Desktop
+Dokumentenscanner
+DesktopInfrastruktur
+DesktopPCs
+ArbeitsplatzPC
+Desktops
+KommunikationsUNDUnterhaltungselektronik
+#OeKOPROFITClubs
+#OeKOPROFITS
+#OeKOPROFIT
+#PROFIT
+#KITA
+#FIT
+#OeKOPROFITClub
+Beleuchtung
+Aulabeleuchtung
+LED-Beleuchtung
+HallengrundBeleuchtung
+Hallenbeleuchtung
+Buerobeleuchtung
+Energiesparbeleuchtung
+Geschaeftsbeleuchtung
+Weihnachtsbeleuchtung
+#OeKOPROFITDelmenhorst
+#OeKOPROFITNetzwerk
+#OeKOPROFITProzessbegleitung
+#OeKOPROFITProzessbegleitungB
+#VITAKO
+Green-IT
+IT-Systemen
+IT-Zubehoer
+Buero- und IT-Geraeten
+IT-Ausstattung
+IT-Geraeten
+IT-Technik
+Lichtmanagement
+Licht und Beleuchtung
+Dimmer
+Energiesparlampe
+Gasentladungslampe
+Glühlampe
+Glühlampenverbot
+Halogen-Metalldampflampe
+Halogenlampe
+Leuchtdiode
+Leuchtstofflampe
+Sonnenschutz
+Tageslichtlampe
+Vorschaltgerät
+Dimmen
+Consumer-Electronics-Bereich
+Kompaktleuchtsto<U+FB04>ampen
+Stand-by-Verbrauch
+Consumer-Electronics
+Haushaltsgeräte
+Hausnummernbeleuchtung
+ErP-Richtlinie
+#Anzeigeelemente
+#Aufheizphase
+Beleuchtungsbedarfs
+Beleuchtungsenergie
+#Ausgangs-Spannung
+Außenbeleuchtung
+#Außenkolben
+#Außenkolbens
+#Begründet
+#Beschaltung
+#Betriebsminuten
+Haushaltsgeräteausstattung
+Haushaltsstrom
+Haushaltsstromverbrauch
+Elektro-Installationen
+Bezugslichtquelle
+#Brom
+Wasserkocher
+#Brückengleichrichter
+Candela
+#Cer
+#Diac
+#Diff
+#Doppelheterostrukturen
+#Dopplereffekt
+#DPem
+#Drahtdurchmesser
+#Drahtlänge
+#Dreibanden-Spektrum
+#Druckverbreiterung
+#Eem
+#Einkoppeln
+#Einschaltstrom
+#Einschaltvorgang
+#Einschaltvorgangs
+#Elek11
+#Elektrodenmaterials
+#Elektrodynamik
+#Elektrolytkondensator
+#Elektronenfluss
+#Elektronik372
+Elektronikgeräte
+#Empfindlichkeitskurve
+#Energieerzeugungstypen
+Energiesparlampen
+Entladungsrohr
+Entladungsröhren
+#EPh
+#Erntefaktor
+#Erntefaktoren
+#Erzeugungstyp
+Farb-Temperatur
+#Farbmischung
+#Farbspektrum
+Farbtemperatur
+Farbwiedergabe
+Farbwiedergabeindex
+Filmprojektion
+#Flimmern
+#Fluorophor
+#fPh
+#Funktionsaufbau
+Gallium-Arsenid
+Gallium-Arsenid-Phosphid
+Gallium-Halbleiterverbindungen
+Gallium-Nitrid
+Gallium-Phosphid
+Galliumverbindungen
+#Garraum
+#Gasatome
+Gasentladungslampen
+#Gaußverteilung
+#Gefüllt
+#Gelb
+#Gesamtlebensdauer
+#Gesamtschaltplan
+#Gesamtstromdichte
+#Glaskolben
+#Glaskolbens
+#Glaswand
+Glühdraht
+Glühdrähte
+Glühdrahtnormalen
+Glühdrahts
+Glühdrahttemperatur
+Glühwendel
+#Graetz-Schaltung
+#Grundbegriffe
+#Halogen
+Halogen-Metalldampflampen
+Halogenglühlampe
+Halogenglühlampen
+Halogenlampen
+Halogenverbindungen
+#Hem
+#Hilfsgas
+Hochdruck-Entladungslampen
+Hochdruck-Natriumdampflampe
+Hochdruck-Natriumdampflampen
+Hochdruck-Quecksilberdampflampe
+Hochdrucklampen
+Höchstdruck-Xenonlampen
+#HPh
+#Iem
+Induktionslampe
+Induktionslampen
+#Induktionsspannung
+#Induktionsspannungen
+#Induktionsspule
+#Inelastische
+#Innen-9.4
+#Inverkehrbringen
+#J/m
+#JS
+#Kaltleiter
+#KEA
+#Km
+#Kolbenbeschichtung
+Kompakt-Leuchtstofflampen
+Kompaktleuchtstofflampe
+Kompaktleuchtstofflampen
+#Kontinuität
+Kurzbogenlampen
+#L4
+#L5
+#L6
+Lampenart
+Lampenbetriebs
+Lampenfassung
+Lampenkreis
+light-emitting diode
+LED
+LEDs
+Leuchtemission
+Leuchtstofflampen
+Leuchtstoff
+Leuchtstoffe
+Leuchtstoffröhre
+Leuchtstoffs
+Lichtemission
+Lichtemittierende
+Lichtmenge
+Lichtstärke
+Lichtstrom
+Lichtstrom-Strom-Kennlinie
+Lichtstroms
+#Lm/W
+Lumen
+Lux
+#Magnetron
+#Maßeinheit
+#Materialverarbeitung
+#Megahertz
+#Metall-Jodid
+#Metalloxydschichten
+Mikrowellenherds
+Mikrowellenlampe
+Molybdändrähten
+Natrium-Dampflampe
+Natriumdampf-Hochdrucklampe
+#Neon-Atome
+Neon-Entladungsröhre
+Niederdruck-Entladungslampen
+Niederdruck-Natriumdampflampe
+Niederdruck-Natriumdampflampen
+Niederdruck-Natriumlampe
+#Niob
+#Oszillator-Schaltung
+#P1/2
+#P3/2-Zustand
+#Parlaments
+#Pem
+#Pem(<U+03BB>
+#Pem(<U+03BB>)·V(<U+03BB>)d<U+03BB>
+#PEV
+#Photometrische
+#Physiologie
+#Pn-Schicht
+#Primär-Energieaufwand
+#Primärenergieinput
+#QPh
+#Quantenfilme
+#Quecksilberatome
+#R1
+#R2
+#Radiometrische
+#Relaxationsprozesse
+#Resonanzfrequenz
+#Resonanzwandler
+#Resonanzwandlers
+#Restmüll
+#Röhreninnendruck
+#Rücknahme
+#s·A
+#S1/2-Zustand
+#Schaltvorgänge
+#Schwingkreis
+#Sehens
+#Sehvermögen
+#Spannungsstoß
+#Speicherdichten
+#Spektrallinien
+#Startvorgangs
+#Strahlungsausbeute
+#T9.4
+#Tagsehen
+#TFarb
+#Transformatorhilfsspulen
+#Transformatorspule
+#Trigger
+#Umschlossen
+#V(<U+03BB>
+#V(555
+#Verbreiterung
+#Vereinheitlichung
+#Verschiebungssatz
+#Verschiebungssatzes
+#Vertriebsverbote
+#Vorfaktor
+Vorschaltdrossel
+Vorschaltgeräte
+Vorschaltgeräten
+Vorschaltgeräts
+#W/sr
+Wandler-Schaltung
+Wandlerschaltung
+#Wasser-Lithiumbromid-Absorptionskältemaschine
+#Wasser-Lithiumbromid-Lösung
+#Wicklungsverhältnis
+#Wirbelfeld
+Wolframdraht
+Wolframglühdraht
+Wolframhalogenid
+Xenon-Kurzbogenlampen
+Xeonlampe
+#Yttrium-Aluminium-Granat
+#Zeolith-Wasser-Wärmespeichern
+#Zeolithe
+#Zimmertemperatur
+#Zündspannung
+#Zündvorgang
+Elektrogeräte
+Haushaltsgroßgeräte
+Große Kühlgeräte
+Kühlschränke
+Gefriergeräte
+Großgeräte zur Kühlung von Lebensmitteln
+Großgeräte zur Konservierung von Lebensmitteln
+Großgeräte zur Lagerung von Lebensmitteln
+Großgeräte zur Kühlung, Konservierung und Lagerung von Lebensmitteln
+Waschmaschinen
+Wäschetrockner
+Geschirrspüler
+Herde und Backöfen
+elektrische Kochplatten
+elektrische Heizplatten
+Mikrowellengeräte
+Großgeräte zum Kochen von Lebensmitteln
+Großgeräte zur Verarbeitung von Lebensmitteln
+Großgeräte zum Kochen oder zur Verarbeitung von Lebensmitteln
+elektrische Heizgeräte
+elektrische Heizkörper
+Großgeräte zum Beheizen von Räumen
+Großgeräte zum Beheizen von Betten
+Großgeräte zum Beheizen von Sitzmöbeln
+Großgeräte zum Beheizen von Räumen, Betten und Sitzmöbeln
+elektrische Ventilatoren
+Klimageräte
+Belüftungs-, Entlüftungs- und Klimatisierungsgeräte
+Klimatisierungsgeräte
+Belüftungsgeräte
+Entlüftungsgeräte
+Haushaltskleingeräte
+Staubsauger
+Teppichkehrmaschinen
+Reinigungsgeräte
+Geräte zum Nähen
+Geräte zum Stricken
+Geräte zum Weben
+Geräte zur Bearbeitung von Textilien
+Geräte zum Nähen, Stricken, Weben oder zur sonstigen Bearbeitung von Textilien
+Bügeleisen
+Geräte zum Bügeln
+Geräte zum Mangeln
+Bügeleisen zur Pflege von Kleidung
+Bügeleisen zur Kleiderpflege
+Toaster
+Friteusen
+Kaffeemühle
+Kaffeemaschine
+Geräte zum Öffnen oder Verschließen von Verpackungen
+Geräte zum Öffnen oder Verschließen von Behältnissen
+elektrischer Dosenöffner
+elektrische Messer
+Haarschneidegeräte
+Haartrockner
+Fön
+elektrische Zahnbürste
+Rasierapparate
+Geräte für die Körperpflege
+Wecker
+Armbanduhren
+Wecker, Armbanduhren und Geräte zum Messen, Anzeigen oder Aufzeichnen der Zeit
+Geräte zum Messen, Anzeigen oder Aufzeichnen der Zeit
+Eieruhr
+Küchenuhr
+Waagen
+Geräte der Informations- und Telekommunikationstechnik
+Großrechner
+Minicomputer
+Drucker
+PCs
+CPU
+Maus
+Bildschirm
+Tastatur
+Notebooks
+elektronische Notizbücher
+Kopiergeräte
+elektronische Schreibmaschinen
+elektrische Schreibmaschinen
+Tischrechner
+Taschenrechner
+Benutzerendsysteme
+Benutzerendgeräte und -systeme
+Faxgeräte
+Telexgeräte
+Telefone
+Münz- und Kartentelefone
+Schnurlose Telefone
+Mobiltelefone
+Anrufbeantworter
+Geräte der Unterhaltungselektronik
+Radiogeräte
+Fernsehgeräte
+Videokameras
+Videorekorder
+Hi-Fi-Anlagen
+Audio-Verstärker
+Beleuchtungskörper
+stabförmige Leuchtstofflampen
+Entladungslampen
+Metalldampflampen
+Hochdruck-Natriumdampflampen 
+Lichsteuerungsanlage
+Lichsteuerungssystem
+elektrische Werkzeuge
+elektronische Werkzeuge
+Sägen
+Nähmaschinen
+Geräte zum Drehen, Fräsen, Schleifen, Zerkleinern, Sägen, Schneiden, Abscheren, Bohren, Lochen, Stanzen, Falzen, Biegen oder zur entsprechenden Bearbeitung von Holz, Metall und sonstigen Werkstoffen
+Drehbank
+elektrische Stichsäge
+Akkubohrer
+Akkubohrmaschine
+Akkuschrauber
+Niet-, Nagel- oder Schraubwerkzeuge oder Werkzeuge zum Lösen von Niet-, Nagel- oder Schraubverbindungen oder für ähnliche Verwendungszwecke
+Schweiß- und Lötwerkzeuge oder Werkzeuge für ähnliche Verwendungszwecke
+Lötkolben
+Geräte zum Versprühen, Ausbringen, Verteilen oder zur sonstigen Verarbeitung von flüssigen oder gasförmigen Stoffen mit anderen Mitteln
+Rasenmäher
+Gartengeräte
+Heckenschere
+Spielzeug sowie Sport- und Freizeitgeräte
+elektrische Eisenbahn
+Autorennbahnen
+Videospielkonsolen
+Videospiele
+Rudercomputer
+Fahrradcomputer
+Tauchcomputer
+Laufcomputer
+Sportausrüstung mit elektrischen oder elektronischen Bauteilen
+Geldspielautomaten
+Medizinprodukte (mit Ausnahme implantierter und infektiöser Produkte)
+Geräte für Strahlentherapie
+Kardiologiegeräte
+Dialysegeräte
+Beatmungsgeräte
+Nuklearmedizinische Geräte
+Laborgeräte für In-vitro-Diagnostik
+Analysegeräte
+Fertilisations-Testgeräte
+Geräte zur Erkennung, Vorbeugung, Überwachung, Behandlung oder Linderung von Krankheiten, Verletzungen oder Behinderungen
+Überwachungs- und Kontrollinstrumente
+Bewegungsmelder
+Rauchmelder
+Heizregler
+Thermostate
+Geräte zum Messen, Wiegen oder Regeln in Haushalt und Labor
+Küchenwaage
+Überwachungs- und Kontrollinstrumente von Industrieanlagen (z. B. in Bedienpulten)
+automatische Ausgabegeräte
+Heißgetränkeautomaten
+Automaten für heiße oder kalte Flaschen oder Dosen
+Automaten für feste Produkte
+Geldautomaten
+Flaschenautomat
+Pfandautomat
+Dosenautomat
+Kaffeeautomat
+Unterhaltungselektronik
+Fernseher
+Beamer
+Flachbild­fernseher
+Satelliten-TV-Anschluss
+Kabel-TV-Anschluss
+Antennen-TV-Anschluss
+Pay-TV-Receiver
+DVD-Player
+DVD-Recorder

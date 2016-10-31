@@ -1,0 +1,17 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
+Sozialwesen (ohne Heime
+Soziale Betreuung aelterer Menschen und Behinderter
+Ambulante soziale Dienste
+Sonstige soziale Betreuung aelterer Menschen und Behinderter
+Sonstiges Sozialwesen (ohne Heime
+Tagesbetreuung von Kindern
+Sonstiges Sozialwesen a. n. g
+Ambulante
+Betreuung
+Dienste
+Heime
+Kindern
+Menschen
+Soziale
+Sozialwesen
+Tagesbetreuung

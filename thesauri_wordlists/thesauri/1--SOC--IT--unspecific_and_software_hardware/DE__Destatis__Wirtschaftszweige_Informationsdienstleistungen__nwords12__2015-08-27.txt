@@ -1,0 +1,11 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
+Informationsdienstleistungen
+Datenverarbeitung, Hosting und damit verbundene Taetigkeiten; Webportale
+Datenverarbeitung, Hosting und damit verbundene Taetigkeiten
+Webportale
+Erbringung von sonstigen Informationsdienstleistungen
+Korrespondenz- und Nachrichtenbueros
+Erbringung von sonstigen Informationsdienstleistungen a. n. g
+Datenverarbeitung
+Hosting
+Nachrichtenbueros

@@ -1,7 +1,0 @@
-~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der gueter 2008
-Dienstleistungen fuer den sonstigen Bergbau und fuer die Gewinnung von Steinen und Erden
-Dienstleistungen fuer die Steinkohlegewinnung
-Dienstleistungen fuer den sonstigen Bergbau und fuer die sonstige Gewinnung von Steinen und Erden, a.n.g., z.B. fuer die Braunkohlengewinnung
-Bergbau
-Erden
-Gewinnung

@@ -1,0 +1,19 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
+Getraenkeherstellung
+Herstellung von Spirituosen
+Herstellung von Traubenwein
+Herstellung von Apfelwein und anderen Fruchtweinen
+Herstellung von Wermutwein und sonstigen aromatisierten Weinen
+Herstellung von Bier
+Herstellung von Malz
+Herstellung von Erfrischungsgetraenken; Gewinnung natuerlicher Mineralwaesser
+Apfelwein
+Bier
+Erfrischungsgetraenken
+Fruchtweinen
+Malz
+Mineralwaesser
+Spirituosen
+Traubenwein
+Weinen
+Wermutwein

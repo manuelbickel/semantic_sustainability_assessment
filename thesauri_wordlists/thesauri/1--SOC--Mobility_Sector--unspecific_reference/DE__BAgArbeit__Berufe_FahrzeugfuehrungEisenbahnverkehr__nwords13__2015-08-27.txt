@@ -1,0 +1,26 @@
+~~meta: ~~resource: Bundesagentur f?r Arbeit ~~additional_info: Bundesagentur für Arbeit, Klassifikation der Berufe
+Fahrzeugfuehrung im Eisenbahnverkehr
+Abnahmelokomotivfuehrer/in
+Diesellokfuehrer/in
+Eisenbahner/in
+Fahrzeugschlosser/in
+Lokfuehrer/in
+Lokomotivfuehrer/in
+Rangierlokomotivfuehrer/in
+Schienenfahrzeugschlosser/in
+Triebfahrzeugfuehrer/in
+Triebwagenfuehrer/in
+Werkbahnfuehrer/in
+Werkbahnlokfuehrer/in
+Abnahmelokomotivfuehrer
+Diesellokfuehrer
+Eisenbahner
+Fahrzeugschlosser
+Lokfuehrer
+Lokomotivfuehrer
+Rangierlokomotivfuehrer
+Schienenfahrzeugschlosser
+Triebfahrzeugfuehrer
+Triebwagenfuehrer
+Werkbahnfuehrer
+Werkbahnlokfuehrer

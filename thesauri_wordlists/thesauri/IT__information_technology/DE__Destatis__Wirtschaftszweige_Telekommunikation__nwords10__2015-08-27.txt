@@ -1,9 +1,0 @@
-~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
-Telekommunikation
-Leitungsgebundene Telekommunikation
-Drahtlose Telekommunikation
-Satellitentelekommunikation
-Sonstige Telekommunikation
-Internetserviceprovider
-Sonstige Telekommunikation a. n. g
-Drahtlose

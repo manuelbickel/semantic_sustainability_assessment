@@ -1,0 +1,493 @@
+﻿Eisenbahn
+Abt'sche Weiche
+#Abteil
+abtsche Ausweiche
+abtsche Weiche
+Abzweigbahnhof
+#Adhäsionsbahn
+Albulabahn
+Albulalinie
+RegioS
+RegioSBahn
+Alsthom-Lenker
+Altonaer Hafenbahntunnel
+SBahnhof
+Anhaltische Harzbahn
+Anschlussgleis
+aufgleisen
+Aufnahmegebäude
+Aufnahmsgebäude
+aus den Gleisen springen
+äußerer Betriebsdienst
+#Auslenkung
+#Aussichtswagen
+Automatisches Warnsystem
+Backenschiene
+Bahn
+Bahnangestellter
+Bahnarbeiter
+Bahnhof
+Bahnknoten
+Bahnstationsanlage
+Bahnsteig
+Bahnstrecke
+Bahnstrecke Kempten-Isny
+Bahnstrecke Kolín-Decín
+Bahnstrecke Sankt Petersburg-Moskau
+Bahnstrecke Trmice-Bílina
+Bahnstromumformerwerk
+Bahnsuizid
+Bahnübergang
+Bahnverkehr
+Bauartzulassung
+Berliner Nordbahn
+Berninabahn
+Berninalinie
+Bielatalbahn
+Bildfahrplan
+#Bim
+Bimmelbahn
+Blindgleis
+Blockzug
+#Bock
+Bogendreieck
+Bohai-Tunnel
+Bosnaspur
+Bosnische Spurweite
+Bremshundertstel
+Bremsprozente
+#Bügel
+Bummelbahn
+Bundesbahnbediensteter
+Bundesbahner
+#Buntling
+Chinesische Changchun-Eisenbahn
+Chinesische Osteisenbahn
+#Coupé
+#D-Weg
+D-Zug
+Dachsbergtunnel
+Dalian-Yantai-Tunnel
+Dampflok
+Dampflokomotive
+Dampfmaschinensteuerung
+Dampfross
+Dampfspeicherlokomotive
+Danziger Korridor
+DB
+DB Baureihe 194 
+Dermulo-Fondo-Mendel-Bahn
+Deutsche Bahn
+Deutsches Krokodil
+Die Bahn
+Diesellok
+Diesellokomotive
+Dieseltriebfahrzeug
+Donaubahn
+Donautalbahn
+Doppelkreuzungsweiche
+Doppelpendelzug
+Doppelstockwagen
+doppelte Kreuzungsweiche
+#Dosto
+DR Baureihe 254 
+Draisine
+DRG Baureihe E 94
+Durchgangsbahnhof in Gleistieflage
+Durchgangszug
+Durchrutschweg
+E-Bremse
+E-Lok
+Eilzug
+Einheitsdampflokomotive
+Einheitslokomotive
+#Einzelwagenverkehr
+Eisenbahn
+Eisenbahnabteil
+Eisenbahnbediensteter
+Eisenbahner
+Eisenbahnfähre
+Eisenbahnfährlinie
+Eisenbahnfährschiff
+Eisenbahnfährverbindung
+Eisenbahnfahrzeugführer
+Eisenbahnfreund
+Eisenbahnknoten
+Eisenbahnknotenpunkt
+Eisenbahnkreuzung
+Eisenbahnlinie
+Eisenbahnstrecke
+Eisenbahnsuizid
+Eisenbahnverkehr
+Eisenbahnverkehrsunternehmen
+Eisenbahnwagen
+Eisenbahnweiche
+Eisenbahnzug
+Elbetalbahn
+#Elektrische
+#elektrische Generatorbremse
+Elektrolok
+Elektrolokomotive
+elektromotorische Bremse
+Elektrotriebfahrzeug
+#Empfangsgebäude
+#Endhaltestelle
+#Endschleife
+#Endstation
+#Endstelle
+entgleisen
+Etagenbahnhof
+#EVU
+Expresszug
+Extrazug
+Fahrdraht
+Fahrleitung
+Fahrweg
+FD-Zug
+Feldbahn
+Fernschnellzug
+Ferrosexueller
+#feste Fahrbahn
+feuerlose Lokomotive
+#Flugbahnwagen
+#Flügeln
+#Flügelung
+Folgezugbetrieb
+Frachtbahnhof
+Frachtenbahnhof
+Friedatunnel
+#Führerstand
+Ganzzug
+Gefahrpunktabstand
+Geleise
+#Generatorbremse
+#generatorische Bremse
+Gernroder-Harzgeroder Eisenbahn
+Gleis
+Gleisabstand
+Gleisachsabstand
+Gleisanschluss
+Gleisbett
+Gleisdreieck
+Gleisfünfeck
+Gleiskörper
+Gleismittenabstand
+Gleisschleife
+Gleissperre
+Gleiswechsel
+grafischer Fahrplan
+Großraumstraßenbahn
+Großraumstraßenbahnwagen
+Großraumwagen
+Güterbahnhof
+#Halt
+#Haltepunkt
+#Haltestelle
+Handhebelwagen
+Harbin-Eisenbahn
+Hauptbahnhof
+Hbf
+#Heizhaus
+#Hexapode
+Himmelbergtunnel
+#Hochgeschwindigkeitsstrecke
+Hochgeschwindigkeitszug
+#höhenungleich
+Hysteresebremse
+ICE
+indische Breitspur
+induktive Zugsicherung
+#Indusi
+#Insekt
+Inter City Express
+InterCity Express
+Intercity-Express
+Isny-Bähnle
+Jakobs-Drehgestell
+Jakobsachse
+Jakobsgestell
+Karl-Schultz-Schieber
+Karwendelbahn
+#Kehre
+#Kehrschleife
+#Kerbtier
+#Kerf
+#KiN
+Kolonialspur
+#Kondukteur
+#Kontrolleur
+Kopfbahnhof
+Kopfgleis
+Koralmbahn
+Koralpenbahn
+Korridorverkehr
+#Krabbeltier
+#Krabbelviech
+#Kreuzung
+#kreuzungsfrei
+Krimmler Bahn
+#Kundenbetreuer
+Kuppelendstelle
+Leithagebirgsbahn
+#Lemniskatenlenker
+linienförmige Zugbeeinflussung
+Linienzugbeeinflussung
+Lok
+Lokalbahn
+Lokalbahn Teplitz-Reichenberg
+Lokführer
+Lokomotivführer
+Lokomotivkasten
+Lokomotivsandwich
+Lokremise
+Lokschuppen
+Lorenbahn
+LZB
+Magnetbahn
+Magnetschwebebahn
+Maxbahn
+#Metergewicht
+#Meterlast
+Metro
+Mittenwaldbahn
+#Motorbremse
+Murmanbahn
+Murmanskbahn
+#n-Wagen
+Nachschiebebetrieb
+Nachschiebelok
+Nachschiebelokomotive
+Nachschieben
+Nachschiebetriebfahrzeug
+Nachtreisezug
+Nachtzug
+#Nebenbahn
+#Nebenbahn 
+#Nebenstrecke
+#Neubaustrecke
+Nicolai-Kolbenschieber
+#Nietenzähler
+Nikolaibahn
+#niveaufrei
+#niveaugleiche Kreuzung
+Nonsbergbahn
+Nordböhmische Transversalbahn
+Normalspur
+Nutzbremse
+ÖBB Reihe 1020
+#Oberbau
+Oberleitung
+Oberschaffner
+Pannoniabahn
+Panoramawagen
+Pendelzug
+Personenbahnhof
+Petersburg-Warschauer Eisenbahn
+pfälzische Maximiliansbahn
+Pfrimmtalbahn
+Pinzgaubahn
+Pinzgauer Lokalbahn
+#Plattform
+#Platzkarte
+Polarkreiseisenbahn
+Polnischer Korridor
+Possendorfer Heddel
+#Prellbock
+Preußische Nordbahn
+Privilegierter Durchgangsverkehr
+Privilegierter Eisenbahn-Durchgangsverkehr
+Provinzbahn
+#Puffer
+Pufferküsser
+Pufferstrecke
+#Pufferwehr
+punktförmige Zugbeeinflussung
+Punktzugbeeinflussung
+PZB
+Rangierbahnhof
+Rangierbegleiter
+Rangierer
+Rasender Roland
+Regelspur
+Reibungsbahn
+Reisezugbahnhof
+Reiterbahnhof
+Rekolok
+Rekonstruktionslokomotive
+Rekuperationsbremse
+#Reservierung
+Ringlokschuppen
+Ringschuppen
+#rollendes Material
+#Rollmaterial
+Rosenheimer Kurve
+Rosenheimer Schleife
+Rottenwarnanlage
+Rügensche Kleinbahn
+Rundlokschuppen
+S-Bahn
+Sächsische Semmeringbahn
+Sackbahnhof
+Sackgleis
+Sattelbahnhof
+Saugluftbremse
+Schaffner
+#Schaku
+Scharfenbergkupplung
+Schellfischtunnel
+Schiene
+Schienen
+Schienenautobus
+Schienenbett
+Schienenbus
+Schienenfahrzeugführer
+Schienenflankenschmierung
+Schienenkreuz
+Schienenomnibus
+Schienenstrang
+Schienensuizid
+Schienenverkehr
+Schienenzeppelin
+#Schleife
+Schnellbahn
+Schnellfahrstrecke
+Schnellstraßenbahn
+Schnelltrasse
+Schnellzug
+schotterloser Oberbau
+#Schutzstrecke
+#Schutzweg
+Schwartzkopff-Eckhardt-Gestell
+Schwartzkopff-Eckhardt-Lenkgestell
+Schwebdaer Tunnel
+Schwellenzähler
+Sebnitztalbahn
+Sekundärbahn
+Selketalbahn
+Sicherheitsfahrschaltung
+#Sifa
+#Silberling
+#Sinuslauf
+#Sitzplatzreservierung
+Sonderzug
+Speicherdampflokomotive
+#Sperrschuh
+#Spur
+#Spurbreite
+Spurkranzschmierung
+Spurwechseleinrichtung
+Spurwechselstelle
+#Spurweite
+Stadtbahn
+Stadtschnellbahn
+Stalinbahn
+Stalineisenbahn
+#Station
+Stephenson-Spur
+Stockschiene
+Straba
+Straßenbahn
+Straßenbahngroßraumwagen
+strategische Bahn
+strategische Eisenbahn
+#Stromabnehmer
+Stumpengleis
+Stumpfgleis
+Stutzgleis
+#TEE
+#Terminal
+#Tf
+totes Gleis
+Totmannknopf
+#Trajekt
+#Trajektfähre
+#Trajektschiff
+Tram
+Trambahn
+Tramway
+Trans-Europ-Express
+Transmandschurische Eisenbahn
+Transrapid
+Transsib
+Transsibirische Eisenbahn
+#Trasse
+#Trassee
+#Trassenbündelung
+Treibrad
+Trennungsbahnhof
+Triebfahrzeugführer
+Triebrad
+Triebwagen
+Triebwagenführer
+Triebwagenzug
+Triebzug
+Triebzugführer
+Troffimoff-Schieber
+Trofimof-Schieber
+Trofimoff-Schieber
+Trofimov-Schieber
+Tunnel Himmelberg
+Turmbahnhof
+#Typisierung
+U-Bahn
+Überland-Straßenbahn
+#Überleitstelle
+Umfahrgleis
+#Umformerwerk
+Umsetzendstelle
+Umsetzgleis
+Umsetzstelle
+Untergrundbahn
+#Vakuumbremse
+#Verkehrsstation
+#Verkehrswegebündelung
+Verschiebebahnhof
+#Verschieber
+Verschubbahnhof
+Verschubbediensteter
+Vinschgaubahn
+Vinschgerbahn
+#Vollspur
+Vorarlbergbahn
+Vorarlberger Bahn
+#Vorspann
+Vorspannlok
+Vorspannlokomotive
+Vorspanntriebfahrzeug
+#Wagenkasten
+Wagenladungsverkehr
+Waggon
+Wagon
+Warschau-Petersburger Eisenbahn
+#Wartehäuschen
+#Wartekoje
+Weiche
+Weichselkorridor
+#Wellenlauf
+#Wende
+#Wendeschleife
+#Wendestern
+Wendezug
+Windbergbahn
+Wirbelstrombremse
+Zeit-Weg-Diagramm
+Zellertalbahn
+Zentralbahnhof
+Zentralstation
+Zug
+Zugbeeinflussung
+Zugbeeinflussungssystem
+Zugbegleiter
+Zugchef
+Zugfolgebetrieb
+Zugführer
+Zugkreuzung
+Zugsführer
+Zugsicherungssystem
+Zugskreuzung
+Zugsverkehr
+Zugteilung
+Zugverkehr
+#zulässige Überfahrlänge
+Zwischenlok
+Zwischentriebfahrzeug

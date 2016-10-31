@@ -1,0 +1,26 @@
+~~meta: ~~resource: Bundesagentur f?r Arbeit ~~additional_info: Bundesagentur für Arbeit, Klassifikation der Berufe
+Angeh. regulaere Streitkraefte sonst.Raenge
+Berufssoldat/in
+Bundeswehrsoldat/in
+Fallschirmjaeger/in
+Flugabwehrraketensoldat/in
+Flugbetriebssoldat/in
+Freiwil. Wehrdienstleistende/r
+Gefreiter
+Hauptgefreiter
+Maat
+Obergefreiter
+Oberstabsgefreiter
+Schuetze
+Soldat/in
+Soldat/in auf Zeit
+Stabsgefreiter
+Zeitsoldat/in
+Berufssoldat
+Bundeswehrsoldat
+Fallschirmjaeger
+Flugabwehrraketensoldat
+Flugbetriebssoldat
+Freiwil. Wehrdienstleistende
+Soldat
+Zeitsoldat

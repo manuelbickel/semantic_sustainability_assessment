@@ -1,0 +1,16 @@
+﻿~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der gueter 2008
+Torf
+Torf , auch agglomeriert
+Torf fuer gaertnerische Zwecke
+Schwarztorf fuer gaertnerische Zwecke, ohne Naehrstoffe und Kalkung, lose als Rohstoff und zur Bodenverbesserung
+Schwarztorf fuer gaertnerische Zwecke, ohne Naehrstoffe und Kalkung, verpackt
+Blumenerde fuer Hobbygarten, verpackt
+Weißtorf fuer gaertnerische Zwecke, ohne Naehrstoffe und Kalkung, lose als Rohstoff und zur Bodenverbesserung
+Weißtorf fuer gaertnerische Zwecke, ohne Naehrstoffe und Kalkung, verpackt
+Gaertnerische Kultursubstrate , lose, aufgeduengt und gekalkt
+Gaertnerische Kultursubstrate , verpackt in Ballen und Saecken, aufgeduengt und gekalkt
+Kalkung
+Kultursubstrate
+Naehrstoffe
+Schwarztorf
+Weißtorf

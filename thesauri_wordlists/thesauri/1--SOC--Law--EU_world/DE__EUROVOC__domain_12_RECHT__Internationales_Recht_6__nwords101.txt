@@ -1,0 +1,91 @@
+~~meta: ~~language: DE ~~resource: http://eurovoc.europa.eu/drupal/ ~~additionalinfo: derived from a download of the -multilingual list- and the -domain- list in all languages ~~Eurovocfileheadmeta: Thesaurus EUROVOC ISSN 1725-4396 ~ Ausgabe 4.4 (2012) - Deutsch ~ Thematische Fassung ~ Bereich 12 ~ RECHT ~ DE ~ © Europäische Union, 2015 ~~chapter/category: Rechtsquellen_und_Rechtsdisziplinen ~~subcategory: Rechtsphilosophie ~~chapter/category: Rechtsquellen_und_Rechtsdisziplinen ~~subcategory: Rechtsquelle ~~chapter/category: Rechtsquellen_und_Rechtsdisziplinen ~~subcategory: Rechtswissenschaft ~~chapter/category: Bürgerliches_Recht ~~subcategory: Bürgerliches_Recht ~~chapter/category: Bürgerliches_Recht ~~subcategory: Eigentum_an_Gütern ~~chapter/category: Strafrecht ~~subcategory: strafbare_Handlung ~~chapter/category: Strafrecht ~~subcategory: Strafmaßnahme ~~chapter/category: Strafrecht ~~subcategory: Strafrecht ~~chapter/category: Strafrecht ~~subcategory: strafrechtliche_Verantwortlichkeit ~~chapter/category: Strafrecht ~~subcategory: Strafvollzugsrecht ~~chapter/category: Gerichtswesen ~~subcategory: Gerichtsverfahren ~~chapter/category: Gerichtswesen ~~subcategory: Klage_vor_Gericht ~~chapter/category: Gerichtswesen ~~subcategory: Urteil ~~chapter/category: Gerichtswesen ~~subcategory: Zugang_zur_Rechtspflege ~~chapter/category: Gerichtsverfassung ~~subcategory: Gerichtsverfassung ~~chapter/category: Gerichtsverfassung ~~subcategory: Organ_der_Rechtspflege ~~chapter/category: Internationales_Recht ~~subcategory: internationales_Arbeitsrecht ~~chapter/category: Internationales_Recht ~~subcategory: internationales_Privatrecht ~~chapter/category: Internationales_Recht ~~subcategory: internationales_Recht ~~chapter/category: Internationales_Recht ~~subcategory: -Internationales Recht ~~chapter/category: Internationales_Recht ~~subcategory: internationales_Wirtschaftsrecht ~~chapter/category: Internationales_Recht ~~subcategory: Völkerrecht
+Völkerrecht
+internationaler Konflikt
+Kriegsrecht
+öffentliches Recht
+Seeschifffahrtsrecht
+Anerkennung als Staat
+diplomatische Beziehungen
+freier Personenverkehr
+Binnenmarkt EU
+EU-Migrationspolitik
+Europa der Bürger
+freier Dienstleistungsverkehr
+Freizügigkeit
+Freizügigkeit der Arbeitnehmer
+justizielle Zusammenarbeit der EU in Zivilsachen
+Raum der Freiheit, der Sicherheit und des Rechts
+räumliche Mobilität
+Schengener Abkommen
+Zusammenarbeit in inneren Angelegenheiten
+Schengen-Informationssystem
+polizeiliche Zusammenarbeit (EU)
+gegenseitige Unterstützung
+ESVP
+Hoheitsrecht
+Gebietsanspruch
+grenzüberschreitende Umweltbelastung
+militärische Besetzung
+abhängiges Gebiet
+Exterritorialität
+diplomatische Immunität
+diplomatischer Schutz
+Grenze
+Grenzgebiet
+Grenzkontrolle
+Grenzkrieg
+Zoll
+Außengrenze der EU
+Frontex
+Binnengrenze der EU
+Polizeikontrolle
+Zollkontrolle
+Luftrecht
+Beförderung auf dem Luftweg
+Transportrecht
+Lufthoheit
+Luftraum
+Recht der Staaten
+Seerecht
+Bekämpfung der Umweltbelastungen
+Fischereirecht
+Küstenverschmutzung
+Meeresverschmutzung
+Nutzung der Meere
+Ozean
+Verunreinigung durch Schiffe
+Anschlusszone
+Archipel
+Inselgebiet
+ausschließliche Wirtschaftszone
+Fischereizone
+Freiheit der Meere
+Freiheit der Schifffahrt
+Fluss-Schifffahrt
+Seeschifffahrt
+Hoheitsgewässer
+Küstengebiet
+maritimer Raum
+Festlandsockel
+Fischereipolitik
+Binnengewässer
+Wasserlauf
+EU-Gewässer
+gemeinsame Fischereipolitik
+Golf
+internationale Gewässer
+Meerenge
+Überwachung der Meere
+Sicherheit der Meere
+Staatensukzession
+Staatssouveränität
+nationale Unabhängigkeit
+Überstaatlichkeit
+völkerrechtliche Verantwortlichkeit
+Haftung für Umweltschäden
+Weltraumrecht
+Besitz im Weltraum
+Nutzung des Weltraums
+Militarisierung des Weltraums
+Weltraumpolitik
+Weltraum

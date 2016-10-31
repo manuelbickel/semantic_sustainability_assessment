@@ -1,0 +1,224 @@
+~~meta: ~~resource: Bundesagentur f?r Arbeit ~~additional_info: Bundesagentur für Arbeit, Klassifikation der Berufe
+Medizinisches Laboratorium
+Allergologische/r Assistent/in
+Arzt/Aerztin
+Assistenzarzt/-aerztin
+Audiologieassistent/in
+Audiologie-Phoniatrie-Assistent/in
+Audiometrieassistent/in
+Audiometrist/in
+Audio-neurootologische/r Assistent/in
+Bakteriologieassistent/in
+Biomedizinische/r Analytiker/in in der Humanmedizin
+Biomedizinische/r Analytiker/in in der Veterinaermedizin
+Biomedizinische/r Fachanalytiker/in
+Biomed. Fachanalytiker/in
+Biomed. Fachanalytiker/in -med. Mikrobio., Virolog., Hygiene
+Blutbanktechniker/in
+CT-Spezialist/in
+Dermatologische/r Assistent/in
+Dipl.-Molekularmediziner/in
+EEG-Assistent/in
+EKG-Assistent/in
+Epidemiologe/Epidemiologin
+Facharzt/-aerztin
+Fachassistent/in
+Fachradiologietechnologe/-technologin
+Gerichtsmediziner/in
+Gerichtsmedizinische/r Assistent/in
+Gynaekologische/r Assistent/in
+Haematologie-Assistent/in
+Haematologische/r Fachassistent/in
+Haematologisch-technische/r Assistent/in
+Histologie-Assistent/in
+Histologische/r Assistent/in
+Histopathologe/-pathologin
+HNO-Audiologieassistent/in
+Immunhaematologische/r Assistent/in
+Infektologe/Infektologin
+Kardiologieassistent/in
+Kardiotechniker/in
+Klinisch-chemische/r Assistent/in
+Klinisch-chemische/r Fachassistent/in
+Laborarzt/-aerztin
+Laborassistent/in
+Laboratoriumsassistent/in
+Laboratoriumsmediziner/in
+Laborleiter/in
+Leitende/r Assistent/in
+Mammographie-Spezialist/in
+Medizinallaborant/in
+Medizinische/r Assistent/in
+Medizinische/r Fachdiagnostiker/in fuer Audiologie
+Medizinische/r Fachdiagnostiker/in fuer Kardiologie
+Medizinische/r Fachdiagnostiker/in fuer Neurologie
+Medizinische/r Fachdiagnostiker/in fuer Pneumologie
+Medizinische/r Fachdiagnostiker/in fuer Somnologie
+Medizinische/r Laborant/in
+Medizinische/r Laborassistent/in
+Medizinische/r Laboratoriumsassistent/in
+Medizinische/r Laborhelfer/in
+Medizinischer/r Funktionsdiagnostiker/in
+Medizinisch-technische/r Assistent/in
+Medizinisch-technische/r Fachassistent/in
+Medizinisch-technische/r Laborassistent/in
+Medizinisch-technische/r Laboratoriumsassistent/in
+Medizinisch-technische/r Laborleiter/in
+Medizinisch-technische/r Radiologieassistent/in
+Medizin.-techn. Radiologieassistent/in Isotopendiag
+Medizinisch-technische/r Roentgenassistent/in
+Mikrobiologie-Assistent/in
+Mikrobiologielaborant/in
+Mikrobiologische/r Assistent/in
+Mikrobiologische/r Fachassistent/in
+Molekularbiologische/r Assistent/in
+Molekularbiologische/r Fachassistent/in
+Molekularmediziner/in
+Morphologische/r Fachassistent/in
+MRT-Spezialist/in
+MTA
+Mykologie-Assistent/in
+Neurologie-Assistent/in
+Neuro-otologische/r Assistent/in
+Neuropathologe/-pathologin
+Neurophysiologisch-techn. Assistent/in
+Nuklearmediziner/in
+Nuklearmedizinische/r Assistent/in
+Nuklearmedizinische/r Fachassistent/in
+Paediatrie-Assistent/in
+Paedo-Audiologe/Paedo-Audiologin
+Pathologe/Pathologin
+Pathologie-Assistent/in
+Physiologieassistent/in
+Pneumologie-Assistent/in
+Pneumologische/r Assistent/in
+Point-of-Care-Diagnostic-Manager/in
+Pulmologie-Assistent/in
+Radiologe/Radiologin
+Radiologieassistent/in
+Radiologisch-technische/r Assistent/in
+Radioonkologische/r Assistent/in
+Radiotechnologe/-technologin
+Rechtsmediziner/in
+Rechtsmedizinische/r Assistent/in
+Roentgenarzt/-aerztin
+Roentgenassistent/in
+Roentgenhelfer/in
+Roentgenologe/Roentgenologin
+Roentgenschirmbildfacharbeiter/in
+Roentgentechnische/r Assistent/in
+Serologische/r Assistent/in
+Medizin Laborant/in
+Strahlentherapeut/in
+Toxikologische/r Assistent/in
+Transfusionsmediziner/in
+Transfusionsmedizinische/r Assistent/in
+Urologie-Assistent/in
+Veterinaerassistent/in
+Veterinaeringenieur/in
+Veterinaermedizinische/r Laborant/in
+Veterinaermedizinisch-technische/r Assistent/in
+Veterinaertechniker/in
+Virologie-Assistent/in
+Virologische/r Fachassistent/in
+VMTA
+Zytoassistent/in
+Zytologieassistent/in
+Allergologische
+Arzt
+Assistenzarzt
+Audiologieassistent
+Audiologie-Phoniatrie-Assistent
+Audiometrieassistent
+Audiometrist
+Audio-neurootologische
+Bakteriologieassistent
+Biomedizinische
+Biomed. Fachanalytiker
+Blutbanktechniker
+CT-Spezialist
+Dermatologische
+Dipl.-Molekularmediziner
+EEG-Assistent
+EKG-Assistent
+Epidemiologe
+Facharzt
+Fachassistent
+Fachradiologietechnologe
+Gerichtsmediziner
+Gerichtsmedizinische
+Gynaekologische
+Haematologie-Assistent
+Haematologische
+Haematologisch-technische
+Histologie-Assistent
+Histologische
+Histopathologe
+HNO-Audiologieassistent
+Immunhaematologische
+Infektologe
+Kardiologieassistent
+Kardiotechniker
+Klinisch-chemische
+Laborarzt
+Laborassistent
+Laboratoriumsassistent
+Laboratoriumsmediziner
+Laborleiter
+Mammographie-Spezialist
+Medizinallaborant
+Medizinischer
+Medizinisch-technische
+Medizin.-techn. Radiologieassistent
+Mikrobiologie-Assistent
+Mikrobiologielaborant
+Mikrobiologische
+Molekularbiologische
+Molekularmediziner
+Morphologische
+MRT-Spezialist
+Mykologie-Assistent
+Neurologie-Assistent
+Neuro-otologische
+Neuropathologe
+Neurophysiologisch-techn. Assistent
+Nuklearmediziner
+Nuklearmedizinische
+Paediatrie-Assistent
+Paedo-Audiologe
+Pathologe
+Pathologie-Assistent
+Physiologieassistent
+Pneumologie-Assistent
+Pneumologische
+Point-of-Care-Diagnostic-Manager
+Pulmologie-Assistent
+Radiologe
+Radiologieassistent
+Radiologisch-technische
+Radioonkologische
+Radiotechnologe
+Rechtsmediziner
+Rechtsmedizinische
+Roentgenarzt
+Roentgenassistent
+Roentgenhelfer
+Roentgenologe
+Roentgenschirmbildfacharbeiter
+Roentgentechnische
+Serologische
+Medizin Laborant
+Strahlentherapeut
+Toxikologische
+Transfusionsmediziner
+Transfusionsmedizinische
+Urologie-Assistent
+Veterinaerassistent
+Veterinaeringenieur
+Veterinaermedizinische
+Veterinaermedizinisch-technische
+Veterinaertechniker
+Virologie-Assistent
+Virologische
+Zytoassistent
+Zytologieassistent

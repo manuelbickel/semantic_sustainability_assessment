@@ -1,0 +1,278 @@
+﻿Luftfahrt
+#Abdrift
+#Ablenkung
+#Abtrift
+Aeronautik
+Aeroplan
+Airbus A380
+Airline
+An-Bord-Gehen
+#Anforderungsverkehr
+Auftriebsbeiwert
+#Auftriebskoeffizient
+Autogyro
+Aviatik
+#Ballon
+Bedarfsflug
+#Beförderungsklasse
+#bemanntes Gleitfluggerät
+#Bermudadreieck
+beweglicher Flugfunkdienst
+beweglicher Flugfunkdienst 
+beweglicher Flugfunkdienst über Satelliten
+beweglicher Flugfunkdienst über Satelliten 
+Billigairline
+Billigflieger
+Billigfluggesellschaft
+Blickfeldanzeige
+Blickfelddarstellung
+Blickrichtungsanzeige
+#Blimp
+Blindfliegen
+Blindflug
+Boarding
+#Bodenkampfflugzeug
+Boeing 747
+Boeing 787
+#Bombardement
+#Bombardierung
+#Bombenabwurf
+#Buchstabieralphabet
+#Buchstabiertafel
+Channelwing
+Charterflug
+Deklination
+Deltasegler
+Deutsche Luftschiffahrts-Aktiengesellschaft
+Deviation
+#Drachen
+#Dreamliner
+Drehflügelflugzeug
+Drehflügler
+Düsenflieger
+Düsenflugzeug
+#Düsenjäger
+Düsenjet
+Düsentriebwerk
+Dutch Roll
+#effektive Reflexionsfläche
+#Einsteigen
+#Eintrittskante
+#Erdkampfflugzeug
+#Erdkampfunterstützung
+erster Flug
+Erstflug
+Fahrt über Grund
+#Finger
+#Flächenbombardement
+#Flächenbombardierung
+Fliegen
+Flieger
+Fliegeralphabet
+Fliegerangriff
+Fliegerei
+#Fliegerhorst
+Flug
+Flugbegleiterin
+Flugbereichsgrenze
+#Flugdrachen
+#Flugdrohne
+#Flügelrakete
+Flugenveloppe
+Flugfunk
+Flugfunkdienst 
+Fluggastbrücke
+Fluggesellschaft
+Flugkunst
+Fluglinie
+Fluglotse
+Flugpassage
+Flugreise
+Flugsicherheitsbegleiter
+Flugverkehr
+Flugwesen
+Flugzeug
+Flugzeugentführung
+Flugzeugkatapult
+Flugzeugschleuder
+#Freifallbombe
+#Funkalphabet
+Funkhöhenmesser
+#Funkkompass
+#Gegenkolbenmotor
+#Gegenläufer
+#Gegenläufermotor
+#Gegenlaufmotor
+Geländefolgeflug
+Geländefolgeradar
+Geschäftsflugverkehr
+Geschäftsflugzeug
+Geschäftsreiseflugverkehr
+Geschäftsreiseflugzeug
+#Geschwindigkeit über Grund
+Gier-Schwingung
+Gierachse
+#Grundgeschwindigkeit
+Gyrocopter
+Gyrokopter
+Hängegleiter
+Hanggleiter
+#Head-up-Display
+Heißluftballon
+Heli
+Helikopter
+Hochachse
+Holländische Rolle
+Hubi
+Hubschrauber
+Inklinometer
+Instrumentenflug
+#Jabo
+#Jagdbomber
+#Jagdflugzeug
+#Jagdjet
+#Jäger
+Jet
+Jumbo
+Jumbo-Jet
+Jumbojet
+Jungfernflug
+Kabinenchefin
+Kanal-Flügel
+Kanal-Tragfläche
+Kipprotor
+#Kiste
+Klinometer
+Konturenflug
+#Kotzbomber
+#Kranich
+Kranich-Airline
+Kranich-Konzern
+#Kreisfunkfeuer
+#Kursbeschickung
+#Kursumwandlung
+Linienflugzeug
+Linienmaschine
+Low-Cost-Airline
+Low-Cost-Carrier
+#Luftangriff
+Luftbeförderung
+Luftfahrt
+Luftfahrtgesellschaft
+Lufthansa
+Lufthansa-Mitarbeiter
+Lufthanseat
+Luftnahunterstützung
+Luftpiraterie
+Luftreise
+Luftschiff
+Luftschraube
+Luftsicherheitsbegleiter
+Luftstreitkraft
+Luftstreitmacht
+Luftverkehr
+Luftverkehrsgesellschaft
+#Luftwaffe
+#Luvwinkel
+#Marschflugkörper
+#Maschine
+#Megaliner
+#Militärflugplatz
+#Militärflugzeug
+#Militärjet
+#Missweisung
+mobiler Flugfunkdienst
+mobiler Flugfunkdienst 
+mobiler Flugfunkdienst über Satelliten
+mobiler Flugfunkdienst über Satelliten 
+Montgolfiere
+Montgolfière
+Motorjet
+Motorluftstrahltriebwerk
+Motorstrahltriebwerk
+#nahe Luftunterstützung
+#Nasenkante
+#Neigungsmesser
+#Neigungswinkelmesser
+#Nivelliergerät
+#Normalatmosphäre
+#Normatmosphäre
+Omega-Navigationsverfahren
+Omega-Verfahren
+#Orderverkehr
+#Ortsmissweisung
+Parabelflugzeug
+Passagierbrücke
+Passagierflugzeug
+Passagiermaschine
+Pod-Antrieb
+Polnischer Flügel
+Prallluftschiff
+#Profilnase
+Propeller
+Propellergondel
+Pulawski-Flügel
+Quadricopter
+Quadrocopter
+Quadrokopter
+Quadrotor
+#Radar
+Radar-Altimeter
+#Radargerät
+Radarhöhenmesser
+#Radarquerschnitt
+#Radiokompass
+Reiseflugzeug
+Röhrenflügel
+#Rollbombe
+#Rotationsbombe
+Rotorflugzeug
+#Rückstrahlfläche
+Saftschubse
+#Schlachtflugzeug
+Schmetterlings-Leitwerk
+#schräge Musik
+#schräge Nachtmusik
+Seitengleitflug
+Senior Cabin Crew Member
+#Serviceklasse
+#Sitzklasse
+#Standardatmosphäre
+Starrluftschiff
+#Stealth-Technik
+#Stealthflugzeug
+#Steigmesser
+Stewardess
+Strahlflugzeug
+Strahltriebwerk
+Strahlturbine
+Suchradar
+Superjumbo
+#Tarnkappenflugzeug
+#Tarnkappentechnik
+Taumelschwingung
+#Telefonalphabet
+Terrainfolgeflug
+Terrainfolgeradar
+#Teufelsdreieck
+Thermojet
+Tiltrotor
+Tragschrauber
+Tripeldecker
+Turbojet
+#Überwachungsradar
+#unbemanntes Luftfahrzeug
+#ungelenkte Bombe
+#ungerichtetes Funkfeuer
+V-Leitwerk
+#Vario
+Variometer
+Verkehrsflugzeug
+Verkehrsmaschine
+#Vertikalachse
+#Vorderkante
+#Vorhaltewinkel
+Warterunden
+#Warteschleife
+Zeppelin
+#Zielzuweisungsradar

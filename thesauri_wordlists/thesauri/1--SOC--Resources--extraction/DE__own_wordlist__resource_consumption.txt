@@ -1,0 +1,8 @@
+resource_consumption
+EnergieUNDRessourcenverbrauch
+Ressourcennutzung
+Ressourcenverbrauch
+Stoffkreislauf
+stoffliche Ressourcen
+materielle Ressourcen
+Ressourcenkreislauf

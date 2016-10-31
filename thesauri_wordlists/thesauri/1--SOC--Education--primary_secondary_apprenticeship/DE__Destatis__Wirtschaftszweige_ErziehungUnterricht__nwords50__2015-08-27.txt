@@ -1,0 +1,48 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
+Erziehung und Unterricht
+Kindergaerten und Vorschulen
+Kindergaerten
+Vorklassen, Schulkindergaerten
+Grundschulen
+Weiterfuehrende Schulen
+Allgemein bildende weiterfuehrende Schulen
+Allgemein bildende weiterfuehrende Schulen Sekundarbereich I
+Allgemein bildende weiterfuehrende Schulen Sekundarbereich II
+Berufsbildende weiterfuehrende Schulen
+Tertiaerer und post-sekundaerer, nicht tertiaerer Unterricht
+Post-sekundaerer, nicht tertiaerer Unterricht
+Tertiaerer Unterricht
+Universitaeten
+Allgemeine Fachhochschulen
+Verwaltungsfachhochschulen
+Berufsakademien, Fachakademien, Schulen des Gesundheitswesens
+Sonstiger Unterricht
+Sport- und Freizeitunterricht
+Kulturunterricht
+Fahr- und Flugschulen
+Sonstiger Unterricht a. n. g
+Allgemeine und politische Erwachsenenbildung
+Berufliche Erwachsenenbildung
+Unterricht a. n. g
+Erbringung von Dienstleistungen fuer den Unterricht
+Allgemein
+Berufliche
+Berufsakademien
+Berufsbildende
+Erwachsenenbildung
+Erziehung
+Fachakademien
+Fachhochschulen
+Flugschulen
+Freizeitunterricht
+Gesundheitswesens
+Postsekundaerer
+Schulen
+Schulkindergaerten
+Sekundarbereich
+Tertiaerer
+Unterricht
+Vorklassen
+Vorschulen
+Weiterfuehrende
+Post-sekundaerer

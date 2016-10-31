@@ -1,0 +1,6 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
+Luftfahrt
+Personenbefoerderung in der Luftfahrt
+Gueterbefoerderung in der Luftfahrt und Raumtransport
+Gueterbefoerderung in der Luftfahrt
+Raumtransport

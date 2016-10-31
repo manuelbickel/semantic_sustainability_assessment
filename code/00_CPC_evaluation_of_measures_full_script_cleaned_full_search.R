@@ -86,6 +86,7 @@ wd.main <- c("M:/Science/Programmierung/Github/semantic_sustainability_assessmen
   wd.wordlists <- paste(wd.main, "thesauri_wordlists/thesauri/", sep="")
   wd.stopwords <- paste(wd.main, "thesauri_wordlists/stopwords/", sep="")
   wd.encoding <- paste(wd.main, "encoding/", sep="")
+  wd.code <- paste(wd.main, "code/", sep="")
   
   #directory for storing words that are not matched by the wordlists
   wd.notmatched <- paste(wd.main, "thesauri_wordlists/words_not_matched/", sep="")
@@ -108,6 +109,7 @@ wd.main <- c("M:/Science/Programmierung/Github/semantic_sustainability_assessmen
 
 ##+ LOAD LIBRARIES
   library("SnowballC")
+  library("plyr")
 ##+~
 
 ##~-------------------------------------------------------------------
@@ -389,6 +391,44 @@ row.names(time.elapsed)[nrow(time.elapsed)] <- "initial_definitions"
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##+<<<<<<<<<<<<<<<<<<< WRITE EMPTY CODE STRUCTURE FOR TEXT PROCESSING AT FILE HEADS
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##+ WRITE EMPTY CODE STRUCTURE...----------------------------------
+empty.processing.code <- readLines(paste0(wd.code, "code_structure_for_setting_text_processing_markers.txt"), 
+                                   encoding = "UTF-8")
+
+
+files <- list.files(wd.source, pattern="*.txt")
+
+for (i in files) {
+  
+  text <- readLines(i, encoding = "UTF-8")
+  
+  if (length(c(grep("!Analysis_Code_Start!",text), grep("!Analysis_Code_End!",text))) == 2) {
+    
+    #do nothing, code structure already available in text file
+    
+  } else if (length(c(grep("!Analysis_Code_Start!",text), grep("!Analysis_Code_End!",text))) == 0) {
+    
+    text <- c(empty.processing.code, " ", text)
+    
+    #to suppress any encoding issues and keep UTF-8 useBytes = TRUE is set
+    writeLines(text,i, useBytes = TRUE)
+  } else {
+    
+  warning("ERROR: text contains the wording !Analysis_Code_Start! or !Analysis_Code_End! which is used by the code as marker phrase Please delete or change this phrase in the text. Another reason for the error could be that the code at the file head was corrupted and is missing partly. Please check.")
+  
+  }
+  
+}
+##~--------------------------------
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##~<<<<<<<<<<<<<<<<<<< 
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+####MANUAL ACTION  REQUIRED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##+<<<<<<<<<<<<<<<<<<< IDENTIFY EXTRACTION PATTERNS FOR TEXT WINDOWS AND SPLIT TEXTS
@@ -414,7 +454,6 @@ for (f in 1:length(textlist)) {
   names(textlist[[f]]) <- filename
 }
 ##~----------------------------------------
-
 
 
 ##+ IDENTIFY EXTRACTION PATTERNS -------------------------
@@ -1414,9 +1453,6 @@ for (t in seq(length(textlist))) {
 }
 
 
-measures.overall.numbers <- cbind(names(textlist), as.numeric(lapply(textlist, function(X) length(X[[3]]))))
-write.csv(measures.overall.numbers, paste(wd.final, "measures_overall_numbers.csv", sep=""))
-
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "after_matching_all_texts"
 write.csv(time.elapsed, paste(wd.final, "time_elapsed.csv", sep=""))
@@ -1632,3 +1668,328 @@ write.csv(match.rate.table, paste(wd.final, "match_rate_table.csv", sep=""))
 
 
 
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##+<<<<<<<<<<<<<<<<<<< GENERATE RELATIVE COOCCURRENCE MATRICES
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##count normalized co-occurrence of categories within each text
+#(co-occurrence of category1/category2 within X text windows of a text)/(number of all text windows of a text)
+
+library("plyr")
+
+setwd(wd.interim)
+occurrence.filename.tag <- c("__w_occ_mat__MR")
+files <- list.files(pattern = paste("^.*", occurrence.filename.tag, "[[:digit:]]+.csv$", sep=""))
+cooccurrence.filename.tag <- c("__cat_coocc_mat")
+
+categories <- names(wordlists)
+categories<- gsub("c11__CE__climate_protection_tools_measures_aspects", 
+                  "c10__CE__climate_protection_general_and_strategy",  
+                  categories)
+
+categories <- unique(categories)
+categories <- categories[order(categories)]
+
+categories.num <- length(categories)
+
+#initialize
+cooccurrence.matrix <- matrix(rep(0, categories.num*categories.num), nrow = categories.num)
+row.names(cooccurrence.matrix) <- categories[order(categories)]
+colnames(cooccurrence.matrix) <- categories[order(categories)]
+
+#initialize 
+#top ten words concerning occurrence value
+words.occurrence.topten <- as.data.frame(matrix(c("word", "category", "relative_occurrence", "document"), nrow=1))
+colnames(words.occurrence.topten) <- c("word","category", "relative_occurrence", "document")
+
+words.occurrence.topten <- data.frame(word = as.character(),
+                                      category = as.character(),
+                                      relative_occurrence = as.numeric(),
+                                      document = as.character())
+
+
+for (t in seq(length(files))) {   
+  
+
+  evaluationmatrix <- read.csv(files[t]) 
+  
+  #if reading in of the csv generates a column with numbers (old rownumbers) this column is deleted
+  if(colnames(evaluationmatrix)[1] == "X") {
+    evaluationmatrix <- evaluationmatrix[,-c(1)]
+  }
+  
+  #count the number of measures of the case
+  meas.totalnum <- ncol(evaluationmatrix)-2
+  
+  case.name <- gsub(paste("(^.*GER__)([A-Za-z]+)(__.*$)"), "\\2",files[t])
+  
+  #delete sustainability category words which had been assigned in a wrong way
+  #spar does not count as c161_prohibition_limits....
+  delete.rows <- intersect(grep("spar", evaluationmatrix[,"word"]), grep("c161", evaluationmatrix[,"category"]))
+  if (length(delete.rows)>0) {
+    evaluationmatrix <-  evaluationmatrix[-delete.rows,]   
+  }
+  
+  
+  delete.rows <- intersect(grep("Vermi", evaluationmatrix[,"word"]), grep("sufficiency_avoidance", evaluationmatrix[,"category"]))
+  if (length(delete.rows)>0) {
+    evaluationmatrix <-  evaluationmatrix[-delete.rows,]   
+  }
+  
+  delete.rows <- intersect(grep("^Bau$|^Werk$", evaluationmatrix[,"word"]), grep("AFLV", evaluationmatrix[,"category"]))
+  if (length(delete.rows)>0) {
+    evaluationmatrix <-  evaluationmatrix[-delete.rows,]   
+  }
+  
+  delete.rows <- intersect(grep("^Baeum$", evaluationmatrix[,"word"]), grep("intermediate_products", evaluationmatrix[,"category"]))
+  if (length(delete.rows)>0) {
+    evaluationmatrix <-  evaluationmatrix[-delete.rows,]   
+  }
+  
+  delete.rows <- intersect(grep("^Haushalt$|^Kind$|^Verbind$|^Materiali$|^Zusammenstell$|^Raeum$|^Unterlag$|^Buero$|^Bueros$|^Lieg$|^Tier$|^Abnehm$", evaluationmatrix[,"word"]), grep("CF", evaluationmatrix[,"category"]))
+  if (length(delete.rows)>0) {
+    evaluationmatrix <-  evaluationmatrix[-delete.rows,]   
+  }
+  
+  #combine the two climate protection categories
+  evaluationmatrix[,"category"] <- gsub("c11__CE__climate_protection_tools_measures_aspects", 
+                                        "c10__CE__climate_protection_general_and_strategy",  
+                                        evaluationmatrix[,"category"])
+  
+  word.frequencies <- cbind(evaluationmatrix[,1:2], rowSums(evaluationmatrix[,3:ncol(evaluationmatrix)]))
+  colnames(word.frequencies)[3] <- c("relative_occurrence")
+  word.frequencies <- word.frequencies[-which(word.frequencies[,3] == 0),]
+  word.frequencies <- split(word.frequencies, word.frequencies$category)
+  
+  
+  invisible(lapply(word.frequencies, function(x) {
+    x <- x[order(x[,3], decreasing=TRUE),]
+    x <- x[1:10,]
+    x <- cbind(x, document = rep(case.name, 10))
+    
+    delete.rows <- grep("NA", row.names(x))
+    if (length(delete.rows) > 0) {
+      x <- x[-delete.rows,]
+    }
+    
+    words.occurrence.topten <<- rbind.fill(words.occurrence.topten,data.frame(x))
+    
+  }))
+  
+  #delete the words column
+  evaluationmatrix <- evaluationmatrix[,-c(1)]
+  
+  #aggregate the category lines
+  evaluationmatrix <- aggregate(evaluationmatrix[2:ncol(evaluationmatrix)], by=list(category=evaluationmatrix$category), FUN=sum)
+  
+  #make matrix boolean
+  evaluationmatrix[,c(2:ncol(evaluationmatrix))] <- ifelse(evaluationmatrix[,c(2:ncol(evaluationmatrix))]>0,1,0)
+  
+  #generate the same order as in the results matrix
+  evaluationmatrix <- evaluationmatrix[order(evaluationmatrix[,1]),]
+  
+  #initialize results matrix for the case 
+  result.cooccurrence.case <- cooccurrence.matrix
+  
+  evaluationmatrix <- evaluationmatrix[order(evaluationmatrix[,1]),]
+  
+  #check if categories in matrix are the same as the loaded categories, they should be,
+  #but due to naming mistakes etc. there might be errors
+  if (identical(as.character(evaluationmatrix[,1]),row.names(result.cooccurrence.case)) == FALSE)  {
+    warning("ERROR: categories of wordlists and evaluationmatrix are not identical, only the intersecting categories are used.
+            This might lead to incompatibility of the result files of different files.
+            Possible reasons might be mistakes in naming the categories or during reading in the wordlists.")
+    
+    categories.intersect <- intersect(as.character(evaluationmatrix[,1]),row.names(result.cooccurrence.case))
+    categories.num <- length(categories.intersect)
+    
+    evaluationmatrix <- evaluationmatrix[which(evaluationmatrix[,1] == categories.intersect),]
+    evaluationmatrix <- evaluationmatrix[order(evaluationmatrix[,1]),]
+    
+    result.cooccurrence.case <- result.cooccurrence.case[which(row.names(result.cooccurrence.case) == categories.intersect),]
+    result.cooccurrence.case <- result.cooccurrence.case[order(result.cooccurrence.case[,1]),]
+    
+  }
+  
+  
+  ####START loop through all categories and check cooccurrence---------------------------------
+  for(i in seq(length(evaluationmatrix[,"category"]))) {
+    
+    #fix the column/category which shall be filled
+    category <- colnames(result.cooccurrence.case)[i]
+    
+    #select all columns/measures in which the category is fulfilled
+    #1:select only the lines which are connected to the category
+    category.subset <- evaluationmatrix[which(evaluationmatrix[,1] ==  category),]
+    #2:within this subset select only the columns which fulfill the category 
+    #first two colulmns word/category are excluded for this numeric check
+    category.subset <- category.subset[,c(2:ncol(category.subset))]
+    
+    #>>>>>in case the category is not fulfilled at all the colSums are zero
+    #and the cooccurrence is zero in all rows, no further calculation of results needed
+    if (as.integer(rowSums(category.subset)) == 0) {
+      
+      #write zero results in the results matrix
+      cooccurrence <- rep(0, categories.num)
+      
+      #rounding would not be necessary for the zeros, however to receive same format for all results
+      #the operation is conducted anyhow
+      result.cooccurrence.case[,category] <- round((cooccurrence/meas.totalnum) ,digits=4)
+      
+      next(i)
+      
+    }
+    #>>>in case the category is matched at least once the "normal" calculation of cooccurrences is conducted
+    
+    #as the first column was skipped for the colSums evaluation 
+    #a plus one offset for the which/colSums>0 indices has to be introduced 
+    
+    columns.select <- colnames(category.subset)[which(category.subset>0)]
+    
+    #at least one column has to be in the set
+    category.subset <- evaluationmatrix[, columns.select]
+    
+    #the category.subset contains only columns/measures for which the current.category is fullfilled
+    #as a boolean matrix was generated, the rowSums of the matrix represent the cooccurrences
+    #of each other category with the category currently fixed in the loop
+    #the numeric part of the data.frame was converted to boolean numbers therefore this counting procedure works
+    
+    
+    #>>>>>in case only one column fulfills the current category a numeric vector instead of a matrix is returned
+    #this vector already represents the rowSums which has to be calculated in case more columns are fulfilled
+    #hence results can directly be written into the results matrix for this case
+    if (length(columns.select) == 1) {
+      
+      cooccurrence <- category.subset
+      
+      result.cooccurrence.case[,category] <- round((cooccurrence/meas.totalnum) ,digits=4)
+      
+      next(i)
+      
+      
+    }
+    
+    #>>>in case there are more than one columns fulfilling the current category build rowSums to calculate cooccurrence
+    
+    cooccurrence <- rowSums(category.subset)
+    
+    result.cooccurrence.case[,category] <- round((cooccurrence/meas.totalnum) ,digits=4)
+    
+    
+  }
+  ####END loop through all categories and check cooccurrence---------------------------------
+
+  filename <- gsub(paste(occurrence.filename.tag,".*$" ,sep=""),paste(cooccurrence.filename.tag, ".csv", sep=""),files[t])
+  filename <- paste(wd.interim, filename, sep="")
+  
+  write.csv(result.cooccurrence.case, filename)
+  
+  
+} #end loop through all files
+
+
+setwd(wd.final)
+
+write.csv(words.occurrence.topten, "words_occurrence_topten_all.csv")
+
+
+words.occurrence.topten.consolidated <- data.frame(word = as.character(),
+                                                   category = as.character(),
+                                                   relative_occurrence = as.numeric(),
+                                                   document = as.character())
+
+
+
+words.frequencies <- split(words.occurrence.topten, words.occurrence.topten$category)
+
+
+invisible(lapply(words.frequencies, function(x) {
+  x <- x[order(x[,3], decreasing=TRUE),]
+  
+  x <- x[-which(duplicated(x[,1])),]
+  
+  
+  x <- x[1:10,]
+  
+  delete.rows <- grep("NA", row.names(x))
+  if (length(delete.rows) > 0) {
+    x <- x[-delete.rows,]
+  }
+  
+  words.occurrence.topten.consolidated <<- rbind.fill(words.occurrence.topten.consolidated,data.frame(x))
+  
+}))
+
+
+write.csv(words.occurrence.topten.consolidated, "words_occurrence_topten_consolidated.csv")
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##~<<<<<<<<<<<<<<<<<<<
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##+<<<<<<<<<<<<<<<<<<< CALCULATE AVERAGE COOCCURRENCE MATRIX
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+##START build mean values----------------------------------
+setwd(wd.interim)
+files <- list.files(pattern = paste("^.*", cooccurrence.filename.tag, ".csv$", sep=""))
+
+
+#generation of mean values by loading one file after another and extraction the cooccurrence column only
+#-> hence wide format data
+#this is added to a new mean value matrix which is finally used to calculate the mean value over all cases
+
+for (t in seq(length(files))) {   
+  
+  cooccurrence.matrix.case <- read.csv(files[t]) 
+  
+  
+  #if reading in of the csv generates a column with numbers (old rownumbers) this column is deleted
+  if(colnames(cooccurrence.matrix.case)[1] == "X") {
+    
+    row.names(cooccurrence.matrix.case) <- as.character(cooccurrence.matrix.case[,1])
+    cooccurrence.matrix.case <- cooccurrence.matrix.case[,-c(1)]
+  }
+  
+  cooccurrence.matrix.case <-  cooccurrence.matrix.case[,order(colnames(cooccurrence.matrix.case))]
+  cooccurrence.matrix.case <-  cooccurrence.matrix.case[order(row.names(cooccurrence.matrix.case)),]
+  cooccurrence.matrix.case <- as.matrix(cooccurrence.matrix.case)
+  
+  #from the first file not only the number column but also the categories are used to initialize the mean matrix
+  if (t == 1) {
+    cooccurrence.matrix.mean <- cooccurrence.matrix.case
+    #the last column name is named according to the current case
+    #next(t)
+  } else {
+    
+    
+    #check if the category columns are really the same otherwise wrong results are produced
+    if(identical(colnames(cooccurrence.matrix.mean), colnames(cooccurrence.matrix.case)) == FALSE) {
+      warning("The category columns of the cooccurrence files are not identical. The resulting mean values are not correct.")  
+      print(paste("t:", t, ", file: ", files[t], sep=""))
+    }
+    
+    if(identical(row.names(cooccurrence.matrix.mean), row.names(cooccurrence.matrix.case)) == FALSE) {
+      warning("The category columns of the cooccurrence files are not identical. The resulting mean values are not correct.")  
+      print(paste("t:", t, ", file: ", files[t], sep=""))
+    }
+    
+    cooccurrence.matrix.mean <- cooccurrence.matrix.mean+cooccurrence.matrix.case
+    
+  }
+  
+}
+
+
+#after summing up the matrices, divide through the number of cases
+cooccurrence.matrix.mean <-  round(cooccurrence.matrix.mean/length(files), d=4)
+
+#write mean results in file
+filename <- paste("GER__Lower_Saxony_regional_centers_mean", cooccurrence.filename.tag, ".csv", sep="")
+filename <- paste(wd.interim, filename, sep="")
+write.csv(cooccurrence.matrix.mean, filename)
+
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##~<<<<<<<<<<<<<<<<<<< 
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

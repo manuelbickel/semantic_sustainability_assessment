@@ -1,0 +1,145 @@
+~~meta: ~~resource: Bundesagentur f?r Arbeit ~~additional_info: Bundesagentur für Arbeit, Klassifikation der Berufe
+Medien-Dokumentations-Informationsdienst
+Aktenverwalter/in
+Archiv-, Bibliotheks- und Informationsassistent
+Archivar/in
+Archivbeamter/in
+Archivfachkraft
+Archivleiter/in
+Archivsachbearbeiter/in
+Archivvorsteher/in
+Bibliograf/in
+Bibliothekarassistent/in
+Bibliothekar/in
+Bibliotheks-, Dokumentationsbeamter/in
+Bibliotheks- und Informationswissenschaftler
+Bibliotheksassistent/in
+Bibliotheksbeamter/in
+Bibliotheksfacharbeiter/in
+Bibliotheksleiter/in
+Bibliothekssachbearbeiter/in
+Bibliotheksverwalter/in
+Bibliotheksvorsteher/in
+Bibliothekswissenschaftler/in
+Bildarchivfachkraft
+Bilddokumentar/in
+Buechereiangestellte/r
+Buechereigehilfe/-gehilfin
+Buechereileiter/in
+Buechereiverwalter/in
+Buechereivorsteher/in
+Buchwissenschaftler/in
+Clinical Coder/in
+Clinical Data Manager/in
+Dipl.-Informationswirt/in
+Dipl.-Archivar/in
+Dipl.-Bibliothekar/in
+Diplombibliothekar/in
+Dipl.-Dokumentar/in
+Dokumentar/in
+Dokumentarwissenschaftler/in
+Dokumentationsassistent/in
+Dokumentationsbeamter/in
+Dokumentationsfachkraft
+Fachangestellte/r fuer Medien- u. Info.Dienste
+Fachangestellte/r
+Filmarchivar/in
+Funkelektroniker/in
+Infobroker/in
+Infomanager/in
+Informations- und Dokumentationsassistent
+Informationsbibliothekar/in
+Informations-Broker/in
+Informationsfachwirt/in
+Informationsvermittler/in
+Informationswirt/in
+Informationswissenschaftler/in
+Informator/in
+Internet-Scout
+Katalogisierer/in
+Kommunikationselektroniker/in
+Medienarchivar/in
+Mediendokumentar/in
+Mediothekar/in
+Medizinische/r Dokumentar/in
+Medizinische/r Dokumentationsassistent/in
+Musikbibliothekar/in
+Musikdokumentar/in
+Pressedokumentar/in
+Rechenzentrumsarchivar/in
+Registrator/in
+Registraturgehilfe/-gehilfin
+Registraturleiter/in
+Rundfunkarchivar/in
+Schallplattenarchivar/in
+Study-Nurse
+Telekommunikationselektroniker/in
+Telemedizinische/r Assistent/in
+Wirtschaftsarchivar/in
+Wortdokumentar/in
+Aktenverwalter
+Archivar
+Archivbeamter
+Archivleiter
+Archivsachbearbeiter
+Archivvorsteher
+Bibliograf
+Bibliothekarassistent
+Bibliothekar
+Bibliotheks-, Dokumentationsbeamter
+Bibliotheksassistent
+Bibliotheksbeamter
+Bibliotheksfacharbeiter
+Bibliotheksleiter
+Bibliothekssachbearbeiter
+Bibliotheksverwalter
+Bibliotheksvorsteher
+Bibliothekswissenschaftler
+Bilddokumentar
+Buechereiangestellte
+Buechereigehilfe
+Buechereileiter
+Buechereiverwalter
+Buechereivorsteher
+Buchwissenschaftler
+Clinical Coder
+Clinical Data Manager
+Dipl.-Informationswirt
+Dipl.-Archivar
+Dipl.-Bibliothekar
+Diplombibliothekar
+Dipl.-Dokumentar
+Dokumentar
+Dokumentarwissenschaftler
+Dokumentationsassistent
+Dokumentationsbeamter
+Filmarchivar
+Funkelektroniker
+Infobroker
+Infomanager
+Informationsbibliothekar
+Informations-Broker
+Informationsfachwirt
+Informationsvermittler
+Informationswirt
+Informationswissenschaftler
+Informator
+Katalogisierer
+Kommunikationselektroniker
+Medienarchivar
+Mediendokumentar
+Mediothekar
+Musikbibliothekar
+Musikdokumentar
+Pressedokumentar
+Rechenzentrumsarchivar
+Registrator
+Registraturgehilfe
+Registraturleiter
+Rundfunkarchivar
+Schallplattenarchivar
+Telekommunikationselektroniker
+Telemedizinische
+Wirtschaftsarchivar
+Wortdokumentar
+Informationsassistent
