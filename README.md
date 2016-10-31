@@ -1,5 +1,7 @@
 # semantic_sustainability_assessment
 # repository still under construction! - please contact me in case of any questions
+data and main code (except one last plotting code for cooccurrence) are already available, however, 
+not diligently documented, yet
 
 ## Introduction
 This repository contains the data and basic R code of a study conducted to assess the sustainability content and semantic societal networks in climate action plans of sixteen regional centers in the Federal State of Lower Saxony (Germany).
