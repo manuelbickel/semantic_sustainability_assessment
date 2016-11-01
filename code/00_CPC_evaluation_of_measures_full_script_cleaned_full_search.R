@@ -1,8 +1,22 @@
 
-#Set main working directory
+#Set main working directory, filename extenstions, etc.
 wd.main <- c("M:/Science/Programmierung/Github/semantic_sustainability_assessment/")
 
+file.encoding.table.win <- "tm_win1252_misinterpretation_encoding_table_UTF8.txt"
+file.encoding.punctuation  <- "punct_meta_ANSI.txt"
 
+file.words.not.matched <- "words_not_matched.txt"
+
+file.empty.processing.code  <- "code_structure_for_setting_text_processing_markers.txt"
+
+file.split.pattern.identified <- "identified_extraction_patterns.txt"
+
+wordlists.prefix <- c("uniq.stem_")
+
+occurrence.filename.tag <- c("__w_occ_mat__MR")
+cooccurrence.filename.tag <- c("__cat_coocc_mat")
+
+filenamebeginning.cooccurrence.matrix.mean <- "GER__Lower_Saxony_regional_centers_mean"
 
 ######  README  **************************************************************************************************
 
@@ -39,12 +53,12 @@ wd.main <- c("M:/Science/Programmierung/Github/semantic_sustainability_assessmen
 
 #FURTHER NOTES
 
-#the internal R textlist structure which is used to handle the files is as follows
-#(check e.g. str(textlist) or text <- textlist[[24]][[2]] after creating the list)
+#the internal R workingdata.list structure which is used to handle the files is as follows
+#(check e.g. str(workingdata.list) or text <- workingdata.list[[24]][[2]] after creating the list)
 #name
 #[[ENT]]             list ENTity (=document name)
 #[[ENT]][[1-WT]]     Dummy sentence (before: Whole Text of the document including code at filehead)
-#[[ENT]][[2-AEXP]]   Available EXtraction Pattern in the wholetext, matrix
+#[[ENT]][[2-AEXP]]   Available EXtraction Pattern in the complete text, matrix
 #[[ENT]][[3-MEAS]]   separated single measures (including linebreaks marked with "~~collapse~~")
 #[[ENT]][[4-UnWinM]] Unique Words in the single Measures, words which exist in the available wordlists have an E~X~T at the beginning
 
@@ -58,8 +72,8 @@ wd.main <- c("M:/Science/Programmierung/Github/semantic_sustainability_assessmen
 ##+ DESCRIPTION TEXT -------------- : marks the end of a longer code block (may be collapsed, e.g. in R Studio)
 ##~-------------- : marks the end of a longer code block (may be collapsed, e.g. in R Studio)
 
-##+<<<<<<<<<<<<< description text  : marks the beginning of a very large code block
-##~<<<<<<<<<<<<<   : marks the end of a very large code block
+##START <<<<<<<<<<<<< description text  : marks the beginning of a very large code block
+##END <<<<<<<<<<<<<   : marks the end of a very large code block
 
 #variables are named in lowercase letters only, separating symbol is a dot, e.g. variable.new
 #Functions start with an uppercase letter, separating symboal is a hyphen, e.g. Function_new()
@@ -70,9 +84,8 @@ wd.main <- c("M:/Science/Programmierung/Github/semantic_sustainability_assessmen
 #**************************************************************************************************
 
 
-
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##+<<<<<<<<<<<<< INITIAL DEFINITIONS (working directories, functions, etc.)
+##START <<<<<<<<<<<<< LOAD FUNCTIONS AND DEFINITIONS (incl. directories, libraries, etc.)
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 ##+ SET WORKING DIRECTORIES------------------------------------
@@ -82,19 +95,19 @@ wd.main <- c("M:/Science/Programmierung/Github/semantic_sustainability_assessmen
   }
   
   #subdirectories are set automatically on basis of main directory
-  wd.source <- paste(wd.main, "data/text_files/", sep="")
-  wd.interim <- paste(wd.main, "data/results_interim/", sep="")
-  wd.final <- paste(wd.main, "data/results_final/", sep="")
-  wd.wordlists <- paste(wd.main, "thesauri_wordlists/thesauri/", sep="")
-  wd.stopwords <- paste(wd.main, "thesauri_wordlists/stopwords/", sep="")
-  wd.encoding <- paste(wd.main, "encoding/", sep="")
-  wd.code <- paste(wd.main, "code/", sep="")
+  wd.source <- paste0(wd.main, "data/text_files/")
+  wd.interim <- paste0(wd.main, "data/results_interim/")
+  wd.final <- paste0(wd.main, "data/results_final/")
+  wd.wordlists <- paste0(wd.main, "thesauri_wordlists/thesauri/")
+  wd.stopwords <- paste0(wd.main, "thesauri_wordlists/stopwords/")
+  wd.encoding <- paste0(wd.main, "encoding/")
+  wd.code <- paste0(wd.main, "code/")
   
   #directory for storing words that are not matched by the wordlists
-  wd.notmatched <- paste(wd.main, "thesauri_wordlists/words_not_matched/", sep="")
+  wd.notmatched <- paste0(wd.main, "thesauri_wordlists/words_not_matched/")
     #initialize an empty txt.file if there is no file, yet
-    if (c("words_not_matched.txt") %in% list.files(path = wd.notmatched) == FALSE) {
-      writeLines(c(""), paste(wd.notmatched, "words_not_matched.txt", sep="") )
+    if (c(file.words.not.matched) %in% list.files(path = wd.notmatched) == FALSE) {
+      writeLines(c(""), paste0(wd.notmatched, file.words.not.matched))
 }
 
 ##~----------------------------------------------------------------------
@@ -112,6 +125,9 @@ wd.main <- c("M:/Science/Programmierung/Github/semantic_sustainability_assessmen
 ##+ LOAD LIBRARIES
   library("SnowballC")
   library("plyr")
+  library("ggplot2")
+  library("reshape2")
+  library("grid")
 ##+~
 
 ##~-------------------------------------------------------------------
@@ -119,31 +135,30 @@ wd.main <- c("M:/Science/Programmierung/Github/semantic_sustainability_assessmen
 ##+ DEFINITION OF FUNCTIONS------------------------------------------------------------
 
 ##+ CHRACTERS TO BE REPLACED BY BASIC LATIN LETTERS
-  special_german_characters <- c("ä", "Ä", "ö", "Ö", "ü", "Ü", "ß")
+  special.german.characters <- c("ä", "Ä", "ö", "Ö", "ü", "Ü", "ß")
 ##~
 
 
-##+ READING CHARACTER ENCODING LIST
+##+ READ CHARACTER ENCODING LIST
   setwd(wd.encoding)
   options(encoding = "native.enc")
-  winencodingtable <- read.table("tm_win1252_misinterpretation_encoding_table_UTF8.txt", 
+  encoding.table.win <- read.table(file.encoding.table.win, 
                                  header = TRUE, 
                                  sep=";", 
                                  colClasses = "character",
                                  encoding="UTF-8")
   
-  #manual corrections; misinterpreted characters for space are not read in correctly... 
-  #(at least this was the case on the machine of the author)
-  winencodingtable[121,] <- gsub("space", " ", winencodingtable[121,])
-  winencodingtable[121,4] <- c("S~P~A~C~E")
+  #manual corrections; misinterpreted characters for space might not be read in correctly on some machines 
+  encoding.table.win[121,] <- gsub("space", " ", encoding.table.win[121,])
+  encoding.table.win[121,4] <- c("S~P~A~C~E")
 ##~
 
 
 ##+ READING LIST OF PUNCTUACTION CHARACTERS (supplements [[:punct:]])
-  initialencoding <- getOption("encoding")
+  encoding.setting.stored <- getOption("encoding")
   options(encoding = "native.enc")
   
-  suppressWarnings(punct <- readLines(paste(wd.encoding, "punct_meta_ANSI.txt", sep=""), encoding = "ANSI" ))
+  suppressWarnings(punct <- readLines(paste0(wd.encoding, file.encoding.punctuation), encoding = "ANSI" ))
   punct <- strsplit(punct, "~~")
   
   #generate vector format from list
@@ -154,133 +169,133 @@ wd.main <- c("M:/Science/Programmierung/Github/semantic_sustainability_assessmen
   })
   
   punct <- as.character(left)
-  options(encoding = initialencoding)
+  options(encoding = encoding.setting.stored)
 ##~
 
 
-##+ FUNCTION - CORRECT_MISINT_CHARS(CHARACTER VECTOR)
-# correction of characters that have been mmisinterpreted during reading of text files
+##+ FUNCTION - HarmonizeMisintChars(CHARACTER VECTOR)
+#correction of characters that have been mmisinterpreted during reading of text files
 #on basis of the encoding table loaded above
-  Correct_misint_chars <- function(text) {
+  HarmonizeMisintChars <- function(x.vector) {
     
-    for (i in (1:nrow(winencodingtable))) {
+    for (i in (1:nrow(encoding.table.win))) {
       
       #unicode encoding, e.g.: U+203A
-      text <- gsub(as.character(winencodingtable[i,1]), as.character(winencodingtable[i,3]), text,  fixed = TRUE) 
+      x.vector <- gsub(as.character(encoding.table.win[i,1]), as.character(encoding.table.win[i,3]), x.vector,  fixed = TRUE) 
       
       #windows encoding, e.g.: 0x9B
-      text <- gsub(as.character(winencodingtable[i,2]), as.character(winencodingtable[i,3]), text,  fixed = TRUE)
+      x.vector <- gsub(as.character(encoding.table.win[i,2]), as.character(encoding.table.win[i,3]), x.vector,  fixed = TRUE)
       
       #windows misinterpreted character symbols 
-      text <- gsub(as.character(winencodingtable[i,4]), as.character(winencodingtable[i,3]), text,  fixed = TRUE) 
+      x.vector <- gsub(as.character(encoding.table.win[i,4]), as.character(encoding.table.win[i,3]), x.vector,  fixed = TRUE) 
      
       #UTF-8 encoding, e.g.: %E2%80%BA
-      text <- gsub(as.character(winencodingtable[i,5]), as.character(winencodingtable[i,3]), text,  fixed = TRUE) 
+      x.vector <- gsub(as.character(encoding.table.win[i,5]), as.character(encoding.table.win[i,3]), x.vector,  fixed = TRUE) 
       
     }
     
     
     #correct some unicode characters, see e.g. https://en.wikipedia.org/wiki/Typographic_ligature
-    text <- gsub("<U+FB00>", "ff",  text, fixed=TRUE)
-    text <- gsub("U+FB00", "ff",  text, fixed=TRUE)
+    x.vector <- gsub("<U+FB00>", "ff",  x.vector, fixed=TRUE)
+    x.vector <- gsub("U+FB00", "ff",  x.vector, fixed=TRUE)
     
-    text <- gsub("<U+FB01>", "fi",  text, fixed=TRUE)
-    text <- gsub("U+FB01", "fi",  text, fixed=TRUE)
+    x.vector <- gsub("<U+FB01>", "fi",  x.vector, fixed=TRUE)
+    x.vector <- gsub("U+FB01", "fi",  x.vector, fixed=TRUE)
     
-    text <- gsub("<U+00DF>", special_german_characters[7],  text, fixed=TRUE)
-    text <- gsub("U+00DF", special_german_characters[7],  text, fixed=TRUE)
+    x.vector <- gsub("<U+00DF>", special.german.characters[7],  x.vector, fixed=TRUE)
+    x.vector <- gsub("U+00DF", special.german.characters[7],  x.vector, fixed=TRUE)
     
-    text <- gsub("<U+FB02>", "fl",  text, fixed=TRUE)
-    text <- gsub("U+FB02", "fl",  text, fixed=TRUE)
+    x.vector <- gsub("<U+FB02>", "fl",  x.vector, fixed=TRUE)
+    x.vector <- gsub("U+FB02", "fl",  x.vector, fixed=TRUE)
     
-    text <- gsub("<U+AB50>", "ui",  text, fixed=TRUE)
-    text <- gsub("U+AB50", "ui",  text, fixed=TRUE)
+    x.vector <- gsub("<U+AB50>", "ui",  x.vector, fixed=TRUE)
+    x.vector <- gsub("U+AB50", "ui",  x.vector, fixed=TRUE)
     
-    text <- gsub("<U+FB06>", "st",  text, fixed=TRUE)
-    text <- gsub("U+FB06", "st",  text, fixed=TRUE)
+    x.vector <- gsub("<U+FB06>", "st",  x.vector, fixed=TRUE)
+    x.vector <- gsub("U+FB06", "st",  x.vector, fixed=TRUE)
     
-    text <- gsub("<U+FFFD>", "st",  text, fixed=TRUE)
-    text <- gsub("U+FFFD", "st",  text, fixed=TRUE)
+    x.vector <- gsub("<U+FFFD>", "st",  x.vector, fixed=TRUE)
+    x.vector <- gsub("U+FFFD", "st",  x.vector, fixed=TRUE)
     
-    text <- gsub("<U+FB06>", "st",  text, fixed=TRUE)
-    text <- gsub("U+FB06", "st",  text, fixed=TRUE)
+    x.vector <- gsub("<U+FB06>", "st",  x.vector, fixed=TRUE)
+    x.vector <- gsub("U+FB06", "st",  x.vector, fixed=TRUE)
     
     
     #special characters which had been misinterpreted and appear in form of a replacement character
-    text <- gsub("<U+FB06>", "",  text, fixed=TRUE)
-    text <- gsub("U+FB06", "",  text, fixed=TRUE)
+    x.vector <- gsub("<U+FB06>", "",  x.vector, fixed=TRUE)
+    x.vector <- gsub("U+FB06", "",  x.vector, fixed=TRUE)
     
-    text <- gsub("<U+263A>", "",  text, fixed=TRUE)
-    text <- gsub("U+263A", "",  text, fixed=TRUE)
+    x.vector <- gsub("<U+263A>", "",  x.vector, fixed=TRUE)
+    x.vector <- gsub("U+263A", "",  x.vector, fixed=TRUE)
     
-    text <- gsub("<U+F0E0>", "",  text, fixed=TRUE)
-    text <- gsub("U+F0E0", "",  text, fixed=TRUE)
+    x.vector <- gsub("<U+F0E0>", "",  x.vector, fixed=TRUE)
+    x.vector <- gsub("U+F0E0", "",  x.vector, fixed=TRUE)
     
-    return(text)
+    return(x.vector)
   }
 ##~
 
 
-##+ FUNCTION - CLEANTEXT(CHARACTER VECTOR)
-#cleaning of a text from punctuation, etc.
-Cleantext <- function(text) {
+##+ FUNCTION - CLEANx.vector(CHARACTER x.vector)
+#cleaning of a x.vector from punctuation, etc.
+CleanVector <- function(x.vector) {
   
-  #when character vectors are collapsed, ~~collapse~~ is used as a marker phrase 
+  #when character x.vectors are collapsed, ~~collapse~~ is used as a marker phrase 
   #in case the information of the break point is needed at some point to restore the original format
-  text <- gsub("~~collapse~~", "", text)
+  x.vector <- gsub("~~collapse~~", "", x.vector)
   
-  text <- gsub("[[:cntrl:]]", " ", text)
-  text <- gsub("[[:blank:]]{2,}", " ", text)
+  x.vector <- gsub("[[:cntrl:]]", " ", x.vector)
+  x.vector <- gsub("[[:blank:]]{2,}", " ", x.vector)
   
   #in German compounds divided by "und" or "oder" might share a mutual final noun and are therefore
   #combined, since their meaning cannot only be defined on basis of their first noun
   #e.g.: Energie- und Umweltmanagement - management belongs to both energy and environment
-  text <- gsub("(-[[:blank:]]und[[:blank:]])([[:upper:]])", "UND\\2", text, perl=TRUE)
-  text <- gsub("(-[[:blank:]]oder[[:blank:]])([[:upper:]])", "ODER\\2", text, perl=TRUE)
+  x.vector <- gsub("(-[[:blank:]]und[[:blank:]])([[:upper:]])", "UND\\2", x.vector, perl=TRUE)
+  x.vector <- gsub("(-[[:blank:]]oder[[:blank:]])([[:upper:]])", "ODER\\2", x.vector, perl=TRUE)
   
-  #for parsing the texts, some marker phrases were introduced 
+  #for parsing the x.vectors, some marker phrases were introduced 
   #that are deleted during the cleaing step, e.g. [[:blank:]]
-  text <-  gsub("([[:)([A-Za-z]+)(:]])", " " , text, perl=TRUE)
+  x.vector <-  gsub("([[:)([A-Za-z]+)(:]])", " " , x.vector, perl=TRUE)
   
   
   #replace all puncutation characters
-  initialencoding <- getOption("encoding")
+  encoding.setting.stored <- getOption("encoding")
   options(encoding = "native.enc")
 
   for (i in 1:length(punct)) {
     
-    text <- gsub(punct[i],"",text, fixed = TRUE)
+    x.vector <- gsub(punct[i],"",x.vector, fixed = TRUE)
   }
-  options(encoding = initialencoding)
+  options(encoding = encoding.setting.stored)
   
-  text <- gsub("[[:punct:]]", "", text)
+  x.vector <- gsub("[[:punct:]]", "", x.vector)
   
   
-  #replace special_german_characters
-  text <- gsub(special_german_characters[1], "ae", text)
-  text <- gsub(special_german_characters[2], "Ae", text)
-  text <- gsub(special_german_characters[3], "oe", text)
-  text <- gsub(special_german_characters[4], "Oe", text) 
-  text <- gsub(special_german_characters[5], "ue", text)
-  text <- gsub(special_german_characters[6], "Ue", text)
+  #replace special.german.characters
+  x.vector <- gsub(special.german.characters[1], "ae", x.vector)
+  x.vector <- gsub(special.german.characters[2], "Ae", x.vector)
+  x.vector <- gsub(special.german.characters[3], "oe", x.vector)
+  x.vector <- gsub(special.german.characters[4], "Oe", x.vector) 
+  x.vector <- gsub(special.german.characters[5], "ue", x.vector)
+  x.vector <- gsub(special.german.characters[6], "Ue", x.vector)
   
   #delete part of the gender formatting of nouns
-  text <- gsub("/in |_in |/innen |_innen ", "", text)
+  x.vector <- gsub("/in |_in |/innen |_innen ", "", x.vector)
   
   #delete various marker phrases, numbers, etc.
-  text <- gsub("CO[[:blank:]]*2", "COzwei", text)
+  x.vector <- gsub("CO[[:blank:]]*2", "COzwei", x.vector)
   
-  text <- gsub("[[:digit:]]", "", text)
+  x.vector <- gsub("[[:digit:]]", "", x.vector)
   
-  text <- gsub("[[:blank:]][[:alpha:]][[:blank:]]", " ", text)
+  x.vector <- gsub("[[:blank:]][[:alpha:]][[:blank:]]", " ", x.vector)
  
-  text <- gsub("([[:blank:]]|^)[[:alpha:]]([[:blank:]]|$)", " ", text)
+  x.vector <- gsub("([[:blank:]]|^)[[:alpha:]]([[:blank:]]|$)", " ", x.vector)
   
-  text <- gsub("[[:blank:]]{2,}", " ", text)
+  x.vector <- gsub("[[:blank:]]{2,}", " ", x.vector)
  
-  text <- gsub("^[[:blank:]]+|[[:blank:]]+$", "", text)
+  x.vector <- gsub("^[[:blank:]]+|[[:blank:]]+$", "", x.vector)
   
-  text <- gsub("<U+FFFD>", "", text, fixed=TRUE)
+  x.vector <- gsub("<U+FFFD>", "", x.vector, fixed=TRUE)
   
   
   #convert all words which contain at least one uppercase letter to uppercase
@@ -288,27 +303,27 @@ Cleantext <- function(text) {
   #the first letter stays as marker for an uppercase word
   #hence, a "normal" uppercase word is recognized better by the porter stemming algorithm 
   #(this step accounts for misspellings in the documents)
-  text <- gsub("(\\b)([\\w]*)(?=[A-Z])([\\w]*)(\\b)", "\\1\\U\\2\\U\\3\\U\\4\\5", text, perl=TRUE)
-  text <- gsub("(\\b)([A-Z])([\\w]+)(\\b)", "\\1\\2\\L\\3\\4", text, perl=TRUE)
+  x.vector <- gsub("(\\b)([\\w]*)(?=[A-Z])([\\w]*)(\\b)", "\\1\\U\\2\\U\\3\\U\\4\\5", x.vector, perl=TRUE)
+  x.vector <- gsub("(\\b)([A-Z])([\\w]+)(\\b)", "\\1\\2\\L\\3\\4", x.vector, perl=TRUE)
   
-  #in case the text is a vector with several entries, empty lines are deleted
-  text <- text[text != ""]
+  #in case the x.vector is a x.vector with several entries, empty lines are deleted
+  x.vector <- x.vector[x.vector != ""]
   
-  return (text)
+  return (x.vector)
   
 }
 ##~
 
 
-##+ FUNCTION - UNIQUEWORDS(CHARACTER VECTOR)
+##+ FUNCTION - UniqueWords(CHARACTER VECTOR)
 #create a character vector of unique words
-Uniquewords <- function(text) {
+UniqueWords <- function(x.vector.or.list) {
   
-  text <- paste(unlist(text, recursive = TRUE), collapse = " ")
-  text <- unlist(strsplit(text, " "))
-  text <- sort(unique(text))
+  x.vector.or.list <- paste(unlist(x.vector.or.list, recursive = TRUE), collapse = " ")
+  x.vector.or.list <- unlist(strsplit(x.vector.or.list, " "))
+  x.vector.or.list <- sort(unique(x.vector.or.list))
   
-  return (text)
+  return (x.vector.or.list)
   
 }
 ##~
@@ -318,38 +333,38 @@ Uniquewords <- function(text) {
 #loads the stopwordlists in the stopwordlist folder and creates a character vector of unique stopwords
 #txt files may have comments marked via | or # (e.g. like the stopwordlist of the Porter Algorithm: http://snowballstem.org/algorithms/german/stop.txt)
 #csv files are assumed to have a tabular format with a HEADER inlcuiding each category of wordtype and NO comments
-#the function Uniquewords(text) is required
-Loadstopwordlist.txt.csv <- function(stopworddir_wfinalSlash) {
+#the function UniqueWords(text) is required
+LoadStopwordlistTxtCsv <- function(stopworddir_wfinalSlash) {
   
-  stopwordfiles <- list.files(stopworddir_wfinalSlash)
+  files.stopwords <- list.files(stopworddir_wfinalSlash)
   #initial the wordlist
   stopwordlist <-  c("Dummy")
   
   #for txt files
-  txtfiles <- stopwordfiles[grep(".txt$", stopwordfiles)]
+  files.txt <- files.stopwords[grep(".txt$", files.stopwords)]
   
-  for (i in 1:length(txtfiles)) {
-    txtwordlist <- readLines(paste(stopworddir_wfinalSlash, txtfiles[i] ,sep=""))
-    txtwordlist <- gsub("\\|.*$", "", txtwordlist) #in case | is used as comment character
-    txtwordlist <- gsub("\\#.*$", "", txtwordlist) #in case # is used as comment character
-    txtwordlist <- gsub("^[[:blank:]]+|[[:blank:]]+$", "", txtwordlist)
-    txtwordlist <- txtwordlist[grep("[[:graph:]]", txtwordlist)]
+  for (i in 1:length(files.txt)) {
+    stopwords.from.txt <- readLines(paste(stopworddir_wfinalSlash, files.txt[i] ,sep=""))
+    stopwords.from.txt <- gsub("\\|.*$", "", stopwords.from.txt) #in case | is used as comment character
+    stopwords.from.txt <- gsub("\\#.*$", "", stopwords.from.txt) #in case # is used as comment character
+    stopwords.from.txt <- gsub("^[[:blank:]]+|[[:blank:]]+$", "", stopwords.from.txt)
+    stopwords.from.txt <- stopwords.from.txt[grep("[[:graph:]]", stopwords.from.txt)]
     
-    stopwordlist <- c(stopwordlist, txtwordlist)
+    stopwordlist <- c(stopwordlist, stopwords.from.txt)
   }
   
   
   #for .csv files
-  csvfiles <- stopwordfiles[grep(".csv$", stopwordfiles)]
+ files.csv <- files.stopwords[grep(".csv$", files.stopwords)]
   
   for (i in 1:length(csvfiles)) {
-    csvwordlist <- read.csv(paste(stopworddir_wfinalSlash, csvfiles[i] ,sep=""), header = TRUE, sep=";")
-    csvwordlist <- Uniquewords(csvwordlist)
+     stopwords.from.csv <- read.csv(paste(stopworddir_wfinalSlash,files.csv[i] ,sep=""), header = TRUE, sep=";")
+     stopwords.from.csv <- UniqueWords( stopwords.from.csv)
   
-    csvwordlist <- gsub("^[[:blank:]]+|[[:blank:]]+$", "", csvwordlist)
-    csvwordlist <- csvwordlist[grep("[[:graph:]]", csvwordlist)]
+     stopwords.from.csv <- gsub("^[[:blank:]]+|[[:blank:]]+$", "",  stopwords.from.csv)
+     stopwords.from.csv <-  stopwords.from.csv[grep("[[:graph:]]",  stopwords.from.csv)]
     
-    stopwordlist <- c(stopwordlist, csvwordlist)
+    stopwordlist <- c(stopwordlist,  stopwords.from.csv)
   }
   
   stopwordlist <- unique(stopwordlist)
@@ -360,46 +375,45 @@ Loadstopwordlist.txt.csv <- function(stopworddir_wfinalSlash) {
 ##~
 
 
-##FUNCTION - STEM_VECTOR(CHARACTER VECTOR)
+##FUNCTION - StemVector(CHARACTER VECTOR)
 #applies the porter stemming algorithm with some adaptions for better results in German
 #keeps the original format of a vector in case of multiple entries (lines)
-Stem_vector <- function(vector) {
+StemVector <- function(x.vector) {
   
-  vector <- paste(vector, collapse=" ~c~ ")
-  vector <- unlist(strsplit(vector, " "))
+  x.vector <- paste(x.vector, collapse=" ~c~ ")
+  x.vector <- unlist(strsplit(x.vector, " "))
   
   #mark the uppercase words before stemming as some (like Umwelt) are stemmed to lower case
   #and have to be reconverted to upper case after stemming
   
-  vector <- gsub(paste("(\\b)([A-Z|", special_german_characters[2], "|", special_german_characters[6],"|",special_german_characters[4],"])", sep=""), "X~\\2" , vector, perl=TRUE)
-  vector <- wordStem(vector, language = "german")
+  x.vector <- gsub(paste("(\\b)([A-Z|", special.german.characters[2], "|", special.german.characters[6],"|",special.german.characters[4],"])", sep=""), "X~\\2" , x.vector, perl=TRUE)
+  x.vector <- wordStem(x.vector, language = "german")
   
-  vector <- gsub("(X~)([\\w])", "\\U\\2" , vector, perl=TRUE)
-  vector <- paste(vector, collapse=" ")
-  vector <- unlist(strsplit(vector, " ~c~ "))
+  x.vector <- gsub("(X~)([\\w])", "\\U\\2" , x.vector, perl=TRUE)
+  x.vector <- paste(x.vector, collapse=" ")
+  x.vector <- unlist(strsplit(x.vector, " ~c~ "))
   
-  return (vector)
+  return (x.vector)
   
 }
 ##~
 
 ##~--------------------------------------------
 
-
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##END <<<<<<<<<<<<<<<<<<<
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "initial_definitions"
-##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##~<<<<<<<<<<<<<<<<<<<
-##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
 
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##+<<<<<<<<<<<<<<<<<<< WRITE EMPTY CODE STRUCTURE FOR TEXT PROCESSING AT FILE HEADS
+##START <<<<<<<<<<<<<<<<<<< WRITE EMPTY CODE STRUCTURE FOR TEXT PROCESSING AT FILE HEADS
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##+ WRITE EMPTY CODE STRUCTURE...----------------------------------
-empty.processing.code <- readLines(paste0(wd.code, "code_structure_for_setting_text_processing_markers.txt"), 
+empty.processing.code <- readLines(paste0(wd.code, file.empty.processing.code), 
                                    encoding = "UTF-8")
-
 
 files <- list.files(wd.source, pattern="*.txt")
 
@@ -407,16 +421,17 @@ for (i in files) {
   
   text <- readLines(i, encoding = "UTF-8")
   
-  if (length(c(grep("!Analysis_Code_Start!",text), grep("!Analysis_Code_End!",text))) == 2) {
+  if (length(c(grep("!Analysis_Code_Start!", text), grep("!Analysis_Code_End!", text))) == 2) {
     
     #do nothing, code structure already available in text file
     
-  } else if (length(c(grep("!Analysis_Code_Start!",text), grep("!Analysis_Code_End!",text))) == 0) {
+  } else if (length(c(grep("!Analysis_Code_Start!", text), grep("!Analysis_Code_End!", text))) == 0) {
     
     text <- c(empty.processing.code, " ", text)
     
     #to suppress any encoding issues and keep UTF-8 useBytes = TRUE is set
-    writeLines(text,i, useBytes = TRUE)
+    writeLines(text, i, useBytes = TRUE)
+    
   } else {
     
   warning("ERROR: text contains the wording !Analysis_Code_Start! or !Analysis_Code_End! which is used by the code as marker phrase Please delete or change this phrase in the text. Another reason for the error could be that the code at the file head was corrupted and is missing partly. Please check.")
@@ -426,14 +441,14 @@ for (i in files) {
 }
 ##~--------------------------------
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##~<<<<<<<<<<<<<<<<<<< 
+##END <<<<<<<<<<<<<<<<<<< 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 ####MANUAL ACTION  REQUIRED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##+<<<<<<<<<<<<<<<<<<< IDENTIFY EXTRACTION PATTERNS FOR TEXT WINDOWS AND SPLIT TEXTS
+##START <<<<<<<<<<<<<<<<<<< IDENTIFY EXTRACTION PATTERNS FOR TEXT WINDOWS AND SPLIT TEXTS
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 ##+ READ IN TEXTFILES---------------------------------------
@@ -443,17 +458,18 @@ setwd(wd.source)
 files <- list.files(pattern="*.txt")
 
 #initialize list to work with
-textlist <- vector(mode = "list", length = length(files))
+workingdata.list <- vector(mode = "list", length = length(files))
 
-for (f in 1:length(textlist)) {
+for (f in 1:length(workingdata.list)) {
+  
   text <- readLines(files[f], encoding = "UTF-8")
   filename <- files[f]
-  names(textlist)[f] <- filename
+  names(workingdata.list)[f] <- filename
   
   text <- list(text)  
   
-  textlist[[f]] <- text
-  names(textlist[[f]]) <- filename
+  workingdata.list[[f]] <- text
+  names(workingdata.list[[f]]) <- filename
 }
 ##~----------------------------------------
 
@@ -463,15 +479,14 @@ for (f in 1:length(textlist)) {
 #suitable strings are defined manually on basis of number of occurences of potential extraction words 
 #and total number of known windows (from manual screening of text)
 
-
-for (t in 1:length(textlist)) {
+for (t in 1:length(workingdata.list)) {
   
-  wholetext <- textlist[[t]][[1]]
+  text <- workingdata.list[[t]][[1]]
   
   ##+ READ ANALYSIS CODE AT FILE HEAD
-    codestart <- grep("!Analysis_Code_Start!",wholetext)
-    codeend <- grep("!Analysis_Code_End!",wholetext)
-    code <- wholetext[codestart:codeend]
+    processing.code.start <- grep("!Analysis_Code_Start!",text)
+    processing.code.end <- grep("!Analysis_Code_End!",text)
+    code <- text[processing.code.start:processing.code.end]
     
     startpage <- code[grep("pagerange",code)+1]
     endpage <- code[grep("pagerange",code)+2]
@@ -479,29 +494,29 @@ for (t in 1:length(textlist)) {
     #read potential words for marking text windows
     #that were guessed by looking into the text and 
     #inserted manually in the analysis code at the file head)
-    desiredpatternrange <- grep("desired_pattern_end",code)-grep("desired_pattern_start",code)-1
-    desiredpattern <- code[grep("desired_pattern_start",code)+rep(1:desiredpatternrange)]  
+    split.phrases.guessed.range <- grep("desired_pattern_end",code)-grep("desired_pattern_start",code)-1
+    split.phrases.guessed <- code[grep("desired_pattern_start",code)+rep(1:split.phrases.guessed.range)]  
   ##~
   
   
   ##+ CHECK AVAILABILITY OF PATTERNS IN TEXT 
-    wholetext <- wholetext[-c(codestart:codeend)]  
+    text <- text[-c(processing.code.start:processing.code.end)]  
     
     #select the desired page range
-    measurestext <- wholetext[grep(startpage,wholetext):grep(endpage,wholetext)]
+    text <- text[grep(startpage,text):grep(endpage,text)]
     
     #check the number of occurence of potential pattern extraction words 
     #and build a matrix: word : number of occurences  
-    availablepattern <- c(sapply(1:length(desiredpattern), function(i) {
+    split.phrases.guessed.availability <- c(sapply(1:length(split.phrases.guessed), function(i) {
       
-      sum(grepl(desiredpattern[i], measurestext))
+      sum(grepl(split.phrases.guessed[i], text))
       
     }))
     
-    pattern <- cbind(desiredpattern, availablepattern)
-    pattern <- list(pattern)
-    names(pattern) <- paste("potential_pattern_", names(textlist[t]), sep="")
-    textlist[[t]] <- c(textlist[[t]],pattern)
+    split.pattern.guessed.summary <- cbind(split.phrases.guessed, split.phrases.guessed.availability)
+    split.pattern.guessed.summary <- list(split.pattern.guessed.summary)
+    names(split.pattern.guessed.summary) <- paste("split_pattern_guessed_summary", names(workingdata.list[t]), sep="")
+    workingdata.list[[t]] <- c(workingdata.list[[t]],split.pattern.guessed.summary)
   ##~
   
   }
@@ -509,8 +524,8 @@ for (t in 1:length(textlist)) {
   ##+Display the availability of patterns
   #for post-processing of the pattern matching and extraction
   
-  sapply(c(1:length(textlist)),  function(i) {
-    textlist[[i]][2]
+  sapply(c(1:length(workingdata.list)),  function(i) {
+    workingdata.list[[i]][2]
   })
 
   print("Please identify suitable extraction patterns manually and store them in a txt file in wd.interim in the format: 'c(10,22)  | name_of_document_to_be_analyzed.txt'")
@@ -525,42 +540,41 @@ for (t in 1:length(textlist)) {
 
     
 ##+ APPEND EXTRACTION PATTERNS IN FILEHEAD-------------------------
-identifiedpatterns <-  readLines(paste(wd.interim,"identified_extraction_patterns.txt", sep=""))
+split.pattern.identified <-  readLines(paste(wd.interim, file.split.pattern.identified, sep=""))
 
 #clean text from comments
-identifiedpatterns <- gsub("#.*$", "", identifiedpatterns)
-identifiedpatterns <- identifiedpatterns[identifiedpatterns != ""]
+split.pattern.identified <- gsub("#.*$", "", split.pattern.identified)
+split.pattern.identified <- split.pattern.identified[split.pattern.identified != ""]
 
-identifiedpatterns <- strsplit(identifiedpatterns, "\\|")
-identifiedpatterns <- lapply(identifiedpatterns, function(x) gsub("[[:blank:]]+$|^[[:blank:]]+","", x))
+split.pattern.identified <- strsplit(split.pattern.identified, "\\|")
+split.pattern.identified <- lapply(split.pattern.identified, function(x) {
+                                      gsub("[[:blank:]]+$|^[[:blank:]]+","", x)})
 
 
-for (i in 1:length(identifiedpatterns )) {#loop through the identifiedpatterns to write them in the fileheads
+for (i in 1:length(split.pattern.identified )) {#loop through the split.pattern.identified to write them in the fileheads
   
-  #check which identified pattern refers to which textlist element
+  #check which identified pattern refers to which workingdata.list element
   #and if a suitable element exists at all
   #(e.g. in case the order of documents changed or a additional document are stored in the folder)
 
-  
-  extractionpattern <- eval(parse(text=identifiedpatterns[[i]][[1]]))
+  split.pattern.case <- eval(parse(text=split.pattern.identified[[i]][[1]]))
 
-  patternidintextlist <- grep(identifiedpatterns[[i]][[2]], names(textlist), fixed = TRUE)
+  pattern.id.in.workingdata.list <- grep(split.pattern.identified[[i]][[2]], names(workingdata.list), fixed = TRUE)
 
  
-  if (sum(patternidintextlist) > 0) { #check if the filename of the stored pattern matches the one in the textlist, if yes, insert extraction pattern
+  if (sum(pattern.id.in.workingdata.list) > 0) { #check if the filename of the stored pattern matches the one in the workingdata.list, if yes, insert extraction pattern
   
-    startextractstring <- textlist[[patternidintextlist]][[2]][[extractionpattern[1],1]]
+    split.pattern.startstring <- workingdata.list[[pattern.id.in.workingdata.list]][[2]][[split.pattern.case[1],1]]
  
-    textlist[[patternidintextlist]][[1]] <- append(textlist[[patternidintextlist]][[1]], startextractstring, after = grep("startextract \\|", textlist[[patternidintextlist]][[1]]))
+    workingdata.list[[pattern.id.in.workingdata.list]][[1]] <- append(workingdata.list[[pattern.id.in.workingdata.list]][[1]], split.pattern.startstring, after = grep("startextract \\|", workingdata.list[[pattern.id.in.workingdata.list]][[1]]))
   
-    endextractstring <- textlist[[patternidintextlist]][[2]][[extractionpattern[2],1]]
+    split.pattern.endstring <- workingdata.list[[pattern.id.in.workingdata.list]][[2]][[split.pattern.case[2],1]]
 
-    textlist[[patternidintextlist]][[1]] <- append(textlist[[patternidintextlist]][[1]], endextractstring, after = grep("endextract \\|", textlist[[patternidintextlist]][[1]]))
+    workingdata.list[[pattern.id.in.workingdata.list]][[1]] <- append(workingdata.list[[pattern.id.in.workingdata.list]][[1]], split.pattern.endstring, after = grep("endextract \\|", workingdata.list[[pattern.id.in.workingdata.list]][[1]]))
     
     
-  } else { #in case the filename of the extraction pattern is not matched in the textlist
-    print(paste("Not matched in textlist:", identifiedpatterns[[i]][[2]]))
-    notmatched <- TRUE
+  } else { #in case the filename of the extraction pattern is not matched in the workingdata.list
+    print(paste("Not matched in workingdata.list:", split.pattern.identified[[i]][[2]]))
   }
 }
 
@@ -568,17 +582,17 @@ for (i in 1:length(identifiedpatterns )) {#loop through the identifiedpatterns t
 
 ##+ SPLIT TEXTS INTO TEXT WINDOWS-------------------
 
-for (t in 1:length(textlist)) {
+for (t in 1:length(workingdata.list)) {
   
-  wholetext <- textlist[[t]][[1]]
+  text <- workingdata.list[[t]][[1]]
   
   #read analysis code at filehead
   #it has been changed manually in the texts and is therefore read in again
-  codestart <- grep("!Analysis_Code_Start!",wholetext)
-  codeend <- grep("!Analysis_Code_End!",wholetext)
-  code <- wholetext[codestart:codeend]
+  processing.code.start <- grep("!Analysis_Code_Start!",text)
+  processing.code.end <- grep("!Analysis_Code_End!",text)
+  code <- text[processing.code.start:processing.code.end]
   
-  wholetext <- wholetext[-c(codestart:codeend)]
+  text <- text[-c(processing.code.start:processing.code.end)]
   
   #reading in the pages to be analyzed
   startpage <- code[grep("pagerange",code)+1]
@@ -588,14 +602,14 @@ for (t in 1:length(textlist)) {
     #the words F~A~L~S~E and T~R~U~E are used in the code at some parts instead of the boolean TRUE/FALSE
     #as the latter might in some steps (e.g. by gsub) be converted to character and not fulfill their purpose
     #in order to avoid mistakes in processing the text, it may not contain these words, this is checked
-    if (sum(grepl("F~A~L~S~E", wholetext)) > 0) {
-      wholetext <- gsub("F~A~L~S~E", "FALSE", wholetext)
-      print(paste("The string F~A~L~S~E was replaced by FALSE in: ", names(textlist)[t], sep=""))
+    if (sum(grepl("F~A~L~S~E", text)) > 0) {
+      text <- gsub("F~A~L~S~E", "FALSE", text)
+      print(paste("The string F~A~L~S~E was replaced by FALSE in: ", names(workingdata.list)[t], sep=""))
     } 
     
-    if (sum(grepl("T~R~U~E", wholetext)) > TRUE) {
-      wholetext <- gsub("T~R~U~E", "TRUE", wholetext)
-      print(paste("The string T~R~U~E was replaced by TRUE in: ", names(textlist)[t], sep=""))
+    if (sum(grepl("T~R~U~E", text)) > TRUE) {
+      text <- gsub("T~R~U~E", "TRUE", text)
+      print(paste("The string T~R~U~E was replaced by TRUE in: ", names(workingdata.list)[t], sep=""))
     } 
   ##~
   
@@ -604,11 +618,11 @@ for (t in 1:length(textlist)) {
   #manually identified single lines
     if (grep("single_line_deletion_end",code)-grep("single_line_deletion_start",code)-1 >= 1) {
       
-      deletesinglelinesrange <- grep("single_line_deletion_end",code)-grep("single_line_deletion_start",code)-1
-      deletesinglelines <- code[grep("single_line_deletion_start",code)+rep(1:deletesinglelinesrange)]
+      delete.single.lines.range <- grep("single_line_deletion_end",code)-grep("single_line_deletion_start",code)-1
+      delete.single.lines <- code[grep("single_line_deletion_start",code)+rep(1:delete.single.lines.range)]
       
     } else {
-      deletesinglelines <- "F~A~L~S~E"
+      delete.single.lines <- "F~A~L~S~E"
     }
   ##~
   
@@ -617,47 +631,47 @@ for (t in 1:length(textlist)) {
     #or otherwise use two (or more) extraction words
     if (grepl("S~I~N~G~L~E~S~T~R~I~N~G~P~A~T~T~E~R~N:", code[(grep("startextract",code)+1)]) == TRUE) { 
       
-      startextract <- gsub("S~I~N~G~L~E~S~T~R~I~N~G~P~A~T~T~E~R~N:", "", code[(grep("startextract",code)+1)] )
-      endextract <- "F~A~L~S~E"
+      split.start <- gsub("S~I~N~G~L~E~S~T~R~I~N~G~P~A~T~T~E~R~N:", "", code[(grep("startextract",code)+1)] )
+      split.end <- "F~A~L~S~E"
       
-      singlestringpattern <- "T~R~U~E"
+      delete.single.string.switch <- "T~R~U~E"
       
     } else {
       
       #defining the numbers of words and lines for extraction / deletion
-      extractrange <- grep("endextract",code)-grep("startextract",code)-1
+      split.range <- grep("endextract",code)-grep("startextract",code)-1
       
       #defining end/start words based on above ranges to be extracted or deleted - stored in vectors
-      startextract <- code[grep("startextract",code)+rep(1:extractrange)]
-      endextract <- code[grep("endextract",code)+rep(1:extractrange)]
+      split.start <- code[grep("startextract",code)+rep(1:split.range)]
+      split.end <- code[grep("endextract",code)+rep(1:split.range)]
       
-      singlestringpattern <- "F~A~L~S~E"
+      delete.single.string.switch <- "F~A~L~S~E"
     }
  
     #clean the text from words of the analysis code
-    startextract <- gsub("!~~.*~~!", "", startextract) 
-    endextract <- gsub("!~~.*~~!", "", endextract)
-    deletesinglelines <- gsub("!~~.*~~!", "", deletesinglelines)
+    split.start <- gsub("!~~.*~~!", "", split.start) 
+    split.end <- gsub("!~~.*~~!", "", split.end)
+    delete.single.lines <- gsub("!~~.*~~!", "", delete.single.lines)
   ##~
   
   
   
   ##+ EXTRACT PAGE RANGE TO BE ANALYZED AND SPLIT INTO TEXT WINDOWS
-  measuretext <- wholetext[grep(startpage,wholetext):grep(endpage,wholetext)]
+  text.windows <- text[grep(startpage,text):grep(endpage,text)]
 
   #find the lines to START / END extraction on basis of a search string / search cases
-  #for checking the output connected to the lines, use this command: measuretext[startlines]
-    startlines <- c(sapply(seq(length(startextract)), function(e) {
+  #for checking the output connected to the lines, use this command: text.windows[startlines]
+    startlines <- c(sapply(seq(length(split.start)), function(e) {
       
-      grep(startextract[e], measuretext)
+      grep(split.start[e], text.windows)
       
     }))
 
  
   ##+ FIND THE LINES FOR SPLITTING INTO TEXT WINDOWS 
-    if (singlestringpattern == "T~R~U~E") {
+    if (delete.single.string.switch == "T~R~U~E") {
       
-      #all rows to be extracted from measuretext
+      #all rows to be extracted from text.windows
       #set endlines for extraction from one element to the next and last element = last row
       endlines <- startlines
       
@@ -666,19 +680,19 @@ for (t in 1:length(textlist)) {
       #however extraction should be only until stratlines[2]-1 therfore -1 on all rows 
       endlines <- endlines-1 
       
-      #as the final element is missing now the end of the text is defined as last endextraction line
-      endlines <- c(endlines, length(measuretext)) #add the last row as last entry     
+      #as the final element is missing now the end of the text is defined as last split.end line
+      endlines <- c(endlines, length(text.windows)) #add the last row as last entry     
       
     } else {
       
-      endlines <- c(sapply(seq(length(endextract)), function(e) {
+      endlines <- c(sapply(seq(length(split.end)), function(e) {
         
-        grep(endextract[e], measuretext)
+        grep(split.end[e], text.windows)
         
       }))
     } #endif
     
-    #all rows to be extracted from measuretext
+    #all rows to be extracted from text.windows
     extractall <- cbind(startlines, endlines)
   ##~
   
@@ -688,45 +702,45 @@ for (t in 1:length(textlist)) {
   
     ##+ CLEAN TEXT FROM ANALYSIS CODE WORDS
     #the extraction lines are fixed now therefore the extraction patterns (as single words) can be cleaned from the text
-    #for singleline pattern there is only startextract which can be deleted
-    if (singlestringpattern == "T~R~U~E") {
-      measuretext <- gsub( startextract ,"",measuretext)
+    #for singleline pattern there is only split.start which can be deleted
+    if (delete.single.string.switch == "T~R~U~E") {
+      text.windows <- gsub( split.start ,"",text.windows)
     } else {
-      measuretext <- gsub( startextract ,"",measuretext)
-      measuretext <- gsub( endextract ,"",measuretext)
+      text.windows <- gsub( split.start ,"",text.windows)
+      text.windows <- gsub( split.end ,"",text.windows)
     }
     ##~
   
     ##+ DO SPLITTING
     #different way of splitting for single string patterns and multiple string patterns
-    if (singlestringpattern == "T~R~U~E") {
+    if (delete.single.string.switch == "T~R~U~E") {
       
-      #build a vector with each element including a single measure - collapsed text from the rows to be extracted
-      measuresextracted <- c(sapply(seq(nrow(extractall)), function(x) {
+      #build a vector with each element including a single text.window - collapsed text from the rows to be extracted
+      text.windows.split <- c(sapply(seq(nrow(extractall)), function(x) {
         rows <- (extractall[x,1]:extractall[x,2])
-        measure <- measuretext[rows] #extracted text 
-        #for the current analysis it makes sense to collapse the measure into plain text
+        text.window <- text.windows[rows] #extracted text 
+        #for the current analysis it makes sense to collapse the text.window into plain text
         #it might also be stored as a list
         #in case the former structure shall be generated again the wording " ~~collapse~~ " is included at the collaped locations
         
             ##+DELETE FOOTNOTES
             #in case footnotes were defined for deletion
-            if (deletesinglelines[1] == "F~A~L~S~E") {  #first if/else
+            if (delete.single.lines[1] == "F~A~L~S~E") {  #first if/else
               
-              # print(paste("no deletelines, nothing deleted in: ", names(textlist[t])))
+              # print(paste("no deletelines, nothing deleted in: ", names(workingdata.list[t])))
               
-            } else if  (deletesinglelines[1] != "F~A~L~S~E") { #if there is something to delete, loop through the vector of lines containing the deletion marker string
+            } else if  (delete.single.lines[1] != "F~A~L~S~E") { #if there is something to delete, loop through the vector of lines containing the deletion marker string
               
-              for (z in 1:length(deletesinglelines)) { #for loop through deletesinglelines
+              for (z in 1:length(delete.single.lines)) { #for loop through delete.single.lines
                 
-                if (sum(c(grep(deletesinglelines[z], measure))) == 0) {  # second first/ifelse  / in case matching for deletion fails and a integer(o) vector is returned, a safety net is simply not to delete
+                if (sum(c(grep(delete.single.lines[z], text.window))) == 0) {  # second first/ifelse  / in case matching for deletion fails and a integer(o) vector is returned, a safety net is simply not to delete
                   
-                  # if (deletesinglelines[z] != "!~delete_line_~!") { #only print something if the deletline text is not a the dummy text 
-                  #  print(paste("failed to match deleteline", deletesinglelines[z] , "nothing deleted in: ", names(textlist[t])))
+                  # if (delete.single.lines[z] != "!~delete_line_~!") { #only print something if the deletline text is not a the dummy text 
+                  #  print(paste("failed to match deleteline", delete.single.lines[z] , "nothing deleted in: ", names(workingdata.list[t])))
                   # }
                   
-                } else if (sum(c(grep(deletesinglelines[z], measure))) > 0) {
-                  measure <- measure[-c(grep(deletesinglelines[z], measure))]
+                } else if (sum(c(grep(delete.single.lines[z], text.window))) > 0) {
+                  text.window <- text.window[-c(grep(delete.single.lines[z], text.window))]
                 } #end second if/else
                 
               }
@@ -734,63 +748,63 @@ for (t in 1:length(textlist)) {
             } #end first if/else    
             ##~   
         
-        paste(measure, collapse= " ~~collapse~~ ")
+        paste(text.window, collapse= " ~~collapse~~ ")
         
       }))
       
     } else {
       
-      #check if number of start/endextractlines are equal
+      #check if number of start/split.endlines are equal
       if (length(endlines) != length(startlines)) {
-        print(paste("ERROR - number of start/endextractlines not equal in", names(textlist[t])))
+        print(paste("ERROR - number of start/endextractlines not equal in", names(workingdata.list[t])))
       stop}
       
-      #build a vector with each element including a single measure - collapsed text from the rows to be extracted
-      measuresextracted <- c(sapply(seq(nrow(extractall)), function(x) {
+      #build a vector with each element including a single text.window - collapsed text from the rows to be extracted
+      text.windows.split <- c(sapply(seq(nrow(extractall)), function(x) {
         rows <- (extractall[x,1]:extractall[x,2])
-        measure <- measuretext[rows] #extracted text 
-        #for the current analysis it makes sense to collapse the measure into plain text
+        text.window <- text.windows[rows] #extracted text 
+        #for the current analysis it makes sense to collapse the text.window into plain text
         #it might also be stored as a list
         #in case the former structure shall be generated again the wording " ~~collapse~~ " is included at the collaped locations
         
         
             ##+DELETE FOOTNOTES
-            if (deletesinglelines[1] == "F~A~L~S~E") {  #first if/else
+            if (delete.single.lines[1] == "F~A~L~S~E") {  #first if/else
               
-              # print(paste("no deletelines, nothing deleted in: ", names(textlist[t])))
+              # print(paste("no deletelines, nothing deleted in: ", names(workingdata.list[t])))
               
-            } else if  (deletesinglelines[1] != "F~A~L~S~E") { #if there is something to delete, loop through the vector of lines containing the deletion marker string
+            } else if  (delete.single.lines[1] != "F~A~L~S~E") { #if there is something to delete, loop through the vector of lines containing the deletion marker string
               
-              for (z in 1:length(deletesinglelines)) { #for loop through deletesinglelines
+              for (z in 1:length(delete.single.lines)) { #for loop through delete.single.lines
                 
-                if (sum(c(grep(deletesinglelines[z], measure))) == 0) {  # second first/ifelse  / in case matching for deletion fails and a integer(o) vector is returned, a safety net is simply not to delete
+                if (sum(c(grep(delete.single.lines[z], text.window))) == 0) {  # second first/ifelse  / in case matching for deletion fails and a integer(o) vector is returned, a safety net is simply not to delete
                   
-                  # if (deletesinglelines[z] != "!~delete_line_~!") { #only print something if the deletline text is not a the dummy text 
-                  #  print(paste("failed to match deleteline", deletesinglelines[z] , "nothing deleted in: ", names(textlist[t])))
+                  # if (delete.single.lines[z] != "!~delete_line_~!") { #only print something if the deletline text is not a the dummy text 
+                  #  print(paste("failed to match deleteline", delete.single.lines[z] , "nothing deleted in: ", names(workingdata.list[t])))
                   # }
                   
-                } else if (sum(c(grep(deletesinglelines[z], measure))) > 0) {
-                  measure <- measure[-c(grep(deletesinglelines[z], measure))]
+                } else if (sum(c(grep(delete.single.lines[z], text.window))) > 0) {
+                  text.window <- text.window[-c(grep(delete.single.lines[z], text.window))]
                 } #end second if/else
                 
-              } #end for loop through deletesinglelines
+              } #end for loop through delete.single.lines
               
             } #end first if/else    
             ##~
       
         
-        paste(measure, collapse= " ~~collapse~~ ")
+        paste(text.window, collapse= " ~~collapse~~ ")
         
       }))
     } 
     ##~
   
-  measuresextracted <- list(measuresextracted)
-  names(measuresextracted) <- paste("measures_", names(textlist[t]), sep="")
-  textlist[[t]] <- c(textlist[[t]], measuresextracted)    
+  text.windows.split <- list(text.windows.split)
+  names(text.windows.split) <- paste("text_windows_", names(workingdata.list[t]), sep="")
+  workingdata.list[[t]] <- c(workingdata.list[[t]], text.windows.split)    
   
-  #in order to save memory and speed up the following calculations the wholetext is removed
-  textlist[[t]][[1]] <- c("Full text removed in order to free memory and improve calculation performance. Please load again by readLines if the full text is needed.")
+  #in order to save memory and speed up the following calculations the complete text is removed
+  workingdata.list[[t]][[1]] <- c("Full text removed in order to free memory and improve calculation performance. Please load again by readLines if the full text is needed.")
   
 }
 ##~-------------------
@@ -798,24 +812,24 @@ for (t in 1:length(textlist)) {
 
 ##+ COMBINE LISTS OF TEXT WINDOWS FOR HANNOVER-----------
 #the action plan came in several files which are combined here
-  files.combine <- grep("GER__Hannover__", names(textlist))
+  files.combine <- grep("GER__Hannover__", names(workingdata.list))
   
   #only do something if there are more than one list entries with the same entity name
-  if (length(files.combine ) > 1) { 
+  if (length(files.combine) > 1) { 
     
     #initial the combined list with the first element of elements to be combined
-    case.combine <- textlist[files.combine[1]]
+    case.combine <- workingdata.list[files.combine[1]]
     #get the number of first list levels which serve as loop variable
     num.listelements <- length(case.combine[[1]])
     
     #loop through all elements to combine except the intial one
-    add.cases <- files.combine[-c(1)]
+    cases.add <- files.combine[-c(1)]
     
-    for (t in add.cases) {
+    for (t in cases.add) {
       
       for (u in 1:num.listelements) {
         
-        case.combine[[1]][[u]] <- c(case.combine[[1]][[u]], textlist[[t]][[u]])
+        case.combine[[1]][[u]] <- c(case.combine[[1]][[u]], workingdata.list[[t]][[u]])
         
       }
       
@@ -824,52 +838,42 @@ for (t in 1:length(textlist)) {
     #reassign the names
     names(case.combine) <- "GER__Hannover__combined_files.txt"
     names(case.combine[[1]]) <- c("GER__Hannover__combined_files.txt",
-                                  "pattern_GER__Hannover__combined_files.txt",
-                                  "measures_GER__Hannover__combined_files.txt")
+                                  "split_pattern_guessed_summary_GER__Hannover__combined_files.txt",
+                                  "text_windows__GER__Hannover__combined_files.txt")
     
     #add the combined files list and delete the single files
-    textlist <- c(textlist,case.combine)
-    textlist <- textlist[-c(files.combine)]
+    workingdata.list <- c(workingdata.list,case.combine)
+    workingdata.list <- workingdata.list[-c(files.combine)]
   }
 ##~-------------
 
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "after_text_loading_and_splitting"
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##~<<<<<<<<<<<<<<<<<<<
+##END <<<<<<<<<<<<<<<<<<<
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##+<<<<<<<<<<<<<<<<<<< READ AND PREPARE THESAURI AND STOPWORDLIST DATA
+##START <<<<<<<<<<<<<<<<<<< READ AND PREPARE THESAURI AND STOPWORDLIST DATA
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 ##+ PREPARE THESAURI WORDLISTS---------------------------
 #read all txt files in folder and build a list of their names
 #then do some preliminary cleaning (trim, remove comments, etc.)
-setwd(wd.wordlists)
-
-##+ READ DIRECTORIES WHERE THESAURI ARE STOREDE
-  dir_current_root <- paste(getwd(), "/", sep="")
-  dirs <- list.dirs()
-  #the root dir is included as a single dot "." and is excluded
-  #also leading dots are deleted from directory names and a final slash is added
-  dirs <- dirs[grep("[[:alpha:]]", dirs)]
-  dirs <- paste(gsub("./", "", dirs, fixed=TRUE),"/" , sep="")
-##~
-
 
 ##+ READ THE THESAURI DATA AND CLEAN THE WORDLISTS  
 #initialize
+dirs <- list.dirs(wd.wordlists, recursive=F, full.names = F)
 wordlists <- vector(mode = "list", length = length(dirs))
 
 for (f in 1:length(dirs)) {
 
   ##+ READ
-    setwd(paste(dir_current_root, dirs[f], sep=""))
+    setwd(paste0(wd.current, dirs[f]))
     files <- list.files(pattern=".txt")
     #initialize
     text <- c("")
@@ -892,7 +896,7 @@ for (f in 1:length(dirs)) {
     text <- text[text != " "]
     text <- text[text != ""]
     
-    text <- Correct_misint_chars(text)
+    text <- HarmonizeMisintChars(text)
     text <- gsub("[[:blank:]]{2,}", " ", text)
     text <- unique(text)
   ##~
@@ -900,19 +904,12 @@ for (f in 1:length(dirs)) {
   
   ##+ STORE WORDLISTS IN R LIST
   
-    #create wordlistnames on basis of names of the directory
-    category <- gsub("[\\W]", "", dirs[f], perl=TRUE)
-    category <- gsub("[[:blank:]]", "_", category)
-    listname <- category
-    
-    #add a number to the wordlist in case any names are duplicates
-    listname <- paste("c",f,"__",listname,sep="")
-    
     #if the list only contains one single word (i.e. the category in the first line) this
     #causes problems in later steps, therefore dummy words are introduced
     if(length(text) <= 1) text <- c(text, c("DUMMYUPPER", "dummylower", "Dummymixed"))
     
-    names(wordlists)[f] <- listname
+    #create wordlistnames on basis of names of the directory
+    names(wordlists)[f] <- dirs[f]
     
     wordlists[[f]] <- text
   ##~
@@ -921,30 +918,29 @@ for (f in 1:length(dirs)) {
 }
 ##~---------------------------------------
 
-
-
 ##+ PREPARE STOPWORDLIST-----------------------
 
 ##+ COMPILE STOPWORDS FROM FOLDER AND EXTRACTION PATTERN WORDS
   #all words which had been used to identify extraction patterns
   #they are assumed to be very general, hence they can be deleted for the current analysis)
-  stopwordlist <- Loadstopwordlist.txt.csv(wd.stopwords)
+  stopwordlist <- LoadStopwordlistTxtCsv(wd.stopwords)
 
-  stopwordlist.2 <- c(sapply(seq(length(textlist)), function(i) {
+  stopwordlist.2 <- c(sapply(seq(length(workingdata.list)), function(i) {
     
-    text <- textlist[[i]][[2]]
+    text <- workingdata.list[[i]][[2]]
     
   }))
   
   #here unique might be used if n-grams shall be preserved, however, this does not make much sense for stopwords
-  stopwordlist.2 <- Uniquewords(stopwordlist.2)
+  stopwordlist.2 <- UniqueWords(stopwordlist.2)
   
   #some words should not be removed later and some others (like the extraction patterns) are added
-  stopwordlist.2 <-  stopwordlist.2[-c(grep(paste("Hannover|Finanzierung|Klima-Allianz|B",special_german_characters[5],"ro|Industrie|W",special_german_characters[1],"rme|Strom|F",special_german_characters[3],"rderprogramme|Kostenaspekte|Verbraucherverhalten|Erneuerbare|Industrie|Wohnen|Klima-Allianz|Wirtschaftlichkeit|Regionen|Wirtschftlichkeit", sep=""), 
+  stopwordlist.2 <-  stopwordlist.2[-c(grep(paste0("Hannover|Finanzierung|Klima-Allianz|B",special.german.characters[5],"ro|Industrie|W",special.german.characters[1],"rme|Strom|F",special.german.characters[3],"rderprogramme|Kostenaspekte|Verbraucherverhalten|Erneuerbare|Industrie|Wohnen|Klima-Allianz|Wirtschaftlichkeit|Regionen|Wirtschftlichkeit"), 
                                             stopwordlist.2))]
   
   
-  stopwordlist.2 <- c(stopwordlist.2, "~PAGE~RANGE~START~", 
+  stopwordlist.2 <- c(stopwordlist.2, 
+                      "~PAGE~RANGE~START~", 
                       "~PAGE~RANGE~END~", 
                       "END_EXTRACTION",
                       "START_EXTRACTION")
@@ -955,22 +951,22 @@ for (f in 1:length(dirs)) {
 
   
 ##+ CLEAN AND STEM STOPWORDLIST
-  stopwordlist <- Correct_misint_chars(stopwordlist)
+  stopwordlist <- HarmonizeMisintChars(stopwordlist)
   
   #in contrast to stopwordlist.2 the loaded stopwordlist might include n-grams which shall be preserved
-  #therefore not Uniquewords but unique is applied
-  stopwordlist <- unique(Cleantext(stopwordlist))
+  #therefore not UniqueWords but unique is applied
+  stopwordlist <- unique(CleanVector(stopwordlist))
   
   #stem the stopwordlist
-  #lower and uppercase are preserved by stem_vector
-  x <- Stem_vector(stopwordlist)
+  #lower and uppercase are preserved by StemVector
+  stopwordlist.stem <- StemVector(stopwordlist)
   
   #graph does not include blanks, similar like x!=""
-  x <- x[grep("[[:graph:]]", x)]
+  stopwordlist.stem <- x[grep("[[:graph:]]", stopwordlist.stem)]
   
-  x <- sort(unique(x))
+  stopwordlist.stem <- sort(unique(stopwordlist.stem))
   
-  stopwordlist.stem <- x
+  stopwordlist.stem <- stopwordlist.stem
   
   #some stopwords were collected during screening of the final draft results 
   #and added at this point for the final run of the code
@@ -996,31 +992,30 @@ for (f in 1:length(dirs)) {
     
     text <- unlist(wordlists[[i]])
     
-    x <- text
-    x <- unique(Cleantext(x))  #here not Uniquewords() is applied as suitable splitting has been done in the process of preparing the wordlists
+    text <- unique(CleanVector(text))  #here not UniqueWords() is applied as suitable splitting has been done in the process of preparing the wordlists
     
-    #for exceot for word referring to sustainability categories only nouns are considered
+    #for except for word referring to sustainability categories only nouns are considered
     if (grepl("3--SUS--", names(wordlists)[[i]]) == FALSE) {
       
-      x <- x[grep("[[:upper:]]", x)]
+      text <- text[grep("[[:upper:]]", text)]
       
     }
     
-    x <- unique(Stem_vector(x))
+    text <- unique(StemVector(text))
     
-    x <- x[grep("[[:graph:]]", x)]
+    text <- text[grep("[[:graph:]]", text)]
     
-    x <- gsub("^[[:alnum:]]{1,2}$","" , x)
+    text <- gsub("^[[:alnum:]]{1,2}$","" , text)
     
     #remove the stopwords which appeared at the beginning of a sentence and begin with upper case
-    rows.delete <- which(tolower(x) %in% tolower(stopwordlist))
+    rows.delete <- which(tolower(text) %in% tolower(stopwordlist))
     if (length(rows.delete) > 0) {
-      x <- x[-rows.delete]
+      text <- text[-rows.delete]
     }
     
     
-    x <- x[x!=""]  
-    text <- x
+    text <- text[text!=""]  
+ 
     
     if(length(text) <= 1) text <- c(text, c("DUMMYUPPER", "dummylower", "Dummymixed"))
   
@@ -1055,8 +1050,8 @@ for (f in 1:length(dirs)) {
     ##~
     
     text <- list(text)
-    prefix.wordlists <- c("uniq.stem_")
-    names(text) <- paste(prefix.wordlists, names(wordlists[i]), sep="")
+   
+    names(text) <- paste(wordlists.prefix, names(wordlists[i]), sep="")
     
     #in order to free memory and increase performance the original wordlist is replaced
     #it could also be stored for tracing back errors due to stemming 
@@ -1074,9 +1069,10 @@ for (f in 1:length(dirs)) {
 
 #initialize
 wordcategorylist <- matrix(c(0,0), nrow = 1)
-for (i in 1:length(wordlists)) {
+
+  for (i in 1:length(wordlists)) {
   
-  category <- rep(gsub(prefix.wordlists, "", names(wordlists[[i]][1])), length(wordlists[[i]][[1]]))
+  category <- rep(gsub(wordlists.prefix, "", names(wordlists[[i]][1])), length(wordlists[[i]][[1]]))
   matrix <- cbind(wordlists[[i]][[1]], category)
   wordcategorylist <- rbind(wordcategorylist, matrix)
   
@@ -1109,13 +1105,13 @@ row.names(wordcategorylist) <- 1:nrow(wordcategorylist)
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "after_wordlist_loading"
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##~<<<<<<<<<<<<<<<<<<<
+##END <<<<<<<<<<<<<<<<<<<
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##+<<<<<<<<<<<<<<<<<<< CLEAN AND STEM ALL TEXT WINDOWS
+##START <<<<<<<<<<<<<<<<<<< CLEAN AND STEM ALL TEXT WINDOWS
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
@@ -1129,18 +1125,18 @@ ngrams <- as.character(unlist(strsplit(ngrams[grep("[[:blank:]]", ngrams)], " ")
 stopwords.not.in.ngrams <- setdiff(stopwordlist.stem,ngrams)
 
 ##+ CLEAN AND STEM TEXT WINDOWS----------------
-for (i in 1:length(textlist)) {
+for (i in 1:length(workingdata.list)) {
   
-  text <- textlist[[i]][[3]]
+  text <- workingdata.list[[i]][[3]]
   
   ##+ FLAT STEMMED VERSION OF THE WORDS IN THE TEXT WINDOWS
-    measure.stem <- lapply(text, function(x) {
+    window.stem <- lapply(text, function(x) {
       
       x <- paste(unlist(x), collapse=" ")
       
-      x <- Cleantext(x)
+      x <- CleanVector(x)
       
-      x <- Stem_vector(x)
+      x <- StemVector(x)
       
       x <- unlist(strsplit(x, " "))
       
@@ -1151,7 +1147,7 @@ for (i in 1:length(textlist)) {
       x
     })
     
-    measure.stem <- unlist(measure.stem)
+    window.stem <- unlist(window.stem)
   ##~
   
   
@@ -1161,7 +1157,7 @@ for (i in 1:length(textlist)) {
   
     #generate base words
     base <- text
-    x <- Uniquewords(Cleantext(base))
+    x <- UniqueWords(CleanVector(base))
     
     x <- x[grep("[[:graph:]]", x)]
     
@@ -1177,7 +1173,7 @@ for (i in 1:length(textlist)) {
     base <- x[x!=""]
     
     #generate stemmed words and bind both together
-    base.stem <- Stem_vector(base)
+    base.stem <- StemVector(base)
     measure.unique.baseANDstem  <- cbind(base, base.stem)
     
     #delete stopwords in stemmed format
@@ -1190,11 +1186,11 @@ for (i in 1:length(textlist)) {
   ##~
  
   #full original measure text is overwritten
-  textlist[[i]][[3]] <- measure.stem
-  names(textlist[[i]])[3] <- paste("measstem_", names(textlist[i]), sep="")
+  workingdata.list[[i]][[3]] <- window.stem
+  names(workingdata.list[[i]])[3] <- paste("measstem_", names(workingdata.list[i]), sep="")
   measure.unique.baseANDstem <- list(measure.unique.baseANDstem) 
-  textlist[[i]] <- c(textlist[[i]], measure.unique.baseANDstem) 
-  names(textlist[[i]])[4] <- paste("measunibaseANDstem_", names(textlist[i]), sep="")
+  workingdata.list[[i]] <- c(workingdata.list[[i]], measure.unique.baseANDstem) 
+  names(workingdata.list[[i]])[4] <- paste("measunibaseANDstem_", names(workingdata.list[i]), sep="")
 
 }
 
@@ -1203,20 +1199,19 @@ for (i in 1:length(textlist)) {
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "after_cleaning_stemming_measures"
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##~<<<<<<<<<<<<<<<<<<<
+##END <<<<<<<<<<<<<<<<<<<
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##+<<<<<<<<<<<<<<<<<<<  SEARCH ALGORITHM - CREATE OCCURRENCE MATRIX FOR CATEGORIES IN TEXT WINDOWS PER DOCUMENT ON BASIS OF TAGGED WORDS
+##START <<<<<<<<<<<<<<<<<<<  SEARCH ALGORITHM - CREATE OCCURRENCE MATRIX FOR CATEGORIES IN TEXT WINDOWS PER DOCUMENT ON BASIS OF TAGGED WORDS
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 words.tag.num  <- nrow(wordcategorylist) 
 words.tag <- as.character(wordcategorylist[,1])
-occurrence.filename.tag <- c("__w_occ_mat__MR")
 
 #sustainability vocabulary shall be matched also within words 
 #therefore their row numbers are identified
@@ -1225,21 +1220,21 @@ sustainability.rows <- grep("3--SUS--", wordcategorylist[,2])
 sustainability.words <- as.character(wordcategorylist[sustainability.rows,1])
 
 
-for (t in seq(length(textlist))) {
+for (t in seq(length(workingdata.list))) {
   
-  measures <- textlist[[t]][[3]]
+  text.windows.split <- workingdata.list[[t]][[3]]
   
   #initialize matrix to count word occurences
   #one row for each tagged word / one column for each measure
-  meas.num <- length(measures)
-  initial <- rep(0, meas.num*words.tag.num)
+  text.windows.num <- length(text.windows.split)
+  initial <- rep(0, text.windows.num*words.tag.num)
   occurence.matrix <- matrix(initial, nrow = words.tag.num)
-  colnames(occurence.matrix) <- paste("meas_",seq(meas.num) , sep="")
+  colnames(occurence.matrix) <- paste("window_",seq(text.windows.num) , sep="")
   
 ##+ COUNT OCCURRENCE OF WORDS IN TEXT WINDOWS---------------------
-  for (m in seq(meas.num)) {
+  for (m in seq(text.windows.num)) {
     
-    text <- as.character(measures[m])
+    text <- as.character(text.windows.split[m])
     
     for (n in seq(length(words.tag)))  { 
       
@@ -1318,10 +1313,10 @@ for (t in seq(length(textlist))) {
       }
     }
     
-    measures[m] <- gsub("[[:blank:]]{2,}", " ", text)
+    text.windows.split[m] <- gsub("[[:blank:]]{2,}", " ", text)
   }
   
-  textlist[[t]][[3]] <- measures
+  workingdata.list[[t]][[3]] <- text.windows.split
   
   #evaluation matrix - connect the counts to the actual words and categories
   #first type of columns = tagged word and categories connected to it -> word represents categories represented in a measure
@@ -1340,26 +1335,26 @@ for (t in seq(length(textlist))) {
   #!!an approach not using regex might be quicker (the regex approach was rather used for testing)
   
   #select all words which have been matched, make unique as one word may appear as duplicate in different categories
-  #matched.words <- unique(evaluationmatrix[which(rowSums(occurence.matrix)>0),"word"])
+  #words.matched <- unique(evaluationmatrix[which(rowSums(occurence.matrix)>0),"word"])
   #1grams in a first gsub step and n-grams in a next vector step with interim markers
-  #unmatched.words <- gsub("(~)(\\s)([\\w]+)(\\s)(/)","", measures, perl=TRUE)
+  #words.unmatched <- gsub("(~)(\\s)([\\w]+)(\\s)(/)","", text.windows.split, perl=TRUE)
   
-  unmatched.words <- c()
-  matched.words <- c()
+  words.unmatched <- c()
+  words.matched <- c()
   
-  for (m in seq(meas.num)) { 
+  for (m in seq(text.windows.num)) { 
     
-    text <- as.character(measures[m])
+    text <- as.character(text.windows.split[m])
     
     #1grams
-    matched.words <- c(matched.words, regmatches(text, gregexpr("(?=~)(.*?)(?=/)", text, perl=TRUE))) 
+    words.matched <- c(words.matched, regmatches(text, gregexpr("(?=~)(.*?)(?=/)", text, perl=TRUE))) 
     
     rest <- regmatches(text, gregexpr("(?=~)(.*?)(?=/)", text, perl=TRUE), invert=T)
     rest <- paste(unlist(rest), collapse = " ")
     rest <- gsub("~|/", " ", rest)
     
     #ngrams
-    matched.words <- c(matched.words,regmatches(rest, gregexpr("(?=:)(.*?)(?=;)", rest, perl=TRUE)))
+    words.matched <- c(words.matched,regmatches(rest, gregexpr("(?=:)(.*?)(?=;)", rest, perl=TRUE)))
     #this would also have worked without lookaround
     #regmatches(rest, gregexpr("(:)(.*?)(;)", rest, perl=TRUE))
     
@@ -1367,40 +1362,40 @@ for (t in seq(length(textlist))) {
     rest <- paste(unlist(rest), collapse = " ")
     rest <- gsub("[[:punct:]]+", "", rest)
     
-    unmatched.words <- c(unmatched.words, unlist(strsplit(unlist(rest), " ")))
+    words.unmatched <- c(words.unmatched, unlist(strsplit(unlist(rest), " ")))
     
-    unmatched.words <- unique(Cleantext(Uniquewords(unmatched.words)))
+    words.unmatched <- unique(CleanVector(UniqueWords(words.unmatched)))
     
   }
   
-  unmatched.words <- unique(Cleantext(Uniquewords(unmatched.words)))
+  words.unmatched <- unique(CleanVector(UniqueWords(words.unmatched)))
   
   #in case the information is needed how often a single word was matched,
   #counting of ~ or : has to be performed before
-  matched.words <- unique(Cleantext(Uniquewords(matched.words)))                        
+  words.matched <- unique(CleanVector(UniqueWords(words.matched)))                        
   
   ##remove stopwords in upper and lower case
-  rows.delete <- which(tolower(matched.words) %in% tolower(stopwordlist.stem))
+  rows.delete <- which(tolower(words.matched) %in% tolower(stopwordlist.stem))
   
   
   if (length(rows.delete) > 0) {
-    matched.words <- matched.words[-rows.delete]
+    words.matched <- words.matched[-rows.delete]
   }
   
-  rows.delete <- which(tolower(unmatched.words) %in% tolower(stopwordlist.stem))
+  rows.delete <- which(tolower(words.unmatched) %in% tolower(stopwordlist.stem))
   if (length(rows.delete) > 0) {
-    unmatched.words <- unmatched.words[-rows.delete]
+    words.unmatched <- words.unmatched[-rows.delete]
   }
   
-  matched.words <- matched.words[matched.words!=""]
-  unmatched.words <- unmatched.words[unmatched.words!=""]
+  words.matched <- words.matched[words.matched!=""]
+  words.unmatched <- words.unmatched[words.unmatched!=""]
   
-  matched.words.upper <- matched.words[grep("[[:upper:]]", matched.words)]
-  unmatched.words.upper <- unmatched.words[grep("[[:upper:]]", unmatched.words)]
+  words.matched.upper <- words.matched[grep("[[:upper:]]", words.matched)]
+  words.unmatched.upper <- words.unmatched[grep("[[:upper:]]", words.unmatched)]
   
   #matched words are fewer than unmatched, thus, searching for those instead is faster
-  rows.notmatched <- which(!(textlist[[t]][[4]][,"base.stem"] %in% matched.words))
-  notmatched.words.base <- textlist[[t]][[4]][rows.notmatched,"base"]
+  rows.notmatched <- which(!(workingdata.list[[t]][[4]][,"base.stem"] %in% words.matched))
+  notwords.matched.base <- workingdata.list[[t]][[4]][rows.notmatched,"base"]
   
   #the steps before only identify whole words which have been matched
   #on basis of positive entries in the evaluation matrix, for the sustainability vocabulary these entries
@@ -1412,22 +1407,22 @@ for (t in seq(length(textlist))) {
   
   rows.delete <- c()
   for (d in 1:length(sustainability.words)) {
-    rows.delete <- c(rows.delete, grep(paste("(\\b)(\\w*)(",sustainability.words[d],")(\\w*)(\\b)", sep=""), notmatched.words.base, perl=TRUE, ignore.case = TRUE))
+    rows.delete <- c(rows.delete, grep(paste("(\\b)(\\w*)(",sustainability.words[d],")(\\w*)(\\b)", sep=""), notwords.matched.base, perl=TRUE, ignore.case = TRUE))
     
   }
   
-  sustainability.words.matched.not.marked <-  unique(notmatched.words.base[rows.delete])
+  sustainability.words.matched.not.marked <-  unique(notwords.matched.base[rows.delete])
   
   if (length(rows.delete) > 0) {
-    notmatched.words.base <- notmatched.words.base[-rows.delete]
+    notwords.matched.base <- notwords.matched.base[-rows.delete]
   }
   
-  notmatched.words.base <- unique(notmatched.words.base)
-  notmatched.words.base <- notmatched.words.base[order(notmatched.words.base)]
-  notmatched.words.base <- notmatched.words.base[grep("[[:upper:]]", notmatched.words.base)]
+  notwords.matched.base <- unique(notwords.matched.base)
+  notwords.matched.base <- notwords.matched.base[order(notwords.matched.base)]
+  notwords.matched.base <- notwords.matched.base[grep("[[:upper:]]", notwords.matched.base)]
   
   #append the not matched words in the respective file
-  write(notmatched.words.base, file=paste(wd.notmatched, "words_not_matched.txt", sep=""), append=TRUE)
+  write(notwords.matched.base, file=paste(wd.notmatched, file.words.not.matched, sep=""), append=TRUE)
   
 ##~---------------------------------
   
@@ -1435,20 +1430,20 @@ for (t in seq(length(textlist))) {
   #calculate initial match rate
   #this rate only considers the uppercase words and shows if any words have not been tagged 
   #that could have been when following the goal of tagging nouns
-  match.rate <- round(length(matched.words)/
-                        (length(matched.words)+length(unmatched.words)),
+  match.rate <- round(length(words.matched)/
+                        (length(words.matched)+length(words.unmatched)),
                       #as the value is used in the filename no dots should be included
                       digits = 2)*100 
 
   
-  filename <- gsub(".txt",paste(occurrence.filename.tag, match.rate, ".csv", sep=""),names(textlist[t]))
+  filename <- gsub(".txt",paste(occurrence.filename.tag, match.rate, ".csv", sep=""),names(workingdata.list[t]))
 
   
   write.csv(evaluationmatrix, paste(wd.interim, filename, sep=""))
   
  
   time.elapsed <- rbind(time.elapsed, proc.time())
-  case.name <- gsub("^.*GER_", "", names(textlist[t]))
+  case.name <- gsub("^.*GER_", "", names(workingdata.list[t]))
   case.name <- substr(case.name,1,25)
   row.names(time.elapsed)[nrow(time.elapsed)] <- paste("after_matching_in_", case.name, sep="")
 
@@ -1467,19 +1462,19 @@ write.csv(time.elapsed, paste(wd.final, "time_elapsed.csv", sep=""))
 #clean memory from the largest objects
 remove <- intersect(ls(), 
                     c("evaluationmatrix", "occurence.matrix", "initial",
-                      "occurrence.boolean", "wholetext", "interim", "case.combine"))
+                      "occurrence.boolean", "text", "interim", "case.combine"))
 
 rm(list = remove)
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##~<<<<<<<<<<<<<<<<<<<
+##END <<<<<<<<<<<<<<<<<<<
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##+<<<<<<<<<<<<<<<<<<< CALCULATE NUMBER OF TAGGED CONCEPTS AND MATCH RATE
+##START <<<<<<<<<<<<<<<<<<< CALCULATE NUMBER OF TAGGED CONCEPTS AND MATCH RATE
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 #this part of the code was added in a second step of coding and has not been integrated into above
 #main code; it therefore contains several repitions and requires more computing time than needed
@@ -1488,14 +1483,14 @@ rm(list = remove)
 
 #initialize match rate table
 match.rate.table.colnames <- c("case", 
-                               "number of measures", 
-                               "average number of words per measures",
-                               "average number of unique stemmed words per measure", 
+                               "number of text windows", 
+                               "average number of words per text window",
+                               "average number of unique stemmed words per text windows", 
                                
                                "average number of unique uppercase stemmed words",
                                "average number of tagged unique uppercase stemmed words"
                                 )
-match.rate.table <- matrix(nrow=length(textlist),ncol=length(match.rate.table.colnames))
+match.rate.table <- matrix(nrow=length(workingdata.list),ncol=length(match.rate.table.colnames))
 colnames(match.rate.table) <- match.rate.table.colnames
 
 ngrams <- unlist(wordlists)
@@ -1510,18 +1505,18 @@ words.tagged <- as.character(unlist(strsplit(unlist(wordlists), " ")))
 words.tagged <- setdiff(words.tagged,  stopwordlist.stem)
 words.tagged.upper <- words.tagged[grep("[[:upper:]]", words.tagged)]
 
-all.words <- c()
-for (i in 1:length(textlist)) {
+words.all <- c()
+for (i in 1:length(workingdata.list)) {
   
-  text <- textlist[[i]][[3]] 
+  text <- workingdata.list[[i]][[3]] 
   
   text <- lapply(text, function(x) {
     
     x <- paste(unlist(x), collapse=" ")
     
-    x <- Cleantext(x)
+    x <- CleanVector(x)
     
-    x <- Stem_vector(x)
+    x <- StemVector(x)
     
     x <- unlist(strsplit(x, " "))
     
@@ -1532,29 +1527,29 @@ for (i in 1:length(textlist)) {
     x
   })
   
-  all.words <- c(all.words, text)
+  words.all <- c(words.all, text)
 }
 
-all.words.unique <- unique(unlist(strsplit(unlist(all.words), " ")))
-all.words.unique <- setdiff(all.words.unique, stopwordlist.stem)
-all.words.unique <- setdiff(all.words.unique, words.tagged)
-all.words.unique  <- all.words.unique [grep("[[:upper:]]",all.words.unique )]
+words.all.unique <- unique(unlist(strsplit(unlist(words.all), " ")))
+words.all.unique <- setdiff(words.all.unique, stopwordlist.stem)
+words.all.unique <- setdiff(words.all.unique, words.tagged)
+words.all.unique  <- words.all.unique [grep("[[:upper:]]",all.words.unique )]
 
 
 
-for (i in 1:length(textlist)) {
+for (i in 1:length(workingdata.list)) {
   
   
-  text <- textlist[[i]][[3]]
+  text <- workingdata.list[[i]][[3]]
   
 
-  measure.stem <- lapply(text, function(x) {
+  window.stem <- lapply(text, function(x) {
     
     x <- paste(unlist(x), collapse=" ")
     
-    x <- Cleantext(x)
+    x <- CleanVector(x)
     
-    x <- Stem_vector(x)
+    x <- StemVector(x)
     
     x <- unlist(strsplit(x, " "))
     
@@ -1565,11 +1560,11 @@ for (i in 1:length(textlist)) {
     x
   })
   
-  measure.stem <- unlist(measure.stem)
+  window.stem <- unlist(window.stem)
 
   
   
-  words.per.measure.average <- round(mean(unlist(lapply(measure.stem, function(x) {
+  words.per.window.average <- round(mean(unlist(lapply(window.stem, function(x) {
     
     x <- unlist(strsplit(x, " "))
     
@@ -1579,7 +1574,7 @@ for (i in 1:length(textlist)) {
   }))), d=0)
   
   
-  words.unique.per.measure.average <- round(mean(unlist(lapply(measure.stem, function(x) {
+  words.unique.per.window.average <- round(mean(unlist(lapply(window.stem, function(x) {
     
     x <- unlist(strsplit(x, " "))
     
@@ -1592,7 +1587,7 @@ for (i in 1:length(textlist)) {
   
   
   
-  unique.uppercase.stemmed.per.measure <- round(mean(unlist(lapply(measure.stem, function(x) {
+  unique.uppercase.stemmed.per.window <- round(mean(unlist(lapply(window.stem, function(x) {
     
     total <- length(unique(tolower(unlist(strsplit(x, " ")))))
     
@@ -1614,7 +1609,7 @@ for (i in 1:length(textlist)) {
   
   
   
-  nouns.unique.tag.rate.per.measure.average <- round(mean(unlist(lapply(measure.stem, function(x) {
+  nouns.unique.tag.rate.per.window.average <- round(mean(unlist(lapply(window.stem, function(x) {
     
     
     total <- length(unique(tolower(unlist(strsplit(x, " ")))))
@@ -1646,17 +1641,17 @@ for (i in 1:length(textlist)) {
   }))), d=2)
   
   
-  match.rate.table[i,"case"] <- names(textlist)[i]
+  match.rate.table[i,"case"] <- names(workingdata.list)[i]
   
-  match.rate.table[i,"number of measures" ] <- length(measure.stem)
+  match.rate.table[i,"number of text windows" ] <- length(window.stem)
   
-  match.rate.table[i,"average number of words per measures"] <- words.per.measure.average
+  match.rate.table[i,"average number of words per text window"] <- words.per.window.average
   
-  match.rate.table[i, "average number of unique stemmed words per measure"] <- words.unique.per.measure.average
+  match.rate.table[i, "average number of unique stemmed words per text windows"] <- words.unique.per.window.average
   
-  match.rate.table[i, "average number of unique uppercase stemmed words"] <-   unique.uppercase.stemmed.per.measure 
+  match.rate.table[i, "average number of unique uppercase stemmed words"] <-   unique.uppercase.stemmed.per.window 
   
-  match.rate.table[i, "average number of tagged unique uppercase stemmed words"] <-  nouns.unique.tag.rate.per.measure.average
+  match.rate.table[i, "average number of tagged unique uppercase stemmed words"] <-  nouns.unique.tag.rate.per.window.average
   
   
 }
@@ -1665,30 +1660,22 @@ setwd(wd.final)
 write.csv(match.rate.table, paste(wd.final, "match_rate_table.csv", sep=""))
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##~<<<<<<<<<<<<<<<<<<< 
+##END <<<<<<<<<<<<<<<<<<< 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##+<<<<<<<<<<<<<<<<<<< GENERATE RELATIVE COOCCURRENCE MATRICES
+##START <<<<<<<<<<<<<<<<<<< GENERATE RELATIVE COOCCURRENCE MATRICES
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##count normalized co-occurrence of categories within each text
 #(co-occurrence of category1/category2 within X text windows of a text)/(number of all text windows of a text)
 
-library("plyr")
-
 setwd(wd.interim)
-occurrence.filename.tag <- c("__w_occ_mat__MR")
+
 files <- list.files(pattern = paste("^.*", occurrence.filename.tag, "[[:digit:]]+.csv$", sep=""))
-cooccurrence.filename.tag <- c("__cat_coocc_mat")
 
-categories <- names(wordlists)
-categories<- gsub("c11__CE__climate_protection_tools_measures_aspects", 
-                  "c10__CE__climate_protection_general_and_strategy",  
-                  categories)
-
-categories <- unique(categories)
+categories <- list.dirs(wd.wordlists, recursive=F, full.names = F)
 categories <- categories[order(categories)]
 
 categories.num <- length(categories)
@@ -1713,50 +1700,46 @@ for (t in seq(length(files))) {
   
 
   evaluationmatrix <- read.csv(files[t]) 
+ 
+
+  #if reading in of the csv generates columns with numbers (old rownumbers) these are deleted
+  delete.columns <- grep("(X$)|(X\\.)(\\d+)($)", colnames(evaluationmatrix), perl=T)
   
-  #if reading in of the csv generates a column with numbers (old rownumbers) this column is deleted
-  if(colnames(evaluationmatrix)[1] == "X") {
-    evaluationmatrix <- evaluationmatrix[,-c(1)]
+  if (length(delete.columns) > 0) {
+    row.names(evaluationmatrix) <- as.character(evaluationmatrix[, grep("^X$", colnames(evaluationmatrix))])
+    evaluationmatrix <- evaluationmatrix[,-delete.columns]
+    colnames(evaluationmatrix) <- gsub("^X", "",  colnames(evaluationmatrix))
+    colnames(evaluationmatrix) <- gsub("\\.", "-",  colnames(evaluationmatrix))
   }
   
   #count the number of measures of the case
-  meas.totalnum <- ncol(evaluationmatrix)-2
+  text.windows.num <- ncol(evaluationmatrix)-2
   
   case.name <- gsub(paste("(^.*GER__)([A-Za-z]+)(__.*$)"), "\\2",files[t])
   
-  #delete sustainability category words which had been assigned in a wrong way
-  #spar does not count as c161_prohibition_limits....
-  delete.rows <- intersect(grep("spar", evaluationmatrix[,"word"]), grep("c161", evaluationmatrix[,"category"]))
+  #find specific combinations of words and categories
+  #that emerged as unsuitable combinations during analysis of data
+  delete.rows <- c(intersect(grep("^Haushalt$|^Kind$|^Verbind$|^Materiali$|^Zusammenstell$|^Raeum$|^Unterlag$|^Buero$|^Bueros$|^Lieg$|^Tier$|^Abnehm$", evaluationmatrix[,"word"]), 
+                             grep("CF", evaluationmatrix[,"category"])),
+                   
+                   intersect(grep("^Bau$|^Werk$", evaluationmatrix[,"word"]), 
+                             grep("Agriculture", evaluationmatrix[,"category"])),
+                   
+                   intersect(grep("^Baeum$", evaluationmatrix[,"word"]), 
+                             grep("intermediate_products", evaluationmatrix[,"category"])),
+                   
+                   intersect(grep("Vermi", evaluationmatrix[,"word"]), 
+                             grep("sufficiency_avoidance", evaluationmatrix[,"category"]))
+                   
+  )
+  
+  #delete
   if (length(delete.rows)>0) {
-    evaluationmatrix <-  evaluationmatrix[-delete.rows,]   
+    delete.rows <- unique(delete.rows)
+    evaluationmatrix <- evaluationmatrix[-delete.rows,]
   }
   
-  
-  delete.rows <- intersect(grep("Vermi", evaluationmatrix[,"word"]), grep("sufficiency_avoidance", evaluationmatrix[,"category"]))
-  if (length(delete.rows)>0) {
-    evaluationmatrix <-  evaluationmatrix[-delete.rows,]   
-  }
-  
-  delete.rows <- intersect(grep("^Bau$|^Werk$", evaluationmatrix[,"word"]), grep("AFLV", evaluationmatrix[,"category"]))
-  if (length(delete.rows)>0) {
-    evaluationmatrix <-  evaluationmatrix[-delete.rows,]   
-  }
-  
-  delete.rows <- intersect(grep("^Baeum$", evaluationmatrix[,"word"]), grep("intermediate_products", evaluationmatrix[,"category"]))
-  if (length(delete.rows)>0) {
-    evaluationmatrix <-  evaluationmatrix[-delete.rows,]   
-  }
-  
-  delete.rows <- intersect(grep("^Haushalt$|^Kind$|^Verbind$|^Materiali$|^Zusammenstell$|^Raeum$|^Unterlag$|^Buero$|^Bueros$|^Lieg$|^Tier$|^Abnehm$", evaluationmatrix[,"word"]), grep("CF", evaluationmatrix[,"category"]))
-  if (length(delete.rows)>0) {
-    evaluationmatrix <-  evaluationmatrix[-delete.rows,]   
-  }
-  
-  #combine the two climate protection categories
-  evaluationmatrix[,"category"] <- gsub("c11__CE__climate_protection_tools_measures_aspects", 
-                                        "c10__CE__climate_protection_general_and_strategy",  
-                                        evaluationmatrix[,"category"])
-  
+
   word.frequencies <- cbind(evaluationmatrix[,1:2], rowSums(evaluationmatrix[,3:ncol(evaluationmatrix)]))
   colnames(word.frequencies)[3] <- c("relative_occurrence")
   word.frequencies <- word.frequencies[-which(word.frequencies[,3] == 0),]
@@ -1835,7 +1818,7 @@ for (t in seq(length(files))) {
       
       #rounding would not be necessary for the zeros, however to receive same format for all results
       #the operation is conducted anyhow
-      result.cooccurrence.case[,category] <- round((cooccurrence/meas.totalnum) ,digits=4)
+      result.cooccurrence.case[,category] <- round((cooccurrence/text.windows.num) ,digits=4)
       
       next(i)
       
@@ -1863,7 +1846,7 @@ for (t in seq(length(files))) {
       
       cooccurrence <- category.subset
       
-      result.cooccurrence.case[,category] <- round((cooccurrence/meas.totalnum) ,digits=4)
+      result.cooccurrence.case[,category] <- round((cooccurrence/text.windows.num) ,digits=4)
       
       next(i)
       
@@ -1874,7 +1857,7 @@ for (t in seq(length(files))) {
     
     cooccurrence <- rowSums(category.subset)
     
-    result.cooccurrence.case[,category] <- round((cooccurrence/meas.totalnum) ,digits=4)
+    result.cooccurrence.case[,category] <- round((cooccurrence/text.windows.num) ,digits=4)
     
     
   }
@@ -1924,13 +1907,13 @@ invisible(lapply(words.frequencies, function(x) {
 
 write.csv(words.occurrence.topten.consolidated, "words_occurrence_topten_consolidated.csv")
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##~<<<<<<<<<<<<<<<<<<<
+##END <<<<<<<<<<<<<<<<<<<
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##+<<<<<<<<<<<<<<<<<<< CALCULATE AVERAGE COOCCURRENCE MATRIX
+##START <<<<<<<<<<<<<<<<<<< CALCULATE AVERAGE COOCCURRENCE MATRIX
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 ##START build mean values----------------------------------
@@ -1947,12 +1930,16 @@ for (t in seq(length(files))) {
   cooccurrence.matrix.case <- read.csv(files[t]) 
   
   
-  #if reading in of the csv generates a column with numbers (old rownumbers) this column is deleted
-  if(colnames(cooccurrence.matrix.case)[1] == "X") {
-    
-    row.names(cooccurrence.matrix.case) <- as.character(cooccurrence.matrix.case[,1])
-    cooccurrence.matrix.case <- cooccurrence.matrix.case[,-c(1)]
+  #if reading in of the csv generates a column with numbers (old rownumbers) these columns are deleted
+  delete.columns <- grep("(X$)|(X\\.)(\\d+)($)", colnames( cooccurrence.matrix.case), perl=T)
+  
+  if (length(delete.columns) > 0) {
+    row.names( cooccurrence.matrix.case) <- as.character( cooccurrence.matrix.case[, grep("^X$", colnames( cooccurrence.matrix.case))])
+     cooccurrence.matrix.case <-  cooccurrence.matrix.case[,-delete.columns]
+    colnames( cooccurrence.matrix.case) <- gsub("^X", "",  colnames( cooccurrence.matrix.case))
+    colnames( cooccurrence.matrix.case) <- gsub("\\.", "-",  colnames( cooccurrence.matrix.case))
   }
+  
   
   cooccurrence.matrix.case <-  cooccurrence.matrix.case[,order(colnames(cooccurrence.matrix.case))]
   cooccurrence.matrix.case <-  cooccurrence.matrix.case[order(row.names(cooccurrence.matrix.case)),]
@@ -1988,22 +1975,19 @@ for (t in seq(length(files))) {
 cooccurrence.matrix.mean <-  round(cooccurrence.matrix.mean/length(files), d=4)
 
 #write mean results in file
-filename <- paste("GER__Lower_Saxony_regional_centers_mean", cooccurrence.filename.tag, ".csv", sep="")
+filename <- paste(filenamebeginning.cooccurrence.matrix.mean, cooccurrence.filename.tag, ".csv", sep="")
 filename <- paste(wd.interim, filename, sep="")
 write.csv(cooccurrence.matrix.mean, filename)
-
+##~----------------------
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##~<<<<<<<<<<<<<<<<<<< 
+##END <<<<<<<<<<<<<<<<<<< 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 
-
-
-library("ggplot2")
-library("reshape2")
-library("plyr")
-
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##START <<<<<<<<<<<<<<<<<<< PREPARE DATA FOR FINAL PLOTTING AND ANALYSIS
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 ##+ INITIALIZE VARIABLE NAMES ETC.--------------------------
 #delete words
@@ -2037,15 +2021,12 @@ for (t in seq(length(files))) {
   }
   
   #count the number of text windows
-  meas.totalnum <- ncol(evaluationmatrix)-2
+  text.windows.num <- ncol(evaluationmatrix)-2
   
   #find additional stopwords to be deleted and
   #specific combinations of words and categories
   #that emerged as unsuitable combinations during analysis of data
   delete.rows <- c(which(as.character(evaluationmatrix[,"word"]) %in% stopwords.additional),
-                   
-                   intersect(grep("spar", evaluationmatrix[,"word"]), 
-                             grep("c161", evaluationmatrix[,"category"])),
                    
                    intersect(grep("^Haushalt$|^Kind$|^Verbind$|^Materiali$|^Zusammenstell$|^Raeum$|^Unterlag$|^Buero$|^Bueros$|^Lieg$|^Tier$|^Abnehm$", evaluationmatrix[,"word"]), 
                              grep("CF", evaluationmatrix[,"category"])),
@@ -2095,7 +2076,7 @@ for (t in seq(length(files))) {
     #word frequency within a measure is not used for evaluation
     #therefore all numbers larger than 0 are converted to 1
     count <- ifelse(count>0,1,0)
-    result <- round(sum(count)/meas.totalnum, digits=4)
+    result <- round(sum(count)/text.windows.num, digits=4)
     
     results.occ.final[category,t] <- result
   }
@@ -2106,8 +2087,6 @@ results.occ.final  <- cbind(results.occ.final, round((rowSums(results.occ.final)
 colnames(results.occ.final)[ncol(results.occ.final)] <- "mean"
 
 ##~-----------------------------------------
-
-
 
 
 ##+ RENAME CATEGORIES AND SELECT CATEGORY SETS FOR PLOTTING---------------------------------
@@ -2145,10 +2124,13 @@ results.occ.sustainability <- results.occ.final[categories.select3,]
 
 ##~-----------------------------------
 
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##END <<<<<<<<<<<<<<<<<<<
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##+<<<<<<<<<<<<< BOXPLOT OF OCCURRENCES OF CATEGORIES IN ENERGY SYSTEM THESAURUS
+##START <<<<<<<<<<<<< BOXPLOT OF OCCURRENCES OF CATEGORIES IN ENERGY SYSTEM THESAURUS
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 ##+ SET ORDER OF CATEGORIES FOR PLOTTING-------------------------
@@ -2357,12 +2339,12 @@ dev.off()
 ##~-----------------------------------------------
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##~<<<<<<<<<<<<<
+##END <<<<<<<<<<<<<
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##+<<<<<<<<<<<<< BOXPLOT THESAURUS ONE; SOCIAL SYSTEM
+##START <<<<<<<<<<<<< BOXPLOT THESAURUS ONE; SOCIAL SYSTEM
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 ##+ BOXPLOT THESAURUS ONE-----------------------------------------------
@@ -2477,13 +2459,13 @@ dev.off()
 ##~-----------------------------------------------
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##~<<<<<<<<<<<<< BOXPLOT THESAURUS ONE; SOCIAL SYSTEM
+##END <<<<<<<<<<<<< BOXPLOT THESAURUS ONE; SOCIAL SYSTEM
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##+<<<<<<<<<<<<< BOXPLOT THESAURUS THREE , SUSTAINABILITY
+##START <<<<<<<<<<<<< BOXPLOT THESAURUS THREE , SUSTAINABILITY
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 ##+ BOXPLOT THESAURUS THREE--------------------------
@@ -2661,20 +2643,17 @@ p
 dev.off()
 ##~-----------------------------------
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##~<<<<<<<<<<<<< 
+##END <<<<<<<<<<<<< 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##+<<<<<<<<<<<<< PLOT COOCCURRENCE MATRICES
+##START <<<<<<<<<<<<< PLOT COOCCURRENCE MATRICES
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 #COOCCURRENCE IN WIDE FORMAT
-library("ggplot2")
-library("reshape2")
-library("grid")
 
 setwd(wd.interim)
 categories <- list.dirs(wd.wordlists, recursive=F, full.names = F)
@@ -3194,12 +3173,12 @@ dev.off()
 ##~----------------------
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##~<<<<<<<<<<<<<
+##END <<<<<<<<<<<<<
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##+<<<<<<<<<<<<< COOCCURRENCE PLOT ENERGY / SUSTAINABILITY
+##START <<<<<<<<<<<<< COOCCURRENCE PLOT ENERGY / SUSTAINABILITY
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
@@ -3558,7 +3537,7 @@ dev.off()
 ##~-------------------------------
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-##~<<<<<<<<<<<<<
+##END <<<<<<<<<<<<<
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
