@@ -18,6 +18,57 @@ cooccurrence.filename.tag <- c("__cat_coocc_mat")
 
 filenamebeginning.cooccurrence.matrix.mean <- "GER__Lower_Saxony_regional_centers_mean"
 
+#order of energy system categories
+main.categories.energy <- c("<resources><unsp",
+                            "(<resources>)(?!<unsp)",
+                            "<conversion><unsp", 
+                            "(<conversion>)(?!<unsp)",
+                            "<distribution><unsp", 
+                            "(<distribution>)(?!<unsp)",
+                            "<sales_contracts><unsp",
+                            "(<sales_contracts>)(?!<unsp)",
+                            "<Technology_Option>",
+                            "<Energy_Form>",
+                            "<end_use><consumption>",
+                            "<mobility>(?!<frei)",
+                            "<mobility><frei",
+                            "<building><unsp",
+                            "(<building>)(?!<unsp)",
+                            "<electric_application>",
+                            "<local_administration_bodies>",
+                            "<Mobility_Sector>",
+                            "<Infrastructure>",
+                            "<Residents>",
+                            "<Food>",
+                            "<Economy><unspec",
+                            "<Economy><service>",
+                            "<commerce>",
+                            "<industry><unsp",
+                            "(<industry>)(?!<unsp)"
+)
+
+#in graphical results draw separation line at border of following (meta)categories
+main.categories.energy.reduced <- c( "resources",         
+                                       
+                                       "<conversion>", 
+                                       "<distribution>", 
+                                       "<sales_contracts>",
+                                       "<Technology_Option>",
+                                       "<Energy_Form>", 
+                                       "<end_use><consumption>",
+                                       "<mobility>",
+                                       "<building>",
+                                       "<electric_application>",
+                                       "<local_administration_bodies>", 
+                                       "<Mobility_Sector>",
+                                       "<Infrastructure>",
+                                       
+                                       "<Residents>",
+                                       "<Food>",
+                                       "<Economy>"
+                                       
+)
+
 ######  README  **************************************************************************************************
 
 #This code assumes a semi-automatic approach and has to be run stepwise if other documents than the ones for
@@ -1187,10 +1238,10 @@ for (i in 1:length(workingdata.list)) {
  
   #full original measure text is overwritten
   workingdata.list[[i]][[3]] <- window.stem
-  names(workingdata.list[[i]])[3] <- paste("measstem_", names(workingdata.list[i]), sep="")
+  names(workingdata.list[[i]])[3] <- paste("windows_stem_", names(workingdata.list[i]), sep="")
   measure.unique.baseANDstem <- list(measure.unique.baseANDstem) 
   workingdata.list[[i]] <- c(workingdata.list[[i]], measure.unique.baseANDstem) 
-  names(workingdata.list[[i]])[4] <- paste("measunibaseANDstem_", names(workingdata.list[i]), sep="")
+  names(workingdata.list[[i]])[4] <- paste("windows_base_and_stem_", names(workingdata.list[i]), sep="")
 
 }
 
@@ -1337,9 +1388,9 @@ for (t in seq(length(workingdata.list))) {
   #select all words which have been matched, make unique as one word may appear as duplicate in different categories
   #words.matched <- unique(evaluationmatrix[which(rowSums(occurence.matrix)>0),"word"])
   #1grams in a first gsub step and n-grams in a next vector step with interim markers
-  #words.unmatched <- gsub("(~)(\\s)([\\w]+)(\\s)(/)","", text.windows.split, perl=TRUE)
+  #words.notmatched <- gsub("(~)(\\s)([\\w]+)(\\s)(/)","", text.windows.split, perl=TRUE)
   
-  words.unmatched <- c()
+  words.notmatched <- c()
   words.matched <- c()
   
   for (m in seq(text.windows.num)) { 
@@ -1362,13 +1413,13 @@ for (t in seq(length(workingdata.list))) {
     rest <- paste(unlist(rest), collapse = " ")
     rest <- gsub("[[:punct:]]+", "", rest)
     
-    words.unmatched <- c(words.unmatched, unlist(strsplit(unlist(rest), " ")))
+    words.notmatched <- c(words.notmatched, unlist(strsplit(unlist(rest), " ")))
     
-    words.unmatched <- unique(CleanVector(UniqueWords(words.unmatched)))
+    words.notmatched <- unique(CleanVector(UniqueWords(words.notmatched)))
     
   }
   
-  words.unmatched <- unique(CleanVector(UniqueWords(words.unmatched)))
+  words.notmatched <- unique(CleanVector(UniqueWords(words.notmatched)))
   
   #in case the information is needed how often a single word was matched,
   #counting of ~ or : has to be performed before
@@ -1382,20 +1433,20 @@ for (t in seq(length(workingdata.list))) {
     words.matched <- words.matched[-rows.delete]
   }
   
-  rows.delete <- which(tolower(words.unmatched) %in% tolower(stopwordlist.stem))
+  rows.delete <- which(tolower(words.notmatched) %in% tolower(stopwordlist.stem))
   if (length(rows.delete) > 0) {
-    words.unmatched <- words.unmatched[-rows.delete]
+    words.notmatched <- words.notmatched[-rows.delete]
   }
   
   words.matched <- words.matched[words.matched!=""]
-  words.unmatched <- words.unmatched[words.unmatched!=""]
+  words.notmatched <- words.notmatched[words.notmatched!=""]
   
   words.matched.upper <- words.matched[grep("[[:upper:]]", words.matched)]
-  words.unmatched.upper <- words.unmatched[grep("[[:upper:]]", words.unmatched)]
+  words.notmatched.upper <- words.notmatched[grep("[[:upper:]]", words.notmatched)]
   
   #matched words are fewer than unmatched, thus, searching for those instead is faster
   rows.notmatched <- which(!(workingdata.list[[t]][[4]][,"base.stem"] %in% words.matched))
-  notwords.matched.base <- workingdata.list[[t]][[4]][rows.notmatched,"base"]
+  words.notmatched.base <- workingdata.list[[t]][[4]][rows.notmatched,"base"]
   
   #the steps before only identify whole words which have been matched
   #on basis of positive entries in the evaluation matrix, for the sustainability vocabulary these entries
@@ -1407,22 +1458,22 @@ for (t in seq(length(workingdata.list))) {
   
   rows.delete <- c()
   for (d in 1:length(sustainability.words)) {
-    rows.delete <- c(rows.delete, grep(paste("(\\b)(\\w*)(",sustainability.words[d],")(\\w*)(\\b)", sep=""), notwords.matched.base, perl=TRUE, ignore.case = TRUE))
+    rows.delete <- c(rows.delete, grep(paste("(\\b)(\\w*)(",sustainability.words[d],")(\\w*)(\\b)", sep=""), words.notmatched.base, perl=TRUE, ignore.case = TRUE))
     
   }
   
-  sustainability.words.matched.not.marked <-  unique(notwords.matched.base[rows.delete])
+  sustainability.words.matched.not.marked <-  unique(words.notmatched.base[rows.delete])
   
   if (length(rows.delete) > 0) {
-    notwords.matched.base <- notwords.matched.base[-rows.delete]
+    words.notmatched.base <- words.notmatched.base[-rows.delete]
   }
   
-  notwords.matched.base <- unique(notwords.matched.base)
-  notwords.matched.base <- notwords.matched.base[order(notwords.matched.base)]
-  notwords.matched.base <- notwords.matched.base[grep("[[:upper:]]", notwords.matched.base)]
+  words.notmatched.base <- unique(words.notmatched.base)
+  words.notmatched.base <- words.notmatched.base[order(words.notmatched.base)]
+  words.notmatched.base <- words.notmatched.base[grep("[[:upper:]]", words.notmatched.base)]
   
   #append the not matched words in the respective file
-  write(notwords.matched.base, file=paste(wd.notmatched, file.words.not.matched, sep=""), append=TRUE)
+  write(words.notmatched.base, file=paste(wd.notmatched, file.words.not.matched, sep=""), append=TRUE)
   
 ##~---------------------------------
   
@@ -1431,7 +1482,7 @@ for (t in seq(length(workingdata.list))) {
   #this rate only considers the uppercase words and shows if any words have not been tagged 
   #that could have been when following the goal of tagging nouns
   match.rate <- round(length(words.matched)/
-                        (length(words.matched)+length(words.unmatched)),
+                        (length(words.matched)+length(words.notmatched)),
                       #as the value is used in the filename no dots should be included
                       digits = 2)*100 
 
@@ -1681,9 +1732,9 @@ categories <- categories[order(categories)]
 categories.num <- length(categories)
 
 #initialize
-cooccurrence.matrix <- matrix(rep(0, categories.num*categories.num), nrow = categories.num)
-row.names(cooccurrence.matrix) <- categories[order(categories)]
-colnames(cooccurrence.matrix) <- categories[order(categories)]
+cooccurrence.matrix.initial <- matrix(rep(0, categories.num*categories.num), nrow = categories.num)
+row.names(cooccurrence.matrix.initial) <- categories[order(categories)]
+colnames(cooccurrence.matrix.initial) <- categories[order(categories)]
 
 #initialize 
 #top ten words concerning occurrence value
@@ -1714,8 +1765,8 @@ for (t in seq(length(files))) {
   
   #count the number of measures of the case
   text.windows.num <- ncol(evaluationmatrix)-2
-  
-  case.name <- gsub(paste("(^.*GER__)([A-Za-z]+)(__.*$)"), "\\2",files[t])
+
+  case.name <- gsub(paste("(^.*GER)(_+)([A-Za-z]+)(_+)(.*$)"), "\\3",files[t], perl=T)
   
   #find specific combinations of words and categories
   #that emerged as unsuitable combinations during analysis of data
@@ -1773,25 +1824,25 @@ for (t in seq(length(files))) {
   evaluationmatrix <- evaluationmatrix[order(evaluationmatrix[,1]),]
   
   #initialize results matrix for the case 
-  result.cooccurrence.case <- cooccurrence.matrix
+  cooccurrence.matrix.case <- cooccurrence.matrix.initial
   
   evaluationmatrix <- evaluationmatrix[order(evaluationmatrix[,1]),]
   
   #check if categories in matrix are the same as the loaded categories, they should be,
   #but due to naming mistakes etc. there might be errors
-  if (identical(as.character(evaluationmatrix[,1]),row.names(result.cooccurrence.case)) == FALSE)  {
+  if (identical(as.character(evaluationmatrix[,1]),row.names(cooccurrence.matrix.case)) == FALSE)  {
     warning("ERROR: categories of wordlists and evaluationmatrix are not identical, only the intersecting categories are used.
             This might lead to incompatibility of the result files of different files.
             Possible reasons might be mistakes in naming the categories or during reading in the wordlists.")
     
-    categories.intersect <- intersect(as.character(evaluationmatrix[,1]),row.names(result.cooccurrence.case))
+    categories.intersect <- intersect(as.character(evaluationmatrix[,1]),row.names(cooccurrence.matrix.case))
     categories.num <- length(categories.intersect)
     
     evaluationmatrix <- evaluationmatrix[which(evaluationmatrix[,1] == categories.intersect),]
     evaluationmatrix <- evaluationmatrix[order(evaluationmatrix[,1]),]
     
-    result.cooccurrence.case <- result.cooccurrence.case[which(row.names(result.cooccurrence.case) == categories.intersect),]
-    result.cooccurrence.case <- result.cooccurrence.case[order(result.cooccurrence.case[,1]),]
+    cooccurrence.matrix.case <- cooccurrence.matrix.case[which(row.names(cooccurrence.matrix.case) == categories.intersect),]
+    cooccurrence.matrix.case <- cooccurrence.matrix.case[order(cooccurrence.matrix.case[,1]),]
     
   }
   
@@ -1800,7 +1851,7 @@ for (t in seq(length(files))) {
   for(i in seq(length(evaluationmatrix[,"category"]))) {
     
     #fix the column/category which shall be filled
-    category <- colnames(result.cooccurrence.case)[i]
+    category <- colnames(cooccurrence.matrix.case)[i]
     
     #select all columns/measures in which the category is fulfilled
     #1:select only the lines which are connected to the category
@@ -1818,7 +1869,7 @@ for (t in seq(length(files))) {
       
       #rounding would not be necessary for the zeros, however to receive same format for all results
       #the operation is conducted anyhow
-      result.cooccurrence.case[,category] <- round((cooccurrence/text.windows.num) ,digits=4)
+      cooccurrence.matrix.case[,category] <- round((cooccurrence/text.windows.num) ,digits=4)
       
       next(i)
       
@@ -1846,7 +1897,7 @@ for (t in seq(length(files))) {
       
       cooccurrence <- category.subset
       
-      result.cooccurrence.case[,category] <- round((cooccurrence/text.windows.num) ,digits=4)
+      cooccurrence.matrix.case[,category] <- round((cooccurrence/text.windows.num) ,digits=4)
       
       next(i)
       
@@ -1857,7 +1908,7 @@ for (t in seq(length(files))) {
     
     cooccurrence <- rowSums(category.subset)
     
-    result.cooccurrence.case[,category] <- round((cooccurrence/text.windows.num) ,digits=4)
+    cooccurrence.matrix.case[,category] <- round((cooccurrence/text.windows.num) ,digits=4)
     
     
   }
@@ -1866,7 +1917,7 @@ for (t in seq(length(files))) {
   filename <- gsub(paste(occurrence.filename.tag,".*$" ,sep=""),paste(cooccurrence.filename.tag, ".csv", sep=""),files[t])
   filename <- paste(wd.interim, filename, sep="")
   
-  write.csv(result.cooccurrence.case, filename)
+  write.csv(cooccurrence.matrix.case, filename)
   
   
 } #end loop through all files
@@ -1988,7 +2039,7 @@ write.csv(cooccurrence.matrix.mean, filename)
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##START <<<<<<<<<<<<<<<<<<< PREPARE DATA FOR FINAL PLOTTING AND ANALYSIS
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
+setwd(wd.interim)
 ##+ INITIALIZE VARIABLE NAMES ETC.--------------------------
 #delete words
 #in case stopwords which were only identified during an analytical step 
@@ -1998,7 +2049,6 @@ stopwords.additional <- c("dummy_stopword")
 categories <- list.dirs(wd.wordlists, recursive=F, full.names = F)
 categories.num <-length(categories)
 
-occurrence.filename.tag <- c("__w_occ_mat__MR")
 files <- list.files(wd.interim, pattern = paste("^.*", occurrence.filename.tag, "[[:digit:]]+.csv$", sep=""))
 
 results.occ.final <- matrix(rep(0, categories.num*length(files)), nrow = categories.num)
@@ -2059,7 +2109,7 @@ for (t in seq(length(files))) {
   evaluationmatrix[,c(2:ncol(evaluationmatrix))] <- ifelse(evaluationmatrix[,c(2:ncol(evaluationmatrix))]>0,1,0)
   
   #extract case name from filename and write it into the overall results matrix
-  colnames(results.occ.final)[t] <- gsub(paste("(^.*GER__)([A-Za-z]+)(__.*$)"), "\\2",files[t])
+  colnames(results.occ.final)[t] <- gsub(paste("(^.*GER)(_+)([A-Za-z]+)(_+)(.*$)"), "\\3",files[t], perl=T)
   
   
   for(i in seq(length(categories))) {
@@ -2085,6 +2135,7 @@ for (t in seq(length(files))) {
 #add MEAN over all columns as last column 
 results.occ.final  <- cbind(results.occ.final, round((rowSums(results.occ.final)/ncol(results.occ.final)), digits=4))
 colnames(results.occ.final)[ncol(results.occ.final)] <- "mean"
+write.csv(results.occ.final, paste0(wd.final,"results_occurrence_single_cases_and_mean.csv"))
 
 ##~-----------------------------------------
 
@@ -2134,41 +2185,13 @@ results.occ.sustainability <- results.occ.final[categories.select3,]
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 ##+ SET ORDER OF CATEGORIES FOR PLOTTING-------------------------
-main.categories <- c("<resources><unsp",
-                     "(<resources>)(?!<unsp)",
-                     "<conversion><unsp", 
-                     "(<conversion>)(?!<unsp)",
-                     "<distribution><unsp", 
-                     "(<distribution>)(?!<unsp)",
-                     "<sales_contracts><unsp",
-                     "(<sales_contracts>)(?!<unsp)",
-                     "<Technology_Option>",
-                     "<Energy_Form>",
-                     "<end_use><consumption>",
-                     "<mobility>(?!<frei)",
-                     "<mobility><frei",
-                     "<building><unsp",
-                     "(<building>)(?!<unsp)",
-                     "<electric_application>",
-                     "<local_administration_bodies>",
-                     "<Mobility_Sector>",
-                     "<Infrastructure>",
-                     "<Residents>",
-                     "<Food>",
-                     "<Economy><unspec",
-                     "<Economy><service>",
-                     "<commerce>",
-                     "<industry><unsp",
-                     "(<industry>)(?!<unsp)"
-)
-
-main.categories.order <- unlist(lapply(main.categories, function(item) {
+main.categories.energy.order <- unlist(lapply(main.categories.energy, function(item) {
   
   grep(item, rownames(results.occ.energy), ignore.case=T, perl=T)
   
 }))
 
-results.occ.energy <- results.occ.energy[main.categories.order,]
+results.occ.energy <- results.occ.energy[main.categories.energy.order,]
 ##~------------------------------
 
 
@@ -2236,12 +2259,12 @@ results.occ.energy.plotformat <- results.occ.energy.plotformat[nrow(results.occ.
 
 
 ##+ CALCULATE ADDITIONAL PLOTTING PARAMETERS (POSITION OF VERTICAL LINES)---------------
-vertical.line <- unlist(lapply(main.categories, function(item) {
+vertical.line <- unlist(lapply(main.categories.energy.reduced, function(item) {
   
   max(grep(item, unique(results.occ.energy.plotformat$category), perl=T, ignore.case=T))
   
 })) 
-vertical.line <- vertical.line[-length(vertical.line)]
+
 vertical.line  <- vertical.line+0.5
 
 ##~---------------
@@ -2297,28 +2320,14 @@ p <- ggplot(results.occ.energy.plotformat, aes(factor(category), value), stat = 
   
   theme(aspect.ratio=3) +
   coord_flip() +
-  scale_x_discrete(limits = rev(levels(results.occ.energy.plotformat$category))) +
+  scale_x_discrete(limits = rev(levels(results.occ.energy.plotformat$category)))
   
-  #draw vertical lines, desired lines have to be turned off/on manually
-  # geom_vline(aes(xintercept = c(rep(vertical.line[1],  nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-  geom_vline(aes(xintercept = c(rep(vertical.line[2], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-  geom_vline(aes(xintercept = c(rep(vertical.line[3], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-  geom_vline(aes(xintercept = c(rep(vertical.line[4], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-  geom_vline(aes(xintercept = c(rep(vertical.line[5], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-  geom_vline(aes(xintercept = c(rep(vertical.line[6], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-  geom_vline(aes(xintercept = c(rep(vertical.line[7], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-  geom_vline(aes(xintercept = c(rep(vertical.line[8], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-  geom_vline(aes(xintercept = c(rep(vertical.line[9], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-  geom_vline(aes(xintercept = c(rep(vertical.line[10], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-  geom_vline(aes(xintercept = c(rep(vertical.line[11], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-  geom_vline(aes(xintercept = c(rep(vertical.line[12], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-  geom_vline(aes(xintercept = c(rep(vertical.line[13], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-  geom_vline(aes(xintercept = c(rep(vertical.line[14], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-  geom_vline(aes(xintercept = c(rep(vertical.line[15], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-  geom_vline(aes(xintercept = c(rep(vertical.line[16], nrow(results.occ.energy.plotformat)))), linetype= "dashed")
-#geom_vline(aes(xintercept = c(rep(vertical.line[17], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-#geom_vline(aes(xintercept = c(rep(vertical.line[18], nrow(results.occ.energy.plotformat)))), linetype= "dashed") +
-
+  #draw vertical lines, desired lines have to be turned off/on manually in loop
+  #here first entry is skipped
+for (i in 2:length(vertical.line)) {
+  geom_vline.loop <- paste0("geom_vline(aes(xintercept = c(rep(vertical.line[",i,"], nrow(results.occ.energy.plotformat)))), linetype= \"dashed\")")
+  p <- p + eval(parse(text=geom_vline.loop))                          
+}
 p
 ##~---------------------------------------------------------------
 
@@ -2376,7 +2385,7 @@ results.occ.social.plotformat$category <- factor(results.occ.social.plotformat$c
 results.occ.social.plotformat <- results.occ.social.plotformat[nrow(results.occ.social.plotformat):1,]
 
 
-vertical.line <- unlist(lapply(main.categories, function(item) {
+vertical.line <- unlist(lapply(main.categories.energy, function(item) {
   
   max(grep(item, unique(results.occ.social.plotformat$category), perl=T, ignore.case=T))
   
@@ -2802,44 +2811,14 @@ writeLines(noquote(colnames(x)), "systems_with_at_least_one_L3_with_energy_syste
 
 
 ##+ SET ORDER OF CATEGORIES FOR PLOTTING AND RENAME CATEGORIES-------------------------
-main.categories <- c("<resources><unsp", 
-                     "<resources>(?!<unsp)",
-                     "<conversion><unsp",
-                     "<conversion>(?!<unsp)",
-                     "<distribution><unsp", 
-                     "<distribution>(?!<unsp)", 
-                     "<sales_contracts><unsp",
-                     "<sales_contracts>(?!<unsp)",
-                     "<Technology_Option>",
-                     "<Energy_Form>",
-                     "<end_use><consumption>",
-                     "<mobility>(?!<frei)",
-                     "<mobility><frei",
-                     "<building><unsp",
-                     "<building>(?!<unsp)",
-                     "<electric_application>",
-                     "<local_administration_bodies>",
-                     "<Mobility_Sector>",
-                     "<Infrastructure>",
-                     
-                     "<Residents>",
-                     "<Food>",
-                     "<Economy><unspec",
-                     "<Economy><service>",
-                     "<commerce>",
-                     "<industry><unsp",
-                     "(<industry>)(?!<unsp)"
-)
-
-
-main.categories.order <- unlist(lapply(main.categories, function(item) {
+main.categories.energy.order <- unlist(lapply(main.categories.energy, function(item) {
   
   grep(item, rownames(x), perl=T, ignore.case = T)
   
   
 }))
 
-x <- x[rev(main.categories.order),order(colnames(x))]
+x <- x[rev(main.categories.energy.order),order(colnames(x))]
 
 row.names(x) <- gsub("<1><SOC>","",row.names(x))
 row.names(x) <- gsub("<2><ENG>","",row.names(x))
@@ -2875,30 +2854,9 @@ cooccurrence.case.plotformat$category.2 <- factor(cooccurrence.case.plotformat$c
 
 
 ##+ CALCULATE ADDITIONAL PLOTTING OPTIONS (VERTICAL LINES)------------------------
-main.categories.reduced <- c( "resources",         
-                              
-                              "<conversion>", 
-                              "<distribution>", 
-                              "<sales_contracts>",
-                              "<Technology_Option>",
-                              "<Energy_Form>", 
-                              "<end_use><consumption>",
-                              "<mobility>",
-                              "<building>",
-                              "<electric_application>",
-                              "<local_administration_bodies>", 
-                              "<Mobility_Sector>",
-                              "<Infrastructure>",
-                              
-                              "<Residents>",
-                              "<Food>",
-                              "<Economy>"
-                              
-)
-
 
 ##+ VERTICAL LINES
-line.position <- unlist(lapply(main.categories.reduced, function(item) {
+line.position <- unlist(lapply(main.categories.energy.reduced, function(item) {
   
   min(grep(item, as.character(unique(cooccurrence.case.plotformat$category.2)), perl=T, ignore.case = T))
   
@@ -3267,36 +3225,7 @@ colnames(x_sust) <- gsub("<2><ENG><End_Use><mobility><public_transport>",
 
 
 ##+ REORDER CATEGORIES----------------------------------
-main.categories <- c("<resources><unsp", 
-                     "<resources>(?!<unsp)",
-                     "<conversion><unsp",
-                     "<conversion>(?!<unsp)",
-                     "<distribution><unsp", 
-                     "<distribution>(?!<unsp)", 
-                     "<sales_contracts><unsp",
-                     "<sales_contracts>(?!<unsp)",
-                     "<Technology_Option>",
-                     "<Energy_Form>",
-                     "<end_use><consumption>",
-                     "<mobility>(?!<frei)",
-                     "<mobility><frei",
-                     "<building><unsp",
-                     "<building>(?!<unsp)",
-                     "<electric_application>",
-                     "<local_administration_bodies>",
-                     "<Mobility_Sector>",
-                     "<Infrastructure>",
-                     
-                     "<Residents>",
-                     "<Food>",
-                     "<Economy><unspec",
-                     "<Economy><service>",
-                     "<commerce>",
-                     "<industry><unsp",
-                     "(<industry>)(?!<unsp)"
-)
-
-main.categories.order <- unlist(lapply(main.categories, function(item) {
+main.categories.energy.order <- unlist(lapply(main.categories.energy, function(item) {
   
   grep(item, rownames(x_sust), perl=T, ignore.case = T)
   
@@ -3314,7 +3243,7 @@ sust.categories.order <- unlist(lapply(sust.categories, function(item) {
 }))
 
 
-x_sust <- x_sust[rev(main.categories.order),sust.categories.order]
+x_sust <- x_sust[rev(main.categories.energy.order),sust.categories.order]
 
 
 row.names(x_sust) <- gsub("<1><SOC>","",row.names(x_sust))
@@ -3365,31 +3294,7 @@ for (i in seq(length(sust.levels.unique))) {
 line.position.v <- as.numeric(line.position.v[-c(1)])
 
 
-main.categories.reduced <- c(                 "resources",
-                                              "<conversion>", 
-                                              "<distribution>", 
-                                              "<sales_contracts>",
-                                              "<Technology_Option>",
-                                              "<Energy_Form>", 
-                                              "<end_use><consumption>",
-                                              "<mobility>",
-                                              "<building>",
-                                              "<electric_application>",
-                                              "<local_administration_bodies>",
-                                              "<Mobility_Sector>",
-                                              "<Infrastructure>",
-                                              
-                                              "<Residents>",
-                                              "<Food>",
-                                              "<Economy>"
-                                              
-)
-
-
-
-
-
-line.position <- unlist(lapply(main.categories.reduced, function(item) {
+line.position <- unlist(lapply(main.categories.energy.reduced, function(item) {
   
   min(grep(item, as.character(unique(cooccurrence.case.plotformat$category.2)), perl=T, ignore.case = T))
   
