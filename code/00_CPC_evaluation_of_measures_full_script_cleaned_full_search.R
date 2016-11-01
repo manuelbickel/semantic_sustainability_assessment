@@ -1482,7 +1482,7 @@ rm(list = remove)
 ##+<<<<<<<<<<<<<<<<<<< CALCULATE NUMBER OF TAGGED CONCEPTS AND MATCH RATE
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 #this part of the code was added in a second step of coding and has not been integrated into above
-#main code; it therefore contains several repitions and requires more time than needed
+#main code; it therefore contains several repitions and requires more computing time than needed
 #for smaller amounts of data time effort is still ok
 #but integration and optimization of code is necessary for larger data sets
 
@@ -2027,9 +2027,8 @@ colnames(results.occ.final) <- rep("dummy_casename", ncol(results.occ.final))
 for (t in seq(length(files))) {
   
   
-  evaluationmatrix <- read.csv(files[t], header = TRUE)
-  #head(evaluationmatrix)
-  
+  evaluationmatrix <- read.csv(files[t], header = TRUE, check.names=T)
+
   #if reading in of the csv generates leading columns with numbers 
   #(old rownumbers) these columns are deleted
   if (grepl("^X", colnames(evaluationmatrix)[1])==TRUE) {
@@ -2164,7 +2163,8 @@ main.categories <- c("<resources><unsp",
                      "<Technology_Option>",
                      "<Energy_Form>",
                      "<end_use><consumption>",
-                     "<mobility>",
+                     "<mobility>(?!<frei)",
+                     "<mobility><frei",
                      "<building><unsp",
                      "(<building>)(?!<unsp)",
                      "<electric_application>",
@@ -2664,4 +2664,953 @@ dev.off()
 ##~<<<<<<<<<<<<< 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+
+
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##+<<<<<<<<<<<<< PLOT COOCCURRENCE MATRICES
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+#COOCCURRENCE IN WIDE FORMAT
+library("ggplot2")
+library("reshape2")
+library("grid")
+
+setwd(wd.interim)
+categories <- list.dirs(wd.wordlists, recursive=F, full.names = F)
+categories.num <-length(categories)
+
+cooccurrence.filename.tag <- c("__cat_coocc_mat")
+files <- list.files(pattern = paste0(cooccurrence.filename.tag, "\\.csv"))
+
+#fix the categories of the mean case as reference for other cases to be compared later
+cooccurrence.case.reference <- grep("Lower_Saxony_regional_centers", files)
+
+##+READ DATA-----------------
+cooccurrence.case <- read.csv(files[cooccurrence.case.reference], header=T, check.names = T)
+
+#if reading in of the csv generates columns with numbers (old rownumbers) these are deleted
+delete.columns <- grep("(X$)|(X\\.)(\\d+)($)", colnames(cooccurrence.case), perl=T)
+
+if (length(delete.columns) > 0) {
+  row.names(cooccurrence.case) <- as.character(cooccurrence.case[, grep("^X$", colnames(cooccurrence.case))])
+  cooccurrence.case <- cooccurrence.case[,-delete.columns]
+  colnames(cooccurrence.case) <- gsub("^X", "",  colnames(cooccurrence.case))
+  colnames(cooccurrence.case) <- gsub("\\.", "-",  colnames(cooccurrence.case))
+}
+
+
+if (identical(as.character( colnames(cooccurrence.case)), as.character( row.names(cooccurrence.case))) == FALSE) {
+  warning("Matrix not symmetric. Following calculations will produce wrong results.")
+}
+##~-------------------------
+
+
+##+RENAME CATEGORIES---------------------------------
+row.names(cooccurrence.case) <- gsub("--","><",row.names(cooccurrence.case) )
+row.names(cooccurrence.case) <- paste0("<",row.names(cooccurrence.case) )
+row.names(cooccurrence.case) <- paste0(row.names(cooccurrence.case), ">" )
+colnames(cooccurrence.case) <- row.names(cooccurrence.case)
+##~-------------------
+
+
+##~ ORDER CATEGORIES (ALIGN CATEGORIES WITH SAME METACATEGORY)----------------
+ordered.levels.alphabetic <- order(colnames(cooccurrence.case))
+cooccurrence.case <- cooccurrence.case[ordered.levels.alphabetic,ordered.levels.alphabetic]
+
+
+order.interim <- data.frame(category = as.character(row.names(cooccurrence.case)),
+                            value = as.numeric(rowSums(cooccurrence.case)) )
+
+#aggregate values by meta-category
+order.interim.agg <- order.interim
+
+order.interim.agg[,1] <-  gsub("(<[\\d]>)(<[\\w]{3}>)(<[\\w]+>)(.*$)", "\\3",order.interim.agg[,1] , perl=T)
+order.interim.agg <- aggregate(order.interim.agg[,2], by=list(category=order.interim.agg$category), FUN=mean)
+
+#replace the original values for each category 
+#by the aggregated sum of its meta category in the interim list
+for (c in 1:nrow(order.interim.agg)) {
+  replace <- order.interim.agg[c,]
+  order.interim[grep(replace[,1], order.interim[,1]),2] <- replace[,2]
+  
+}
+
+order.cluster.occ <- order(order.interim[,2], decreasing=T)
+
+cooccurrence.case <- cooccurrence.case[order.cluster.occ ,order.cluster.occ]
+##~--------------------
+
+
+##+EXCLUDE CATEGORIES WITH VERY LOW OCCURRENCE AND APPLY SCALING TO MATRIX--------------------
+x <- round(as.matrix(cooccurrence.case), d=3)
+
+#for the unscaled plot
+x_full <- x
+
+#for the sustainabilty cooccurrence plot
+x_sust <- x
+
+
+oc_lower_1p <- which(as.numeric(diag(x)) < 0.01)
+#rownames(x[oc_lower_1p,oc_lower_1p])
+x <- x[-oc_lower_1p,-oc_lower_1p]
+
+
+
+##+ SCALE BY MINIMUM VALUES OF DIAGONAL
+x.diag <- as.numeric(diag(x))
+
+for (d in seq(length(x.diag))) {
+  
+  x.diag.value <- cbind(x.diag, rep(as.numeric(x.diag[d]), length(x.diag)))
+  
+  x.diag.value <- apply(x.diag.value,1, min)
+  
+  x[,d] <- round(x[,d]/x.diag.value,d=3)
+}
+
+x <- ifelse(is.na(x), 0, x)
+##~
+##~----------------------------
+
+
+##+ RENAME CATEGORIES, CLASSIFY; SELECT CATEGORIES ABOVE THRESHOLD VALUE FOR BEING PLOTTED-------------
+x <- x[grep("<2>|<economy>|<industry>|<commerce>|<mobility_sector>|<local_administration_bodies>|<infrastructure>|<Food>|<Residents>", rownames(x), ignore.case = T), 
+       -grep("<3>|<2><ENG>", colnames(x),ignore.case=T, perl=T)]
+
+#exclude categories from y-axis
+rows.exclude <- grep("<carrier>|<rental_of_houses>|<social_groups>|<general_reference><saving>|<building_parts_materials>|<Energy><unspecific_reference>|<Energy_Form><unspecific_reference>|<Economy><commerce><sector_unspecific>|<Infrastructure><disposal_unspecific>|<detailed_PPtechnology>|<alternative_wo_bike>|<tariffs_standing_orders>|<Economy><general_reference><employment_workplace>|<Infrastructure><unspecific>|<Infrastructure><supply_unspecific>|<Economy><general_reference><economic_viability>|<Economy><service><personal_services_crafting>", rownames(x), ignore.case = T)
+if (length(rows.exclude) > 0) {
+  x <- x[-rows.exclude,]
+}
+
+
+#exclude categories from x-axis
+columns.exclude <- grep("<Spatial_scale><fed_state><ger>", colnames(x), ignore.case = T)
+if (length(columns.exclude) > 0) {
+  x <- x[,-columns.exclude]
+}
+
+
+
+##+ SELECT ROWS THAT ACHIEVED AVERAGE COOCURRENCE OF X%
+columns.maxima <- apply(x, 2, sum)
+average.sum.required.minimum <- nrow(x)*0.20
+columns.maxima <- which(columns.maxima >= average.sum.required.minimum)
+x <- x[,columns.maxima]
+##~
+
+##+ CLASSIFIY
+classes <- c(0,0.25,0.5,0.75,1)
+x <- ifelse(is.na(x), 0, x)
+x <- ifelse(x <= classes[1], 0, x)
+x <- ifelse((x > classes[1] & x < classes[2]), 0.05, x)
+x <- ifelse((x >= classes[2] & x < classes[3]), 0.375,x)
+x <- ifelse((x >= classes[3] & x < classes[4]), 0.625,x)
+#x <- ifelse((x >= classes[4] & x < classes[5]), 0.7,x)
+x <- ifelse((x >= classes[4]), 0.875,x)
+
+columns.maxima <- apply(x, 2, function(item) length(which(item >=0.625)))
+columns.maxima <- which(columns.maxima >1)
+
+x <- x[,columns.maxima]
+##~
+
+setwd(wd.final)
+writeLines(noquote(colnames(x)), "systems_with_at_least_one_L3_with_energy_system.txt")
+##~-----------------------------
+
+
+##+ SET ORDER OF CATEGORIES FOR PLOTTING AND RENAME CATEGORIES-------------------------
+main.categories <- c("<resources><unsp", 
+                     "<resources>(?!<unsp)",
+                     "<conversion><unsp",
+                     "<conversion>(?!<unsp)",
+                     "<distribution><unsp", 
+                     "<distribution>(?!<unsp)", 
+                     "<sales_contracts><unsp",
+                     "<sales_contracts>(?!<unsp)",
+                     "<Technology_Option>",
+                     "<Energy_Form>",
+                     "<end_use><consumption>",
+                     "<mobility>(?!<frei)",
+                     "<mobility><frei",
+                     "<building><unsp",
+                     "<building>(?!<unsp)",
+                     "<electric_application>",
+                     "<local_administration_bodies>",
+                     "<Mobility_Sector>",
+                     "<Infrastructure>",
+                     
+                     "<Residents>",
+                     "<Food>",
+                     "<Economy><unspec",
+                     "<Economy><service>",
+                     "<commerce>",
+                     "<industry><unsp",
+                     "(<industry>)(?!<unsp)"
+)
+
+
+main.categories.order <- unlist(lapply(main.categories, function(item) {
+  
+  grep(item, rownames(x), perl=T, ignore.case = T)
+  
+  
+}))
+
+x <- x[rev(main.categories.order),order(colnames(x))]
+
+row.names(x) <- gsub("<1><SOC>","",row.names(x))
+row.names(x) <- gsub("<2><ENG>","",row.names(x))
+##~------------------------------
+
+
+##+ FORMAT MATRIX FOR PLOTTING (LONG FORMAT)--------------------
+cooccurrence.case.plotformat <- t(round(x, d=3))
+
+category.1 <- rownames(cooccurrence.case.plotformat)
+cooccurrence.case.plotformat <- cbind.data.frame(category.1, cooccurrence.case.plotformat)
+row.names(cooccurrence.case.plotformat) <- NULL
+
+cooccurrence.case.plotformat.melted <- melt(cooccurrence.case.plotformat, id.vars=c("category.1"),
+                                            #source columns
+                                            measure.vars= colnames(cooccurrence.case.plotformat)[2:ncol(cooccurrence.case.plotformat)],
+                                            
+                                            #name of the destination column
+                                            variable.name = "category.2", 
+                                            value.name = "strength_of_link_scaling_option_1",
+                                            na.rm = FALSE)
+
+
+cooccurrence.case.plotformat <- cooccurrence.case.plotformat.melted
+
+cooccurrence.levels <- c(0.000, seq(1000)/1000)
+
+cooccurrence.case.plotformat$strength_of_link_scaling_option_1 <- factor( cooccurrence.case.plotformat$strength_of_link_scaling_option_1, levels = cooccurrence.levels[order(cooccurrence.levels)])
+
+cooccurrence.case.plotformat$category.1 <- factor(cooccurrence.case.plotformat$category.1, levels = unique(as.character(cooccurrence.case.plotformat$category.1)))
+cooccurrence.case.plotformat$category.2 <- factor(cooccurrence.case.plotformat$category.2,  levels = unique(as.character(cooccurrence.case.plotformat$category.2)))
+##~--------------------
+
+
+##+ CALCULATE ADDITIONAL PLOTTING OPTIONS (VERTICAL LINES)------------------------
+main.categories.reduced <- c( "resources",         
+                              
+                              "<conversion>", 
+                              "<distribution>", 
+                              "<sales_contracts>",
+                              "<Technology_Option>",
+                              "<Energy_Form>", 
+                              "<end_use><consumption>",
+                              "<mobility>",
+                              "<building>",
+                              "<electric_application>",
+                              "<local_administration_bodies>", 
+                              "<Mobility_Sector>",
+                              "<Infrastructure>",
+                              
+                              "<Residents>",
+                              "<Food>",
+                              "<Economy>"
+                              
+)
+
+
+##+ VERTICAL LINES
+line.position <- unlist(lapply(main.categories.reduced, function(item) {
+  
+  min(grep(item, as.character(unique(cooccurrence.case.plotformat$category.2)), perl=T, ignore.case = T))
+  
+  
+}))
+line.position<- line.position-1
+
+#position of lines to be drawn between systems
+system.levels <- unique(as.character(cooccurrence.case.plotformat$category.1)) 
+system.levels <- unique(gsub("(<[\\d]>)(<[\\w]{3}>)(<[\\w]+>)(.*$)", "\\3", system.levels , perl=T))
+
+line.position.v <- unlist(lapply(system.levels, function(item) {
+  
+  min(grep(item, as.character(unique(cooccurrence.case.plotformat$category.1)), perl=T, ignore.case = T))
+  
+  
+}))
+line.position.v <- line.position.v-1
+##~
+
+
+
+cooccurrence.case.plotformat$category.1 <- gsub("(^<[\\d]>)(<[\\w]+>)(<.*$)","\\3", as.character(cooccurrence.case.plotformat$category.1), perl=T)
+cooccurrence.case.plotformat$category.1 <- factor(cooccurrence.case.plotformat$category.1, levels = unique(as.character(cooccurrence.case.plotformat$category.1)))
+
+cooccurrence.case.plotformat$category.2 <- gsub("(^<[\\d]>)(<[\\w]+>)(<.*$)","\\3", as.character(cooccurrence.case.plotformat$category.2), perl=T)
+cooccurrence.case.plotformat$category.2 <- factor(cooccurrence.case.plotformat$category.2, levels = unique(as.character(cooccurrence.case.plotformat$category.2)))
+
+
+
+##+ MARK SELF-REFERENCE (COOCCURRENCE) OF CATEGORIES WITH NAs/CROSSES
+energy_categories <- gsub("<End_Use>","", as.character(cooccurrence.case.plotformat$category.2))
+
+energy_categories <- as.character(cooccurrence.case.plotformat$category.2)
+subsystem_categories <- as.character(cooccurrence.case.plotformat$category.1)
+
+
+#get categories which co-occur with themselves in the graph to mark
+#the respective positions with a cross
+self_cooc <- which(subsystem_categories == energy_categories)
+#cooccurrence.case.plotformat[self_cooc,] 
+#head(cooccurrence.case.plotformat)
+cooccurrence.case.plotformat[self_cooc,"strength_of_link_scaling_option_1"] <- NA
+
+na <- rep(FALSE, nrow(cooccurrence.case.plotformat))
+cooccurrence.case.plotformat <- cbind(cooccurrence.case.plotformat, na)
+cooccurrence.case.plotformat[self_cooc,"na"] <- TRUE
+
+self_cooc_categories <- cooccurrence.case.plotformat[self_cooc,c(1,2)]
+
+#full list of categories of x and y axis with numbering
+cat_y <-   cbind(unique(as.character(cooccurrence.case.plotformat$category.2)),
+                 1:length( unique(as.character(cooccurrence.case.plotformat$category.2))))
+
+cat_x <-    cbind(unique(as.character(cooccurrence.case.plotformat$category.1)), 
+                  1:length(unique(as.character(cooccurrence.case.plotformat$category.1))))
+
+
+#leave only those categories which match with the self cooccurring categories
+cat_x <- cat_x[!is.na(match(cat_x[,1], self_cooc_categories[,1])), ]
+cat_y <- cat_y[!is.na(match(cat_y[,1], self_cooc_categories[,2])), ]
+
+order_y <- unlist(lapply(cat_x[,1], function(item) {
+  
+  grep(item, cat_y[,1])
+  
+}))
+
+cat_y <- cat_y[order_y,]
+
+
+na_positions <- as.data.frame(cbind(
+  as.integer(cat_x[,2])-0.5,
+  as.integer(cat_y[,2])-0.5
+))
+##~
+##~------------------------
+
+
+##+ COOCCURRENCE PLOT ENERGY / SOCIAL SYSTEM--------------------
+axis.label.size <- 8
+
+p_scaled_cooc <- ggplot(NULL) +
+  
+  #raster with no distance to the axis
+  geom_raster(data= cooccurrence.case.plotformat, aes(x = category.1, y = category.2, fill = strength_of_link_scaling_option_1), 
+              hjust = 0, vjust = 0) +  
+  
+  
+  xlab("")+
+  ylab("")+
+  
+  #set colour scale for displaying values
+  scale_fill_manual(values = c("white", "grey95", "grey75", "grey30", "black"),
+                    labels = c("0", "L1","L2","L3","L4 (self-reference: white cross)"),
+                    na.value="black") +
+  
+  #remove labels
+  labs(x = element_blank(), y=element_blank()) +
+  
+  #set basic theme of the plot
+  theme_bw() +
+  
+  theme(
+    
+    plot.background = element_blank(),
+    
+    plot.title = element_blank(),
+    
+    aspect.ratio = round(length(unique(as.character(cooccurrence.case.plotformat$category.2)))/length(unique(as.character(cooccurrence.case.plotformat$category.1)))),
+    
+    plot.margin = unit(c(0.1,0.1,0.1,0.1), "cm"),
+    
+    #rotate x-axis label, and set distance of label/axis to zero
+    axis.text.x = element_text(angle = 90, hjust = 0, vjust=-0.25, size=axis.label.size),
+    axis.text.y = element_text(vjust = .8, size=axis.label.size, hjust = 0),
+    
+    #remove axis title
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    
+    axis.ticks = element_line(size=.01),
+    axis.ticks.length = unit(.1, "cm"),
+    
+    
+    legend.position = c(-0.5,-0.1),
+    legend.key.size = unit(0.25, "cm"),
+    legend.title = element_text(size=axis.label.size),
+    legend.direction = "vertical",
+    legend.background = element_rect(colour = "grey30"),
+    legend.key = element_rect(colour = "grey30"),
+    legend.text = element_text(size=axis.label.size)
+    
+    
+  ) +
+  
+  geom_vline(xintercept = line.position.v, colour = "black", linetype= "dashed", size=.01) +
+  geom_hline(yintercept = line.position, colour = "black", linetype= "dashed", size=.01) +
+  
+  geom_point(data = na_positions, aes(x=V1, y=V2, shape=4), color="white", size=4) +
+  scale_shape_identity()
+
+p_scaled_cooc 
+##~--------------------
+
+
+##~ SAVE PLOT IN FILE----------------
+opar <- par()
+
+par(mar=c(0.1,0.1,0.1,0.1))
+
+setwd(wd.final)
+
+scale_figure <- c(10,6.8)
+
+win.metafile("Figure_2_CoOc_L3_to_Energy_system_and_average_CoOc_0125_scalingOpt1.emf", height=scale_figure[1] ,width=scale_figure[2])
+p_scaled_cooc
+dev.off()
+
+
+postscript("Figure_2_CoOc_L3_to_Energy_system_and_average_CoOc_0125_scalingOpt1.eps", height=scale_figure[1] ,width=scale_figure[2])
+p_scaled_cooc
+dev.off()
+
+par(opar)
+##~-----------------------------
+
+
+
+##+ PLOT COOCCURRENCE MATRIX WITHOUT ANY SCALING AND CLASSIFICATION---------------------------
+# explanations of code see above in plotting cooccurrence of energy system with social system categories
+
+x_full  <- round(x_full, d=3)
+
+x_full <- x_full[order(row.names(x_full)), order(colnames(x_full))]
+
+
+
+cooccurrence.case.plotformat.full <- x_full
+
+category.1 <- rownames(cooccurrence.case.plotformat.full)
+cooccurrence.case.plotformat.full <- cbind.data.frame(category.1, cooccurrence.case.plotformat.full)
+row.names(cooccurrence.case.plotformat.full) <- NULL
+
+cooccurrence.case.plotformat.full.melted <- melt(cooccurrence.case.plotformat.full, id.vars=c("category.1"),
+                                                 #source columns
+                                                 measure.vars= colnames(cooccurrence.case.plotformat.full)[2:ncol(cooccurrence.case.plotformat.full)],
+                                                 
+                                                 #name of the destination column
+                                                 variable.name = "category.2", 
+                                                 value.name = "cooccurrence",
+                                                 na.rm = FALSE)
+
+
+cooccurrence.case.plotformat <- cooccurrence.case.plotformat.full.melted
+
+cooccurrence.levels <- c(0.000, seq(1000)/1000)
+
+cooccurrence.case.plotformat$strength_of_link_scaling_option_1 <- factor(cooccurrence.case.plotformat$strength_of_link_scaling_option_1, levels = cooccurrence.levels[order(cooccurrence.levels)])
+
+cooccurrence.case.plotformat$category.1 <- factor(cooccurrence.case.plotformat$category.1, levels = unique(as.character(cooccurrence.case.plotformat$category.1)))
+cooccurrence.case.plotformat$category.2 <- factor(cooccurrence.case.plotformat$category.2,  levels = unique(as.character(cooccurrence.case.plotformat$category.2)))
+
+
+axis.label.size <- 3
+
+p_full <- ggplot(NULL) +
+  
+  #raster with no distance to the axis
+  geom_raster(data= cooccurrence.case.plotformat, aes(x = category.1, y = category.2, fill = cooccurrence), hjust = 0, vjust = 0) +  
+  
+  
+  xlab("")+
+  ylab("")+
+  
+  
+  scale_fill_grey(start = 1, end = 0, na.value = "white") +   
+  
+  #remove labels
+  labs(x = element_blank(), y=element_blank()) +
+  
+  #set basic theme of the plot
+  theme_bw() +
+  
+  theme(
+    axis.text.x = element_text(angle = 90, hjust = 0, vjust=-0.25, size=axis.label.size),
+    # 
+    axis.text.y = element_text(vjust = .8, hjust = 0, size=axis.label.size),
+    
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    
+    axis.ticks = element_line(size=.01),
+    
+    axis.ticks.length = unit(.1, "cm"),
+    
+    plot.background = element_rect(fill = NULL,colour = NA),
+    plot.background = element_blank(),
+    
+    plot.title = element_blank(),
+    
+    aspect.ratio = 1,
+    
+    plot.margin = unit(c(0.1,0.1,0.1,0.1), "cm"),
+    legend.position = "none"#,
+    
+    
+  ) +
+  
+  geom_vline(xintercept = 1:ncol(x_full), colour = "black", linetype= "dotted", size=.1) +
+  geom_hline(yintercept = 1:nrow(x_full), colour = "black", linetype= "dotted", size=.1)
+
+
+p_full
+
+
+par(mar=c(0.2,0.2,0.2,0.2))
+
+setwd(wd.final)
+
+pdf("full_cooc_mat_scaled_by_total_max_cooc.pdf")
+p_full
+dev.off()
+
+win.metafile("full_cooc_mat_scaled_by_total_max_cooc.emf")
+p_full
+dev.off()
+
+postscript("full_cooc_mat_scaled_by_total_max_cooc.eps")
+p_full
+dev.off()
+##~----------------------
+
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##~<<<<<<<<<<<<<
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##+<<<<<<<<<<<<< COOCCURRENCE PLOT ENERGY / SUSTAINABILITY
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+##+EXCLUDE CATEGORIES WITH VERY LOW OCCURRENCE AND APPLY SCALING TO MATRIX-----------
+oc_lower_1p_all <- which(as.numeric(diag(x_sust)) < 0.01)
+oc_lower_1p_all_names <- rownames(x_sust)[oc_lower_1p_all]
+keep <- grep("<3><SUS>|biofuels|storage|renewable|car_sharing|bike_pedestrian|energetic_building_refurbishment", rownames(x_sust))
+oc_lower_1p <- setdiff(oc_lower_1p_all, keep)
+x_sust <- x_sust[-oc_lower_1p,-oc_lower_1p]
+
+
+# scale by relative occurrence of sustainability categories in sets of other categories
+x_sust.diag <- as.matrix_sust(diag(x_sust))
+x_sust <- apply(x_sust, 2, function(column) column/as.numeric(x_sust.diag))
+##~------------------------------
+
+##+ CLASSIFY--------------------
+classes <- c(0,0.25,0.5,0.75,1)
+x_sust <- ifelse(is.na(x_sust), 0, x_sust)
+x_sust <- ifelse(x_sust <= classes[1], 0, x_sust)
+x_sust <- ifelse((x_sust > classes[1] & x_sust < classes[2]), 0.05, x_sust)
+x_sust <- ifelse((x_sust >= classes[2] & x_sust < classes[3]), 0.375,x_sust)
+x_sust <- ifelse((x_sust >= classes[3] & x_sust < classes[4]), 0.625,x_sust)
+#x_sust <- ifelse((x_sust >= classes[4] & x_sust < classes[5]), 0.7,x_sust)
+x_sust <- ifelse((x_sust >= classes[4]), 0.875,x_sust)
+##~--------------------
+
+##+ SELECT AND RENAME CATEGORIES------------------------
+x_sust <- x_sust[grep("<2>|<economy>|<industry>|<commerce>|<mobility_sector>|<local_administration_bodies>|<infrastructure>|<Food>|<Residents>", rownames(x_sust), ignore.case = T), 
+                 grep("<3>|biofuels|renewable|pedestrian|insulation|car_sharing|public_transport|storage", colnames(x_sust),ignore.case=T, perl=T)]
+
+
+
+x_sust <- x_sust[-unlist(lapply(oc_lower_1p_all_names, function(item) grep(item, rownames(x_sust)))), ]
+
+x_sust <- x_sust[,-grep("<sustainability>|<Uncertainty>", colnames(x_sust), ignore.case = T)]
+
+#exclude categories from y-axis
+rows.exclude <- grep("<carrier>|<rental_of_houses>|<social_groups>|<general_reference><saving>|<building_parts_materials>|<Energy><unspecific_reference>|<Energy_Form><unspecific_reference>|<Economy><commerce><sector_unspecific>|<Infrastructure><disposal_unspecific>|<detailed_PPtechnology>|<alternative_wo_bike>|<tariffs_standing_orders>|<Economy><general_reference><employment_workplace>|<Infrastructure><unspecific>|<Infrastructure><supply_unspecific>|<Economy><general_reference><economic_viability>|<Economy><service><personal_services_crafting>", rownames(x), ignore.case = T)
+if (length(rows.exclude) > 0) {
+  x <- x[-rows.exclude,]
+}
+
+if (length(rows.exclude) > 0) {
+  x_sust <- x_sust[-rows.exclude,]
+}
+
+colnames(x_sust) <- gsub("<2><ENG><Resources><renewable>" , 
+                         "<3><SUS><Consistency><Resources><renewable>",
+                         colnames(x_sust))
+
+colnames(x_sust) <- gsub("<2><ENG><Conversion><renewable>", 
+                         "<3><SUS><Consistency><Conversion><renewable>",
+                         colnames(x_sust))
+
+colnames(x_sust) <- gsub("<2><ENG><Sales_Contracts><renewable>" , 
+                         "<3><SUS><Consistency><Sales_Contracts><renewable>",
+                         colnames(x_sust))
+
+colnames(x_sust) <- gsub("<2><ENG><End_Use><mobility><biofuels>", 
+                         "<3><SUS><Consistency><End_Use><mobility><biofuels>",
+                         colnames(x_sust))
+
+colnames(x_sust) <- gsub("<2><ENG><Technology_Option><storage>", 
+                         "<3><SUS><Efficiency><Technology_Option><storage>",
+                         colnames(x_sust))
+
+colnames(x_sust) <- gsub("<2><ENG><End_Use><building><insulation>" , 
+                         "<3><SUS><Efficiency><End_Use><building><insulation>",
+                         colnames(x_sust))
+
+colnames(x_sust) <- gsub("<2><ENG><End_Use><mobility><car_sharing>" , 
+                         "<3><SUS><Sufficiency><End_Use><mobility><car_sharing>",
+                         colnames(x_sust))
+
+
+colnames(x_sust) <- gsub("<2><ENG><End_Use><mobility><bike_pedestrian>", 
+                         "<3><SUS><Sufficiency><End_Use><mobility><bike_pedestrian>",
+                         colnames(x_sust))
+
+colnames(x_sust) <- gsub("<2><ENG><End_Use><mobility><public_transport>", 
+                         "<3><SUS><Sufficiency><End_Use><mobility><public_transport>",
+                         colnames(x_sust))
+
+##~------------------------------------
+
+
+##+ REORDER CATEGORIES----------------------------------
+main.categories <- c("<resources><unsp", 
+                     "<resources>(?!<unsp)",
+                     "<conversion><unsp",
+                     "<conversion>(?!<unsp)",
+                     "<distribution><unsp", 
+                     "<distribution>(?!<unsp)", 
+                     "<sales_contracts><unsp",
+                     "<sales_contracts>(?!<unsp)",
+                     "<Technology_Option>",
+                     "<Energy_Form>",
+                     "<end_use><consumption>",
+                     "<mobility>(?!<frei)",
+                     "<mobility><frei",
+                     "<building><unsp",
+                     "<building>(?!<unsp)",
+                     "<electric_application>",
+                     "<local_administration_bodies>",
+                     "<Mobility_Sector>",
+                     "<Infrastructure>",
+                     
+                     "<Residents>",
+                     "<Food>",
+                     "<Economy><unspec",
+                     "<Economy><service>",
+                     "<commerce>",
+                     "<industry><unsp",
+                     "(<industry>)(?!<unsp)"
+)
+
+main.categories.order <- unlist(lapply(main.categories, function(item) {
+  
+  grep(item, rownames(x_sust), perl=T, ignore.case = T)
+  
+  
+}))
+
+
+sust.categories <- c("<Sufficiency", "<Efficiency", "<Consistency")
+
+sust.categories.order <- unlist(lapply(sust.categories, function(item) {
+  
+  grep(item, colnames(x_sust), perl=T, ignore.case = T)
+  
+  
+}))
+
+
+x_sust <- x_sust[rev(main.categories.order),sust.categories.order]
+
+
+row.names(x_sust) <- gsub("<1><SOC>","",row.names(x_sust))
+row.names(x_sust) <- gsub("<2><ENG>","",row.names(x_sust))
+colnames(x_sust) <- gsub("<3><SUS>","", colnames(x_sust))
+##~--------------------------------
+
+
+##+ FORMAT MATRIX FOR PLOTTING (LONG FORMAT)--------------------
+cooccurrence.case.plotformat.plotformat <- t(round(x_sust, d=3))
+
+category.1 <- rownames(cooccurrence.case.plotformat)
+cooccurrence.case.plotformat <- cbind.data.frame(category.1, cooccurrence.case.plotformat)
+row.names(cooccurrence.case.plotformat) <- NULL
+
+cooccurrence.case.plotformat.melted <- melt(cooccurrence.case.plotformat, id.vars=c("category.1"),
+                                            #source columns
+                                            measure.vars= colnames(cooccurrence.case.plotformat)[2:ncol(cooccurrence.case.plotformat)],
+                                            
+                                            #name of the destination column
+                                            variable.name = "category.2", 
+                                            value.name = "degree_of_representation_scaling_option_2",
+                                            na.rm = FALSE)
+
+
+cooccurrence.case.plotformat <- cooccurrence.case.plotformat.melted
+
+cooccurrence.levels <- c(0.000, seq(1000)/1000)
+
+cooccurrence.case.plotformat$degree_of_representation_scaling_option_2 <- factor(cooccurrence.case.plotformat$degree_of_representation_scaling_option_2, levels = cooccurrence.levels[order(cooccurrence.levels)])
+
+cooccurrence.case.plotformat$category.1 <- factor(cooccurrence.case.plotformat$category.1, levels = unique(as.character(cooccurrence.case.plotformat$category.1)))
+cooccurrence.case.plotformat$category.2 <- factor(cooccurrence.case.plotformat$category.2,  levels = unique(as.character(cooccurrence.case.plotformat$category.2)))
+##~----------------------------------------                          
+
+##+ CALCULATE ADDITIONAL PLOTTING OPTIONS (VERTICAL LINES)------------------------
+
+##+ VERTICAL LINES
+#position of lines to be drawn between systems
+sust.levels <- unique(as.character(cooccurrence.case.plotformat$category.1)) 
+sust.levels.unique <- c("sufficiency", "efficiency", "consistency")
+line.position.v <- c("")
+for (i in seq(length(sust.levels.unique))) {
+  
+  line.position.v <- c(line.position.v, max(grep(sust.levels.unique[i],sust.levels, ignore.case = T)))
+  
+}
+line.position.v <- as.numeric(line.position.v[-c(1)])
+
+
+main.categories.reduced <- c(                 "resources",
+                                              "<conversion>", 
+                                              "<distribution>", 
+                                              "<sales_contracts>",
+                                              "<Technology_Option>",
+                                              "<Energy_Form>", 
+                                              "<end_use><consumption>",
+                                              "<mobility>",
+                                              "<building>",
+                                              "<electric_application>",
+                                              "<local_administration_bodies>",
+                                              "<Mobility_Sector>",
+                                              "<Infrastructure>",
+                                              
+                                              "<Residents>",
+                                              "<Food>",
+                                              "<Economy>"
+                                              
+)
+
+
+
+
+
+line.position <- unlist(lapply(main.categories.reduced, function(item) {
+  
+  min(grep(item, as.character(unique(cooccurrence.case.plotformat$category.2)), perl=T, ignore.case = T))
+  
+  
+}))
+line.position<- line.position-1
+##~
+
+
+
+
+##+ MARK SELF-REFERENCE (COOCCURRENCE) OF CATEGORIES WITH NAs/CROSSES
+energy_categories <- as.character(cooccurrence.case.plotformat$category.2)
+sust_categories <- as.character(cooccurrence.case.plotformat$category.1)
+
+sust_categories <-   gsub("^<sufficiency>|^<consistency>|^<efficiency>,", "",sust_categories, ignore.case=T)
+
+
+#get categories which co-occur with themselves in the graph to mark
+#the respective positions with a cross
+
+self_cooc <- which(sust_categories == energy_categories)
+#cooccurrence.case.plotformat[self_cooc,] 
+#head(cooccurrence.case.plotformat)
+cooccurrence.case.plotformat[self_cooc,"degree_of_representation_scaling_option_2"] <- NA
+
+na <- rep(FALSE, nrow(cooccurrence.case.plotformat))
+cooccurrence.case.plotformat <- cbind(cooccurrence.case.plotformat, na)
+cooccurrence.case.plotformat[self_cooc,"na"] <- TRUE
+
+
+self_cooc_categories <- cooccurrence.case.plotformat[self_cooc,c(1,2)]
+
+#full list of categories of x and y axis with numbering
+cat_y <-   cbind(unique(as.character(cooccurrence.case.plotformat$category.2)),
+                 1:length( unique(as.character(cooccurrence.case.plotformat$category.2))))
+
+cat_x <-    cbind(unique(as.character(cooccurrence.case.plotformat$category.1)), 
+                  1:length(unique(as.character(cooccurrence.case.plotformat$category.1))))
+
+
+#leave only those categories which match with the self cooccurring categories
+cat_x <- cat_x[!is.na(match(cat_x[,1], self_cooc_categories[,1])), ]
+cat_y <- cat_y[!is.na(match(cat_y[,1], self_cooc_categories[,2])), ]
+
+cat_x[,1] <-   gsub("^<sufficiency>|^<consistency>|^<efficiency>,", "",cat_x[,1], ignore.case=T)
+
+
+
+order_y <- unlist(lapply(cat_x[,1], function(item) {
+  
+  grep(item, cat_y[,1])
+  
+}))
+
+cat_y <- cat_y[order_y,]
+
+
+na_positions <- as.data.frame(cbind(
+  as.integer(cat_x[,2])-0.5,
+  as.integer(cat_y[,2])-0.5
+))
+##~----------------------------------------
+
+
+
+##+ COOCCURRENCE PLOT ENERGY / SUSTAINABILITY--------------------
+axis.label.size <- 8
+
+p_sust <- ggplot(NULL) +
+  
+  #raster with no distance to the axis
+  geom_raster(data= cooccurrence.case.plotformat, aes(x = category.1, y = category.2, fill = degree_of_representation_scaling_option_2),hjust = 0, vjust = 0) +  
+  
+  scale_fill_manual(values = c("white", "grey95", "grey75", "grey30", "black"),
+                    labels = c("0", "S1","S2","S3","S4 (self-reference: white cross)"),
+                    na.value="black")  +
+  
+  #remove labels
+  labs(x = element_blank(), y=element_blank()) +
+  
+  #set basic theme of the plot
+  theme_bw() +
+  
+  theme(
+    
+    #rotate x-axis label, and set distance of label/axis to zero
+    axis.text.x = element_text(angle = 90, hjust = 0, vjust=-0.25, size=axis.label.size),
+    axis.text.y = element_text(vjust = .8, size=axis.label.size, hjust=0),
+    
+    #remove axis title
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    
+    axis.ticks = element_line(size=.01),
+    
+    axis.ticks.length = unit(.1, "cm"),
+    
+    plot.background = element_rect(fill = NULL,colour = NA),
+    
+    plot.margin = unit(c(0.1,0.1,0.1,0.1), "cm"),
+    
+    #length(unique(as.character(cooccurrence.case.plotformat$category.2)))/length(unique(as.character(cooccurrence.case.plotformat$category.1)))
+    aspect.ratio = 2.737,
+    
+    legend.position = c(-0.6,-0.1),
+    legend.key.size = unit(0.25, "cm"),
+    legend.title = element_text(size=axis.label.size),
+    legend.direction = "vertical",
+    legend.background = element_rect(colour = "grey30"),
+    legend.key = element_rect(colour = "grey30"),
+    legend.text = element_text(size=axis.label.size)
+    
+  ) +
+  
+  
+  geom_vline(xintercept = line.position.v, colour = "black", linetype= "dashed", size=.01) +
+  geom_hline(yintercept = line.position, colour = "black", linetype= "dashed", size=.01) +
+  
+  geom_point(data = na_positions, aes(x=V1, y=V2, shape=4), color="white", size=4) +
+  scale_shape_identity()
+
+p_sust
+##~-------------------------
+
+
+##~ SAVE PLOT IN FILE----------------
+par(mar=c(0.2,0.2,0.2,0.2))
+
+setwd(wd.final)
+
+
+# pdf("Figure_3_CoOc_Energy_and_Sustainability_scalingOpt2.pdf")
+# p_sust
+# dev.off()
+
+win.metafile("Figure_3_CoOc_Energy_and_Sustainability_scalingOpt2.emf", height=10, width=6)
+p_sust
+dev.off()
+
+
+postscript("Figure_3_CoOc_Energy_and_Sustainability_scalingOpt2.eps", height=10, width=6)
+p_sust
+dev.off()
+##~-------------------------------
+
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##~<<<<<<<<<<<<<
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+
+
+################### THE FOLLOWING LINES MIGHT BE USED AT DIFFERENT POINTS OF THE WORKFLOW FOR DOCUMENTING SELECTED CATEGORIES
+
+##+ WRITE SELECTED CATEGORIES INTO FILE---------------
+categories.all <- colnames(cooccurrence.case)
+
+categories.SOC <- categories.all[grep("<1>", categories.all)]
+categories.ENG <- rev(rownames(x))
+#categories.SUS <- categories.all[grep("<3>", categories.all)]
+
+categories.SOC <- gsub("(^<[\\d]>)(<[\\w]{3}>)(.*$)", "\\3", categories.SOC, perl=T)
+categories.ENG <- gsub("(^<[\\d]>)(<[\\w]{3}>)(.*$)", "\\3", categories.ENG, perl=T)
+#categories.SUS <- gsub("(^<[\\d]>)(<[\\w]{3}>)(.*$)", "\\3", categories.SUS, perl=T)
+
+
+categories.SOC <- gsub("(^<[\\w]+>)(<.*$)", "\\1~#~\\2", categories.SOC, perl=T)
+categories.ENG <- gsub("(^<[\\w]+>)(<.*$)", "\\1~#~\\2", categories.ENG, perl=T)
+#categories.SUS <- gsub("(^<[\\w]+>)(<.*$)", "\\1~#~\\2", categories.SUS, perl=T)
+
+delimiter <- "~#~"
+categories.SOC <- do.call(rbind,strsplit(categories.SOC, delimiter, perl=T))
+categories.ENG <- do.call(rbind,strsplit(categories.ENG, delimiter, perl=T))
+#categories.SUS <- do.call(rbind,strsplit(categories.SUS, delimiter, perl=T))
+
+
+wd <- getwd()
+setwd(wd.final)
+write.csv(categories.SOC, paste("categories_SOC_nMeta_",
+                                length(unique(categories.SOC[,1])),
+                                "_nCat_",
+                                length(categories.SOC[,2]),
+                                ".csv"))
+
+write.csv(categories.ENG, paste("categories_ENG_nMeta_",
+                                length(unique(categories.ENG[,1])),
+                                "_nCat_",
+                                length(unique(categories.ENG[,2])),
+                                ".csv"))
+
+# write.csv(categories.SUS, paste("categories_SUS_nMeta_",
+#                                 length(unique(categories.SUS[,1])),
+#                                 "_nCat_",
+#                                 length(unique(categories.SUS[,2])),
+#                                 ".csv"))
+# 
+# setwd(wd)
+##~---------------------
+
+#####################
 

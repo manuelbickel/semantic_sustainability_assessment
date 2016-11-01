@@ -143,7 +143,7 @@ RAP__residential_area;Residents#residential_area;1#SOC#;1#SOC#Residents#resident
 RAP__social_groups;Residents#social_groups;1#SOC#;1#SOC#Residents#social_groups;1--SOC--Residents--social_groups
 RED__education_formative;Education#primary_secondary_apprenticeship;1#SOC#;1#SOC#Education#primary_secondary_apprenticeship;1--SOC--Education--primary_secondary_apprenticeship
 RED__education_nonformative_events_locations;Education#continuing_education_events_locations;1#SOC#;1#SOC#Education#continuing_education_events_locations;1--SOC--Education--continuing_education_events_locations
-RED__knowledge_RnD;Education#tertiary_R&D_institutions;1#SOC#;1#SOC#Education#tertiary_R&D_institutions;1--SOC--Education--tertiary_R&D_institutions
+RED__knowledge_RnD;Education#tertiary_R&D_institutions;1#SOC#;1#SOC#Education#tertiary_RnD_institutions;1--SOC--Education--tertiary_RnD_institutions
 RES__resources_extraction;Resources#extraction;1#SOC#;1#SOC#Resources#extraction;1--SOC--Resources--extraction
 RES__resources_raw_materials_anorganic_non_energy;Resources#raw_materials_anorganic;1#SOC#;1#SOC#Resources#raw_materials_anorganic;1--SOC--Resources--raw_materials_anorganic
 RES__resources_raw_materials_organic_non_energy;Resources#raw_materials_organic_non_energy;1#SOC#;1#SOC#Resources#raw_materials_organic_non_energy;1--SOC--Resources--raw_materials_organic_non_energy
