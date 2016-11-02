@@ -20,6 +20,7 @@ file.empty.processing.code  <- "code_structure_for_setting_text_processing_marke
 #and deleting single lines like footnotes, etc.
 file.split.pattern.identified <- "identified_extraction_patterns.txt"
 
+#prefix for naming the sublist of the working data list that contains
 #the stemmed unique words of the text windows
 wordlists.prefix <- c("uniq.stem_")
 
