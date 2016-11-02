@@ -248,6 +248,7 @@ row.names(wordcategorylist) <- 1:nrow(wordcategorylist)
 
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "PREPARE_THESAURI_AND_STOPWORDS"
+time.elapsed
 setwd(wd.current)
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##END READ AND PREPARE THESAURI AND STOPWORDLIST DATA<<<<<<<<<<<<<<<<<<<

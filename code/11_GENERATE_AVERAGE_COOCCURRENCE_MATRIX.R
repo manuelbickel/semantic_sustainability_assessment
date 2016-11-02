@@ -69,6 +69,7 @@ write.csv(cooccurrence.matrix.mean, filename)
 
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "GENERATE_AVERAGE_COOCCURRENCE_MATRIX"
+time.elapsed
 setwd(wd.current)
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##END <<<<<<<<<<<<<<<<<<< GENERATE AVERAGE COOCCURRENCE MATRIX

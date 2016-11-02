@@ -94,6 +94,7 @@ warning("Please identify suitable extraction patterns manually
 ##~-------------------------
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "LOAD_TXT_AND_CHECK_MARKER_PHRASES"
+time.elapsed
 setwd(wd.current)
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

@@ -191,6 +191,7 @@ write.csv(match.rate.table, paste(wd.final, "match_rate_table.csv", sep=""))
 
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "CALCULATE_MATCH_RATE_TABLE"
+time.elapsed
 setwd(wd.current)
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

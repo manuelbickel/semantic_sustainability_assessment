@@ -314,6 +314,7 @@ if (length(files.combine) > 1) {
 
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "SPLIT_INTO_TEXT_WINDOWS"
+time.elapsed
 setwd(wd.current)
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##END <<<<<<<<<<<<<<<<<<< SPLIT INTO TEXT WINDOWS

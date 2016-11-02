@@ -291,6 +291,7 @@ par(opar)
 
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "COOCCURRENCE_PLOT_ENERGY_AND_SOCIAL_SYSTEM"
+time.elapsed
 setwd(wd.current)
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##END <<<<<<<<<<<<< SCALED COOCCURRENCE PLOT ENERGY SYSTEM AND SOCIAL SYSTEM CATEOGIRES

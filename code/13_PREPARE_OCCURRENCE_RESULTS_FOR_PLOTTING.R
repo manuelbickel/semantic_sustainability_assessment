@@ -45,6 +45,7 @@ results.occ.sustainability <- results.occ.final[categories.select3,]
 
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "PREPARE_OCCURRENCE_RESULTS_FOR_PLOTTING"
+time.elapsed
 setwd(wd.current)
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

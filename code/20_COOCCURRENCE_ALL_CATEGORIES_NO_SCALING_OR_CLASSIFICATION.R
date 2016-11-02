@@ -108,6 +108,7 @@ dev.off()
 
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "COOCCURRENCE_ALL_CATEGORIES_NO_SCALING_OR_CLASSIFICATION"
+time.elapsed
 setwd(wd.current)
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##END <<<<<<<<<<<<< COOCCURRENCE PLOT OF ALL CATEGORIES WIHTOUT ANY CALSSIFICATION OR SCALING

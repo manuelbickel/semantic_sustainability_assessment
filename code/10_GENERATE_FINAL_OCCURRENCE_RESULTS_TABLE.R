@@ -106,6 +106,7 @@ write.csv(results.occ.final, paste0(wd.final,file.occurrence.results))
 
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "GENERATE_FINAL_OCCURRENCE_RESULTS_TABLE"
+time.elapsed
 setwd(wd.current)
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##END <<<<<<<<<<<<<<<<<<< GENERATE FINAL OCCURRENCE RESULTS TABLE

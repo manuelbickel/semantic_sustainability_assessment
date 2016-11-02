@@ -181,6 +181,7 @@ dev.off()
 
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "BOXPLOT_OCCURRENCE_SUSTAINABILITY"
+time.elapsed
 setwd(wd.current)
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

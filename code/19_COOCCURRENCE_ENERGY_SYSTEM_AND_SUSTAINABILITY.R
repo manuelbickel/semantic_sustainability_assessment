@@ -307,6 +307,7 @@ dev.off()
 
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "COOCCURRENCE_ENERGY_SYSTEM_AND_SUSTAINABILITY"
+time.elapsed
 setwd(wd.current)
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##END <<<<<<<<<<<<< COOCCURRENCE PLOT ENERGY / SUSTAINABILITY

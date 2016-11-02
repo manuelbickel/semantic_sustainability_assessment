@@ -247,6 +247,7 @@ write.csv(words.occurrence.topten.consolidated, "words_occurrence_topten_consoli
 
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "NORMALIZED_COOCCURRENCE_MATRICES_AND_TOP_WORDS"
+time.elapsed
 setwd(wd.current)
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##END <<<<<<<<<<<<<<<<<<< GENERATE NORMALIZED COOCCURRENCE MATRICES AND GET WORDS WITH HIGHEST OCCURRENCE

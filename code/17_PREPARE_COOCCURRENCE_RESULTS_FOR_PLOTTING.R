@@ -82,6 +82,7 @@ x_sust <- x
 ##~--------------------
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "PREPARE_DATA_FOR_COOCCURRENCE_PLOTS"
+time.elapsed
 setwd(wd.current)
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##END <<<<<<<<<<<<< PREPARE DATA FOR COOCCURRENCE PLOTS

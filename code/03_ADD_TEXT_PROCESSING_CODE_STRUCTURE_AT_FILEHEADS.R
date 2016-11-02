@@ -35,6 +35,7 @@ for (i in files) {
 ##~--------------------------------
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "ADD_PROCESSING_CODE_AT_FILEHEAD"
+time.elapsed
 setwd(wd.current)
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##END WRITE EMPTY CODE STRUCTURE FOR TEXT PROCESSING AT FILE HEADS <<<<<<<<<<<<<<<<<<< 

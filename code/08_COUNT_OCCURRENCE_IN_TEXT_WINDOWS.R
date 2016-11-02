@@ -264,6 +264,7 @@ rm(list = remove)
 
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "COUNT_OCCURRENCE_IN_TEXT_WINDOWS"
+time.elapsed
 setwd(wd.current)
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##END SEARCH ALGORITHM - CREATE OCCURRENCE MATRIX FOR CATEGORIES IN TEXT WINDOWS PER DOCUMENT ON BASIS OF TAGGED WORDS<<<<<<<<<<<<<<<<<<<

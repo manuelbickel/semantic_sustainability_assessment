@@ -312,6 +312,7 @@ StemVector <- function(x.vector) {
 ##~--------------------------------------------
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "LOAD_DEFINITIONS_OPTIONS_FUNCTIONS"
+time.elapsed
 setwd(wd.current)
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ##END <<<<<<<<<<<<<<<<<<< LOAD DEFINITIONS OPTIONS FUNCTIONS (incl. directories, libraries, etc.)

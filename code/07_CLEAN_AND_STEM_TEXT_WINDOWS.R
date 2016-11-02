@@ -88,6 +88,7 @@ for (i in 1:length(workingdata.list)) {
 
 time.elapsed <- rbind(time.elapsed, proc.time())
 row.names(time.elapsed)[nrow(time.elapsed)] <- "CLEAN_AND_STEM_TEXT_WINDOWS"
+time.elapsed
 setwd(wd.current)
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
