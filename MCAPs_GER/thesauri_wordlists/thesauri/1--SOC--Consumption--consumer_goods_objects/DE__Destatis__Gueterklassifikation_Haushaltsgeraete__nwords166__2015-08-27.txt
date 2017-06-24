@@ -1,0 +1,138 @@
+﻿~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der gueter 2008
+Haushaltsgeraete
+Elektrische Haushaltsgeraete, Teile dafuer
+Kuehl-, Gefrierschraenke, Tiefkuehltruhen; Geschirrspuelmaschinen; Waschmaschinen und Waeschetrockner; Heizdecken; Ventilatoren und Abzugshauben
+Kuehl-, Gefrierschraenke, Tiefkuehltruhen
+Kombinierte Kuehl- und Gefrierschraenke mit gesonderten Außentueren
+Haushaltskuehlschraenke
+Einbaukuehlschraenke
+Gefrier- und Tiefkuehltruhen mit einem Inhalt von 800 l oder weniger
+Gefrier- und Tiefkuehlschraenke mit einem Inhalt von 900 l oder weniger
+Haushaltsgeschirrspuelmaschinen
+Maschinen zum Waschen von Waesche und Waeschetrockner, mit einem Fassungsvermoegen an Trockenwaesche von 10 kg oder weniger
+Decken aus Gewebe mit elektrischer Heizvorrichtung
+Ventilatoren und Abzugshauben fuer den Haushalt
+Ventilatoren mit eingebautem Elektromotor mit einer Leistung von 125 W oder weniger
+Abzugshauben mit einer groeßten horizontalen Seitenlaenge von 120 cm oder weniger
+Andere elektrische Haushaltsgeraete, a.n.g
+Staubsauger und elektromechanische Haushaltsgeraete, mit eingebautem Elektromotor
+Staubsauger, mit einer Leistung von 1500 W oder weniger und mit einem Fassungsvermoegen des Staubbehaelters von 20 l oder weniger
+Andere Staubsauger
+Lebensmittelzerkleinerungs- und -mischgeraete ; Frucht- und Gemuesepressen
+Elektrische Rasierapparate, Haarschneide- und Schermaschinen sowie Haarentferner
+Elektrische Haar- und Haendetrockner ; Buegeleisen
+Elektrische Trockenhauben, andere Haartrockner
+Trockenhauben, auch wandbefestigte
+Elektrische Haendetrockner
+Elektrische Buegeleisen
+Andere Elektrowaermegeraete
+Staubsauger, einschl. Trocken- und Nasssauger
+Kaffee- und Teemaschinen
+Brotroester
+Warmhalteplatten
+Elektrische Warmwasserbereiter und Tauchsieder, auch fuer gewerbliche Zwecke
+Tauchsieder
+Elektrische Geraete zum Raum- und Bodenheizen oder zu aehnlichen Zwecken, auch fuer gewerbliche Zwecke
+Elektrische Speicherheizgeraete
+Elektrische Radiatoren mit Fluessigkeitsumlauf, Konvektoren, elektrische Heizgeraete mit eingebautem Ventilator
+Mikrowellengeraete
+Andere elektrische Oefen, a.n.g.; elektrische Kuechenherde, Kochplatten, Grill- und Bratgeraete
+Elektrische Vollherde
+Elektrische Einzel- und Mehrfachkochplatten und Kochmulden
+zum Einbau
+Elektrische Grillgeraete und Bratgeraete
+Elektrische Einbau-Backoefen
+Elektrische Heizwiderstaende
+Teile fuer elektrische Haushaltsgeraete
+fuer Staubsauger
+fuer elektromechanische Haushaltsgeraete
+fuer elektrische Rasierapparate, Haarschneide- und Schermaschinen
+fuer Warmwasserbereiter, Elektrowaermegeraete fuer den Haushalt und fuer gewerbliche Zwecke
+Nicht elektrische Haushaltsgeraete, Teile dafuer
+Nicht elektrische Heiz-, Koch-, Heißwasser-, Heißluft- u.ae. Geraete fuer den Haushalt
+Nicht elektrische Back-, Brat-, Grill-, Kochgeraete und Warmhalteplatten, fuer den Haushalt, aus Eisen, Stahl oder Kupfer
+Back-, Koch- u.ae. Geraete fuer Feuerung mit gasfoermigen Brennstoffen, aus Eisen oder Stahl
+Gas- Einbauherde und -backoefen
+Back-, Koch- u.ae. Geraete fuer Feuerung mit anderen Brennstoffen, aus Eisen oder Stahl sowie Koch- und Heizgeraete , aus Kupfer
+Nicht elektrische Raumheizoefen, Kuechenherde u.ae. nicht elektrische Haushaltsgeraete, aus Eisen oder Stahl
+Heizgeraete u.ae. nicht elektrische Haushaltsgeraete fuer Feuerung mit gasfoermigen Brennstoffen
+mit eigener Abgasabfuehrung
+nicht mit eigener Abgasabfuehrung
+Heizgeraete u.ae. nicht elektrische Haushaltsgeraete fuer Feuerung mit fluessigen Brennstoffen
+Heizgeraete u.ae. nicht elektrische Haushaltsgeraete fuer Feuerung mit festen Brennstoffen
+Nicht elektrische Heißlufterzeuger und -verteiler, mit motorbetriebenem Ventilator oder Geblaese, Teile dafuer, aus Eisen oder Stahl, auch fuer gewerbliche Zwecke
+Nicht elektrische Durchlauferhitzer und Heißwasserspeicher
+mit sonstiger Beheizung
+Teile fuer Oefen, Kochgeraete, Warmhalteplatten u.ae. nicht elektrische Haushaltsgeraete, aus Eisen oder Stahl
+Abzugshauben
+Außentueren
+Back-, Brat-, Grill-, Kochgeraete
+Back-, Koch
+Bodenheizen
+Bratgeraete
+Buegeleisen
+EinbauBackoefen
+Einbauherde und -backoefen
+Einzel- und Mehrfachkochplatten
+Elektrowaermegeraete
+Fassungsvermoegen
+Fluessigkeitsumlauf
+Frucht- und Gemuesepressen
+GasMXRKXREinbauherde
+Gasbeheizung
+Gefrier- und Tiefkuehlschraenke
+Gefrier- und Tiefkuehltruhen
+Gefrierschraenke
+Gemuesepressen
+Geschirrspuelmaschinen
+Grill- und Bratgeraete
+Grillgeraete
+Haar- und Haendetrockner
+Haarentferner
+Haarschneide- und Schermaschinen
+Haartrockner
+Haendetrockner
+Haushalt
+Heißlufterzeuger und -verteiler
+Heiz-, Koch-, Heißwasser-, Heißluft
+Heizdecken
+Heizgeraete
+Heizvorrichtung
+Heizwiderstaende
+Koch- und Heizgeraete
+Kochgeraete
+Kochmulden
+Kochplatten
+Kombinierte
+Konvektoren
+Kuechenherde
+Kuehl-, Gefrierschraenke
+Kuehl- und Gefrierschraenke
+Lebensmittelzerkleinerungs
+Mehrfachkochplatten
+Nasssauger
+Oefen
+Oelbeheizung
+Radiatoren
+Rasierapparate
+Raum- und Bodenheizen
+Raumheizoefen
+Schermaschinen
+Speicherheizgeraete
+Staubbehaelters
+Staubsauger
+Teemaschinen
+Tiefkuehlschraenke
+Tiefkuehltruhen
+Trocken- und Nasssauger
+Trockenhauben
+Trockenwaesche
+Ventilator
+Ventilatoren
+Vollherde
+Waesche
+Waeschetrockner
+Warmwasserbereiter
+Waschen
+Waschmaschinen
+Einbau-Backoefen

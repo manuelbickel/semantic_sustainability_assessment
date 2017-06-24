@@ -1,0 +1,27 @@
+~~meta: ~~language: DE ~~resource: http://eurovoc.europa.eu/drupal/ ~~additionalinfo: derived from a download of the -multilingual list- and the -domain- list in all languages ~~Eurovocfileheadmeta: Thesaurus EUROVOC ISSN 1725-4396 ~ Ausgabe 4.4 (2012) - Deutsch ~ Thematische Fassung ~ Bereich 48 ~ VERKEHR ~ DE ~ © Europäische Union, 2015 ~~chapter/category: Verkehrspolitik ~~subcategory: Beförderungsentgelt ~~chapter/category: Verkehrspolitik ~~subcategory: Transportpolitik ~~chapter/category: Verkehrspolitik ~~subcategory: verkehrspolitische_Regelung ~~chapter/category: Verkehrspolitik ~~subcategory: Verkehrsvorschriften ~~chapter/category: Organisation_des_Verkehrs ~~subcategory: Beförderungsart ~~chapter/category: Organisation_des_Verkehrs ~~subcategory: Beförderungsmittel
+Beförderungsmittel
+schadstoffarmes Fahrzeug
+Fahrzeug
+Campingfahrzeug
+Camping
+Elektrofahrzeug
+Fahrzeugausrüstung
+Bereifung
+Sicherheit im Straßenverkehr
+Lenkvorrichtung
+Sicherheitsvorrichtung
+Transportsicherheit
+Signal- und Beleuchtungseinrichtung
+Verkehrszeichengebung
+Gewichte und Abmessungen
+Großraumtransporter
+Kraftfahrzeug
+Abgas
+Kraftfahrzeugindustrie
+landwirtschaftliches Fahrzeug
+Landmaschine
+landwirtschaftliche Ausrüstung
+landwirtschaftliche Zugmaschine
+Luftkissenfahrzeug
+Beförderung auf dem Seeweg
+Schienentransport

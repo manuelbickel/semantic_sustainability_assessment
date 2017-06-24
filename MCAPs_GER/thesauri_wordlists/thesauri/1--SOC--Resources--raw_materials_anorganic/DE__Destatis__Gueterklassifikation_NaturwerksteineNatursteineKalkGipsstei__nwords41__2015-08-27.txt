@@ -1,0 +1,38 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der gueter 2008
+Naturwerksteine und Natursteine, Kalk- und Gipssteine , Kreide und Schiefer
+Naturwerksteine und Natursteine
+Marmor u.a. kalkhaltige Naturwerksteine und Natursteine
+Marmor und Travertin
+roh oder grob behauen
+lediglich zerteilt, in Bloecken oder in Platten
+Ecaussine u.a. Werksteine aus Kalkstein; Alabaster, roh, auch grob behauen oder lediglich zerteilt
+Granit, Sandstein u.a. Naturwerksteine und Natursteine
+Granit
+Sandstein
+Gipsstein, Anhydrit; Kalkstein als Hochofenzuschlaege oder zum Herstellen von Kalk oder Zement
+Gipsstein; Anhydrit
+Kalkstein
+Kalkstein fuer die Herstellung von Zement; Branntkalk und Kalkstein fuer Industrie und Umwelttechnik
+Kalkstein, gemahlen
+Kreide und Dolomit, weder gebrannt oder gesintert
+Kreide
+Dolomit, weder gebrannt noch gesintert
+Tonschiefer
+Tonschiefer, auch grob behauen oder lediglich zerteilt, in Bloecken oder in Platten
+Alabaster
+Anhydrit
+Bloecken
+Branntkalk
+Dolomit
+Ecaussine
+Gipsstein
+Gipssteine
+Hochofenzuschlaege
+Kalk
+Kalk- und Gipssteine
+Marmor
+Natursteine
+Naturwerksteine
+Schiefer
+Travertin
+Werksteine

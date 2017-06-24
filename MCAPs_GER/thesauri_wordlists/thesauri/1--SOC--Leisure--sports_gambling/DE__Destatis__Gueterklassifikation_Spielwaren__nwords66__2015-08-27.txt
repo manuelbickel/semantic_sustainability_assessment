@@ -1,0 +1,66 @@
+﻿~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der gueter 2008
+Spielwaren
+Puppen; Spielzeug, Tiere oder nichtmenschliche Wesen darstellend; Teile und Zubehoer fuer Puppen
+Puppen, nur Nachbildungen von Menschen darstellend
+Spielzeug, Tiere oder nichtmenschliche Wesen darstellend
+#Fuellmaterial enthaltend
+#aus Holz, Kunststoff und aus anderen Stoffen
+#aus Holz
+aus anderen Stoffen
+Teile und Zubehoer fuer Puppen
+Elektrische Eisenbahnen ; maßstabgetreu verkleinerte Modelle zum Zusammenbauen, Bausaetze und Baukastenspielzeug
+Elektrische Eisenbahnen
+Maßstabgetreu verkleinerte Modelle zum Zusammenbauen, auch mit Antrieb
+Anderes Spielzeug
+Puppenwagen, Spielfahrzeuge, zum Besteigen und Fortbewegen durch Kinder geeignet
+Puzzles
+Anderes Spielzeug, a.n.g
+Musikspielzeuginstr. u. -ger.; Spielzeug, aufgem. in Zusammenstell. od. Aufmach. ; Spielzg. u. Modelle, mit eingeb. Motor; Spielzg.waf
+Miniaturmodelle aus Metall, im Spritzgussverfahren hergestellt
+Andere Spiele
+Spielkarten
+Billardspiele und Zubehoer; Spiele, mit Muenzen oder Spielmarken betrieben; elektrische Autorennspiele; andere Gesellschaftsspiele
+Billardspiele und Zubehoer
+Spiele, mit Muenzen oder Spielmarken betrieben , Teile dafuer
+Elektrische Auto-Rennspiele, die den Charakter von Gesellschaftsspielen haben
+#Antrieb
+#Aufmach
+AutoRennspiele
+Autorennspiele
+Baukastenspielzeug
+#Bausaetze
+#Besteigen
+Billardspiele
+#Charakter
+#Eisenbahnen
+#Fortbewegen
+#Fuellmaterial
+Gesellschaftsspiele
+Gesellschaftsspielen
+#Holz
+#Kinder
+#Kunststoff
+Maßstabgetreu
+#Menschen
+#Metall
+Miniaturmodelle
+#Modelle
+#Motor
+#Muenzen
+Musikspielzeuginstr
+#Nachbildungen
+Puppen
+Puppenwagen
+Spiele
+Spielfahrzeuge
+Spielmarken
+Spielzeug
+Spielzg
+Spielzgwaf
+Spritzgussverfahren
+#Tiere
+#Wesen
+#Zusammenbauen
+#Zusammenstell
+Auto-Rennspiele
+Spielzg.waf

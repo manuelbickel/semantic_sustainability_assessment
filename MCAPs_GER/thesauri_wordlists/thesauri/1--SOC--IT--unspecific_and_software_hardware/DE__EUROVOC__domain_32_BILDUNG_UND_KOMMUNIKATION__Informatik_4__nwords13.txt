@@ -1,0 +1,13 @@
+~~meta: ~~language: DE ~~resource: http://eurovoc.europa.eu/drupal/ ~~additionalinfo: derived from a download of the -multilingual list- and the -domain- list in all languages ~~Eurovocfileheadmeta: Thesaurus EUROVOC ISSN 1725-4396 ~ Ausgabe 4.4 (2012) - Deutsch ~ Thematische Fassung ~ Bereich 32 ~ BILDUNG UND KOMMUNIKATION ~ DE ~ © Europäische Union, 2015 ~~chapter/category: Bildung ~~subcategory: Bildung ~~chapter/category: Bildung ~~subcategory: Bildungspolitik ~~chapter/category: Bildung ~~subcategory: pädagogische_Methode ~~chapter/category: Unterrichtswesen ~~subcategory: allgemein_bildender_Unterricht ~~chapter/category: Unterrichtswesen ~~subcategory: berufsbildender_Unterricht ~~chapter/category: Unterrichtswesen ~~subcategory: Lehranstalt ~~chapter/category: Unterrichtswesen ~~subcategory: Stufe_des_Bildungssystems ~~chapter/category: Unterrichtswesen ~~subcategory: Unterrichtswesen ~~chapter/category: Organisation_des_Unterrichtswesens ~~subcategory: Organisation_des_Unterrichtswesens ~~chapter/category: Organisation_des_Unterrichtswesen ~~subcategory: schulisches_Arbeiten ~~chapter/category: Organisation_des_Unterrichtswesen ~~subcategory: schulisches_Leben ~~chapter/category: Organisation_des_Unterrichtswesen ~~subcategory: Unterrichtsmaterial ~~chapter/category: Dokumentation ~~subcategory: Dokument ~~chapter/category: Dokumentation ~~subcategory: Dokumentation ~~chapter/category: Dokumentation ~~subcategory: Dokumentationssystem ~~chapter/category: Kommunikation ~~subcategory: Audio-und Videogerät ~~chapter/category: Kommunikation ~~subcategory: Kommunikationsindustrie ~~chapter/category: Kommunikation ~~subcategory: Kommunikationsmittel ~~chapter/category: Kommunikation ~~subcategory: Kommunikationspolitik ~~chapter/category: Kommunikation ~~subcategory: Kommunikationssystem ~~chapter/category: Information_und_Informationsverarbeitung ~~subcategory: Information ~~chapter/category: Information_und_Informationsverar ~~subcategory: Informationspolitik ~~chapter/category: Information_und_Informationsverar ~~subcategory: Informationsverarbeitung ~~chapter/category: Informatik ~~subcategory: Datenrecht ~~chapter/category: Informatik ~~subcategory: Datenverarbeitung ~~chapter/category: Informatik ~~subcategory: Datenverarbeitungsindustrie ~~chapter/category: Informatik ~~subcategory: Datenverarbeitungssystem
+Datenverarbeitungssystem
+Simulation
+EDV-Benutzer
+Benutzerunterstützung
+Informatikanwendung
+Informatiknetz
+Datenautobahn
+EDV-Terminal
+lokales Netz
+Netz-Server
+Rechenzentrum
+Systemverbund

@@ -1,0 +1,13 @@
+~~meta: ~~language: DE ~~resource: http://eurovoc.europa.eu/drupal/ ~~additionalinfo: derived from a download of the -multilingual list- and the -domain- list in all languages ~~Eurovocfileheadmeta: Thesaurus EUROVOC ISSN 1725-4396 ~ Ausgabe 4.4 (2012) - Deutsch ~ Thematische Fassung ~ Bereich 24 ~ FINANZWESEN ~ DE ~ © Europäische Union, 2015 ~~chapter/category: Währungsbeziehungen ~~subcategory: Europäisches_Währungssystem ~~chapter/category: Währungsbeziehungen ~~subcategory: internationale_Finanzen ~~chapter/category: Währungsbeziehungen ~~subcategory: Währungsbeziehungen ~~chapter/category: Währungsbeziehungen ~~subcategory: Zahlungsbilanz ~~chapter/category: Geldwirtschaft ~~subcategory: Devisenpolitik ~~chapter/category: Geldwirtschaft ~~subcategory: Geld-und Kreditpolitik ~~chapter/category: Geldwirtschaft ~~subcategory: Geldmarkt ~~chapter/category: Geldwirtschaft ~~subcategory: Wirtschafts-und Währungsunion ~~chapter/category: Geld-_und_Kreditwesen ~~subcategory: Bankgeschäft ~~chapter/category: Geld-_und_Kreditwesen ~~subcategory: Finanzdienstleistungen ~~chapter/category: Geld-_und_Kreditwesen ~~subcategory: Finanzinstitution ~~chapter/category: Geld-_und_Kreditwesen ~~subcategory: Kredit ~~chapter/category: Geld-_und_Kreditwesen ~~subcategory: Kreditpolitik ~~chapter/category: Freier_Kapitalverkehr ~~subcategory: Finanzmarkt ~~chapter/category: Freier_Kapitalverkehr ~~subcategory: freier_Kapitalverkehr ~~chapter/category: Investition_und_Finanzierung ~~subcategory: Finanzierung ~~chapter/category: Investition_und_Finanzierung ~~subcategory: Investition ~~chapter/category: Versicherungswesen ~~subcategory: Versicherung ~~chapter/category: Öffentliche_Finanzen_und_Haushaltspolitik ~~subcategory: Haushaltspolitik ~~chapter/category: Öffentliche_Finanzen_und_Haushaltspolitik ~~subcategory: öffentliche_Finanzen ~~chapter/category: Öffentliche_Finanzen_und_Haushaltspolitik ~~subcategory: öffentliche_Schuld ~~chapter/category: Haushaltsplan ~~subcategory: Ausführung_des_Haushaltsplans ~~chapter/category: Haushaltsplan ~~subcategory: Finanzierung_des_Haushalts ~~chapter/category: Haushaltsplan ~~subcategory: Haushaltsausgabe ~~chapter/category: Haushaltsplan ~~subcategory: Haushaltsverfahren ~~chapter/category: Steuerwesen ~~subcategory: Einkommensteuer ~~chapter/category: Steuerwesen ~~subcategory: Steuer
+Steuer
+außergewöhnliche Abgabe
+direkte Steuer
+Einkommensteuer
+spezielle Verbrauchssteuer
+Vermögenssteuer
+indirekte Steuer
+Verbrauchssteuer
+Gewerbesteuer
+Pauschalsteuer
+Realsteuer
+steuerähnliche Abgabe

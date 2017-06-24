@@ -1,0 +1,3068 @@
+﻿!Analysis_Code_Start!
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pagerange | (start/stop word - it is assumed that the text to be analyzed has an "/f" at the beginning in order to use it for analyzing the structure) ~~~~~~~~~~~~~~~~~~~~~~~
+~PAGE~RANGE~START~
+~PAGE~RANGE~END~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+single_line_deletion_start | (esp. footnotes, etc.) - insert wording of single lines to be deleted, if needed ~~~~~~~~~
+!~delete_line_~!
+single_line_deletion_end |~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+desired_pattern_start | ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\f
+^Maßnahme
+^von 39
+Handlungsfeld
+Zuständigkeit
+Ziele
+Kurzbeschreibung
+Umsetzungsschritte
+Zielgruppe
+Geplanter Start
+Laufzeit
+Beispiele
+Förderprogramme
+Indikatoren
+^Offene Fragen
+desired_pattern_end | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !~~_OFF_-5_SET_~~!von 39
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+startextract | leave blank, will be filled in a later step within R~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+endextract | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+!Analysis_Code_End!
+
+Kommunales
+Klimaschutzkonzept
+
+Maßnahmenkatalog
+Integriertes Klimaschutzkonzept Stadt Nordhorn
+
+Impressum
+
+Alle Veröffentlichungen im Rahmen des Konzepts können als Pdf-Datei von der Website
+http://www.nordhorn.de, Menüpunkt Bau | Umwelt / Klimaschutzkonzept heruntergeladen werden.
+Herausgeber
+des Berichts und Projektträger des integrierten Klimaschutzkonzepts ist die
+Stadt Nordhorn, Amt für Grünplanung und Umwelt.
+Ansprechpartner
+Christina Mahlmann, Umweltbeauftragte, Amt für Grünplanung und Umwelt, Stadt Nordhorn
+Milena Schauer, Leiterin des Amts für Stadtentwicklung, Stadt Nordhorn
+Verantwortlich für den Inhalt
+ist die target GmbH. Nicht jede Aussage muss der Auffassung der Stadt Nordhorn entsprechen.
+Autoren
+Der Bericht wurde von der target GmbH erstellt.
+Die Autoren sind in alphabetischer Reihenfolge:
+Eco-conseiller Loïc Besnier, target GmbH
+Marion Elle M. A., target GmbH
+B. Eng. Sebastian Kücken, target GmbH
+Stefan Lange, target GmbH
+Hermann Sievers, target GmbH
+Dipl.-Soz.-wirt Andreas Steege, target GmbH
+Dott. Ing. Erika Villa, target GmbH
+Dipl.-Ing. Ulrike Wolf, target GmbH
+Lektorat
+Hermann Sievers, target GmbH
+Layout
+Erika Villa und Ulrike Wolf, target GmbH
+Titelfoto
+Stadt Nordhorn
+Stand: 20. Dezember 2013
+
+Die Erarbeitung des Konzepts wurde finanziell gefördert durch:
+
+Förderkennzeichen: 03KS3950
+
+target GmbH
+Walderseestraße 7
+30163 Hannover
+Telefon 0511 909688-30
+Fax 0511 909688-40
+office@targetgmbh.de
+www.targetgmbh.de
+
+2
+                                                                          Maßnahmenkatalog
+
+I. Handlungsfelder und Maßnahmeempfehlungen
+
+Die Maßnahmeempfehlungen sind ein Kernelement des Klimaschutzkonzepts. Es wurden zum einen
+Maßnahmen für eine CO2-Minderung durch Energieeinsparung, Energieeffizienz und die Substitution
+fossiler durch erneuerbare Energieträger formuliert sowie zum anderen Handlungsansätze für die Um-
+setzung dieser Maßnahmen. Um Doppelarbeiten und Überschneidungen mit dem Klimaschutzkonzept
+des Landkreises Grafschaft Bentheim zu vermeiden, wurden in Abstimmung mit der Lenkungsgruppe
+der Stadt Nordhorn, Handlungsfelder festgelegt, die im direkten kommunalen Zuständigkeitsbereich
+liegen und dementsprechend gesteuert werden können. Dazu zählen: Umsetzungsstrukturen,
+Nachhaltige Energieerzeugung und erneuerbare Energien, Klimaschutz und Stadtplanung, Bürger-
+beteiligung sowie Stadt als Vorbild – Klimaschutz in der Stadtverwaltung.
+Die Auswahl der Maßnahmen basiert auf den Diskussionsergebnissen der thematischen Arbeits-
+gruppensitzungen, den Ergebnissen der Ist-Analyse sowie Vorschlägen, die gemeinsam mit Fachleuten
+und der Verwaltung entwickelt wurden. Es wurden dabei ausschließlich Maßnahmen aufgenommen,
+die auf Ebene der Stadt umgesetzt werden können. Die insgesamt 39 Maßnahmevorschläge wurden
+fünf thematischen Handlungsfeldern zugeordnet, die im Einflussbereich der Stadtverwaltung liegen.
+
+Die Maßnahmeempfehlungen verteilen sich auf                die einzelnen  Handlungsfelder
+(A bis E) wie folgt:
+A: Übergeordnete Strukturen:                               5 Maßnahmen
+B: Nachhaltige Energieerzeugung und erneuerbare Energien:  10 Maßnahmen
+C: Klimaschutz und Stadtplanung:                           9 Maßnahmen
+D: Aktivierung und Beteiligung der Bürger:                 7 Maßnahmen
+E: Stadt als Vorbild:                                      8 Maßnahmen
+
+I.1 Erläuterung zum Maßnahmenkatalog und Priorisierung der einzelnen Maßnahmen
+
+Jede Maßnahmeempfehlung wurde detailliert anhand eines zweiseitigen Steckbriefs beschrieben.
+Dieser beinhaltet folgende Kriterien:
+ Handlungsfeld
+ Priorität
+ Zuständigkeit
+ Ziele
+ Kurzbeschreibung
+ Umsetzungsschritte
+ Zielgruppe
+ Geplanter Start
+ Laufzeit
+ Beispiele
+ Förderprogramme / Finanzierungswege
+ Kosteneinschätzung
+ Indikatoren für Monitoring
+ Offene Fragen
+
+Die detaillierten Maßnahmesteckbriefe sind in einem separaten Katalog zusammengefasst. Einen Maß-
+nahmesteckbrief mit den Erläuterungen finden Sie auf der folgenden Seite.
+
+Jede Maßnahme wurde anhand folgender acht Indikatoren bewertet. Diese ergeben insgesamt eine
+Gesamtpriorität:
+ CO2-Einsparpotenzial
+ Öffentlichkeitswirksamkeit
+ Personalaufwand
+ Regionale Wertschöpfung
+
+                                                                                                    3
+Integriertes Klimaschutzkonzept Stadt Nordhorn
+
+ Umsetzungsreife
+ Finanzierung und / oder Förderung
+ Beeinflussbarkeit
+ Notwendigkeit
+
+Jeder dieser Indikatoren wird folgendermaßen bewertet – eine Erläuterung der Bewertung befindet
+sich auf der folgenden Seite:
+
+Bewertung                                       Zeichen   Priorität in Worten
+In sehr hohem Maße gewährleistet                       3           Sehr hoch
+In hohem Maße gewährleistet                            2              Hoch
+Gewährleistet                                          1             Mittel
+Unklar                                                 0             Niedrig
+Nicht gewährleistet                                   -1
+                                                                 Sehr niedrig
+
+Tab. 1-0-1:Übersicht der Bewertung der Indikatoren
+
+Die Einzelbewertung der acht Indikatoren führt zu einer Gesamtbewertung der Maßnahmen auf einer
+Prioritätenskala von sehr hoch bis sehr niedrig. Maßnahmen, die eine sehr niedrige Priorität hätten,
+sind nicht im Maßnahmenkatalog aufgeführt.
+Es ist zu berücksichtigen, dass bis auf den Indikator Personalaufwand alle Indikatoren eine positive
+Skalierung haben: Je höher die Indikatoren bewertet wurden, desto höher ist die Priorität der
+Maßnahme. Der Indikator Personalaufwand wurde genau umkehrt bewertet, d. h., eine Maßnahme
+mit niedrigem Personalaufwand wird entsprechend hoch bewertet.
+
+4
+                                                                                                                                                   Maßnahmenkatalog
+
+Indikatoren                                3                             2                              1                          0                           1
+CO2-Einsparpotenzial                                                                                                                               Es existiert kein
+                       Die Maßnahme besitzt ein sehr    Die Maßnahme besitzt ein      Die Maßnahme besitzt        Das CO2-Einsparpotenzial
+                                                        hohes CO2-Einsparpotenzial.   CO2-Einsparpotenzial.       kann nicht berechnet             CO2-Einsparpotenzial.
+                       hohes CO2-Einsparpotenzial.                                                                werden.
+                                                                                                                  Die Öffentlichkeitswirk-         Die Maßnahme wird von der
+Öffentlichkeits-       Die Umsetzung der Maßnahme       Die Umsetzung der             Die Umsetzung der           samkeit ist unklar.              Öffentlichkeit eher abgelehnt.
+wirksamkeit            ist äußerst öffentlichkeits-     Maßnahme ist öffentlich-      Maßnahme ist
+                       wirksam, spricht ein breites     keitswirksam, spricht         öffentlichkeitswirksam und  Die Personalanforderungen        Es muss zusätzliches Personal
+Personalaufwand        Publikum an und hat einen sehr   Publikum an und hat           kann zur Imagesteigerung    der Maßnahme sind unklar.        für die Maßnahmeumsetzung
+                       hohen Imageeffekt.               einen Imageeffekt.            eingesetzt werden.                                           vorgesehen werden.
+Regionale              Für die Maßnahme müssen          Die Maßnahme könnte mit       Für die Maßnahme müssten
+Wertschöpfung          keine zusätzlichen Personal-     geringem zusätzlichem         einige Kapazitäten bei      Die Auswirkung der               Eine Auswirkung auf die
+Umsetzungsreife        ressourcen eingeplant werden,    Aufwand mit bestehendem       bestehendem Personal        Maßnahme auf die regionale       regionale Wertschöpfung ist
+                       es existieren Synergien mit      Personal umgesetzt werden.    geschaffen werden.          Wertschöpfung ist unklar.        nicht gegeben.
+Finanzierung und/oder  bestehenden Strukturen.                                                                    Die Umsetzbarkeit ist unklar.    Bisher ist die Maßnahme
+Förderung              Mit der Maßnahme kann eine       Mit der Maßnahme kann         Mit der Maßnahme kann                                        nur ein Vorschlag.
+Beeinflussbarkeit      sehr hohe regionale Wert-        eine hohe regionale Wert-     regionale Wertschöpfung
+                       schöpfung erzielt werden.        schöpfung erzielt werden.     erzielt werden.             Finanzierungs- und               Es stehen weder
+Notwendigkeit          Konzepte, erste Planungsschrit-  Konzepte und erste            Konzepte liegen vor.        Förderungswege sind unklar.      Förderprogramme noch
+                       te sowie Abstimmungen zu         Planungsschritte liegen vor.                                                               Budgets zur Verfügung.
+                       Finanzierung und Umsetzung                                     Eine Finanzierung kann
+                       liegen vor.                      Es existieren Förderpro-      entwickelt werden.          Der Einfluss der Stadt (Politik  Die Maßnahme kann nicht
+                       Es existieren attraktive         gramme und/oder eine                                      und Verwaltung), die             von der Stadt (Politik und
+                       Förderprogramme und/oder         Finanzierung kann             Die Maßnahme kann von der   Maßnahme umzusetzen, ist         Verwaltung) beeinflusst
+                       eine Finanzierung ist bereits    entwickelt werden.            Stadt (Politik und          unklar.                          werden.
+                       geplant.                         Die Maßnahme kann in          Verwaltung) beeinflusst     Die Notwendigkeit für das        Es besteht keine zwingende
+                       Die Maßnahme kann in sehr        hohem Maße von der Stadt      werden.                     Erreichen der Klimaschutz-       Notwendigkeit für die Maß-
+                       hohem Maße von der Stadt         (Politik und Verwaltung)      Für das Erreichen der       ziele ist unklar.                nahme, um die Klimaschutz-
+                       (Politik und Verwaltung)         beeinflusst werden.           Klimaschutzziele ist die                                     ziele zu erreichen.
+                       beeinflusst werden.              Für das Erreichen der         Maßnahme wichtig.
+                       Für das Erreichen der            Klimaschutzziele ist die
+                       Klimaschutzziele ist die         Maßnahme entscheidend.
+                       Maßnahme eine zwingende
+                       Grundvoraussetzung.
+
+Tab. 1-2: Übersicht über die Einschätzung und Bewertung der einzelnen Indikatoren
+
+                                                                                                                                                                           5
+Integriertes Klimaschutzkonzept Stadt Nordhorn
+
+I.2 Maßnahmenpriorität in der Übersicht
+
+In den folgenden Tabellen sind die jeweils am höchsten bewerteten Maßnahmen in der Übersicht
+aufgelistet – zum einen die Maßnahmen mit der höchsten Gesamtpriorität, d.h. der Summe der
+Bewertung aller Indikatoren, als auch zum anderen die Maßnahmen mit der höchsten Priorität in den
+Indikatoren CO2-Einsparpotenzial, Öffentlichkeitswirksamkeit, Umsetzungsreife und Notwendigkeit. Die
+Beschreibung der Maßnahmen findet sich im separaten Maßnahmenkatalog.
+
+Laufnummer  HF  Maßnahme                                                                                                                                                                                                                                                                                                                                                                                                                   Priorität
+                Unterstützung für Bürgerwindparks                                                                                                                                                                                                                                                                                                                                                                                          Sehr hoch
+11          B   Kampagne energieeffiziente Gebäude                                                                                                                                                                                                                                                                                                                                                                                         Sehr hoch
+26          D   (Thermografie, Haus-zu-Haus-Aktionen)
+                                                                                                                                                                                                                                                                                                                                                                                                                                           Sehr hoch
+28 D            Klimaschutzprojekte in Schulen und Vereinen                                                                                                                                                                                                                                                                                                                                                                                Sehr hoch
+18 C            Realisierungsprüfung für ein KfW gefördertes
+                Pilotprojekt „Nachhaltiges Quartiersmanagement“                                                                                                                                                                                                                                                                                                                                                                            Sehr hoch
+05 A
+                Beantragung und Einstellung eines Klimaschutz-
+                managers
+
+Tab. 1-3: Übersicht über die Maßnahmen mit der höchsten Gesamtpriorität
+
+Laufnummer HF   Maßnahme                           Priorität                                                                                                                                                                                                                                                                                                                                                                               CO2-Einspar-
+                                                                                                                                                                                                                                                                                                                                                                                                                                           potenzial
+26          D Kampagne energieeffiziente           Sehr                                                                                                                                                                                                                                                                                                                                                                                    Sehr hoch
+
+                Gebäude (Thermografie, Haus-zu-    hoch                                                                                                                                                                                                                                                                                                                                                                                    Sehr hoch
+
+                Haus-Aktionen)                                                                                                                                                                                                                                                                                                                                                                                                             Sehr hoch
+                                                                                                                                                                                                                                                                                                                                                                                                                                           Sehr hoch
+03 A Verbesserte Finanzierung von Klima- Hoch                                                                                                                                                                                                                                                                                                                                                                                              Sehr hoch
+                                                                                                                                                                                                                                                                                                                                                                                                                                           Sehr hoch
+                schutzmaßnahmen: Programme,                                                                                                                                                                                                                                                                                                                                                                                                Sehr hoch
+                                                                                                                                                                                                                                                                                                                                                                                                                                           Sehr hoch
+                Beratung und Akquise
+                                                                                                                                                                                                                                                                                                                                                                                                                                           Hoch
+16 C Klimaschutz in der Bauleitplanung Hoch                                                                                                                                                                                                                                                                                                                                                                                                Hoch
+
+17 C Förderung und Aufbau einer Öko- Hoch
+
+                siedlung
+
+35          E Einführung einer nachhaltigen        Hoch
+
+                Beschaffung
+
+08 B Aufbau eines Wärmekatasters und Hoch
+
+                Analyse von Nahwärmekonzepten
+
+31 D Anreizsystem zur Nutzung des ÖPNV Mittel
+
+09          B Pilotprojekte für innovative         Mittel
+
+                Speichertechnologien in Zusammen-
+
+                arbeit mit der NVB
+
+11 B Unterstützung für Bürgerwindparks Sehr
+
+                                                   hoch
+
+29 D Öffentlichkeitswirksame Förderung Hoch
+
+                von Leuchtturmprojekten
+
+Tab. 1-4: Übersicht über die 10 Maßnahmen mit dem höchsten CO -Einsparpotenzial
+                                                                                                                                                                                                                                                                                                                                                                                                                                        2
+
+6
+                                                                                       Maßnahmenkatalog
+
+Laufnummer HF Maßnahme                  Priorität Öffentlichkeits-
+
+                                                                           wirksamkeit
+
+26  D Kampagne energieeffiziente        Sehr                               Sehr hoch
+
+    Gebäude (Thermografie, Haus-zu-     hoch
+
+    Haus-Aktionen)
+
+11  B Unterstützung für Bürgerwindparks Sehr                               Sehr hoch
+
+                                        hoch
+
+28  D Klimaschutzprojekte in Schulen und Sehr                              Sehr hoch
+
+    Vereinen                            hoch
+
+05  A Beantragung und Einstellung eines Sehr                               Sehr hoch
+
+    Klimaschutzmanagers                 hoch
+
+03  A Verbesserte Finanzierung von      Hoch                               Sehr hoch
+
+    Klimaschutzmaßnahmen:
+
+    Programme, Beratung und Akquise
+
+17  C Förderung und Aufbau einer        Hoch                               Sehr hoch
+
+    Ökosiedlung
+
+29  D Öffentlichkeitswirksame Förderung Hoch                               Sehr hoch
+
+    von Leuchtturmprojekten
+
+22  C Einsatz von Elektrobussen         Hoch                               Sehr hoch
+
+38  E Förderung regionaler Produkte und Hoch                               Sehr hoch
+
+    Dienstleistungen
+
+37 E Klimafreundliches                  Hoch                               Sehr hoch
+
+    Fuhrparkmanagement und
+
+    fahrradfreundliche Verwaltung
+
+Tab. 1-5: Übersicht über die 10 Maßnahmen mit der höchsten Öffentlichkeitswirksamkeit
+
+Laufnummer HF Maßnahme                  Priorität                          Umsetzugsreife
+                                                                           Sehr hoch
+26  D Kampagne energieeffiziente        Sehr
+                                                                           Sehr hoch
+    Gebäude (Thermografie, Haus-zu-     hoch                               Sehr hoch
+                                                                           Sehr hoch
+    Haus-Aktionen)
+                                                                           Sehr hoch
+28 D Klimaschutzprojekte in Schulen und Sehr                               Sehr hoch
+                                                                           Sehr hoch
+    Vereinen                            hoch                               Sehr hoch
+                                                                           Sehr hoch
+05 A Beantragung und Einstellung eines Sehr                                Sehr hoch
+
+    Klimaschutzmanagers                 hoch
+
+37 E Klimafreundliches                  Hoch
+
+    Fuhrparkmanagement und
+
+    fahrradfreundliche Verwaltung
+
+25  D Bürgerveranstaltungen zu          Hoch
+
+    Klimaschutz
+
+01 A Formulierung von Klimaschutzzielen Hoch
+
+02  A Verankerung von Klimaschutz &     Hoch
+
+    Nachhaltigkeit im Leitbild
+
+15  B Recherche und Präsentation guter  Hoch
+
+    Praxisbeispiele
+
+06  B Fachforen zu Klimaschutz &        Hoch
+
+    Nachhaltigkeitsthemen
+
+07  B Fachforum 1: Optimierung und      Hoch
+
+    Effizienzsteigerung von
+
+    Biogasanlagen
+
+Tab. 1-6: Übersicht über die 10 Maßnahmen mit der größten Umsetzungsreife
+
+                                                                                           7
+Integriertes Klimaschutzkonzept Stadt Nordhorn
+
+Laufnummer HF Maßnahme                          Priorität                 Notwendigkeit
+                                                                          Sehr hoch
+26  D Kampagne energieeffiziente                Sehr
+                                                                          Sehr hoch
+    Gebäude (Thermografie, Haus-zu- hoch                                  Sehr hoch
+                                                                          Sehr hoch
+    Haus-Aktionen)                                                        Sehr hoch
+                                                                          Sehr hoch
+05 A Beantragung und Einstellung eines Sehr                               Sehr hoch
+                                                                          Sehr hoch
+    Klimaschutzmanagers                         hoch                      Sehr hoch
+                                                                          Sehr hoch
+29 D Öffentlichkeitswirksame Förderung Hoch
+
+    von Leuchtturmprojekten
+
+27 D Schaffung einer                            Hoch
+
+    Beratungsinfrastruktur für Bürger
+
+01 A Formulierung von Klimaschutzzielen Hoch
+
+02  A Verankerung von Klimaschutz &             Hoch
+
+    Nachhaltigkeit im Leitbild
+
+08 B Aufbau eines Wärmekatasters und Hoch
+
+    Analyse von Nahwärmekonzepten
+
+21 C Emissionsvermeidende                       Hoch
+
+    Verkehrsleitplanung
+
+06  B Fachforen zu Klimaschutz &                Hoch
+
+    Nachhaltigkeitsthemen
+
+32 E Fortsetzung des                            Hoch
+
+    Energiemanagement und
+
+    Controllings der städtischen
+
+    Gebäude
+
+Tab. 1-7: Übersicht über die 10 Maßnahmen mit der höchsten Notwendigkeit
+
+8
+~PAGE~RANGE~START~
+
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Formulierung von Klimaschutzzielen
+
+01
+
+von 39
+
+Handlungsfeld                                     Priorität  Zuständigkeit
+A Übergeordnete Strukturen                        Hoch       Stadt Nordhorn
+
+Ziele             Festlegen von überprüfbaren CO₂-Minderungszielen als Klimaschutzvision für die Stadt
+
+Kurzbeschreibung  In den Workshop-Diskussionen wurde geäußert, dass die Stadt Nordhorn sich selbst
+
+                  ambitionierte CO₂-Minderungziele setzen sollte. Hier müssen realisierbare und
+                  visionäre Bestrebungen ausgewogen berücksichtigt werden. Eine langfristige
+                  Zielsetzung könnten die Energiautarkie (100 % Versorgung aus erneuerbaren
+
+                  Energien) und ein CO₂-Ausstoß von nicht mehr als 2 Tonnen pro Kopf sein. Bis zu
+                  welchem Zeitpunkt diese Ziele erreicht werden könnten, muss in den
+                  Entscheidungsgremien der Stadt auf Grundlage der Potenziale und Trends festgelegt
+                  werden. Minderungsziele als eine Klimaschutzvision ist ein wichtiger Referenzpunkt
+                  für alle Klimaschutzaktivitäten, der hilft, gesellschaftliche sowie politische Kräfte zu
+                  bündeln und zu aktivieren.
+
+Umsetzungsschritte Formulierung der Ziele, Diskussion und Verabschiedung, Monitoring und
+                                Erfolgskontrolle
+
+Zielgruppe        Alle Bürger der Stadt Nordhorn
+
+Geplanter Start   Ab Januar 2014
+
+Laufzeit          Bis Mitte 2014
+
+                                                                                                            9
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Viele Kommunen haben sich sehr ambitionierte Zielsetzungen gesetzt und auch die
+                 Bundesrepublik Deutschland und die EU haben Klimaschutzziele festgelegt.
+
+Förderprogramme / Keine Förderung möglich
+Finanzierungswege
+
+Kosteneinschätzung Über Personalkosten hinaus fallen keine weiteren Kosten an.
+
+Indikatoren für  Festgelegte Ziele und Überprüfung der Einsparziele, Anteil der Versorgung aus
+Monitoring       Erneuerbaren, CO₂-Austoß pro Kopf (in t/a)
+
+Offene Fragen    Der politische Wille und die Unterstützung zur Formulierung von Einsparzielen müssen
+                 gewährleistet sein.
+
+Priorität insgesamt         12
+CO₂-Einsparpotenzial        0
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             0
+Regionale Wertschöpfung     0
+Umsetzungsreife             3
+Finanzierung/Förderung      0
+Beinflussbarkeit            3
+Notwendigkeit               3
+
+10
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Verankerung von Klimaschutz &
+                  Nachhaltigkeit im Leitbild
+02
+
+von 39
+
+Handlungsfeld                                Priorität  Zuständigkeit
+A Übergeordnete Strukturen                   Hoch       Klimaschutzmanagement
+
+Ziele             Ergänzung des existierenden Leitbildes um das Querschnittsthema Klimaschutz und
+Kurzbeschreibung  Nachhaltigkeit
+
+                  Im Sinne eines übergreifenden „Masterplans" wurde im Mai 2005 das Leitbild für die
+                  Stadt Nordhorn erstellt, das Ziele der Stadtentwicklung auf den verschiedenen Ebenen
+                  für die nächsten 15 bis 20 Jahre in Form einer konsensbasierten, realisierbaren Vision
+                  mit konkreten Handlungszielen, Ideen und Maßnahmen formuliert. Mit den Themen
+                  „Wasserstadt“, „textile Vergangenheit“ und „Grenzsituation“ wurden wichtige
+                  Identifikationsmerkmale benannt. Die Themen Nachhaltigkeit und Klimaschutz wurde
+                  innerhalb des Leitbildes bezogen auf die Daseinsgrundfunktionen nicht explizit
+                  herausgearbeitet oder auch nicht als zusätzliches identitätsstiftendes
+                  Querschnittsthema genannt. Für eine Aktualisierung des Leitbilds werden
+                  Nachhaltigkeit und Klimaschutz als zusätzliche Merkmale mit aufgenommen und alle
+                  definierten Maßnahmen in den Bereichen Wohnen, Arbeiten und Wirtschaft,
+                  Einkaufen, Freizeit/Tourismus/Sport/Kultur, Bildung/Ausbildung, Verkehr, Aufgaben
+                  für besondere soziale Gruppen, Raumplanung, Organisation der Akteure um
+                  klimaschutz- und nachhaltigkeitsrelevante Aspekte ergänzt.
+
+Umsetzungsschritte Umformulierung des Leitbildes, Vorschlag und Diskussion in Stadtrat, Verabschiedung
+                                und Veröffentlichung
+
+Zielgruppe        Allgemeine Öffentlichkeit
+
+Geplanter Start   Mitte 2014
+
+Laufzeit          Sechs Monate
+
+                                                        11
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Es gibt immer mehr Städte, die Nachhaltigkeit, Klimaschutz und Energieaspekte in
+                 ihre Leitbilder aufnehmen; so z. B. die „Klimastadt" Bremerhaven, die „Nachhaltige
+                 Stadt“ Leutkirch oder die „Umwelt- und Energiestadt Donauwörth“.
+
+Förderprogramme / Es sind keine gezielten Förderprogramme bekannt.
+Finanzierungswege
+
+Kosteneinschätzung Die Umschreibung des Leitbildes ist eine administrativer Vorgang, der nur
+                                Personalressourcen verlangt.
+
+Indikatoren für  Veröffentlichung des neuen Leitbildes
+Monitoring
+
+Offene Fragen    Möglicherweise muss die Umformulierung des Leitbildes im Rahmen einer
+                 Akteursbeteiligung erfolgen.
+
+Priorität insgesamt         12
+CO₂-Einsparpotenzial        0
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             1
+Regionale Wertschöpfung     0
+Umsetzungsreife             3
+Finanzierung/Förderung      2
+Beinflussbarkeit            0
+Notwendigkeit               3
+
+12
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme            Verbesserte Finanzierung von
+                    Klimaschutzmaßnahmen: Programme,
+03                  Beratung und Akquise
+
+von 39
+
+Handlungsfeld                            Priorität                    Zuständigkeit
+A Übergeordnete Strukturen               Hoch                         Stadt Nordhorn
+
+Ziele               Förderung von Klimaschutzmaßnahmen durch eigene Programme, verbesserte
+Kurzbeschreibung    Beratung zu Förderung sowie Akquise von Fördermitteln
+
+                    In den Arbeitsgruppen wurde wiederholt geäußert, dass Investitionen in Klimaschutz
+                    besser gefördert werden sollten. Denkbar ist hier, dass dies im Rahmen von drei
+                    Bausteinen umgesetzt werden kann. Baustein 1 würde ein eigenes städtisches
+                    Förderprogramm umfassen, das einen Schwerpunkt im Gebäudebereich und einen für
+                    Leuchtturmprojekte hat. Zum einen könnten Privathaushalte und die notwenigen
+                    Investitionen im Gebäudebereich gefördert werden. Dieses Programm könnte in
+                    Kooperation mit den Energieversorgungsunternehmen umgesetzt werden. Des
+                    Weiteren könnten Förderinstrumente auf Leuchtturmprojekte ausgerichtet werden,
+                    die Signalwirkung haben und Investitionen nach sich ziehen. Baustein 2 hätte das Ziel,
+                    bestehende Förderprogramme auf regionaler, nationaler und EU-Ebene besser zu
+                    kommunizieren und gezielt zu diesen Programmen zu beraten. Baustein 3 würde die
+                    aktive Mittelakquise umfassen. Hier könnte das Klimaschutzmanagement
+                    Förderprogramme recherchieren und Anträge für Klimaschutzmaßnahmen stellen, z.
+                    B. auch im Rahmen der nationalen Klimaschutzinitiative, um mehr Fördergelder für
+                    Klimaschutzmaßnahmen vor Ort zu akquirieren.
+
+Umsetzungsschritte  Baustein 1: Breitenförderung und Leuchtturmprojekte (Erarbeitung der Richtlinien,
+                    Sicherung des Budgets, Kooperation mit EVU) Baustein 2: Hochwertige Beratung
+                    (Schulung von Personal, Ansprache von Verwaltung, Unternehmen, Institutionen)
+                    Baustein 3: Recherche von Förderprogrammen, Auswahl, Stellen von Anträgen
+
+Zielgruppe          Bürger, regionale Unternehmen und Organisationen
+
+Geplanter Start     2015
+
+Laufzeit            Zunächst zwei Jahre
+
+                                                                                                       13
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele           In der Region Hannover existiert schon seit über einem Jahrzehnt der Klimaschutz-
+                    Fonds proKlima der gemeinsam mit den Stadtwerken sowohl Breitenförderung als
+                    auch Förderung innovativer Pilotprojekten umsetzt.
+
+Förderprogramme /   Baustein 1 muss aus dem Haushalt bereitgestellt und könnte in Kooperation mit dem
+Finanzierungswege   EVU aufgestockt werden. Alle regionalen, nationalen und EU-Förderprogramme für
+                    Klimaschutz und Nachhaltigkeitsprojekte sollten für die Bausteine 2 und 3 recherchiert
+                    und geprüft werden.
+
+Kosteneinschätzung  Baustein 1: Hier muss eine detaillierte Finanzplanung erfolgen. Das Budget sollte
+                    maximal verfügbar sein. Bausteine 2 und 3: Keine zusätzlichen Kosten über
+                    Personalkosten hinaus.
+
+Indikatoren für
+Monitoring
+
+Offene Fragen       Können überhaupt Haushaltsmittel für Baustein 1 bereitgestellt werden?
+
+Priorität insgesamt         14
+CO₂-Einsparpotenzial        3
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             1
+Regionale Wertschöpfung     3
+Umsetzungsreife             1
+Finanzierung/Förderung      0
+Beinflussbarkeit            3
+Notwendigkeit               0
+
+14
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme            Fortschreibung der Energie- und
+                    CO₂-Bilanz
+04
+
+von 39
+
+Handlungsfeld                                         Priorität       Zuständigkeit
+A Übergeordnete Strukturen                            Mittel          Stadt Nordhorn
+
+Ziele               Überprüfung der Erfolge von Klimaschutzmaßnahmen
+
+Kurzbeschreibung    Eine Energie- und CO₂-Bilanz ist das entscheidende Instrument, um auf quantitative
+                    Weise die Erfolge aller Klimaschutzmaßnahmen bewerten zu können. Wichtiger
+                    Bestandteil ist eine harmonisierte und fortschreibbare Erfassung und Bewertung der
+                    Daten. Die Bilanzen können mithilfe internetbasierter, kostenpflichtiger
+                    Berechnungstools erstellt und die Erfassung, Verwaltung und Analyse von externen
+                    Dienstleistern umgesetzt werden. Zug um Zug können die Ergebnisse auch für den
+                    Aufbau eines überregionalen Benchmarkings genutzt werden.
+
+Umsetzungsschritte  Kontinuierliche Datenerfassung, Sicherung der Datenqualität, Abstimmung mit
+                    Fachleuten, Vernetzung und Harmonisierung mit Landkreis / anderen Kommunen,
+                    Aktualisierung, Veröffentlichung
+
+Zielgruppe          Verwaltung, interessierte Bürger
+
+Geplanter Start     Ab sofort
+
+Laufzeit            Kontinuierlich
+
+                                                                                                        15
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele          Alle Kommunen, die eine Startbilanz aufgestellt und ein integriertes
+                   Klimaschutzkonzept entwickelt haben, sind verpflichtet, die Energie- und CO₂-Bilanz
+Förderprogramme /  fortzuschreiben. Wenn diese Fortschreibung eingeführt und auf hohem Niveau
+Finanzierungswege  regelmäßig durchgeführt wird, können Benchmarking wie z. B. der European Energy
+                   Award darauf aufbauen. Die Stadt Oldenburg beispielsweise wurde vom European
+                   Energy Award mit „Gold” zertifiziert, was bedeutet, dass mehr als 80 % der
+                   geplanten Klimaschutz- und Energieeinsparmaßnahmen umgesetzt wurden.
+
+                   Keine
+
+Kosteneinschätzung Es fallen Lizenzgebühren für das Berechnungstool an. Möglicherweise müssen externe
+                                Dienstleister beauftragt werden.
+
+Indikatoren für    Aufbau der Datenreihen, Stringenz, jährliche Aktualisierung, Veröffentlichung
+Monitoring
+
+Offene Fragen      Die Datenqualität und Datenerfassung müssen auf einem sehr hohen Niveau
+                   sichergestellt werden; auch die Kontinuität der Datenreihen ist wichtig.
+
+Priorität insgesamt         10
+CO₂-Einsparpotenzial        0
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             -1
+Regionale Wertschöpfung     0
+Umsetzungsreife             2
+Finanzierung/Förderung      0
+Beinflussbarkeit            3
+Notwendigkeit               3
+
+16
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme            Beantragung und Einstellung eines
+                    Klimaschutzmanagers
+05
+
+von 39
+
+Handlungsfeld                                              Priorität      Zuständigkeit
+A Übergeordnete Strukturen                                 Sehr hoch      Stadt Nordhorn
+
+Ziele               Gewährleistung der Umsetzung des Klimaschutzkonzepts
+
+Kurzbeschreibung    Die Beantragung eines Klimaschutzmanagers im Rahmen der Klimaschutzinitiative des
+                    BMU ist die naheliegenste Maßnahme für die Umsetzungsphase des Konzepts.
+                    Voraussetzung ist die Verabschiedung des Konzepts durch den Stadtrat. Grundlage
+                    für das Stellenprofil des Klimaschutzmanagers ist der Maßnahmenkatalog des
+                    Klimaschutzkonzepts. Schwerpunkte der Arbeit des Klimaschutzmanagers sind unter
+                    anderem:
+                    - Koordination aller relevanten Aktivitäten in den genannten Handlungsfeldern
+                    - kreisweite und überregionale Kooperation und Vernetzung
+                    - Öffentlichkeitsarbeit und Außendarstellung des Klimaschutzkonzepts
+                    - strategische Weiterentwicklung des integrierten Klimaschutzkonzepts
+
+                    - Fortschreibung der Energie- und CO₂-Bilanz.
+
+Umsetzungsschritte  Beantragung der Förderung, Stellenausschreibung, Auswahlverfahren, Einstellung,
+                    Einarbeitung und Coaching, Start der Arbeit gemäß Klimaschutzkonzept, nach drei
+                    Jahren Evaluation und Entwicklung der Fortsetzung
+
+Zielgruppe          Verwaltung, allgemeine Öffentlichkeit
+
+Geplanter Start     Beantragung sofort nach Beschluss des Konzepts
+
+Laufzeit            Zunächst drei Jahre
+
+                                                                                                     17
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele           Mittlerweile haben sehr viele Kommunen Klimaschutzmanager eingestellt. Es ist
+                    sicherlich ratsam, sich über mögliche Hürden oder Startschwierigkeiten für die
+                    Manager bei denjenigen Kommunen zu informieren, die schon Manager eingestellt
+                    haben; einige Anfangsfehler lassen sich so vermeiden.
+
+Förderprogramme /   Über die Nationale Klimaschutzinitiative können Klimaschutzmanager für die
+Finanzierungswege   „begleitende Umsetzung” von Klimaschutzmaßnahmen gefördert werden; die
+                    Förderquote beträgt 65 %.
+
+Kosteneinschätzung  35 % der anfallenden Personalkosten für eine Stelle nach TVöD 11 oder 12 für drei
+                    Jahre sind einzukalkulieren. Es ist wichtig, dass darüberhinaus auch für die Umsetzung
+                    von Maßnahmen Budgets einkalkuliert werden, da sonst der Gestaltungspielraum des
+                    Managers sehr eingeschränkt wird und Frustrationen vorprogrammiert sind.
+
+Indikatoren für
+Monitoring
+
+Offene Fragen       Wer stellt den Antrag? Wie ist die Bearbeitung und Abwicklung des Antrags derzeit
+                    einzuschätzen? Wo ist die Stelle angesiedelt? Wer garantiert eine gute Einarbeitung
+                    des Managers? Wie hoch ist das zusätzliche Budget einzukalkulieren? Es ist sicherlich
+                    auch hilfreich, einige Leitprojekte für die Startphase der Umsetzung auszuwählen.
+
+Priorität insgesamt         15
+CO₂-Einsparpotenzial        0
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             0
+Regionale Wertschöpfung     0
+Umsetzungsreife             3
+Finanzierung/Förderung      3
+Beinflussbarkeit            3
+Notwendigkeit               3
+
+18
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme            Fachforen zu Klimaschutz &
+                    Nachhaltigkeitsthemen
+06
+
+von 39
+
+Handlungsfeld                                            Priorität  Zuständigkeit
+B Nachhaltige Energieerzeugung und erneuerbare Energien  Hoch       Stadt Nordhorn
+
+Ziele               Vernetzung von zentralen Schlüsselakteuren, Aufbauen einer gesellschaftlichen
+Kurzbeschreibung    Allianz für Nachhaltigkeits- und Klimaschutzprojekte
+
+                    Der Austausch und die Diskussion über spezifische Fachthemen für Experten,
+                    Vertreter von Verbänden, Unternehmen oder Initiativen sowie andere Beteiligte dient
+                    der Vernetzung und dem Schaffen einer gesellschaftlichen Allianz für die Umsetzung
+                    von Klimaschutz- und Nachhaltigkeitsprojekten. Der Kerngedanke ist, dass man alle
+                    diejenigen, die vor Ort zu einem Thema Positionen beziehen oder Fachmeinungen
+                    vertreten, an einen Tisch bittet, um mögliche Konflikte zu bereinigen sowie Konsens
+                    bei der Umsetzung bestimmter Maßnahmen zu schaffen. Als konkretes Thema wurde
+                    z. B. die Optimierung von Biogasanlagen vorgeschlagen, das als Maßnahme 7 schon
+                    in den Katalog aufgenommen wurde. Die Anregung bliebe jedoch, sich auch zu
+                    anderen Themen in einem regelmäßigen Gremium auszutauschen. So könnten auch
+                    weitere Themen wie Repowering, Gebäudesanierungen, Fahrradstadt, Vermarktung
+                    regionaler Produkte über einen regelmäßigen Austausch vorangebracht werden. Zu
+                    diesen Bereichen ließen sich Maßnahmen entwickeln, deren Erarbeitungsprozess,
+                    neben der Maßnahmen 7, bisher nicht stattgefunden hat.
+
+Umsetzungsschritte  Auswahl und Festlegung der Themen, Ansprache von Referenten für Fachinputs,
+                    Aufbau des Verteilers und Ansprache der Akteure, Einladung, Organisation und
+                    Management, Dokumentation
+
+Zielgruppe          Fachleute, Vertreter von Unternehmen, Verbänden, Initiativen
+
+Geplanter Start     Ab Sommer 2014
+
+Laufzeit            Jährlich ein bis zwei Treffen pro Fachforum
+
+                                                                                                  19
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Die Klimaschutzagentur Region Hannover führt regelmäßige sogenannte Akteursforen
+                 zu bestimmten Themen durch, die mittlerweile ein etabliertes Gremium für Austausch
+                 und gemeinschaftliches Umsetzen von Projekten sind.
+
+Förderprogramme / Über den Klimaschutzmanager können die Personalkosten abgedeckt werden.
+Finanzierungswege
+
+Kosteneinschätzung Über die Personalkosten hinaus entstehen keine weiteren Kosten.
+
+Indikatoren für  Anzahl der Teilnehmer, Anzahl der Treffen, Feedback, Erfolg gemeinschaftlicher
+Monitoring       Projekte
+
+Offene Fragen    Welche Fachthemen neben Biogas sollten besprochen werden?
+
+Priorität insgesamt         12
+CO₂-Einsparpotenzial        0
+Öffentlichkeitswirksamkeit  2
+Personalaufwand             1
+Regionale Wertschöpfung     0
+Umsetzungsreife             3
+Finanzierung/Förderung      0
+Beinflussbarkeit            3
+Notwendigkeit               3
+
+20
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme            Fachforum 1: Optimierung und
+                    Effizienzsteigerung von Biogasanlagen
+07
+
+von 39
+
+Handlungsfeld                                            Priorität  Zuständigkeit
+B Nachhaltige Energieerzeugung und Erneuerbare Energien  Hoch       Klimaschutzmanagement
+
+Ziele               Optimierung bestehender Biogasanlagen, gemeinschaftliches Vorgehen und
+Kurzbeschreibung    kooperative Lösung potentieller Konflikte
+
+                    Inhalt der Maßnahme ist die Organisation, Moderation und Dokumentation
+                    kontinuierlicher, mindestens halbjährlich stattfindender Gesprächsrunden rund um
+                    das Thema Biogas. Das Forum ist ein zentrales Instrument zur Vernetzung der
+                    unterschiedlichen Akteursgruppen, für den Austausch und die Transparenz von
+                    Aktivitäten sowie für die Entwicklung konkreter Projektvorhaben. Dabei sollte die
+                    Optimierung und Effizienzsteigerung bestehender Anlagen im Fokus stehen. Neben
+                    dem Informationsaustausch zwischen Kommune, Investoren, Landwirten,
+                    Naturschutz, Versorgungsunternehmen und weiteren Beteiligten, bietet dies auch
+                    eine Plattform zur Klärung von konkreten Konflikten oder Fragen (Flächennutzung,
+                    Netzeinspeisung o.a.). Die Einbindung möglichst vieler Partner sowie die Integration
+                    von Natur- und Umweltverbänden ist dabei wichtig.
+
+Umsetzungsschritte  Auswahl und Festlegung von Bioenergie-Fachthemen, Ansprache von Referenten für
+                    Fachinputs, Aufbau des Verteilers und Ansprache der Akteure, Einladung,
+                    Organisation und Management, Dokumentation
+
+Zielgruppe          Betreiber, Fachleute, Landwirte, Verwaltungsmitarbeiter, Verbände
+
+Geplanter Start     Ab Herbst 2014
+
+Laufzeit            Drei Jahre
+
+                                                                                                          21
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Die Klimaschutzagentur Region Hannover führt regelmäßige sogenannte Akteursforen
+                 zu bestimmten Themen durch, die mittlerweile ein etabliertes Gremium für Austausch
+                 und gemeinschaftliches Umsetzen von Projekten sind.
+
+Förderprogramme / Über den Klimaschutzmanager können die Personalkosten abgedeckt werden.
+Finanzierungswege
+
+Kosteneinschätzung Über die Personalkosten hinaus entstehen keine weiteren Kosten.
+
+Indikatoren für  Anzahl der Teilnehmer, Anzahl der Treffen, Feedback, Erfolg gemeinschaftlicher
+Monitoring       Projekte
+
+Offene Fragen    Keine
+
+Priorität insgesamt         12
+CO₂-Einsparpotenzial        0
+Öffentlichkeitswirksamkeit  2
+Personalaufwand             1
+Regionale Wertschöpfung     1
+Umsetzungsreife             3
+Finanzierung/Förderung      0
+Beinflussbarkeit            3
+Notwendigkeit               2
+
+22
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme            Aufbau eines Wärmekatasters und
+                    Analyse von Nahwärmekonzepten
+08
+
+von 39
+
+Handlungsfeld                                            Priorität  Zuständigkeit
+B Nachhaltige Energieerzeugung und erneuerbare Energien  Hoch       Stadt Nordhorn
+
+Ziele               Verbesserte und effizientere Wärmenutzung, Aufbau von Nahwärmenetzen
+
+Kurzbeschreibung    In welchen Wohn- oder Gewerbegebieten liegen die größten
+                    Energieeinsparpotenziale? Welche Gebäudetypen haben den größten
+                    Heizenergiebedarf? Wo lassen sich Nahwärmenetze planen oder ganzheitliche
+                    Quartierskonzepte realisieren? Die Erarbeitung eines Wärmekatasters kann Antworten
+                    auf diese Fragen liefern und als strategisches Planungsinstrument eingesetzt werden.
+                    Die Analyse der Wohngebietsstrukturen (Erfassung der Baualtersklassen sowie der
+                    Energieinfrastrukturen), die Zuordnung des Wohngebäudebestands zu
+                    Gebäudetypologien sowie die Beschreibung der vorhandenen Wärmeversorgung sind
+                    die Kernelemente. Eine wichtige Datenquelle ist die Erfassung und Auswertung der
+                    Schornsteinfegerdaten. Auf Basis dieses Katasters kann festgelegt werden, in welchen
+                    geografischen Schwerpunkten Kampagnenmaßnahmen durchgeführt oder
+                    detailliertere Nutzungskonzepte entwickelt werden könnten. Auch Bürogebäude,
+                    Lager, Autohäuser sowie Geschäfte sollten erfasst werden. Ein besonderes
+                    Augenmerk soll auf die mögliche Nutzung von Anlagen gelegt werden, sie sowohl
+                    Strom als auch Wärme liefern könnten (Kraft-Wärme-Kopplung).
+
+Umsetzungsschritte
+
+Zielgruppe          Ämter, Fachleute, Planer sowie auch Nutzer
+Geplanter Start     Mitte 2014
+
+Laufzeit            Aufbau innerhalb von 12 Monaten
+
+                                                                                          23
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele           Sehr innovativ hat die Stadt Rheinbach bei Bonn ein Wärmekataster mittels
+                    „Thermografie-Befliegung” aufgebaut. Aber auch der GIS-basierte Datenaufbau ist in
+                    vielen Kommunen fester Bestandteil der Klimaschutzkonzepte. In vielen kleineren
+                    Kommunen in Bayern wurden Wärmekataster erstellt, z. B. in Utting/Schondorf.
+
+Förderprogramme / Derzeit keine bekannt
+Finanzierungswege
+
+Kosteneinschätzung  Die Erstellung eines Katasters ist sehr zeitintensiv und daher müssen ausreichend
+                    Personalressourcen dafür vorgesehen werden. Des Weiteren müssen möglicherweise
+                    Kosten für externe Dienstleister vergeben werden, die das Fachwissen zur
+                    Visualisierung des Katasters haben (GIS / Überfliegung).
+
+Indikatoren für
+Monitoring
+
+Offene Fragen       Die Methode muss ausgewählt sowie Verantwortlichkeiten innerhalb der Verwaltung
+                    festgelegt werden.
+
+Priorität insgesamt         11
+CO₂-Einsparpotenzial        3
+Öffentlichkeitswirksamkeit  2
+Personalaufwand             -1
+Regionale Wertschöpfung     0
+Umsetzungsreife             2
+Finanzierung/Förderung      0
+Beinflussbarkeit            2
+Notwendigkeit               3
+
+24
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme            Pilotprojekte für innovative
+                    Speichertechnologien in
+09                  Zusammenarbeit mit der NVB
+
+von 39
+
+Handlungsfeld                                            Priorität  Zuständigkeit
+B Nachhaltige Energieerzeugung und erneuerbare Energien  Mittel     Klimaschutzmanagement
+
+Ziele               Erforschung und Erprobung der Speicherung von nachhaltigem erneuerbarem Strom
+Kurzbeschreibung    vor Ort, Aufbau von Know how
+
+                    Die Speicherung von wetterabhängig erzeugtem erneuerbaren Strom stellt eine
+                    wesentliche Herausforderungen für das Ausgestalten der Energiewende. Gerade im
+                    Norden von Deutschland fällt schon jetzt eine Menge erneuerbarer Strom an, der
+                    noch nicht zuverlässig gespeichert werden kann. Hier sind verschiedene Technologien
+                    denkbar, wie dezentrale Batteriesysteme, Wasserstoffspeicher, Power-To-Gas-
+                    Systeme, Pumpspeicherkraftwerke oder Elektroautos. Viele Systeme müssen noch
+                    technologisch verfeinert und erprobt werden. Ziel ist es, vor Ort ein Pilotprojekt mit
+                    regionalen Akteuren und Fachleuten zu entwickeln. Hier können Erfahrungen
+                    gemacht und Know how aufgebaut werden. Bundesweit gibt es viele
+                    Forschungsinitiativen, die sich diesem innovativen Thema widmen, mit denen man
+                    sich austauschen und vernetzen könnte. Versorgungssicherheit und Stabilität der
+                    Stromnetze sowie möglicherweise auch eine dezentrale Energieautonomie sind
+                    Aspekte, die durch ausgeklügelte Speicherungen erreicht werden könnten. Ein
+                    innovatives Pilotprojekt kann auch als Leuchtturmprojekt fungieren und Interesse am
+                    Klimaschutz wecken.
+
+Umsetzungsschritte  Entwicklung der Projektidee mit regionalen Akteuren, Diskussion und Feinplanung der
+                    technischen Projektskizze, Finanz- und Umsetzungsplanung, Ansprache mit
+                    Sponsoren und Finanziers
+
+Zielgruppe          Regionale Unternehmen und Fachleute, Forschungseinrichtungen und Institute
+
+Geplanter Start     2015
+
+Laufzeit            Mindestens drei Jahre
+
+                                                                                                25
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele          „Audi e-gas” in Werlte ist so ein innovatives Pilotprojekt (Power-To-Gas), bei dem
+                   regenerativ erzeugter Strom über die Erzeugung von Methan an das Erdgasnetz
+                   gekoppelt wird.
+
+Förderprogramme /  Derzeit gibt es über die KfW ein Förderprogramm für private Solarspeicher. Das
+Finanzierungswege  Bundesministerium für Wirtschaft und Forschung fördert im Bereich
+                   „Energieforschung und Innovationen” einige Programme, die für Pilotprojekte
+                   genutzt werden könnten, so wie durch die Forschungsinitiative „Energiespeicher”.
+
+Kosteneinschätzung Die Umsetzung eines innovativen Pilotprojekts kann sehr kostenintensiv sein und ist
+                                ohne Mittel aus der Privatwirtschaft nicht möglich.
+
+Indikatoren für
+Monitoring
+
+Offene Fragen      Gibt es ausreichend aktive und engagierte Akteure, Fachleute und/oder Unternehmen
+                   vor Ort, die so ein Projekt umsetzen könnten?
+
+Priorität insgesamt         8
+CO₂-Einsparpotenzial        3
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             -1
+Regionale Wertschöpfung     2
+Umsetzungsreife             -1
+Finanzierung/Förderung      -1
+Beinflussbarkeit            1
+Notwendigkeit               2
+
+26
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme            Windenergiekonzept zur Ausweitung
+                    der Vorrangflächen für Windenergie
+10                  und Repowering
+
+von 39
+
+Handlungsfeld                                            Priorität    Zuständigkeit
+B Nachhaltige Energieerzeugung und erneuerbare Energien  Hoch         Stadt Nordhorn
+
+Ziele               Erhöhung der Produktion von Strom aus Windkraft
+
+Kurzbeschreibung    Insgesamt kann davon ausgegangen werden, dass das Potenzial für Windkraft in der
+                    Stadt Nordhorn schon relativ weit ausgeschöpft wurde. Die Steigerung der
+                    Stromproduktion durch Windenergie erfordert daher die Ausweitung der
+                    Vorrangflächen sowie die Ertüchtigung bestehender Windkraftanlagen (Repowering).
+                    Insbesondere dazu auch Beschränkungszonen in Bezug auf die Nordhorn Range zu
+                    überprüfen und zu verhandeln. Dazu sollten die zuständigen Verwaltungen so weit
+                    und so früh wie möglich steuernd eingreifen, um Ausschlusskriterien basierend auf
+                    den neuesten Erkenntnissen und Vorgaben anhand eines Kriterienkatalogs
+                    festzulegen. Wichtig ist dabei eine detaillierte Potenzialanalyse. In weiteren Schritten
+                    müssen unter Beteiligung aller relevanten Gruppierungen betroffene Bürger,
+                    potentielle Investoren und Betreiber alle Belange sowie potentielle Konflikte
+                    einvernehmlich geregelt werden.
+
+Umsetzungsschritte  Detaillierte Potenzialanalyse, Anbahnung der Ausweitung, Planungsverfahren,
+                    Moderation von Repoweringprojekten, begleitende Beratung und Vermittlung bei der
+                    Erschließung der Standorte
+
+Zielgruppe          Bürger, Investoren, Betreiber, Ämter, Bundeswehr
+
+Geplanter Start     Sofort durch Klimaschutzmanagement
+
+Laufzeit            Fünf bis zehn Jahre
+
+                                                                                      27
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Derzeit wird in vielen Kommunen über die Ausweitung und Ertüchtigung der
+                 Standorte von Windkraftanlagen nachgedacht. Ein Erfahrungstausch ist hier sicher
+                 über die kommunalen Verbände möglich.
+
+Förderprogramme / Für die Erstellung des Konzepts derzeit keine; die Kosten für die Erschließung von
+Finanzierungswege Standorten und Anlagen müssen von den Investoren übernommen werden.
+
+Kosteneinschätzung Über Personalkosten hinaus sind externe Dienstleister mit der Durchführung der
+                                Potenzialanalyse zu beauftragten.
+
+Indikatoren für  Fertigstellung des Kriterienkatalogs, Fertigstellung der detaillierten Potenzialanalyse,
+Monitoring       Planfeststellungsprozess, zugebaute und neu bewilligte Leistung von Windkraftanlagen
+
+Offene Fragen    Es muss eine politische Rückendeckung für das Konzept geben.
+
+Priorität insgesamt         12
+CO₂-Einsparpotenzial        2
+Öffentlichkeitswirksamkeit  1
+Personalaufwand             -1
+Regionale Wertschöpfung     3
+Umsetzungsreife             3
+Finanzierung/Förderung      -1
+Beinflussbarkeit            3
+Notwendigkeit               2
+
+28
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme            Unterstützung für Bürgerwindparks
+
+11
+
+von 39
+
+Handlungsfeld                                               Priorität    Zuständigkeit
+B Nachhaltige Energieerzeugung und erneuerbare Energien     Sehr hoch    Stadt Nordhorn
+
+Ziele               Festlegen von Rahmenbedingungen für Bürgerwindparks
+
+Kurzbeschreibung    Der Ausbau von Windenergie trifft immer häufiger auf Widerstand. Mit
+                    Bürgerwindparks können Bürger vor Ort bei der Planung, Finanzierung,
+                    Bauausführung und dem Betrieb von Windkraftanlagen eingebunden werden,
+                    insbesondere dann, wenn die Flächen in kommunalem Besitz sind. Der Vorteil Bürger-
+                    Windparks liegt in der höheren Akzeptanz aufgrund des Mitspracherechts und der
+                    finanziellen Beteiligung. Zudem ermöglicht es den Menschen, sich an der
+                    kommunalen Energiepolitik zu beteiligen. Darüber hinaus bestehen Vorteile für die
+                    regionale Wertschöpfung. Bei Bürgerwindprojekten fallen höhere
+                    Gewerbesteuereinnahmen für die jeweilige Gemeinde an, da der Sitz des
+                    Unternehmens in aller Regel die jeweilige Standortgemeinde ist. Durch die Beteiligung
+                    von Bürgern wird das Steueraufkommen zusätzlich um den gemeindlichen Anteil der
+                    Einkommenssteuer ergänzt. Darüber hinaus profitieren in stärkerem Maße regionale
+                    Bau- und Projektierungsfirmen sowie Kreditinstitute. Zugleich entstehen vor Ort
+                    häufig auch Betriebe, mit dauerhaften Arbeitsplätzen für Service und Wartung.
+                    Kommunen können im Rahmen ihrer Handlungsmöglichkeiten auf die stärkere
+                    Umsetzung dieses Modells hinweisen, Investoren direkt ansprechen, moderierend
+                    eingreifen oder eine Steuerungsfunktion übernehmen.
+
+Umsetzungsschritte  Vorprüfung der Standorteignung, Gründung einer Projektgesellschaft,
+                    Flächensicherung, Standortanalyse und -planung, Netzanbindung,
+                    Wirtschaftlichkeitsbetrachtung, Finanzierung, Projektumsetzung, Betriebsführung und
+                    Ertrag
+
+Zielgruppe          Private Investoren in Windkraftanlagen
+
+Geplanter Start     Sofort durch Klimaschutzmanager
+
+Laufzeit            Drei bis fünf Jahre
+
+                                                                                         29
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Gute Beispiele für Bürgerwindparks gibt es einige. Jedoch sind mittlerweile auch viele
+                 negative Beispiele bekannt, Anleger hohe finanzielle Verluste hinnehmen mussten.
+
+Förderprogramme / Ein Bürgerwindpark wird durch private Investoren sowie Kredite finanziert.
+Finanzierungswege
+
+Kosteneinschätzung Zwischen 600 und 870 Euro pro Kilowatt installierter Leistung.
+
+Indikatoren für  Installierte Leistung und Ertrag
+Monitoring
+                 Man sollte aus den Fehlern und Problemen vieler Bürgerwindparks lernen, bei denen
+Offene Fragen    sich Bürger finanziell übernommen haben und Erwartungen nicht erfüllt wurden. Eine
+                 sorgsame Planung und Aufklärung ist daher elementar.
+
+Priorität insgesamt         17
+CO₂-Einsparpotenzial        2
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             2
+Regionale Wertschöpfung     3
+Umsetzungsreife             2
+Finanzierung/Förderung      3
+Beinflussbarkeit            1
+Notwendigkeit               1
+
+30
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Aufbau eines Solardachkatasters
+
+12
+
+von 39
+
+Handlungsfeld                                             Priorität           Zuständigkeit
+B Nachhaltige Energieerzeugung und erneuerbare Energien   Mittel              Stadt Nordhorn
+
+Ziele             Potenzialermittlung und Entscheidungshilfen für Investoren
+
+Kurzbeschreibung  Wie viel Solarstrom und Solarwärme lassen sich auf den Dächern der Stadt Nordhorn
+                  erzeugen? Ein sogenanntes Solarkataster dient dazu, die Potenziale zu erkennen; in
+                  zahlreichen Kommunen sind solche Solarkataster bereits erstellt worden. Mit wenigen
+                  Klicks im Internet erhalten Interessierte die Auskunft, welche Dachflächen für die
+                  Nutzung von Solarstrom- oder Solarwärmeanlagen geeignet sind. Grundlage der
+                  Berechnung sind hochauflösende Laserscannerdaten aus einer Überfliegung.
+                  Solardachkataster werden von verschiedenen Dienstleistern in Deutschland
+                  angeboten. Die Erfolge für die Aktivierung können sich sehen lassen: So hat sich seit
+                  Freischaltung des SUN-AREA Solarkatasters in der Stadt Osnabrück im Jahr 2013 die
+                  installierte Leistung von Photovoltaik-Anlagen mehr als verdoppelt. Neben der
+                  Potenzialermittlung liefern Solardachkataster Einschätzungen und
+                  Entscheidungshilfen für Investoren. Eine sorgfältige Planung (Statik, Denkmalschutz
+                  etc.) kann das Solarkataster jedoch nicht ersetzen.
+
+Umsetzungsschritte Auswahl und Planung der Methode, Ansprache von Dienstleistern, Finanzierung und
+                                Umsetzung
+
+Zielgruppe        Potenzielle Betreiber von Solaranlagen
+
+Geplanter Start   2015
+
+Laufzeit          Nach Aufbau kontinuierlich
+
+                                                                                                    31
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Landkreis Osnabrück
+
+Förderprogramme / Derzeit keine bekannt
+Finanzierungswege
+
+Kosteneinschätzung Die Kosten müssen bei den Anbietern erfragt werden.
+
+Indikatoren für  Fertigstellung des Katasters, Größe der erfassten Fläche
+Monitoring       Keine
+
+Offene Fragen
+
+Priorität insgesamt         9
+CO₂-Einsparpotenzial        0
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             1
+Regionale Wertschöpfung     0
+Umsetzungsreife             3
+Finanzierung/Förderung      0
+Beinflussbarkeit            1
+Notwendigkeit               1
+
+32
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Prüfung der naturverträglichen
+                  Ausbaupotenziale der Kleinwasserkraft
+13
+
+von 39
+
+Handlungsfeld                                            Priorität  Zuständigkeit
+B Nachhaltige Energieerzeugung und erneuerbare Energien  Mittel     Klimaschutzmanagement
+
+Ziele             Erhöhung des Anteils von Strom aus Wasserkraft
+
+Kurzbeschreibung  Die Stadt Nordhorn hat das Thema „Wasser” im Rahmen ihres Leitbildes als
+                  Alleinstellungsmerkmal definiert. Vor diesem Hintergrund ist möglicherweise der
+                  Ausbau von Kleinwasserkraft interessant, die noch Ausbaupotenzial haben könnte.
+                  Kleine dezentrale Anlagen können ohne Probleme Strom in ein bestehendes Netz
+                  einspeisen, jedoch sollte auf die Naturverträglichkeit großer Wert gelegt werden. Für
+                  die Stadt Nordhorn sollte als erster Schritt eine Prüfung der lokalen Potenziale
+                  erfolgen, damit weitere Maßnahmen angeschoben werden könnten, um die
+                  Kleinwasserkraft auszubauen.
+
+Umsetzungsschritte Erstellung der Studie
+
+Zielgruppe        Private Investoren
+Geplanter Start   2015
+
+Laufzeit          Sechs Monate
+
+                                                                    33
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        /
+
+Förderprogramme / Derzeit keine
+Finanzierungswege
+
+Kosteneinschätzung Für die Potenzialstudie müssten externe Dienstleister beauftragt werden.
+
+Indikatoren für  Fertigstellung der Studie
+Monitoring
+                 Wie könnte das Thema „Wasserstadt” noch weiter in Bezug auf Klimaschutzaspekte
+Offene Fragen    erweitert werden? Außer Wasserkraft gibt es möglicherweise noch andere Ansätze.
+
+Priorität insgesamt         10
+CO₂-Einsparpotenzial        1
+Öffentlichkeitswirksamkeit  2
+Personalaufwand             1
+Regionale Wertschöpfung     1
+Umsetzungsreife             2
+Finanzierung/Förderung      0
+Beinflussbarkeit            2
+Notwendigkeit               1
+
+34
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Potenzialermittlung Energie aus
+                  Rest- und Abfallstoffen; Förderung
+14                über
+
+von 39            KSI-Teilkonzept
+
+Handlungsfeld                                               Priorität  Zuständigkeit
+B Nachhaltige Energieerzeugung und erneuerbare Energien     Mittel     Klimaschutzmanagement
+
+Ziele             Erschließung neuer Energiequellen
+
+Kurzbeschreibung  Die hochwertige energetische Nutzung heimischer Biomasse und biogener Rest- und
+                  Abfallstoffe für die effiziente Erzeugung von Bioenergie nimmt eine Schlüsselrolle in
+                  der Erreichung der Klimaschutzziele und in dem nachhaltigen Ausbau der
+                  erneuerbaren Energien ein. Durch die Nationale Klimaschutzinitiative könnte ein
+                  Teilkonzept zur „Klimafreundlichen Abfallentsorgung” beantragt werden, das in
+                  einem ersten Schritt eine Bestandaufnahme sowie eine Potenzialanalyse umfasst.
+
+Umsetzungsschritte Antragsstellung, Erstellung des Konzept
+
+Zielgruppe        Verwaltung
+Geplanter Start   2014
+
+Laufzeit          Ein Jahr
+
+                                                                       35
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        /
+
+Förderprogramme / Durch die Nationale Klimaschutzinitiative kann das Teilkonzept mit bis zu
+Finanzierungswege 30.000 Euro gefördert werden.
+
+Kosteneinschätzung Die Kosten für das Konzept müssen bei externen Dienstleistern erfragt werden.
+                                Die Eigenbeteiligung liegt bei 50 % der förderfähigen Kosten.
+
+Indikatoren für  Fertigstellung der Studie
+Monitoring
+
+Offene Fragen    Auch 2014 wird die Erstellung von Klimaschutz-Teilkonzepten wieder gefördert.
+                 Anträge können aber nur vom 1. Januar bis zum 30. April 2014 gestellt werden.
+
+Priorität insgesamt         10
+CO₂-Einsparpotenzial        0
+Öffentlichkeitswirksamkeit  2
+Personalaufwand             1
+Regionale Wertschöpfung     0
+Umsetzungsreife             2
+Finanzierung/Förderung      3
+Beinflussbarkeit            2
+Notwendigkeit               0
+
+36
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Recherche und Präsentation
+                  guter Praxisbeispiele
+15
+
+von 39
+
+Handlungsfeld                                            Priorität  Zuständigkeit
+B Nachhaltige Energieerzeugung und erneuerbare Energien  Hoch       Klimaschutzmanagement
+
+Ziele             Information und Aktivierung
+
+Kurzbeschreibung  Es gibt schon eine Vielzahl von Beispielen für gelungenen Klimaschutz vor Ort, die
+                  präsentiert werden könnten, um zu motivieren und Orientierung zu geben. Dabei
+                  sollen in diesem Fall Anlagen oder Konzepte zur nachhaltigen und erneuerbaren
+                  Energieerzeugung im Vordergrund stehen. Akteure können so positiv unterstützt und
+                  Vorurteile abgebaut werden. Eine Präsentation guter Beispielen kann über eine
+                  Webseite, aber auch in Form von Broschüren oder z. B. Veranstaltungen -
+                  „Nordhorner Klimaschützer stellen sich vor” geschehen.
+
+Umsetzungsschritte Recherche der guten Beispiele, Ansprache der Beteiligten, Erstellung von Steckbriefen,
+                                Durchführung von Interview, Publikation
+
+Zielgruppe        Allgemeine Öffentlichkeit
+
+Geplanter Start   2014
+
+Laufzeit          Zunächst drei Jahre
+
+                                                                    37
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Der Landkreis Peine hat für seine Öffentlichkeitsarbeit den Preis im Wettbewerb
+                 „Klimaschutz kommunal” gewonnen.
+
+Förderprogramme / Keine
+Finanzierungswege
+
+Kosteneinschätzung Über Personalkosten hinaus fallen nur geringe Kosten für etwaige Printmaterialien an.
+
+Indikatoren für  Anzahl der Beispiele, Verbreitung der Publikationen/Präsentationen
+Monitoring       Keine
+
+Offene Fragen
+
+Priorität insgesamt         12
+CO₂-Einsparpotenzial        0
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             1
+Regionale Wertschöpfung     0
+Umsetzungsreife             3
+Finanzierung/Förderung      0
+Beinflussbarkeit            3
+Notwendigkeit               2
+
+38
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme            Klimaschutz in der Bauleitplanung
+
+16
+
+von 39
+
+Handlungsfeld                       Priorität  Zuständigkeit
+C Klimaschutz und Stadtplanung      Hoch
+                                               Stadt Nordhorn,
+                                               Bauleitplanung
+
+Ziele               Senkung der Emissionen in den Bereichen Gebäude und Verkehr, Gestaltung einer
+Kurzbeschreibung    übergeordneten Strategie für mehr Klimaschutz und Nachhaltigkeit in der
+
+                    Städte und Kommunen haben als Planungsträger durch die Bauleitplanung auch
+                    einen entscheidenden Gestaltungspielraum für Klimaschutz, Energieeffizienz und
+                    Nachhaltigkeit, der auch im BauGB aufgenommen wurde. Hierzu zählten die
+                    Erarbeitung des Flächennutzungsplans (Fokus Erneuerbare) und die Aufstellung von
+                    Bebauungsplänen (Fokus Energieeffizienz in Gebäuden), die sich am Klimaschutz im
+                    Allgemeinen sowie an den speziellen Leitbildern vor Ort im Besonderen orientieren
+                    können. Auch die Innenentwicklung soll durch die Bauleitplanung und die
+                    Novellierung des BauGB gefördert werden und nachhaltigere Siedlungsstrukturen
+                    ermöglichen. Zusätzlich hat die Bauleitplanung auch die Aufgabe einer
+                    Klimafolgenanpassung. Da der Bebauungsplan aber im Ganzen die
+                    rechtsverbindlichen Festsetzungen für die städtebauliche Ordnung enthält, kann auf
+                    energetisch relevante Größen Einfluss genommen werden. Als klimarelevante
+                    Festsetzungen können dabei Festlegungen über Art und Maß baulicher Nutzung,
+                    optimierte Orientierung, geringe Verschattung, zu Versorgungsanlagen und -
+                    leitungen, Hinweise zu regenerativen Energien und bauliche Standards sowie
+                    Bauvorschriften dienen.
+
+Umsetzungsschritte  Anfertigung eines Kriterienkatalogs für die Erstellung zukünftiger Bauleitpläne,
+                    Erstellung klimafreundlicher Bebauungspläne, Wärmeversorgungskonzepte für
+                    Neubaugebiete
+
+Zielgruppe          Bauwillige
+
+Geplanter Start     2014
+
+Laufzeit            Kontinuierlich
+
+                                                                                                        39
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Die Stadt Braunschweig hat schon in einigen Gebieten klimabewusste Bauleitplanung
+                 umgesetzt.
+
+Förderprogramme / Derzeit keine bekannt
+Finanzierungswege
+
+Kosteneinschätzung Personalressourcen innerhalb der Verwaltung müssen vorgesehen werden.
+
+Indikatoren für  Erstellung der Leitlinien und des Kriterienkatalogs, Erstellung der Baupläne,
+Monitoring       Umsetzung von Projekten
+
+Offene Fragen    Keine
+
+Priorität insgesamt         13
+CO₂-Einsparpotenzial        3
+Öffentlichkeitswirksamkeit  2
+Personalaufwand             -1
+Regionale Wertschöpfung     2
+Umsetzungsreife             2
+Finanzierung/Förderung      1
+Beinflussbarkeit            2
+Notwendigkeit               2
+
+40
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Förderung und Aufbau einer
+                  Ökosiedlung
+17
+
+von 39
+
+Handlungsfeld                                        Priorität  Zuständigkeit
+C Klimaschutz und Stadtplanung                       Hoch       Stadt Nordhorn
+
+Ziele             Steigerung von hocheffizienten und nachhaltigen Neubaugebieten
+
+Kurzbeschreibung  Neubaugebiete können ganz im Sinne nachhaltiger und energieeffizienter
+                  Ökosiedlungen geplant werden, die sich gestalterisch und konzeptionell als
+                  Leuchtturmprojekte eignen. Insgesamt sind in Deutschland mehr als 180
+                  Ökosiedlungen in den letzten 30 Jahren entstanden, 50 davon in Baden-Württemberg
+                  und nur sieben in Niedersachsen. Der Begriff und die Geschichte der Ökosiedlungen
+                  zeigt, dass es hier nicht immer nur um möglichst energieeffiziente und
+                  umweltverträgliche Bauweisen geht, sondern auch die wirtschaftliche
+                  Zukunftsfähigkeit und Sozialverträglichkeit wichtige Aspekte sind und auch über
+                  innovative Konzepte des gemeinschaftlichen Wohnens nachgedacht wird. Die
+                  Reduzierung des Flächenverbrauchs und die Schaffung kurzer Wege, der Erhalt und
+                  die Pflege der Landschaft, die Vermeidung von Verkehrswegen und Lärm, die
+                  Schonung von Ressourcen, die Vermeidung von Abfall, die Erhaltung des Bodens, die
+                  Stärkung der regionalen Wirtschaftskraft, die Hervorhebung regionaler
+                  Besonderheiten sowie die Einbeziehung aller sozialen Kräfte sind neben Klimaschutz
+                  und Energieeinsparung wichtige Aspekte bei Ökosiedlungen.
+
+Umsetzungsschritte Die Umsetzung ist sehr komplex und bedarf einer Feinplanung.
+
+Zielgruppe        Verwaltung, Bauträger, Bauwillige
+Geplanter Start   2015
+
+Laufzeit          Zehn Jahre
+
+                                                                                  41
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Auf der Webseite www.oekosiedldungen.de findet man Steckbriefe von mehr als 180
+                 Siedlungen in Deutschland.
+
+Förderprogramme / Reguläre öffentliche Förderprogramme für hocheffizienten Neubau
+Finanzierungswege
+
+Kosteneinschätzung Die Kostenplanung muss ebenfalls sehr umfassend und detailliert erfolgen.
+
+Indikatoren für  Umsetzung der Siedlung, Anzahl der Bewohner und Energieeinsparungen im
+Monitoring       Vergleich zu konventionellen Wohnweisen
+
+Offene Fragen    Der mögliche Standort für eine Ökosiedlung in Nordhorn sollte geklärt sein, bevor
+                 weitere Planungen angeschoben werden.
+
+Priorität insgesamt         13
+CO₂-Einsparpotenzial        3
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             -1
+Regionale Wertschöpfung     3
+Umsetzungsreife             0
+Finanzierung/Förderung      0
+Beinflussbarkeit            3
+Notwendigkeit               2
+
+42
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Realisierungsprüfung für ein
+                  KfW-gefördertes Pilotprojekt
+18                „Nachhaltiges Quartiersmanagement”
+
+von 39
+
+Handlungsfeld                                             Priorität  Zuständigkeit
+C Klimaschutz und Stadtplanung                            Sehr hoch  Klimaschutzmanagement
+
+Ziele             Entwicklung eines Leuchtturmprojekts, Erprobung von Konzepten und Technologien
+
+Kurzbeschreibung  Mit dem Förderprogramm „Energetische Stadtsanierung - Zuschüsse für integrierte
+                  Quartierskonzepte und Sanierungsmanager” fördert die KfW Bankengruppe
+                  Modellprojekte für die Verbesserung der Energieeffizienz in innerstädtischen
+                  Quartieren. Ein Quartier besteht stets aus mehreren flächenmäßig
+                  zusammenhängenden privaten und / oder öffentlichen Gebäuden inklusive der
+                  öffentlichen Infrastruktur. Im Förderprogramm werden sowohl die Planung als auch
+                  das Management bei der Realisierung einer energetischen Sanierung in einem
+                  Stadtteilquartier unterstützt. Antragsberechtigt sind kommunale
+                  Gebietskörperschaften oder deren rechtlich unselbstständige Eigenbetriebe. Für die
+                  Stadt Nordhorn kann ein solches Projekt möglicherweise auf Industriebrachen
+                  identifiziert werden, das modellhaft saniert wird und als gutes Bespiel auch
+                  überregional ausstrahlt. Vorschlag ist, zunächst die Umsetzbarkeit eines solchen
+                  Antrages zu Prüfen. In einem zweiten Schritt ist dann der Förderantrag zu stellen.
+
+Umsetzungsschritte Durchführung der Machbarkeitsprüfung, Antragsstellung, bei Bewilligung
+                                Durchführung des Konzepts, anschließende Umsetzung
+
+Zielgruppe        Zunächst nur für den internen Gebrauch
+
+Geplanter Start   Anfang 2014
+
+Laufzeit          Machbarkeitsprüfung zwei Monate, Antragserstellung drei Monate
+
+                                                                                                      43
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele           Für das Quartier Ohlenhof in Bremen wurde im Rahmen des KfW-Programms ein
+                    Konzept erarbeitet, das ab Ende 2013 in die Umsetzung gehen soll. Laut Angaben
+                    werden nach der Sanierung die Energieverbräuche um 78 % gesenkt werden können.
+
+Förderprogramme / Für die Konzepterstellung liegt der Eigenanteil der Kosten bei 35 %, dabei können
+Finanzierungswege weitere Fördermittel von der EU oder des Landes eingesetzt werden.
+
+Kosteneinschätzung  Für die Machbarkeitsprüfung sowie für die Antragserstellung fallen keine zusätzlichen
+                    Kosten an, sofern dies der Klimaschutzmanager durchführen kann. Die Aufgaben
+                    könnten auch an Externe vergeben werden.
+
+Indikatoren für     Beantragung des Projekts, Durchführung
+Monitoring
+
+Offene Fragen       Es muss ein Beschluss zur Stellung des Antrages getroffen werden.
+
+Priorität insgesamt         15
+CO₂-Einsparpotenzial        0
+Öffentlichkeitswirksamkeit  2
+Personalaufwand             1
+Regionale Wertschöpfung     3
+Umsetzungsreife             2
+Finanzierung/Förderung      3
+Beinflussbarkeit            2
+Notwendigkeit               2
+
+44
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Anpassung an den Klimawandel
+                  und Ausbau der CO₂-Senken
+19
+
+von 39
+
+Handlungsfeld                                        Priorität  Zuständigkeit
+C Klimaschutz und Stadtplanung                       Mittel
+                                                                Stadt Nordhorn,
+                                                                Grünflächenamt
+
+Ziele             Reduzierung und Vorbeugung der durch den Klimawandel zu erwartenden Probleme
+
+Kurzbeschreibung  Im Zuge der Klimaerwärmung ist auch in Städten mit zunehmenden Problemen
+                  aufgrund heißer Sommer zu rechnen. Mit der Wiedernutzung versiegelter
+                  Brachflächen kann ein Teil dieser Flächen entsiegelt und rekultiviert werden, um damit
+                  neue Kohlenstoffspeicher zu schaffen und zur Verbesserung des Stadtklimas, vor
+                  allem zur Verminderung klimawandelbedingt zunehmender Hitzestaus beizutragen.
+                  Der Erhalt und die Wiederherstellung natürlicher Bodenfunktionen tragen dazu bei,
+                  Auswirkungen klimawandelbedingter Veränderungen auszugleichen. Auch in
+
+                  Nordhorn können innerstädtische Begrünungen als CO₂-Senken genutzt werden und
+                  gleichzeitig zur Verbesserung des Stadtklimas beitragen. Ein wachsender Trend ist
+                  derzeit die Integration von Landwirtschaft und Gartenbau in urbane
+                  Siedlungsstrukturen. Auch wenn diese Ansätze sicherlich vor allem für Großstädte
+                  interessant sind, könnte auch bei der Stadt Nordhorn über eine stärkere
+                  Sichtbarmachung und Einbindung von Landwirtschaft und Gartenbau in der Stadt
+                  nachgedacht werden. Hier gibt es auch einen direkten Bezug zu der Maßnahme
+                  „Stadt im Grünen”, die schon im Leitbild formuliert wurde.
+
+Umsetzungsschritte Planung, Finanzierung, Umsetzung
+
+Zielgruppe        Verwaltung und Bürger
+Geplanter Start   Ab sofort
+
+Laufzeit          Kontinuierlich
+
+                                                                                 45
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Gelungene Beispiele für die Planung einer „Stadt im Grünen” gibt es viele, wo z. B.
+                 Freizeitanlangen im Grünen, historische Kulturlandschaften, Renaturierung von
+                 Gewässern sowie Parkgestaltung ineinander greifen.
+
+Förderprogramme / Derzeit keine bekannt
+Finanzierungswege
+
+Kosteneinschätzung Kann derzeit nicht abgeschätzt werden und richtet sich nach der Konzeption
+
+Indikatoren für  Enge Abstimmung mit der Umsetzung des Leitbildes muss gegeben sein
+Monitoring
+
+Offene Fragen
+
+Priorität insgesamt         10
+CO₂-Einsparpotenzial        0
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             0
+Regionale Wertschöpfung     1
+Umsetzungsreife             3
+Finanzierung/Förderung      0
+Beinflussbarkeit            2
+Notwendigkeit               1
+
+46
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Ausbau zur Fahrradstadt
+
+20
+
+von 39
+
+Handlungsfeld                                     Priorität  Zuständigkeit
+C Klimaschutz und Stadtplanung                    Hoch       Klimaschutzmanagement
+
+Ziele             Steigerung des Fahrradverkehrs
+
+Kurzbeschreibung  Die Stadt Nordhorn liegt im einzigen Landkreis Niedersachsens, der bereits zweimal
+                  als fahrradfreundliche Kommune in Niedersachsen ausgezeichnet wurde. Hier gibt es
+                  also bereits vor Ort viele Konzepte und Anknüpfungspunkte, die auch von der Stadt
+                  übernommen werden könnten. So ist neben dem Ausbau des Fahrradnetzes, der
+                  durchgängigen und einheitlichen Beschilderung, dem guten Angebot von
+                  Abstellplätzen, der Verkehrssicherung auch eine kohärentes Qualitätsmanagement
+                  sowie die Einbeziehung wichtiger Akteure wie Schüler wichtig. Die Integration des
+                  Leitbildes „Fahrradstadt” muss auch innerhalb der Verwaltung akzeptiert und
+                  befürwortet sowie durch die Aktivierung der Bürger untermauert werden.
+
+Umsetzungsschritte Entwicklung des Leitbildes und von Instrumenten für die „Fahrradstadt”, Einstellung
+                                eines Fahrradbeauftragten
+
+Zielgruppe        Verkehrsteilnehmer
+
+Geplanter Start   2014
+
+Laufzeit          Kontinuierlich
+
+                                                                                                        47
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Über die Arbeitsgemeinschaft fußgänger- und fahrradfreundlicher Städte, Gemeinden
+                 und Kreise in Nordrhein-Westfalen e. V. kann man sich über viele gute Beispiele
+                 informieren.
+
+Förderprogramme / Derzeit keine bekannt
+Finanzierungswege
+
+Kosteneinschätzung Feinplanung notwendig
+
+Indikatoren für  /
+Monitoring
+
+Offene Fragen
+
+Priorität insgesamt         11
+CO₂-Einsparpotenzial        1
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             -1
+Regionale Wertschöpfung     2
+Umsetzungsreife             2
+Finanzierung/Förderung      0
+Beinflussbarkeit            2
+Notwendigkeit               2
+
+48
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Emissionsvermeidende
+                  Verkehrsleitplanung
+21
+
+von 39
+
+Handlungsfeld                                                  Priorität  Zuständigkeit
+C Klimaschutz und Stadtplanung                                 Hoch       Klimaschutzmanagement
+
+Ziele             Reduzierung der Emissionen aus dem Verkehr, intelligente und effiziente Planung
+
+Kurzbeschreibung  Durch eine zeitgemäße Verkehrsleitplanung (z. B. innerörtliche Verkehrsberuhigung)
+                  werden motorisierte Verkehrsströme zum einen reduziert und zum anderen
+                  gleichzeitig flüssiger gestaltet. Rad- und Fußverkehr erhalten den Vorzug gegenüber
+                  motorisiertem Verkehr. Ziel dieser Maßnahme ist es daher auch, den Informationsfluss
+                  zwischen der Verkehrsmanagementzentrale und den Bürgern zu erhöhen, um eine
+                  Verstetigung des Verkehrsflusses zu erreichen. Dynamische Verkehrsinformationen
+                  und Verkehrslenkung sowie Fahrgastinformationen sind hier sinnvolle Mittel. Neue
+                  Technologien können so eingesetzt werden, dass die Vermeidung von Verkehr und
+                  Emissionen möglich ist.
+
+Umsetzungsschritte Aufstellung eine detaillierten Feinplanung
+
+Zielgruppe        Verkehrsteilnehmer
+Geplanter Start   2015
+
+Laufzeit          Langfristig
+
+                                                                                                   49
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Die Region Hannover mit ihrem „Verkehrsentwicklungsplan pro Klima”, der auch
+                 Punkte der Verkehrsleitplanung enthält, wurde 2012 vom Verkehrsclub Deutschland
+                 und der Vereinigung für Stadt-, Regional- und Landesplanung mit dem
+                 Verkehrsplanungspreis ausgezeichnet.
+
+Förderprogramme / Derzeit keine bekannt
+Finanzierungswege
+
+Kosteneinschätzung Personalressourcen müssen vorgesehen werden. Darüber hinaus fallen Investitionen in
+                                Technik und Infrastruktur an, deren Finanzierung detailliert geplant werden muss.
+
+Indikatoren für
+Monitoring
+
+Offene Fragen    /
+
+Priorität insgesamt         13
+CO₂-Einsparpotenzial        2
+Öffentlichkeitswirksamkeit  2
+Personalaufwand             0
+Regionale Wertschöpfung     2
+Umsetzungsreife             2
+Finanzierung/Förderung      -1
+Beinflussbarkeit            3
+Notwendigkeit               3
+
+50
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Einsatz von Elektrobussen
+
+22
+
+von 39
+
+Handlungsfeld                      Priorität  Zuständigkeit
+C Klimaschutz und Stadtplanung     Hoch       Klimaschutzmanagement
+
+Ziele             Reduzierung der Emissionen aus Verkehr, Stärkung der E-Mobilität
+
+Kurzbeschreibung  Elektrobusse leisten einen entscheidenden Beitrag zum Klimaschutz, während sie
+                  gleichzeitig geringere Betriebskosten als Dieselbusse haben. Allerdings sind sie derzeit
+                  noch teurer in der Anschaffung als konventionelle Fahrzeuge, die mit Diesel fahren.
+
+                  Wenn Elektrobusse zudem mit 100 % erneuerbarem Strom fahren, wird die CO₂-
+                  Einsparung nochmals erhöht. Schätzungsweise kann ein Elektro-Bus im Vergleich zu
+                  einem Dieselbus mit einem Kraftstoffverbrauch von 30.000 Litern rund 80 Tonnen
+
+                  CO₂ pro Jahr einsparen. Für die Stadt Nordhorn könnte zunächst probeweise eine
+                  Buslinie als E-Bus-Linie umgerüstet werden.
+
+Umsetzungsschritte Detailplanung, Finanzierungplanung, Abstimmung mit allen relevanten Akteuren,
+                                Beantragung von Förderungen
+
+Zielgruppe        Nutzer des ÖPNV
+
+Geplanter Start   2014
+
+Laufzeit          Erste Erprobungsphase von ein bis zwei Jahren, danach kontinuierlicher Ausbau
+
+                                                                                                  51
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele          In Berlin wird derzeit im Rahmen des „Schaufensters Elektromobilität” die Buslinie
+                   147 auf Elektrobusse umgestellt.
+
+Förderprogramme /  Es müsste geprüft werden, ob im Rahmen des Bundeswettbewerbs „Schaufenster
+Finanzierungswege  Elektromobilität“, der sich in Niedersachsen auf die Metropolregion Hannover -
+                   Braunschweig - Göttingen - Wolfsburg konzentriert, auch außerhalb dieser Zone
+                   Projekte gefördert werden könnten.
+
+Kosteneinschätzung Die Anschaffungskosten für einen Elektro-Bus liegen bei etwa 200.000 Euro.
+
+Indikatoren für    Eingesparte Emissionen, Anzahl der Fahrzeuge, Anzahl der Fahrgäste
+Monitoring         Ein Detailplanung muss in Kooperation mit den NVB entwickelt werden.
+
+Offene Fragen
+
+Priorität insgesamt         12
+CO₂-Einsparpotenzial        2
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             -1
+Regionale Wertschöpfung     1
+Umsetzungsreife             2
+Finanzierung/Förderung      2
+Beinflussbarkeit            2
+Notwendigkeit               1
+
+52
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Ausbau Versorgungsinfrastruktur
+                  für Gas- und E-Fahrzeuge
+23
+
+von 39
+
+Handlungsfeld                                        Priorität          Zuständigkeit
+C Klimaschutz und Stadtplanung                       Hoch
+                                                                        Klimaschutzmanager,
+                                                                        Betreiber
+
+Ziele             Reduzierung der Emissionen aus Verkehr, Stärkung der E-Mobilität
+
+Kurzbeschreibung  Die hohen Emissionen im Verkehrsbereich sind nur zu vermeiden, wenn ein
+                  Technologiewechsel von Verbrennungsmotoren hin zu Elektroantrieben gelingt.
+                  Strom kann aus erneuerbaren Energieträgern gewonnen werden. Aber auch
+                  gasbetriebene Fahrzeuge oder Hybridautos können einen wertvollen Beitrag zur
+                  Senkung der Emissionen leisten. Derzeit sind noch relativ wenig Elektroautos in
+                  Deutschland zugelassen, der Markt verzeichnet jedoch kontinuierlich Zuwachs. Eine
+                  regional gut ausgelegte Versorgungsinfrastruktur wird daher in Zukunft immer
+                  wichtiger und zentrale Weichen dafür können schon jetzt gestellt werden. In
+                  Nordhorn existieren bereits zwei Gastankstellen und eine E-Tankstelle. Ziel der
+                  Maßnahme könnte es zunächst sein, über einen strategischen Ausbau mit wichtigen
+                  Akteuren zu diskutieren, aber auch die Zulassungen von E-Autos und die Nachfrage
+                  im Blick zu haben. Möglichweise muss hier auch gezielt die Nachfrage angekurbelt
+                  werden. Auch könnte über innovative Aufladestationen für E-Autos nachgedacht
+                  werden. Zusätzlich könnte die Umstellung des kommunalen Fuhrparks auf E-Antriebe
+                  zur Einführung einer kleinen Ladeinfrastruktur genutzt werden. Insgesamt ist diese
+                  Maßnahme sehr langfristig ausgelegt.
+
+Umsetzungsschritte Detailplanung, Absprach mit den relevanten Akteuren
+
+Zielgruppe        Alle Nutzer von Individualverkehr
+Geplanter Start   Ab 2015
+
+Laufzeit          Sehr langfristig bis 2030
+
+                                                                                             53
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele          metropol-E entwickelt und testet erstmals ein Lade- und Flottenmanagementsystem
+                   für den Einsatz von Elektrofahrzeugen in einer kommunalen Flotte in Dortmund.
+Förderprogramme /  Das Projekt wurde 2012 von der Bundesregierung als Leuchtturmprojekt
+Finanzierungswege  ausgezeichnet. Erneuerbare Energien werden gezielt für die Mobilität genutzt. Das
+                   Projektkonsortium testet den Betrieb einer E-Flotte von zehn Elektrofahrzeugen und
+                   zehn Pedelecs im Einsatz bei der Stadt sowie zwei Elektrofahrzeugen im Einsatz bei
+                   Unternehmen. Während des Projekts wird die Ladeinfrastruktur in Dortmund
+                   ausgebaut, auch Schnellladetechniken werden erprobt und nutzerfreundliche Services
+                   entwickelt.
+
+                   Die Finanzierung über Bundesförderprogramme ist zu prüfen.
+
+Kosteneinschätzung Möglicherweise tätigen die Betreiber die Investitionen.
+
+Indikatoren für    Anzahl der Gas- und E-Tankstellen, Anzahl der Gas- und E-Fahrzeuge
+Monitoring         Die Nachfrage ist entscheidend. Hier müssen separate Maßnahmen ergriffen werden.
+
+Offene Fragen
+
+Priorität insgesamt         12
+CO₂-Einsparpotenzial        1
+Öffentlichkeitswirksamkeit  2
+Personalaufwand             -1
+Regionale Wertschöpfung     3
+Umsetzungsreife             2
+Finanzierung/Förderung      1
+Beinflussbarkeit            2
+Notwendigkeit               2
+
+54
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Stärken-Schwächen-Analyse für
+                  die Etablierung von CarSharing
+24
+
+von 39
+
+Handlungsfeld                                         Priorität  Zuständigkeit
+C Klimaschutz und Stadtplanung                        Mittel     Klimaschutzmanagement
+
+Ziele             Reduzierung des Individualverkehrs
+
+Kurzbeschreibung  In der Vergangenheit wurde mit einem vom Bundesministerium für Bildung und
+                  Forschung gefördertes Projekt im Rahmen der Initiative „Personennahverkehr für die
+                  Region” gemeinsam mit der Kfz-Innung und der Kreishandwerkerschaft versucht, in
+                  Nordhorn CarSharing zu etablieren. Das Angebot wurde allerdings nach einem Jahr
+                  eingestellt, „weil keine dauerhaft tragfähige Nachfrage erreicht werden konnte und
+                  insbesondere die für eine Grundauslastung notwendige Integration eines Teils der
+                  kommunalen Dienstwagenflotte” nicht gelang. Nun könnte versucht werden, anhand
+                  einer Stärken-Schwächen-Analyse das Scheitern dieses Versuches zu untersuchen. Alle
+                  Beteiligten sollten nochmals angesprochen werden, um alternative Konzepte zu
+                  entwickeln. Wie kann man Nordhorner Bürger besser ansprechen und zum
+                  Mitmachen aktivieren? Ziel ist es, genau zu ermitteln, warum CarSharing sich bisher
+                  nicht etablieren konnte und welche Bedingungen vorliegen müssen, damit dies
+                  geschieht.
+
+Umsetzungsschritte Stärken-Schwächen-Analyse, Befragung relevanter Akteure, Diskussionen,
+                                Marktrecherche, Befragung potentieller Nutzer, Erarbeitung eines Konzepts
+
+Zielgruppe        Zunächst intern
+
+Geplanter Start   Anfang 2015
+
+Laufzeit          Sechs Monate
+
+                                                                                                           55
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Es gibt eine Reihe von Studien, die die Einstellungen zu CarSharing untersuchen und
+                 wertvolle Hinweise geben könnten, so die Studie zum „Umweltbewusstsein” vom
+                 Bundesumweltministerium oder das CarSharing Barometer des Automotive Institute
+                 for Management.
+
+Förderprogramme / Keine
+Finanzierungswege
+
+Kosteneinschätzung Über Personalkosten hinaus fallen keine Kosten an
+
+Indikatoren für  Anzahl der Befragungen und Interviews, Vorlage des Konzepts/Berichts
+Monitoring
+                 Das Scheitern des Projekts in der Vergangenheit kann auch auf negativen
+Offene Fragen    Einstellungen der Hauptbeteiligten basieren. Diese müssten ermittelt werden.
+
+Priorität insgesamt         6
+CO₂-Einsparpotenzial        0
+Öffentlichkeitswirksamkeit  1
+Personalaufwand             2
+Regionale Wertschöpfung     0
+Umsetzungsreife             3
+Finanzierung/Förderung      0
+Beinflussbarkeit            0
+Notwendigkeit               0
+
+56
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Bürgerveranstaltungen zu Klimaschutz
+
+25
+
+von 39
+
+Handlungsfeld                                   Priorität        Zuständigkeit
+D Aktivierung und Beteiligung der Bürger        Hoch             Klimaschutzmanagement
+
+Ziele             Ansprache interessierter Bürger zu Fachthemen
+
+Kurzbeschreibung  Um Bürger tatsächlich zur Änderung ihres Verhaltens und zu Investitionen in
+                  Klimaschutzmaßnahmen zu bewegen, sollten zu bestimmten Themen
+                  Veranstaltungen angeboten werden, die beraten, informieren und aktivieren.
+                  Einzelbereiche wie eine energetische Sanierung oder klimagerechter Lebenswandel
+                  sind sehr komplex und hier bedürfen Bürger gezielter Unterstützung und
+                  Fachinformationen. Die Stadt könnte Fachleute ansprechen und eine
+                  Veranstaltungsserie entwickeln, bei der sie sich als Moderator und Initiator mit
+                  einbringen kann. Wichtig ist, dass die Themen eng an der Lebenswelt der Bürger
+                  ausgerichtet sind und auch aktuelle Diskussionen aufgreifen können.
+
+Umsetzungsschritte Planung der Themen, Auswahl der Referenten, Organisation und Moderation,
+                                Bewerbung und Öffentlichkeitsarbeit
+
+Zielgruppe        Interessierte Öffentlichkeit
+
+Geplanter Start   2014
+
+Laufzeit          Drei Jahre
+
+                                                                                                    57
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Ein „Bürgerdialog” ist Teil einer Reihe, in der das Bundesministerium für Bildung und
+                 Forschung zur Diskussion über wichtige Zukunftsthemen einlädt. Dazu werden
+                 hochkarätige Fachleute eingeladen, zu ausgewählten Themen zu sprechen. Eine
+                 derartige Serie, zugeschnitten auf die lokalen Gegebenheiten, wäre möglich.
+
+Förderprogramme / Derzeit keine bekannt; möglicherweise können Referenten von geförderten Initiativen
+Finanzierungswege gewonnen werden, kostenlos Vorträge zu halten.
+
+Kosteneinschätzung Über Personalkosten hinaus fallen keine Kosten an.
+
+Indikatoren für  Anzahl der Veranstaltungen, Anzahl der Teilnehmer, Feedback
+Monitoring       Welche Themen bieten sich für Nordhorn an?
+
+Offene Fragen
+
+Priorität insgesamt         13
+CO₂-Einsparpotenzial        0
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             1
+Regionale Wertschöpfung     1
+Umsetzungsreife             3
+Finanzierung/Förderung      1
+Beinflussbarkeit            2
+Notwendigkeit               2
+
+58
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme            Kampagne energieeffiziente Gebäude
+                    (Thermografie, Haus-zu-Haus-
+26                  Aktionen)
+
+von 39
+
+Handlungsfeld                                     Priorität  Zuständigkeit
+D Aktivierung und Beteiligung der Bürger          Sehr hoch  Klimaschutzmanagement
+
+Ziele               Erhöhung der Sanierungsquote
+
+Kurzbeschreibung    Die energieeffiziente Modernisierung des Gebäudebestands ist ein zentrales
+                    Handlungsfeld der Energiewende. Zielsetzungen sind die Steigerung der
+                    Sanierungsquote, die derzeit nur bei 1 % pro Jahr liegt sowie die Modernisierung auf
+                    dem höchstmöglichen energetischen Niveau. Energetische Modernisierung hat ein
+                    hohes regionales Wertschöpfungspotenzial, da die Aufträge überwiegend vom
+                    örtlichen Handwerk ausgeführt werden. Die Zielsetzungen können durch die
+                    Umsetzung einer Kampagne wirkungsvoll unterstützt werden. Die Kampagne
+                    „energieeffiziente Gebäude” setzt sich aus verschiedenen Bausteinen zusammen, die
+                    ihre Wirkung erst im abgestimmten Zusammenspiel entfalten. Dabei sollen
+                    Hausbesitzer und Investoren umfassend informiert und motiviert, Investitionen
+                    ausgelöst und Qualitätsstandards realisiert werden. Die Kampagne könnte Bausteine
+                    umfassen wie den Aufbau einer Beraterinfrastruktur, das Umsetzen von Haus-zu-
+                    Haus-Aktionen, bei denen Hausbesitzer straßenweise direkt angesprochen werden
+                    sowie das Anbieten von Thermografie-Aufnahmen. Die Umsetzung der Maßnahmen
+                    erfolgt über den Klimaschutzmanager oder ein beauftragtes
+                    Dienstleistungsunternehmen.
+
+Umsetzungsschritte  Planung der Kampagne und Instrumente, Einbeziehung und Schulung von Beratern,
+                    Aufbau eines Beraterpools, Umsetzung der Aktionen, Dokumentation und
+                    Auswertung
+
+Zielgruppe          Hausbesitzer
+
+Geplanter Start     2014
+
+Laufzeit            Drei Jahre
+
+                                                                                                   59
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Die Klimaschutzagentur Region Hannover setzt seit Jahren sehr erfolgreich die
+                 Kampagne „Gut beraten starten!” um.
+
+Förderprogramme / Derzeit keine bekannt
+Finanzierungswege
+
+Kosteneinschätzung Für eine lokale Kampagne müssen auf jeden Fall Gelder bereitgestellt werden.
+                                Schätzungsweise sollte ein Betrag von mindestens 10.000 Euro bereitgestellt werden.
+
+Indikatoren für  Anzahl der eingebundenen Berater, ausgelöste Investitionen
+Monitoring
+
+Offene Fragen    Existieren vor Ort bereits Energieberaternetzwerke, die einbezogen werden könnten?
+
+Priorität insgesamt         17
+CO₂-Einsparpotenzial        3
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             -1
+Regionale Wertschöpfung     3
+Umsetzungsreife             3
+Finanzierung/Förderung      1
+Beinflussbarkeit            2
+Notwendigkeit               3
+
+60
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Schaffung einer
+                  Beratungsinfrastruktur für Bürger
+27
+
+von 39
+
+Handlungsfeld                                   Priorität  Zuständigkeit
+D Aktivierung und Beteiligung der Bürger        Hoch       Klimaschutzmanagement
+
+Ziele             Erhöhung der Sanierungsquote
+
+Kurzbeschreibung  Förderprogramme und Finanzierungsinstrumente für energieeffiziente
+                  Gebäudemodernisierung und klimafreundlichen Lebenswandel sind sehr vielschichtig
+                  und unübersichtlich. Für den Verbraucher werden die Finanzierungsangebote häufig
+                  als Dschungel wahrgenommen, dabei sind die Angebote durchaus attraktiv.
+                  Zahlreiche Angebote in Form von Zuschüssen oder zinsgünstigen Darlehen sind an die
+                  Erreichung energetischer Standards gekoppelt.
+                  Die Entscheidung, in eine energieeffiziente Modernisierungsmaßnahme zu
+                  investieren, wird durch finanzielle Anreize in jedem Fall positiv beeinflusst. Ziel der
+                  Maßnahme ist es, ein fachkundiges Beratungsangebot einzurichten, um potenzielle
+                  Investoren kompetent zur gesamten Palette der Förderinstrumente zu beraten (z. B.
+                  feste Termine in Kommunen, Informationsveranstaltungen). Die Maßnahme sollte in
+                  enger Abstimmung mit den Kreditinstituten umgesetzt werden. Die Beratung wendet
+                  sich sowohl an Investoren als auch an Fachleute wie Handwerksbetriebe oder
+                  Energieberater.
+
+Umsetzungsschritte Ansprache der beteiligten Akteure, Detailplanung, Finanzierungsplanung, Umsetzung
+
+Zielgruppe        Bürgerschaft
+Geplanter Start   2014
+
+Laufzeit          Kontinuierlich
+
+                                                           61
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        In vielen Kommunen existieren bereits Beratungszentren zu Energie- und
+                 Klimaschutzthemen.
+
+Förderprogramme / Derzeit keine bekannt
+Finanzierungswege
+
+Kosteneinschätzung Eine gute Beratungsinfrastruktur sollte mindestens eine volle Stelle umfassen, die
+                                möglicherweise auf mehrere geschulte Berater aufgeteilt werden könnte.
+
+Indikatoren für  Anzahl der Beratungen, Feedback
+Monitoring
+
+Offene Fragen    Keine
+
+Priorität insgesamt         12
+CO₂-Einsparpotenzial        1
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             -1
+Regionale Wertschöpfung     1
+Umsetzungsreife             2
+Finanzierung/Förderung      1
+Beinflussbarkeit            2
+Notwendigkeit               3
+
+62
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme            Klimaschutzprojekte in Schulen
+                    und Vereinen
+28
+
+von 39
+
+Handlungsfeld                                        Priorität  Zuständigkeit
+D Aktivierung und Beteiligung der Bürger             Sehr hoch  Klimaschutzmanagement
+
+Ziele               Aktivierung von Multiplikatoren
+
+Kurzbeschreibung    Vereine und Verbände spielen eine tragende Rolle im gesellschaftlichen Leben und
+                    können für Energieeinsparung und Klimaschutzprojekte als strategische Partner
+                    gewonnen werden. Zahlreiche Menschen engagieren sich u. a. in Sportvereinen,
+                    Schützenvereinen oder Naturschutzverbänden. Man könnte beispielsweise
+                    Energieeinsparung in den eigenen Vereinsgebäuden sowie in fremd genutzten
+                    (Sport-)Stätten vornehmen. Hier bestehen verschiedene erprobte Handlungsansätze.
+                    Auch für Schulen gibt es diese zur Umsetzung von Klimaschutzaktivitäten, seien es
+                    von der über die Klimaschutzinitiative finanzierten „Einsparmodelle” oder der
+                    Initiierung von Projektwochen, Wettbewerben oder Klimaschutzbildungszentren.
+
+Umsetzungsschritte  1) Gebäudeanalyse und Verbrauchserfassung in Liegenschaften
+                    2) Energieeinsparberatung für Vereine und Schulen
+                    3) Energieeinsparung durch verändertes Nutzerverhalten
+                    4) Förderinstrumente und Fördermittelberatung
+                    5) Hallenmanagement und Kooperation mit Vereinen
+
+Zielgruppe          Schulen und Vereine
+
+Geplanter Start     2014
+
+Laufzeit            Fünf Jahre
+
+                                                                                                       63
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Die Klimaschutzagentur Region Hannover bietet seit Jahren erfolgreich über eco.Sport
+                 und eco.Fit Aktivierungsprogramme für Vereine an.
+
+Förderprogramme / Über die Klimaschutzinitiative können „Energieeinsparmodelle” an Schulen finanziert
+Finanzierungswege werden.
+
+Kosteneinschätzung Ein Budget für Aktvierungs- und Anspracheinstrumente ist sinnvoll, darüber hinaus
+                                fallen Personalkosten an.
+
+Indikatoren für
+Monitoring
+
+Offene Fragen    Keine
+
+Priorität insgesamt         16
+CO₂-Einsparpotenzial        1
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             1
+Regionale Wertschöpfung     1
+Umsetzungsreife             3
+Finanzierung/Förderung      2
+Beinflussbarkeit            3
+Notwendigkeit               2
+
+64
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Öffentlichkeitswirksame Förderung
+                  von Leuchtturmprojekten
+29
+
+von 39
+
+Handlungsfeld                                           Priorität  Zuständigkeit
+D Aktivierung und Beteiligung der Bürger                Hoch       Klimaschutzmanagement
+
+Ziele             Schaffung von Projekten mit großer Öffentlichkeitswirkung, Aktivierung und
+Kurzbeschreibung  Ansprache
+
+                  Leuchtturmprojekte sind Maßnahmen, die eine große Strahlkraft, Identifizierung und
+                  Vorzeigefunktion in Sachen Klimaschutz haben. Das können sowohl Projekte sein, die
+                  sich einem zentralen Handlungsfeld (z. B. Mobilität) widmen als auch solche, die
+                  Klimaschutz als Querschnittsthema vieler Bereiche hervorheben (z. B. Nachhaltige
+                  Lebensweise). Ein spezielles Förderprogramm kann entwickelt und mögliche
+                  Förderschwerpunkte eruiert werden. Die Themen aus dem Leitbild „Wasserstadt”,
+                  „Grenzlage” sowie „Textile Vergangenheit” könnten mit Leuchtturmprojekten in
+                  einen Zusammenhang mit Nachhaltigkeit und Klimaschutz gestellt werden. So
+                  könnten z. B. eine grenzübergreifende Kooperation mit Klimaschutzaspekten
+                  aufgebaut werden oder Industriebrachen in Klimaschutzprojekte umgewidmet
+                  werden.
+                  Eine Möglichkeit der Umsetzung einer „ausgewählten Maßnahme” kann die
+                  Sanierung eines öffentlichen Gebäudes mit einer CO₂-Reduktion von über 80 % sein.
+                  Die Umsetzung der Maßnahme sollte möglichst öffentlichkeitswirksam begleitet
+                  werden. Auch nach der Umsetzung sollte über entsprechende Führungen und
+                  Informationsmaterialien die Innovation des Projektes als Muster für weitere Projekte
+                  genutzt werden. Daher sollte im Rahmen der Klimaschutzarbeit geprüft werden, ob
+                  Gebäude die ohnehin als Lernort fungieren und möglichst häufig in der Stadt
+                  vorkommen, dieses Potenzial des Wissenstransfers ermöglichen.
+
+Umsetzungsschritte Feinplanung des Förderprogramms
+
+Zielgruppe        Unternehmen, Institutionen, Verbände
+Geplanter Start   2015
+
+Laufzeit          Fünf Jahre
+
+                                                                   65
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele  Leuchtturmprojekte finden sich in vielen Kommunen.
+
+Förderprogramme / Zusätzliche Fördergelder können für innovative Projekte immer akquiriert werden.
+Finanzierungswege
+
+Kosteneinschätzung Die Bereitstellung eines Budgets muss verhandelt werden.
+
+Indikatoren für
+Monitoring
+
+Offene Fragen
+
+Priorität insgesamt         14
+CO₂-Einsparpotenzial        2
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             -1
+Regionale Wertschöpfung     2
+Umsetzungsreife             1
+Finanzierung/Förderung      2
+Beinflussbarkeit            2
+Notwendigkeit               3
+
+66
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme            Informationsangebote und
+                    Öffentlichkeitsarbeit
+30
+
+von 39
+
+Handlungsfeld                                  Priorität                     Zuständigkeit
+D Aktivierung und Beteiligung der Bürger       Mittel                        Klimaschutzmanagement
+
+Ziele               Bewusstseinsbildung, gezielte Aktivierung und Ansprache
+
+Kurzbeschreibung    Um die Bürger für Klimaschutzmaßnahmen zu aktivieren und an diesen zu beteiligen,
+                    müssen gezielte Informationsangebote geschaffen und eine umfangreiche
+                    Öffentlichkeitsarbeit umgesetzt werden. Die Öffentlichkeitsarbeit sollte sich dabei auf
+                    Aktivierung, allgemeine Information, konkrete Beratung und Dialogangebote
+                    konzentrieren. Dies heißt, zum einen für laufende Projekte aktiv werben und zum
+                    anderen für bestimmte Themen Hilfestellung, Fachinformation und Beratung
+                    bereitzustellen. Über Klimaschutzprojekte sollte auf der Webseite der Stadt Nordhorn
+                    regelmäßig berichtet werden; so werden der Öffentlichkeit Erfolge und Meilensteine
+                    präsentiert. Zudem kann die Verwaltung so in einen direkten Dialog mit der
+                    Bürgerschaft getreten. Denkbar ist neben regelmäßigen Informationsmedien
+                    (Newsletter, Broschüren, Flyer) beispielsweise auch die Durchführung eines
+                    „Klimaschutz-Aktionstages”. Je stärker man sich überregional vernetzt, desto besser
+                    kann man eigene Errungenschaften auch präsentieren, z. B. durch die Teilnahme am
+                    Europäischen Bund der Bürgermeister, dem Klimabündnis oder dem European Energy
+                    Award.
+
+Umsetzungsschritte  Konzepterstellung (im Rahmen des Klimaschutzkonzepts), Budget- und Zeitplanung,
+                    Werbung für Sponsoren und regionale Medienpartnerschaft, Planung von
+                    Instrumenten, Publikationen und Events, Umsetzung und Management, Controlling
+                    und Dokumentation
+
+Zielgruppe          Allgemeine Öffentlichkeit
+
+Geplanter Start     Anfang 2014
+
+Laufzeit            Kontinuierlich
+
+                                                                                                     67
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Es gibt viele erfolgreiche Beispiele für gelungene kommunale Öffentlichkeitsarbeit.
+                 Diese gelingt insbesondere dann gut, wenn für alle ein visionäres Ziel für alle
+                 erkennbar ist. Dem Landkreis Lüchow-Dannenberg ist es beispielsweise gelungen, sich
+                 mit regionalen und überregionalen Aktivitäten als „100 %-Erneuerbare-Energie-
+                 Region” bekannt zu machen.
+
+Förderprogramme / Keine bekannt
+Finanzierungswege
+
+Kosteneinschätzung Eine gut geplante „Kampagnenarbeit” kommt nicht ohne Budget aus.
+                                Als Minimum sollte man hier 10.000 Euro pro Jahr einplanen.
+
+Indikatoren für  Anzahl der Webseitenaufrufe, Leser, geleistete Beratungen, Telefonanrufe,
+Monitoring       Besucher bei Events
+
+Offene Fragen    Keine
+
+Priorität insgesamt         10
+CO₂-Einsparpotenzial        0
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             0
+Regionale Wertschöpfung     0
+Umsetzungsreife             3
+Finanzierung/Förderung      0
+Beinflussbarkeit            2
+Notwendigkeit               2
+
+68
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme          Anreizsystem zur Nutzung des ÖPNV
+
+31
+
+von 39
+
+Handlungsfeld                                         Priorität  Zuständigkeit
+D Aktivierung und Beteiligung der Bürger              Mittel     Stadt Nordhorn
+
+Ziele             Reduzierung des Individualverkehrs
+
+Kurzbeschreibung  Der ÖPNV wird in Nordhorn noch zu wenig genutzt und ein Anreizsystem könnte die
+                  Anzahl der Nutzer steigern. Es ist jedoch wichtig, dass dies gemeinsam mit allen
+                  regionalen Beteiligten und Akteuren, zugeschnitten auf die Bedürfnisse und die
+                  Akzeptanz der Nutzer, entwickelt wird. Hier sind also Abstimmung sowie auch
+                  Marktforschung notwendig, damit ermittelt werden kann, welche Anreize den
+                  gewünschten Effekt erzielen. Diese sollten an die demografischen und regionalen
+                  Besonderheiten angepasst und für Nutzer und Anbieter wirtschaftlich sein, innovative
+                  Technologien und veränderte Mobilitätsverhalten berücksichtigen und natürlich auch
+                  nachhaltig im Sinne des Klimaschutzes sein. Dabei sind Investitionen in die
+                  Infrastruktur, die Erhöhung der Taktzahlen, eine verbesserte Anbindung zwischen den
+                  Verkehrsmitteln ebenso notwendig wie Tarifgestaltung,
+                  E-Ticketing, Öffentlichkeitsarbeit, Fahrgastinformationssysteme und die technische
+                  Weiterentwicklung der Verkehrsmittel selbst. All dies ist angesichts des künftigen
+                  Finanzierungsbedarfs des ÖPNV zu planen, der die öffentliche Hand tendenziell stark
+                  fordert und des Budget durch die reinen Erlöse meist nicht gedeckt werden kann.
+
+Umsetzungsschritte Detaillierte Marktforschung und Konzeptplanung, Konzeption, Finanzierungsplanung,
+                                Abstimmung mit allen relevanten Akteuren
+
+Zielgruppe        Potentielle Nutzer des ÖPNV
+
+Geplanter Start   Mitte 2014
+
+Laufzeit          Kontinuierlich, langfristig
+
+                                                                                 69
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele          In Tübingen wird immer wieder über die Einführung eines kostenlosen
+                   innerstädtischen ÖPNV debattiert. Um den Verlust an Ticket-Einnahmen
+Förderprogramme /  auszugleichen, müsste die Stadt entweder die kommunalen Steuern erhöhen oder
+Finanzierungswege  eine zweckgebundene Mobilitätsabgabe einführen – die allerdings rechtlich in Baden-
+                   Württemberg nicht zulässig ist. In der Größenordnung geht es jährlich um
+                   100 Euro pro Erwachsenen.
+
+                   Derzeit keine bekannt
+
+Kosteneinschätzung Die Anreizsysteme müssen separat budgetiert werden.
+
+Indikatoren für    Anteil des ÖPNV am Modalsplit
+Monitoring         Welche Anreizsysteme sind realisier- und finanzierbar?
+
+Offene Fragen
+
+Priorität insgesamt         10
+CO₂-Einsparpotenzial        3
+Öffentlichkeitswirksamkeit  2
+Personalaufwand             -1
+Regionale Wertschöpfung     2
+Umsetzungsreife             1
+Finanzierung/Förderung      0
+Beinflussbarkeit            2
+Notwendigkeit               1
+
+70
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme             Fortsetzung des Energiemanagements
+                     und Controllings der städtischen
+32                   Gebäude
+
+von 39
+
+Handlungsfeld                                              Priorität  Zuständigkeit
+E Stadt als Vorbild                                        Hoch       Stadt Nordhorn
+
+Ziele                Einsparung von Kosten und Emissionen
+
+Kurzbeschreibung     Im Bundesdurchschnitt betragen die Energiekosten der kommunalen Einrichtungen
+                     35 bis 40 Euro pro Einwohner. Bei steigenden Energiepreisen wachsen diese Kosten
+                     kontinuierlich und belasten die kommunalen Haushalte jedes Jahr stärker. 10 bis 20
+                     % der Energiekosten lassen sich nach Expertenmeinung allein durch gering- und
+                     nicht-investive Maßnahmen einsparen. Das Fortsetzen des Energiemanagements und
+                     des Controllings ist daher von zentraler Bedeutung und entsprechende Maßnahmen
+                     sind in Kooperation mit dem Klimaschutzmanager umzusetzen. Kommunales
+                     Energiemanagement (KEM) umfasst Strategien und Maßnahmen zur Erreichung einer
+                     nachhaltigen und effizienten Energienutzung in allen kommunalen Liegenschaften.
+                     Das schließt Organisationsfragen ebenso ein wie technische Maßnahmen oder die
+                     Fortbildung kommunaler Mitarbeiter. Grundlage des KEM ist die kontinuierliche
+                     Erfassung und Auswertung der Verbräuche von Wärme, Strom und Wasser. Zudem
+                     geht von der Kommune eine große Vorbildwirkung für ihre Bürgerinnen und Bürger
+                     aus.
+
+Umsetzungsschritte Bereits eingeführt
+
+Zielgruppe           Verwaltung
+Geplanter Start      Sofort
+
+Laufzeit             Kontinuierlich
+
+                                                                                      71
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele          Gute Beispiele für die Umsetzung des KEM finden sich beim „Klimawandel und
+                   Kommunen”. Hier kann man auch auf eine Fülle von Vorlagen, Tipps und konkrete
+                   Hilfestellungen zurückgreifen.
+
+Förderprogramme /  Über die Klimaschutzinitiative kann ein Klimaschutz-Teilkonzept „Kommunale
+Finanzierungswege  Liegenschaften” finanziert werden, sofern eine Analyse der Energieverbräuche noch
+                   nicht vorliegt.
+
+Kosteneinschätzung Personalressourcen und ein Budget für investive Maßnahmen müssen bereitgestellt
+                                werden.
+
+Indikatoren für    Regelmäßige Berichte, Energieverbräuche und Einsparungen, Reduzierung der Kosten
+Monitoring         und Emissionen
+
+Offene Fragen      Keine
+
+Priorität insgesamt         11
+CO₂-Einsparpotenzial        2
+Öffentlichkeitswirksamkeit  1
+Personalaufwand             -1
+Regionale Wertschöpfung     0
+Umsetzungsreife             3
+Finanzierung/Förderung      0
+Beinflussbarkeit            3
+Notwendigkeit               3
+
+72
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme             Die papierlose Stadtverwaltung
+
+33
+
+von 39
+
+Handlungsfeld                 Priorität                                      Zuständigkeit
+E Stadt als Vorbild           Mittel                                         Stadt Nordhorn
+
+Ziele                Reduzierung von Verbrauchsmaterial, Ressourcenschonung
+
+Kurzbeschreibung     Viele Kommunen in Deutschland haben bereits eine „papierlose” Verwaltung
+                     eingeführt, bei dem ein digitales Dokumenten-Management-System die
+                     herkömmlichen Papierakten und Unterlagen ersetzt und so der Papierverbrauch
+                     drastisch reduziert werden kann. Akten können elektronisch geführt werden,
+                     Vorgänge werden nur noch online bearbeitet. Die Umstellung auf eine papierlose
+                     Verwaltung erfordert den Einstieg in eine systematische Nutzung neuer
+                     Informationstechnologien hin zum Wissensmanagement und wird auch als E-
+                     Governance bezeichnet. Insgesamt kann so eine Verwaltung effizienter und schlanker
+                     ausgestaltet sowie die Transparenz gegenüber den Bürgern erhöht werden. Durch
+                     eine papierlose Verwaltung wird nicht nur der Verbrauch von Papier, sondern auch
+                     von anderen Büromaterialen stark verringert, was wiederum auch der Stadtkasse
+                     zugutekommt. Auch die Gremienarbeit, z. B. im Stadtrat, könnte so mit Hilfe von
+                     mobilen Geräten (z. B. Tablet-Computern) papierlos und anwenderfreundlich
+                     abgewickelt werden.
+
+Umsetzungsschritte   Beschluss, Erarbeitung eines Konzepts, Planung und Auswahl der Technik, Einführung
+                     und Schulung der Mitarbeiter, Begleitung und Fachberatung in der Übergangsphase,
+                     Umstellung
+
+Zielgruppe           Mitglieder der Verwaltung und des Stadtrats
+
+Geplanter Start      Ab 2014
+
+Laufzeit             Für die komplette Umstellung sollten man fünf Jahre einplanen.
+
+                                                                                             73
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Bereits vor fast sechs Jahren hat die Stadt Friesoythe ihre Sitzungsunterlagen als eine
+                 der ersten Kommunen im Oldenburger Münsterland komplett online zur Verfügung
+                 gestellt.
+
+Förderprogramme / Derzeit keine bekannt
+Finanzierungswege
+
+Kosteneinschätzung Für die Umstellung müssen die technischen Geräte und Dienstleistungen (Server)
+                                finanziert werden.
+
+Indikatoren für  Erreichen der Meilensteine für die Umstellung
+Monitoring
+
+Offene Fragen    Wie steht die Verwaltung zu so einem Beschluss? Die Umstellung muss gut
+                 vorbereitet und kann nicht ohne Akzeptanz der Verwaltung durchgesetzt werden.
+
+Priorität insgesamt         9
+CO₂-Einsparpotenzial        1
+Öffentlichkeitswirksamkeit  2
+Personalaufwand             -1
+Regionale Wertschöpfung     1
+Umsetzungsreife             2
+Finanzierung/Förderung      0
+Beinflussbarkeit            3
+Notwendigkeit               1
+
+74
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme             Klimaneutrale Webseite
+
+34
+
+von 39
+
+Handlungsfeld                                   Priorität                 Zuständigkeit
+E Stadt als Vorbild                             Mittel                    Stadt Nordhorn
+
+Ziele                Klimaneutralität für den Internetauftritt der Stadt
+
+Kurzbeschreibung     Der Stromverbrauch für den Betrieb von Websites nimmt weltweit rasant zu.
+
+                     CO₂-Emissionen aufgrund der Internet entsprechen heutzutage in etwa denjenigen
+                     des globalen Flugverkehrs. Die Website der Stadt Nordhorn könnte über zertifizierte
+                     Kompensationsprojekte oder den Bezug von Ökostrom für das Betreiben des Servers
+                     klimaneutral werden. Die Außenwirkung ist groß und ein erprobtes Vorgehen kann
+                     auf weitere Webseiten ausgedehnt werden.
+
+Umsetzungsschritte Beschluss, Auswahl der Methode, Beauftragung, Zertifizierung
+
+Zielgruppe           Allgemeine Öffentlichkeit
+Geplanter Start      Sofort möglich
+
+Laufzeit             Kontinuierlich
+
+                                                                                          75
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Es scheint noch vergleichsweise wenig Kommunen zu geben, die ihre Webseiten
+                 klimaneutral hosten. Ein Beispiel ist der Internetauftritt des Landkreises Rottweil.
+
+Förderprogramme / Derzeit keine bekannt
+Finanzierungswege
+
+Kosteneinschätzung Die Kosten hängen von dem ursprünglichen Verbrauch des Hostings ab und müssen
+                                bei den Anbietern individuell eingeholt werden.
+
+Indikatoren für  Einsparungen von Emissionen
+Monitoring
+
+Offene Fragen    Einige technische Fragen müssen geklärt und auch die mögliche Methode zur
+                 Ausgestaltung ausgewählt werden (Kompensation oder Ökostrom-Bezug).
+
+Priorität insgesamt         10
+CO₂-Einsparpotenzial        0
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             1
+Regionale Wertschöpfung     0
+Umsetzungsreife             3
+Finanzierung/Förderung      0
+Beinflussbarkeit            2
+Notwendigkeit               1
+
+76
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme             Einführung einer nachhaltigen
+                     Beschaffung
+35
+
+von 39
+
+Handlungsfeld                        Priorität                               Zuständigkeit
+E Stadt als Vorbild                  Hoch                                    Stadt Nordhorn
+
+Ziele                Reduzierung von Verbrauchsmaterial, Ressourcenschonung
+
+Kurzbeschreibung     Bei einem jährlichen Volumen von 51,4 Mrd. Euro in Deutschland (McKinsey) ist die
+                     Beschaffung ein „grüner Zukunftsmarkt“. Deutschlandweit beträgt das
+
+                     Einsparpotenzial 30 % CO₂ bis zum Jahr 2020. Auch die Stadt Nordhorn kann hier als
+                     Vorbild vorangehen, und Richtlinien für nachhaltige Beschaffung durchsetzen. Die
+                     nachhaltige Beschaffung berührt die Bereiche Beleuchtung, Verbrauchsmaterialien,
+                     Bürogeräte, Fahrzeuge, Gebäudekomponenten, Haushaltsgeräte sowie den Bezug
+                     von Strom.
+
+Umsetzungsschritte Aufstellung der Richtlinien, Schulung der Mitarbeiter, Umbau des
+                                Beschaffungssystems, Umsetzung
+
+Zielgruppe           Verwaltung
+
+Geplanter Start      Ab Mitte 2014
+
+Laufzeit             Kontinuierlich
+
+                                                                                             77
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Im Rahmen des EU-geförderten Projekts „Buy Smart-Beschaffung und Klimaschutz”
+                 kann man viele Hilfestellungen und auch Praxisbeispiele finden.
+
+Förderprogramme / Derzeit keine bekannt
+Finanzierungswege
+
+Kosteneinschätzung Langfristig können durch nachhaltige Beschaffung immer Kosten gespart werden.
+
+Indikatoren für  Die Umstellung der Verwaltungspraxis ist auf motivierte Mitarbeiter und eine klare
+Monitoring       Zielvorgabe angewiesen.
+
+Offene Fragen
+
+Priorität insgesamt         12
+CO₂-Einsparpotenzial        3
+Öffentlichkeitswirksamkeit  2
+Personalaufwand             -1
+Regionale Wertschöpfung     2
+Umsetzungsreife             2
+Finanzierung/Förderung      0
+Beinflussbarkeit            3
+Notwendigkeit               1
+
+78
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme             Aktivierung und Schulung
+                     der Verwaltungsmitarbeiter
+36
+
+von 39
+
+Handlungsfeld                        Priorität                                    Zuständigkeit
+E Stadt als Vorbild                  Hoch                                         Stadt Nordhorn
+
+Ziele                Erhöhung der Effizienz, aktives Einbeziehen der Mitarbeiter
+
+Kurzbeschreibung     Durch gezielte, niederschwellige Informationsangebote kann die Mitarbeiterschaft
+                     motiviert und geschult werden, Effizienz- und Einsparpotenziale im
+                     Arbeitszusammenhang zu erschließen. Zusätzlich sind die Sensibilisierung und
+                     Einbindung der Mitarbeiterschaft von großer Bedeutung für den Erfolg und die
+                     Glaubwürdigkeit von Klimaschutzmaßnahmen. Darüber hinaus können spezielle
+                     Angebote für besondere Zielgruppen, z. B. Hausmeister, Reinigungspersonal oder
+                     Mitarbeiter in der Beschaffung, gemacht werden, die vertiefend in relevante Themen
+                     und das Nutzerverhalten einsteigen. Wichtig ist, dass die Angebote auf die
+                     Bedürfnisse der Mitarbeiter zugeschnitten sind und motivieren.
+
+Umsetzungsschritte Abfrage der Bedürfnisse und Anforderungen, Planung der Instrumente und Themen,
+                                Organisation und Durchführung, Feedback und Dokumentation
+
+Zielgruppe           Verwaltung
+
+Geplanter Start      Sofort möglich
+
+Laufzeit             Drei Jahre
+
+                                                                                                  79
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Die EnergieAgentur.NRW bietet regelmäßig Hilfestellung und auch Schulungen für
+                 Hausmeister in kommunalen Liegenschaften an.
+
+Förderprogramme / Derzeit keine bekannt
+Finanzierungswege
+
+Kosteneinschätzung Über Personalkosten hinaus entstehen keine weiteren Kosten. Die Einbindung
+                                externer Berater ist zu überprüfen.
+
+Indikatoren für
+Monitoring
+
+Offene Fragen    Welche Erfahrungen liegen innerhalb der Verwaltung bei der Durchführung von
+                 Schulungen vor? Welche Aspekte waren besonders schwierig?
+
+Priorität insgesamt         11
+CO₂-Einsparpotenzial        2
+Öffentlichkeitswirksamkeit  0
+Personalaufwand             1
+Regionale Wertschöpfung     0
+Umsetzungsreife             2
+Finanzierung/Förderung      0
+Beinflussbarkeit            3
+Notwendigkeit               3
+
+80
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme             Klimafreundliches
+                     Fuhrparkmanagement und
+37                   fahrradfreundliche Verwaltung
+
+von 39
+
+Handlungsfeld                        Priorität  Zuständigkeit
+E Stadt als Vorbild                  Hoch       Stadt Nordhorn
+
+Ziele                Reduzierung von Emissionen und Kosten bei der Mobilität der Verwaltung;
+Kurzbeschreibung     Vorbildfunktion
+
+                     Bei einem klimafreundlichen Fuhrparkmanagement muss die Stadt im Spannungsfeld
+                     zwischen Wirtschaftlichkeit, Umweltfreundlichkeit und Leistungsfähigkeit agieren. Ziel
+                     dieser Maßnahme sollte es sein, sicherzustellen, dass die eingesetzten Fahrzeuge
+                     einen möglichst geringen Kraftstoffverbrauch haben, optimal ausgelastet sind, wenig
+                     Luftschadstoffe und Kohlendioxid ausstoßen und gleichzeitig ihre Aufgaben erfüllen.
+                     Genauso wichtig wie Bereitstellung und Anschaffung der Fahrzeuge sind auch die
+                     genaue Analyse und Überwachung des tatsächlichen Mobilitätsbedarfs sowie eine
+                     kontinuierliche Optimierung der Einsatzzeiten und Wartungsarbeiten. Eine
+                     fahrradfreundliche Verwaltung nimmt vor allem ihre Vorbildfunktion wahr. Durch das
+                     Schaffen einer optimalen Infrastruktur für Mitarbeiter und/oder das Bereitstellen von
+                     Dienstfahrrädern werden weitere nutzbringende Nebeneffekte erzielt: Mitarbeiter
+                     verhalten sich gesundheitsfördernd und kommen motivierter zur Arbeit. Sie haben
+                     besseren Kontakt zu ihrer Stadt und setzen Klimaschutzziele sichtbar um. Wie genau
+                     Fahrradfreundlichkeit aussehen könnte, kann mit den Mitarbeitern besprochen
+                     werden. Auch die Teilnahme an Aktionen wie „Stadtradeln” erhöht die Motivation.
+
+Umsetzungsschritte Konzepterstellung, Einbeziehung der Mitarbeiter, Finanzierungsplanung, Planung der
+                                Maßnahmen, Festlegung der Verantwortlichkeiten, Umsetzung
+
+Zielgruppe           Verwaltung
+
+Geplanter Start      2014
+
+Laufzeit             Kontinuierlich
+
+                                                                81
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Über die Arbeitsgemeinschaft fußgänger- und fahrradfreundlicher Städte, Gemeinden
+                 und Kreise in Nordrhein-Westfalen e.V. kann man sich über viele gute Beispiele
+                 informieren.
+
+Förderprogramme / Derzeit keine bekannt
+Finanzierungswege
+
+Kosteneinschätzung Personalressourcen innerhalb der Verwaltung müssen eingeplant werden; ideal wäre
+                                die Einstellung eines/r Fahrradbeauftragten.
+
+Indikatoren für  Anzahl der Fahrradfahrer in der Verwaltung, Einsparung der Emissionen im Fuhrpark
+Monitoring
+
+Offene Fragen    Keine
+
+Priorität insgesamt         14
+CO₂-Einsparpotenzial        1
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             1
+Regionale Wertschöpfung     1
+Umsetzungsreife             3
+Finanzierung/Förderung      0
+Beinflussbarkeit            3
+Notwendigkeit               2
+
+82
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme             Förderung regionaler Produkte
+                     und Dienstleistungen
+38
+
+von 39
+
+Handlungsfeld                                    Priorität  Zuständigkeit
+E Stadt als Vorbild                              Hoch       Klimaschutzmanagement
+
+Ziele                Stärkung der regionalen Wertschöpfung, Vermeidung von Emissionen aus Transport,
+Kurzbeschreibung     Transparenz für den Verbraucher
+
+                     Wer sich für den Kauf regionaler Lebensmittel entscheidet, leistet einen direkten
+                     Beitrag zum Umwelt- und Klimaschutz, zum Erhalt traditioneller Kulturlandschaften,
+                     stärkt den heimischen Arbeitsmarkt und wird belohnt mit hervorragender
+                     Lebensmittelqualität, Frische und gesunden Produkten aus transparenter Erzeugung.
+                     Auch wer regionale Dienstleistungen bevorzugt, hilft Emissionen für Transporte zu
+                     vermeiden und die lokale Wirtschaft zu stärken. Orte, die über eine starke regionale
+                     Identität sowie traditionelle Erzeugnisse und Dienstleistungen verfügen, können daran
+                     mitwirken, diese noch stärker in das Bewusstsein der Konsumenten zu bringen. So
+                     könnte eine regionale Marke aufgebaut und deren gezielte Vermarktung
+                     vorangebracht werden. Denkbar sind hier Märkte, eine Anbieterdatenbank für
+                     Direktvermarktung und Transparenz der Erzeugung, der Verkauf von Warenkörben
+                     und vieles mehr. Es gibt bereits eine Vielzahl von Initiativen, die sich der Stärkung und
+                     Förderung regionaler Produkte und Dienstleistungen verschrieben haben, so z. B. die
+                     „Regionalbewegung” oder das „Netzwerk der Regionalinitiativen”. Ein Engagement
+                     und Aufbau sollten in enger Abstimmung mit dem Landkreis und den Erzeugern und
+                     Anbietern vor Ort erfolgen. Das Klimaschutzmanagement kann hier aktivierend und
+                     vernetzend tätig werden.
+
+Umsetzungsschritte Konzeption, Ansprach der Erzeuger, Planung einer Initiative, Detailplanung für das
+                                Marketing, Probephase
+
+Zielgruppe           Konsumente vor Ort
+
+Geplanter Start      2015
+
+Laufzeit             Kontinuierlich nach Aufbau
+
+                                                                                                       83
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        Über die Initiative „Regionalentwicklung” können viele gute Beispiele recherchiert
+                 werden.
+
+Förderprogramme / Derzeit keine bekannt
+Finanzierungswege
+
+Kosteneinschätzung Budgets für eine gemeinsame Marke und Informationsarbeit müssten bereitgestellt
+                                werden.
+
+Indikatoren für  Absatz regionale Produkte
+Monitoring
+
+Offene Fragen    /
+
+Priorität insgesamt         12
+CO₂-Einsparpotenzial        2
+Öffentlichkeitswirksamkeit  3
+Personalaufwand             -1
+Regionale Wertschöpfung     3
+Umsetzungsreife             2
+Finanzierung/Förderung      0
+Beinflussbarkeit            1
+Notwendigkeit               2
+
+84
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Maßnahme             Allianz für Fort- und Weiterbildung
+                     im Klimaschutz
+39
+
+von 39
+
+Handlungsfeld                                     Priorität  Zuständigkeit
+E Stadt als Vorbild                               Hoch
+                                                             Klimaschutzmanagement,
+                                                             Bildungsträger, Kammern
+
+Ziele                Aktivierung von Fachkräften, Capacity Building, Schließen von Angebotslücken,
+Kurzbeschreibung     Aufbau von neuen Zukunftsthemen
+
+                     In sämtlichen relevanten Themenbereichen des Klimaschutzes ist eine starke Dynamik
+                     zu verzeichnen, sowohl in Bezug auf die Entwicklung von Produkten und
+                     Technologien als auch hinsichtlich der Veränderung rechtlicher, organisatorischer oder
+                     finanzieller Rahmenbedingungen. Fachkräfte in Unternehmen und Verwaltungen
+                     müssen mit dieser Entwicklung Schritt halten. Gezielte Informations- und
+                     Qualifizierungsangebote unterstützen die Umsetzung wirtschaftlicher
+                     Klimaschutzmaßnahmen. Zielsetzung dieser Maßnahme ist die Initiierung einer Allianz
+                     zur Stärkung von Fort- und Weiterbildung, das Entwickeln neuer Angebote und das
+                     Schließen von Angebotslücken. Bei der Zusammenstellung eines
+                     Qualifizierungsprogramms kann auf bestehende Strukturen und Bildungsanbieter
+                     zurückgegriffen werden. Eine wesentliche Aufgabe der Allianz besteht in der
+                     gemeinschaftlichen und verstärkten Ansprache und Motivation der Zielgruppen zur
+                     Teilnahme an den Bildungsangeboten.
+
+Umsetzungsschritte   1) Analyse von Bedarfen und Zielgruppen
+                     2) Abstimmung mit Bildungsanbietern und Partnern (Kammern,
+                     Kreishandwerkerschaft, Kommunalverwaltungen)
+                     3) Abstimmung mit den Nachbarkommunen
+                     4) Inhaltliche und organisatorische Vorbereitung von Fort- und
+                     Weiterbildungsangeboten
+
+Zielgruppe           Fachkräfte wie Handwerker, Meister, Fachplaner, Ingenieure, Architekten, aber auch
+                     Energieberater in Unternehmen
+
+Geplanter Start      Anfang 2015
+
+Laufzeit             Nach Möglichkeit unbegrenzt
+
+                                                                                                         85
+Klimaschutzkonzept 2013
+Maßnahmenkatalog
+
+Beispiele        /
+
+Förderprogramme / Über die NBank könnten Bildungsangebote gefördert werden.
+Finanzierungswege
+
+Kosteneinschätzung Feinplanung nötig
+
+Indikatoren für  Welche Akteure muss man ansprechen? Welche Themen und Zielgruppen sind für die
+Monitoring       Stadt Nordhorn relevant?
+
+Offene Fragen
+
+Priorität insgesamt         12
+CO₂-Einsparpotenzial        0
+Öffentlichkeitswirksamkeit  2
+Personalaufwand             1
+Regionale Wertschöpfung     2
+Umsetzungsreife             2
+Finanzierung/Förderung      2
+Beinflussbarkeit            2
+Notwendigkeit               1
+~PAGE~RANGE~END~
+
+86
+

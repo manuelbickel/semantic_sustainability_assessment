@@ -1,0 +1,45 @@
+~~meta: ~~language: DE ~~resource: http://eurovoc.europa.eu/drupal/ ~~additionalinfo: derived from a download of the -multilingual list- and the -domain- list in all languages ~~Eurovocfileheadmeta: Thesaurus EUROVOC ISSN 1725-4396 ~ Ausgabe 4.4 (2012) - Deutsch ~ Thematische Fassung ~ Bereich 10 ~ EUROPÄISCHE UNION ~ DE ~ © Europäische Union, 2015 ~~chapter/category: Institutionen_der_Europäischen_Union_und_Europäischer_Öffentlicher_Dienst ~~subcategory: Arbeitsweise_der_Organe ~~chapter/category: Institutionen_der_Europäischen_Union_und ~~subcategory: EG-Behörde Einrichtung_der_EU ~~chapter/category: Institutionen_der_Europäischen_Union_und ~~subcategory: Europäischer_öffentlicher_Dienst ~~chapter/category: Institutionen_der_Europäischen_Union_und ~~subcategory: Gemeinschaftsorgan ~~chapter/category: Institutionen_der_Europäischen_Union_und ~~subcategory: institutionelle_Struktur ~~chapter/category: Recht_der_Europäischen_Union ~~subcategory: EU-Recht ~~chapter/category: Recht_der_Europäischen_Union ~~subcategory: Europäische_Verträge ~~chapter/category: Recht_der_Europäischen_Union ~~subcategory: PE ~~chapter/category: Recht_der_Europäischen_Union ~~subcategory: Rechtsakt_der_EU ~~chapter/category: Recht_der_Europäischen_Union ~~subcategory: EG ~~chapter/category: Recht_der_Europäischen_Union ~~subcategory: EG ~~chapter/category: Recht_der_Europäischen_Union ~~subcategory: EG ~~chapter/category: Recht_der_Europäischen_Union ~~subcategory: PE ~~chapter/category: Recht_der_Europäischen_Union ~~subcategory: EG
+EG
+Entscheidung
+Entschließung (EU)
+Entschließung
+Entschließung des Europäischen Rates
+Entschließung des Rates der Europäischen Union
+Entschließung EP
+Entschließung des Parlaments
+Rechtsakt (EU)
+Rechtsakt ohne Gesetzescharakter (EU)
+Richtlinie (EU)
+Angleichung der Rechtsvorschriften
+einzelstaatliche Durchführungsmaßnahme
+Richtlinie
+delegierte Richtlinie
+Durchführungsrichtlinie
+Stellungnahme (EU)
+Stellungnahme
+Stellungnahme EAG
+Stellungnahme EGKS
+Stellungnahme AdR
+Ausschuss der Regionen
+Stellungnahme der Europäischen Zentralbank
+Europäische Zentralbank
+Stellungnahme der Kommission
+Europäische Kommission
+Stellungnahme des Gerichtshofs (EU)
+Gerichtshof (EU)
+Stellungnahme des Rates
+Rat der Europäischen Union
+Stellungnahme EP
+Europäisches Parlament
+zustimmende Stellungnahme
+PE
+Einheitliche Europäische Akte
+Stellungnahme Europäischer Rechnungshof
+Europäischer Rechnungshof
+Stellungnahme EWSA
+Europäischer Wirtschafts- und Sozialausschuss
+Verordnung (EU)
+Anwendung des EU-Rechts
+Verordnung
+delegierte Verordnung
+Durchführungsverordnung

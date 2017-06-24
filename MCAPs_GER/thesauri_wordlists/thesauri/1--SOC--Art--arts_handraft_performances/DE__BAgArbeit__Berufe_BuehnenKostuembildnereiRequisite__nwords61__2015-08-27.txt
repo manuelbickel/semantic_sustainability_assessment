@@ -1,0 +1,108 @@
+ï»¿~~meta: ~~resource: Bundesagentur f?r Arbeit ~~additional_info: Bundesagentur für Arbeit, Klassifikation der Berufe
+Buehnen- und Kostuembildnerei, Requisite
+Ankleider/in
+Ankleider/in / Garderobier/e
+Außenrequisiteur/in
+Ausstatter/in
+Ausstattungs-Assistent/in
+Ausstattungsleiter/in
+Buehnen- und Kostuembildner
+Buehnen- und Szenenmaler
+Buehnen- und Szenenplastiker
+Buehnenarchitekt/in
+Buehnenausstatter/in
+Buehnenbild-Assistent/in
+Buehnenbildner/in
+Buehnenbildner/in mit technischen Mitarbeitern
+Buehnendesigner/in
+Buehnengestalter/in
+Buehnenmaler/in und Buehnenplastiker/in
+Buehnenmaler/in
+Buehnenplastiker/in
+Dekorationenmaler/in
+Erste/r Buehnenmaler/in und Buehnenplastiker/in
+Filmarchitekt/in
+Filmausstatter/in
+Fundusverwalter/in
+Garderobenmeister/in
+Garderobier/e
+Requisiteur/in
+Gewandmeister/in
+Innenrequisiteur/in
+Kascheur/in
+Kleiderkammerverwalter/in
+Kostuemberater/in
+Kostuembild-Assistent/in
+Kostuembildner/in
+Kostuemdesigner/in
+Kostuemfundusbetreuer/in
+Kostuemplastiker/in
+Kostuemschneider/in
+Kulissengestalter/in
+Requisitenfahrer/in
+Requisitenmeister/in
+Requisitenverwalter/in
+Scenograf/in
+Set Designer/in
+Set-Decorator
+Set-Dresser
+Szenenbild-Assistent/in
+Szenenbildner/in
+Szenenmaler/in
+Szenenplastiker/in
+Szenograf/in
+Theaterdekorateur/in
+Theaterfundusverwalter/in
+Theaterkostuemschneider/in
+Theatermaler/in
+Theatermaler/in/Theaterplastiker/in
+Theaterplastiker/in
+Werkstaettenleiter/in
+Werkstaettenvorstand
+Ankleider
+Außenrequisiteur
+Ausstattungs-Assistent
+Ausstattungsleiter
+Buehnenarchitekt
+Buehnenausstatter
+Buehnenbild-Assistent
+Buehnenbildner
+Buehnendesigner
+Buehnengestalter
+Buehnenmaler
+Buehnenplastiker
+Dekorationenmaler
+Filmarchitekt
+Filmausstatter
+Fundusverwalter
+Garderobenmeister
+Garderobier
+Requisiteur
+Gewandmeister
+Innenrequisiteur
+Kascheur
+Kleiderkammerverwalter
+Kostuemberater
+Kostuembild-Assistent
+Kostuembildner
+Kostuemdesigner
+Kostuemfundusbetreuer
+Kostuemplastiker
+Kostuemschneider
+Kulissengestalter
+Requisitenfahrer
+Requisitenmeister
+Requisitenverwalter
+Scenograf
+Set Designer
+Szenenbild-Assistent
+Szenenbildner
+Szenenmaler
+Szenenplastiker
+Szenograf
+Theaterdekorateur
+Theaterfundusverwalter
+Theaterkostuemschneider
+Theatermaler
+Theaterplastiker
+Werkstaettenleiter

@@ -1,0 +1,151 @@
+~~meta: ~~resource: Bundesagentur f?r Arbeit ~~additional_info: Bundesagentur für Arbeit, Klassifikation der Berufe
+Psychologie, nichtaerztl. Psychotherapie
+Analytische/r Kinder- u. Jugendlichenpsychotherapeut/in
+Arbeitsagenturpsychologe/-psychologin
+Arbeitspsychologe/-psychologin
+Behindertenpsychologe/-psychologin
+Betriebspsychologe/-psychologin
+Charakterologe/Charakterologin
+Dipl.-Kommunikationspsychologe/-psychologin
+Dipl.-Psychologe/-Psychologin
+Dipl.-Rehabilitationspsychologe/-psychologin
+Dipl.-Wirtschaftspsychologe/-psychologin
+Eignungspsychologe/-psychologin
+Familien-/Paartherapeut/in
+Familientherapeut/in
+Forensische/r Psychologe/Psychologin
+Fuehrungs- und Organisationsberater
+Gerichtspsychologe/-psychologin
+Gerontopsychologe/-psychologin
+Gespraechsanalytiker/-analytikerin
+Graphologe/Graphologin
+Gutachter/in
+Jugendpsychologe/-psychologin
+Jugendpsychotherapeut/in
+Kinder- und Jugendlichenpsychotherapeut
+Kinder- und Jugendpsychologe
+Kinder- und Jugendpsychotherapeut
+Kinderpsychologe/-psychologin
+Kinderpsychotherapeut/in
+Klinische/r Neuropsychologe/-psychologin
+Klinische/r Psychologe/Psychologin
+Klinische/r Psychotherapeut/in
+Kognitionswissenschaftler/in
+Kommunikationsberater/in
+Kommunikationspsychologe/-psychologin
+Konfliktberater/in
+Konfliktmanager/in
+Krankenhauspsychologe/-psychologin
+Kriminalpsychologe/Kriminalpsychologin
+Logotherapeut/in
+Marktforschungspsychologe/-psychologin
+Marktpsychologe/-psychologin
+Mediator/in
+Medienpsychologe/-psychologin
+Neuropsychologe/-psychologin
+Notfallpsychologe/-psychologin
+Organisationspsychologe/-psychologin
+Paartherapeut/in
+Paedagogische/r Psychologe/Psychologin
+Polizeipsychologe/-psychologin
+Psychiatrisch-technische/r Assistent/in
+Psychoanalytiker/in
+Psychologe/Psychologin
+Psychologische/r Assistent/in
+Psychologischer Berater/in
+Psychologische/r Psychotherapeut/in
+Psychologisch-technische/r Assistent/in
+Psychotherapeut/in
+Rehabilitationspsychologe/-psychologin
+Schriftpsychologe/-psychologin
+Schulpsychologe/-psychologin
+Sexualberater/in
+Sozialpsychologe/-psychologin
+Soziotherapeut/in
+Sportpsychologe/-psychologin
+Suchtkrankentherapeut/in
+Suchtpsychologe/-psychologin
+Suchttherapeut/in
+Supervisor/in
+Therapeutische/r Psychologe/Psychologin
+Therapeut/in
+Tiefenpsychologe/-psychologin
+Umweltpsychologe/-psychologin
+Unfallforscher/in
+Verhaltenstherapeut/in
+Verkehrspsychologe/-psychologin
+Verkehrspsychologische/r Sachverstaendige/r
+Werbepsychologe/-psychologin
+Wirtschaftspsychologe/-psychologin
+Analytische
+Arbeitsagenturpsychologe
+Arbeitspsychologe
+Behindertenpsychologe
+Betriebspsychologe
+Charakterologe
+Dipl.-Kommunikationspsychologe
+Dipl.-Psychologe
+Dipl.-Rehabilitationspsychologe
+Dipl.-Wirtschaftspsychologe
+Eignungspsychologe
+Familien
+Familientherapeut
+Forensische
+Gerichtspsychologe
+Gerontopsychologe
+Gespraechsanalytiker
+Graphologe
+Gutachter
+Jugendpsychologe
+Jugendpsychotherapeut
+Kinderpsychologe
+Kinderpsychotherapeut
+Klinische
+Kognitionswissenschaftler
+Kommunikationsberater
+Kommunikationspsychologe
+Konfliktberater
+Konfliktmanager
+Krankenhauspsychologe
+Kriminalpsychologe
+Logotherapeut
+Marktforschungspsychologe
+Marktpsychologe
+Mediator
+Medienpsychologe
+Neuropsychologe
+Notfallpsychologe
+Organisationspsychologe
+Paartherapeut
+Paedagogische
+Polizeipsychologe
+Psychiatrisch-technische
+Psychoanalytiker
+Psychologe
+Psychologische
+Psychologischer Berater
+Psychologisch-technische
+Psychotherapeut
+Rehabilitationspsychologe
+Schriftpsychologe
+Schulpsychologe
+Sexualberater
+Sozialpsychologe
+Soziotherapeut
+Sportpsychologe
+Suchtkrankentherapeut
+Suchtpsychologe
+Suchttherapeut
+Supervisor
+Therapeutische
+Therapeut
+Tiefenpsychologe
+Umweltpsychologe
+Unfallforscher
+Verhaltenstherapeut
+Verkehrspsychologe
+Verkehrspsychologische
+Werbepsychologe
+Wirtschaftspsychologe
+Organisationsberater
+Jugendlichenpsychotherapeut

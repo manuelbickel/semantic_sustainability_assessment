@@ -1,0 +1,36 @@
+﻿Fahrzeuge
+Abgaskatalysator
+Abgasqualität
+Atkinson-Motor
+Dieselkraftstoff
+Dieselmotor
+Drop-in Fuel
+Drosselverluste
+Erdgasfahrzeug
+Feinstaub
+Hubkolbenmotor
+Hubraum
+Kaltstart
+Klopfen beim Ottomotor
+Klopffestigkeit
+Kraftstoff sparen
+Kraftstoffeinspritzung
+Lambdasonde
+Magermotor
+Messverfahren für Kraftstoffverbrauch und Abgaswerte
+Motorbremse
+Ottomotor
+Rekuperation
+Rußpartikelfilter
+Saugmotor
+Start-Stopp-Automatik
+Stickoxide
+Tanktourismus
+Turboaufladung
+unverbrannte Kohlenwasserstoffe
+Ventile beim Hubkolbenmotor
+Verbrennungsluftverhältnis
+Verbrennungsmotor
+Vergaser
+Volllastanreicherung
+Zylinderabschaltung

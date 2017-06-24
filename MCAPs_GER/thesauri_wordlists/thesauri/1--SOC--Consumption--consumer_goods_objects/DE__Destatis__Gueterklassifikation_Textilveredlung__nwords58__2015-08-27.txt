@@ -1,0 +1,57 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der gueter 2008
+Textilveredlung
+Bleichen, Faerben, Bedrucken u.a. Ausruestungen von Fasern und Garnen
+Bleichen, Faerben, Bedrucken u.a. Ausruestungen von Garnen
+Bleichen von Geweben und Stoffen
+von Geweben aus Seide
+von Geweben aus Wolle oder anderen Tierhaaren
+von Geweben aus Baumwolle
+fuer Bekleidung
+fuer Heim- und Haushaltstextilien
+fuer technischen und industriellen Bedarf
+von Geweben aus Flachs, Jute, anderen textilen Bastfasern, pflanzlichen Spinnfasern und Papiergarn
+von Geweben aus synthetischen Filamenten oder Spinnfasern
+von Geweben aus kuenstlichen Filamenten oder Spinnfasern
+von gewebtem Samt und Pluesch oder Chenillegewebe
+von Frottiergewebe
+von Maschenstoffen
+Faerben von Geweben und Stoffen
+von Geweben aus Flachs, Jute, anderen textilen Bastfasern, pflanzlichen Textilfasern und Papiergarn
+von Maschenstoffen u.a. Stoffen
+von Maschenstoffen fuer Bekleidung
+von Maschenstoffen fuer technischen und industriellen Bedarf
+von anderen Stoffen
+Bedrucken von Geweben und Stoffen
+fuer anderen Bedarf
+von Maschenstoffen u.a. Stoffen ; Konfektionswaren
+Andere Ausruestungen von Geweben u.a. Stoffen
+fuer Haushalts- und Heimtextilien
+Veredlung von Bekleidung
+Bastfasern
+Baumwolle
+Bedrucken
+Bekleidung
+Bleichen
+Chenillegewebe
+Faerben
+Fasern
+Filamenten
+Flachs
+Frottiergewebe
+Garnen
+Geweben
+Haushalts- und Heimtextilien
+Haushaltstextilien
+Heim- und Haushaltstextilien
+Heimtextilien
+Jute
+Konfektionswaren
+Maschenstoffen
+Papiergarn
+Pluesch
+Samt
+Seide
+Spinnfasern
+Textilfasern
+Tierhaaren
+Wolle

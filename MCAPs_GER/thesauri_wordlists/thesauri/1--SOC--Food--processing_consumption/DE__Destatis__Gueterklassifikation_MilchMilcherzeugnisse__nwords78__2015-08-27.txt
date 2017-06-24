@@ -1,0 +1,76 @@
+﻿~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der gueter 2008
+Milch und Milcherzeugnisse
+Fluessige Milch und fluessiger Rahm, verarbeitet
+Fluessige Milch, verarbeitet
+mit einem Fettgehalt von 1 % oder weniger
+mit einem Inhalt von 2 l oder weniger
+mit einem Fettgehalt von mehr als 1 %, jedoch hoechstens 6
+Milch und Rahm mit einem Fettgehalt von mehr als 6 %, weder eingedickt noch gesueßt
+mit einem Fettgehalt von mehr als 6 %, jedoch hoechstens 21 %, weder eingedickt noch gesueßt, mit einem Inhalt von 2 l oder weniger
+mit einem Fettgehalt von mehr als 6 %, jedoch hoechstens 21 %, weder eingedickt noch gesueßt, mit einem Inhalt von mehr als 2 l
+mit einem Fettgehalt von mehr als 21 %, weder eingedickt noch gesueßt, mit einem Inhalt von 2 l oder weniger
+mit einem Fettgehalt von mehr als 21 %, weder eingedickt noch gesueßt, mit einem Inhalt von mehr als 2 l
+Milch und Rahm in Pulverform, granuliert oder in anderer fester Form, auch gesueßt
+Magermilchpulver
+in Gebinden von 2,5 kg oder weniger
+in Gebinden von mehr als 2,5 kg
+Vollmilchpulver
+Butter u.a. Fettstoffe aus Milch; Milchstreichfette
+Butter u.a. Fettstoffe aus Milch, mit einem Fettgehalt von 85 % oder weniger
+Butter u.a. Fettstoffe aus Milch, mit einem Fettgehalt von mehr als 85
+Milchstreichfette mit einem Fettgehalt von weniger als 80
+Kaese und Quark
+Frischkaese
+Kaese, gerieben oder in Pulverform, Kaese mit Schimmelbildung im Teig und anderer Kaese
+Kaese, gerieben oder in Pulverform
+Kaese mit Schimmelbildung im Teig
+Schmelzkaese, weder gerieben noch in Pulverform
+Andere Milch und Milcherzeugnisse
+Milch und Rahm, eingedickt, nicht in Pulverform, auch gesueßt
+Eingedickte Milch, nicht gesueßt
+Sonstige eingedickte Milch
+Buttermilch, Sauermilch, Sauerrahm, Joghurt, Kefir u.a. fermentierte oder gesaeuerte Milch oder Rahm
+Sauermilch, Sauerrahm, Joghurt u.a. fermentierte Erzeugnisse
+fluessig, ohne Geschmackszusaetze und ohne Fruechte, Nuesse oder Kakao
+in Pulverform, granuliert oder in anderer fester Form
+fluessig, mit Geschmackszusaetzen oder mit Fruechten, Nuessen oder Kakao
+Buttermilch
+in Pulverform
+Casein
+Lactose und Lactosesirup
+Molke
+Molke in Form von Pulver und Granulat oder in anderer fester Form, auch gesueßt
+Erzeugnisse aus natuerlichen Milchbestandteilen, a.n.g
+Speiseeis
+Speiseeis, auch kakaohaltig
+Butter
+Eingedickte
+Fettgehalt
+Fettstoffe
+Fluessige
+Fruechte
+Fruechten
+Gebinden
+Geschmackszusaetze
+Geschmackszusaetzen
+Granulat
+Inhalt
+Joghurt
+Kaese
+Kakao
+Kefir
+Lactose
+Lactosesirup
+Milch
+Milchbestandteilen
+Milcherzeugnisse
+Milchstreichfette
+Nuesse
+Nuessen
+Pulverform
+Quark
+Sauermilch
+Sauerrahm
+Schimmelbildung
+Schmelzkaese
+Teig

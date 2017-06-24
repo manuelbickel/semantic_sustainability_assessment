@@ -1,0 +1,21 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
+Herstellung von Kraftwagen und Kraftwagenteilen
+Herstellung von Kraftwagen und Kraftwagenmotoren
+Herstellung von Personenkraftwagen und Personenkraftwagenmotoren
+Herstellung von Nutzkraftwagen und Nutzkraftwagenmotoren
+Herstellung von Karosserien, Aufbauten und Anhaengern
+Herstellung von Teilen und Zubehoer fuer Kraftwagen
+Herstellung elektrischer und elektronischer Ausruestungsgegenstaende fuer Kraftwagen
+Herstellung von sonstigen Teilen und sonstigem Zubehoer fuer Kraftwagen
+Anhaengern
+Aufbauten
+Ausruestungsgegenstaende
+Karosserien
+Kraftwagen
+Kraftwagenmotoren
+Kraftwagenteilen
+Nutzkraftwagen
+Nutzkraftwagenmotoren
+Personenkraftwagen
+Personenkraftwagenmotoren
+Teilen

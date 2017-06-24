@@ -1,0 +1,126 @@
+~~meta: ~~resource: Bundesagentur f?r Arbeit ~~additional_info: Bundesagentur für Arbeit, Klassifikation der Berufe
+Innenarchitektur, Raumausstattung
+Auslagenarrangeur/in
+Ausstattungsplaner/in
+Ausstellungsberater/in
+Ausstellungsdesigner/in
+Ausstellungsentwickler/in
+Ausstellungsgestalter/in
+Bau- und Raumgestalter
+Chefdekorateur/in
+Deko- und Werbeleiter
+Dekorateur/in
+Dekorateurmeister/in
+Dekorationsberater/in
+Dekorationsleiter/in
+Dekorierer/in
+Einrichtungsplaner/in
+Farb- und Oberflaechengestalter
+Farb- und Raumgestalter
+Farbberater/in
+Farbgestalter/in
+Form- und Raumgestalter
+Gardinendekorateur/in
+Gebrauchswerber/in
+Gestaltungsberater/in
+Gestalter/in fuer visuelles Marketing
+Holzgestalter/in
+Innenarchitekt/in
+Innenarchitekturassistent/in
+Innenarchitekturingenieur/in
+Innenausstatter/in
+Innenausstattermeister/in
+Innenausstattungsberater/in
+Innendekorateur/in
+Inneneinrichter/in
+Innenraumdesigner/in
+Innenraumgestalter/in
+Innenraumplaner/in
+Messegestalter/in
+Moebelgestalter/in
+Objekteinrichter/in
+Polsterer- und Dekorateurmeister
+Polsterer/in und Raumausstatter/in
+Polsterer und Dekorateur/Polsterin und Dekorateurin
+Polsterer/Polsterin
+Raum- und Innenausbautechniker
+Raumausstattermeister/in
+Raumausstatter/in
+Raumausstatterwerker/in
+Raumgestaltermeister/in
+Raumgestalter/in
+Raumgestaltungstechniker/in
+Raumtechniker/in
+Schaufensterdekorateur/in
+Schaufenstergestalter/in
+Schauwerbeassistent/in
+Schauwerbeberater/in
+Schauwerbedesigner/in
+Schauwerbefachwirt/in
+Schauwerbegestalter/in
+Schauwerbeleiter/in
+Werbegestalter/in
+Tapetenentwerfer/in
+Tapezierer/in und Dekorateur/in
+Tapeziermeister/in
+Visual Merchandiser/in
+Visual Merchandising-Fachwirt/in
+Auslagenarrangeur
+Ausstattungsplaner
+Ausstellungsberater
+Ausstellungsdesigner
+Ausstellungsentwickler
+Ausstellungsgestalter
+Chefdekorateur
+Dekorateur
+Dekorateurmeister
+Dekorationsberater
+Dekorationsleiter
+Dekorierer
+Einrichtungsplaner
+Farbberater
+Farbgestalter
+Gardinendekorateur
+Gebrauchswerber
+Gestaltungsberater
+Holzgestalter
+Innenarchitekt
+Innenarchitekturassistent
+Innenarchitekturingenieur
+Innenausstatter
+Innenausstattermeister
+Innenausstattungsberater
+Innendekorateur
+Inneneinrichter
+Innenraumdesigner
+Innenraumgestalter
+Innenraumplaner
+Messegestalter
+Moebelgestalter
+Objekteinrichter
+Polsterer
+Polsterer und Dekorateur
+Raumausstattermeister
+Raumausstatter
+Raumausstatterwerker
+Raumgestaltermeister
+Raumgestalter
+Raumgestaltungstechniker
+Raumtechniker
+Schaufensterdekorateur
+Schaufenstergestalter
+Schauwerbeassistent
+Schauwerbeberater
+Schauwerbedesigner
+Schauwerbefachwirt
+Schauwerbegestalter
+Schauwerbeleiter
+Werbegestalter
+Tapetenentwerfer
+Tapezierer
+Tapeziermeister
+Visual Merchandiser
+Visual Merchandising-Fachwirt
+Werbeleiter
+Oberflaechengestalter
+Innenausbautechniker

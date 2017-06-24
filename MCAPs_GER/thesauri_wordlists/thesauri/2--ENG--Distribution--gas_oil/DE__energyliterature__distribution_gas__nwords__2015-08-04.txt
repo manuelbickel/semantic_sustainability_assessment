@@ -1,0 +1,315 @@
+﻿distribution_gas
+Biogasleitung
+Erdgasvorwaermung
+Biogasnetzeinspeisung
+Biogasnetzes
+BioErdgasanteils
+Erdgasexpansion
+BiogasEinspeisung
+Erdgastransport
+LNG-Kapazitäten
+LNG-Kette
+LNG-Ketten
+Kraftwerksgas
+LNG-Abnehmer
+LNG-Plattformen
+LNG-Tanker
+LNG-Tankschiffen
+LNG-Transport
+LNG-Transports
+LNG-Anteil
+LNG-Anteils
+Erdgasexpansionsanlagen
+Erdgas-Fernleitungsnetz
+#Inhalt
+Erdgasnetz
+Erdgasanschluss
+Aggertalleitung
+Ethylenpipeline
+Nord-Stream-Pipeline
+Gasnetz
+#Anbindungsleitung
+#Ankündigung
+#Anschlussnehmer
+#Antransport
+#Arbeitsblatt
+Armaturenstation
+Ausspeisekapazität
+Ausspeisekapazitäten
+#Austauschmöglichkeiten
+#Baukostenzuschusses
+Bayernets-Hauptnetzes
+#Bebauungsdichte
+#Begründung
+#Bestellleistungen
+#Bestellungen
+#Braunkohletagebaue
+Deodorierungsanlage
+DEUDAN
+Druckabsicherung
+Druckanhebung
+Drucksystemen
+#Düker
+#Durchflussmenge
+DVGW-G
+Erdgastransportleitung
+Erdgastransportleitungen
+#Erforderlichkeit
+Exit-Kapazität
+Exit-Kapazitäten
+#Exportleistung
+#Fahrweg
+Ferngasleitungen
+#Flughafens
+Flussumkehr
+Fluxys
+DZK
+dynamisch zuordenbare Kapazität
+feste freie zuordenbare Kapazitäten
+feste Kapazitäten mit Auflage
+feste Kapazitäten mit Beschränkung
+beschränkt zuordenbare Kapazität
+BZK
+lastabhängig zuordenbare Kapazität
+bFZK
+fFZK
+FZK-Kapazitäten
+bayernets
+Fluxys TENP
+Fluxys D
+GASCADE Gastransport
+GOAL
+GRTgaz Deutschland
+GTG Nord 
+GUD
+jordgasTransport
+Lubmin-Brandov Gastransport
+NEL
+Nowega
+OGE
+ONTRAS
+OPAL
+terranets bw
+Thyssengas
+bayernets GmbH
+Fluxys TENP TSO S.p.A.
+Fluxys Deutschland GmbH
+GASCADE Gastransport GmbH
+Gasunie Ostseeanbindungsleitung GmbH
+GRTgaz Deutschland GmbH
+Gastransport Nord GmbH
+Gasunie Deutschland Transport Services GmbH
+jordgasTransport GmbH
+Lubmin-Brandov Gastransport GmbH 
+NEL Gastransport GmbH
+Nowega GmbH
+Open Grid Europe GmbH 
+ONTRAS - VNG Gastransport GmbH
+OPAL Gastransport GmbH
+terranets bw GmbH
+Thyssengas GmbH
+Grenzübergangspunkt
+Marktgebietsübergangspunkt
+bestellbarer Netzkopplungspunkt
+bestellbare Ausspeisezone
+Netzanschlusspunkt Kraftwerk
+Netzanschlusspunkt Untergrundspeicher
+GÜP
+MÜP
+NKP-IB
+NAP-KW
+NAP-UGS
+TVK
+technisch verfügbare Kapazität
+Gasbeschaffenheitsstandards
+GASCADE
+GASCADE-System
+Gasdruckregel
+Gasdruckregelmessanlage
+Gasfernleitungen
+Gasleitung
+GASPOOL
+Gasqualität
+Gasqualitäten
+Gastransport
+Gastransportmengen
+Gasunie
+GDRM
+GDRM-Anlage
+GDRM-Anlagen
+GDRMAnlage
+#Geestlandschaft
+#Gemeindegebiet
+#Großraum
+GRTgaz
+GTG
+GUD-H-Gas-System
+H-Gas
+H-Gas-Kapazitäten
+H-Gas-Leitung
+H-Gas-Leitungen
+H-Gas-Mengen
+H-Gas-Netz
+H-Gas-Quellenverteilung
+H-Gas-Strom
+H-Gas-Transportsystem
+H-Gas-Versorgung
+H-GasQuellenverteilung
+HGas
+Hochdruckleitung
+Hochdrucknetz
+#Hochlastphasen
+Importpunkt
+#Industrieansiedlungen
+#Investitionsentscheidung
+Jordgas
+Jordgas-Transport
+Konvertierungsanlage
+Konvertierungsleistung
+Kopplungskapazität
+Kraichgauleitung
+L-Gas
+L-Gas-Aufkommen
+L-Gas-Bereich
+L-Gas-Bereichen
+L-Gas-Infrastruktur
+L-Gas-Leitungen
+L-Gas-Netzkopplungspunkte
+L-Gas-Netzteile
+L-Gas-Produktion
+L-Gas-Qualität
+L-Gas-Trennung
+L-Gas-Verdichterstation
+L-GasGebiet
+L-H-Gas
+L-H-Gas-Systemtrennung
+L-H-Gas-Umstellung
+L-H-Gas-Umstellungsgebiet
+L-H-Gas-Umstellungsgebiete
+L-H-Gas-Umstellungsprozess
+L-H-GasUmstellung
+L-H-GasUmstellungsgebiete
+L-HGas-Umstellungsgebieten
+Leistungsbilanz
+#Leitungsanfang
+#Leitungsdurchmesser
+#Leitungsneubau
+#Leitungsneubauvorhaben
+#Leitungssysteme
+#Leitungssystems
+#Leitungstrasse
+#Leitungsverbindung
+#Leitungsverlauf
+#Letztverbrauchern
+LH-Gas-Umstellungsbereiche
+Erdgas-Loop-Leitung
+Loop-Leitung
+#Lückenschluss
+#Marktgebiet
+#Marktraumumstellung
+#Maschineneinheiten
+MEGAL
+#Messanlage
+Molchstation
+MONACO
+MURO
+#Naturpark
+#Nebenanlagen
+NETG
+NETG-Armaturenstation
+NETG-Station
+NETRA
+#Netzgebiet
+#Netzgebietes
+Netzkoppelpunktes
+Netzkopplung
+NOWAL
+Nowega-Fernleitungsnetzes
+OGE-Transportleitung
+#Ortsumgehungen
+Ostseeanbindungsleitung
+Parallel-Leitungssystem
+#Parallelisierung
+#PCI-Projekt
+#PCI-Status
+#Planerische
+#Planungsstand
+#Projektidee
+#Qualitätstrennende
+#Querspange
+#Querung
+#Querungen
+#Redundanz
+#Regelanlage
+Regelstation
+#Regionalsystemen
+#Reversierung
+#Ringschluss
+Schieberanlage
+Schieberstation
+#Schutzgebieten
+#Siedlungsbereiche
+Speicher-Epe
+#Spitzenlastbereitstellung
+#Spitzenlastdeckung
+#Stadtgrenze
+#Stadtkreise
+#Standby
+#Startpunkt
+#Stationsgelände
+#Stickstoffzwischenlagerung
+#Stream
+Streckenarmaturen
+Süd-Nord-Reversierung
+#Süd-Nord-Richtung
+#Systemabschnitt
+#TA-Luft
+#Teildurchführung
+#Teilnetz-Bildung
+#Teilstück
+TENP
+TENP-Verdichterstationen
+TNm³/h
+#Transportleistung
+#Transportleitung
+#Transportleitungen
+#Transportsystems
+#Trasse
+#Trassenendpunkt
+#Trassenverlauf
+Übergabedrucks
+Überspeisebedarf
+Überspeisekapazität
+Überspeisekapazitäten
+Überspeiseleistung
+Überspeisemöglichkeiten
+#Umbindung
+#Umstellbereiche
+#Umstellungsbereich
+#Umstellungsbereiche
+#Umstellungsbereichen
+#Umstellungsgebietes
+#Umstellungsphase
+#Umstellungsteilschritten
+#Unterdeckung
+Verdichteranlage
+Verdichtereinheit
+Verdichtereinheiten
+Verdichterstandort
+Verdichterstation
+Verdichtungsleistung
+#Verteilernetze
+#Vorhaben
+#Waldbereiche
+#Waldquerungen
+#Weltkulturerbes
+ZEELINK
+#Zumischung
+Pipelinegas
+Gaspipeline
+Trans-Adria-Pipeline
+South-Stream-Pipeline
+
+
+
+

@@ -1,0 +1,6 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
+Abwasserentsorgung
+Betrieb der Sammelkanalisation
+Betrieb von Klaeranlagen
+Klaeranlagen
+Sammelkanalisation

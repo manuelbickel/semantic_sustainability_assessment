@@ -1,0 +1,81 @@
+~~meta: ~~resource: Bundesagentur f?r Arbeit ~~additional_info: Bundesagentur für Arbeit, Klassifikation der Berufe
+Pharmazie
+Apothekendirektor/in
+Apothekenlaborant/in
+Apothekenleiter/in
+Apothekenpaechter/in
+Apothekenverwalter/in
+Apotheker/in
+Apothekerassistent/in
+Apotheker/in / Pharmazeut/in
+Arzneientwickler/in
+Arzneimittelvertreter/in
+Arzt/Aerztin
+Arztberater/in
+Aerzteberater/in
+Assistenzarzt/-aerztin
+Dipl.-Pharmazeut/in
+Fachapotheker/in
+Facharzt/-aerztin
+Klinikberater/in
+Klinikreferent/in
+Klinische/r Monitor/in
+Krankenhausapotheker/in
+Laborassistent/in
+Medical Advisor
+Medical Manager/in
+Medical Writer
+Monitor/in
+Pharmaanalytiker/in
+Pharmaberater/in
+Pharmakologe/Pharmakologin
+Pharmakologie-Assistent/in
+Pharmalaborant/in
+Pharmareferent/in
+Pharmazeutische/r Assistent/in
+Pharmazeutische/r Berater/in
+Pharmazeutisch-technische/r Assistent/in
+Pharmazeutisch-techn. Assistent/in
+Pharmazeut/in
+Pharmazielaborant/in
+PTA
+Regulatory-Affairs-Manager/in
+Stufenplanbeauftragter/Stufenplanbeauftragte
+Toxiokologie-Assistent/in
+Apothekendirektor
+Apothekenlaborant
+Apothekenleiter
+Apothekenpaechter
+Apothekenverwalter
+Apotheker
+Apothekerassistent
+Arzneientwickler
+Arzneimittelvertreter
+Arzt
+Arztberater
+Aerzteberater
+Assistenzarzt
+Dipl.-Pharmazeut
+Fachapotheker
+Facharzt
+Klinikberater
+Klinikreferent
+Klinische
+Krankenhausapotheker
+Laborassistent
+Medical Manager
+Monitor
+Pharmaanalytiker
+Pharmaberater
+Pharmakologe
+Pharmakologie-Assistent
+Pharmalaborant
+Pharmareferent
+Pharmazeutische
+Pharmazeutisch-technische
+Pharmazeutisch-techn. Assistent
+Pharmazeut
+Pharmazielaborant
+Regulatory-Affairs-Manager
+Stufenplanbeauftragter
+Toxiokologie-Assistent

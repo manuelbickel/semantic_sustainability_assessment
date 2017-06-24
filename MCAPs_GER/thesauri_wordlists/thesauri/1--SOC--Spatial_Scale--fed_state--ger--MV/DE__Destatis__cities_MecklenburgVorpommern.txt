@@ -1,0 +1,785 @@
+MecklenburgVorpommern
+Rostock
+Schwerin
+Alt Schwerin
+Altenhagen
+Altenhof
+Altentreptow
+Ankershagen
+Bartow
+Basedow
+Beggerow
+Beseritz
+Blankenhof
+Blankensee
+Blumenholz
+Bollewick
+Borrentin
+Bredenfelde
+Breesen
+Breest
+Briggow
+Brunn
+Buchholz
+Burg Stargard
+Burow
+Bütow
+Cammin
+Carpin
+Cölpin
+Dargun
+Datzetal
+Demmin
+Duckow
+Eichhorst
+Faulenrost
+Feldberger Seenlandschaft
+Fincken
+Friedland
+Fünfseen
+Galenbeck
+Genzkow
+Gielow
+Glienke
+Gnevkow
+Godendorf
+Göhren-Lebbin
+Golchen
+Gotthun
+Grabow-Below
+Grabowhöfe
+Grammentin
+Grapzow
+Grischow
+Groß Dratow
+Groß Gievitz
+Groß Kelle
+Groß Miltzow
+Groß Nemerow
+Groß Plasten
+Groß Teetzleben
+Grünow
+Gültz
+Gülzow
+Helpt
+Hinrichshagen
+Hohen Wangelin
+Hohenbollentin
+Hohenmocker
+Hohenzieritz
+Holldorf
+Ivenack
+Jabel
+Jürgenstorf
+Kargow
+Kentzlin
+Kieve
+Kittendorf
+Klein Vielen
+Kletzin
+Klink
+Klocksin
+Knorrendorf
+Kratzeburg
+Kriesow
+Krukow
+Kublank
+Kummerow
+Lansen-Schönau
+Lapitz
+Lärz
+Leizen
+Lindenberg
+Lindetal
+Ludorf
+Malchin
+Malchow
+Mallin
+Massow
+Meesiger
+Melz
+Mildenitz
+Mirow
+Möllenbeck
+Möllenhagen
+Mölln
+Moltzow
+Neddemin
+Neetzka
+Neu Gaarz
+Neubrandenburg
+Neuenkirchen
+Neukalen
+Neustrelitz
+Neverin
+Nossendorf
+Nossentiner Hütte
+Penkow
+Penzlin
+Petersdorf
+Pragsdorf
+Priborn
+Priepert
+Pripsleben
+Puchow
+Rechlin
+Ritzerow
+Röbel/Müritz
+Röckwitz
+Roggentin
+Rosenow
+Sarow
+Schloen
+Schönbeck
+Schönfeld
+Schönhausen
+Schwarz
+Schwinkendorf
+Siedenbollentin
+Siedenbrünzow
+Sietow
+Silz
+Sommersdorf
+Sponholz
+Staven
+Stavenhagen
+Stuer
+Torgelow am See
+Trollenhagen
+Tützpatz
+Userin
+Utzedel
+Varchentin
+Verchen
+Vielist
+Vipperow
+Voigtsdorf
+Vollrathsruhe
+Walow
+Waren (Müritz)
+Warrenzin
+Werder
+Wesenberg
+Wildberg
+Woggersin
+Wokuhl-Dabelow
+Wolde
+Woldegk
+Wredenhagen
+Wulkenzin
+Wustrow
+Zepkow
+Zettemin
+Zirzow
+Zislow
+Admannshagen-Bargeshagen
+Alt Bukow
+Alt Sührkow
+Altkalen
+Am Salzhaff
+Bad Doberan
+Bartenshagen-Parkentin
+Bastorf
+Baumgarten
+Behren-Lübchin
+Benitz
+Bentwisch
+Bernitt
+Biendorf
+Blankenhagen
+Boddin
+Börgerende-Rethwisch
+Bröbberow
+Broderstorf
+Bützow
+Carinerland
+Dahmen
+Dalkendorf
+Diekhof
+Dobbin-Linstow
+Dolgen am See
+Dreetz
+Dummerstorf
+Elmenhorst/Lichtenhagen
+Finkenthal
+Gelbensande
+Glasewitz
+Gnewitz
+Gnoien
+Graal-Müritz
+Grammow
+Groß Roge
+Groß Schwiesow
+Groß Wokern
+Groß Wüstenfelde
+Gülzow-Prüzen
+Güstrow
+Gutow
+Hohen Demzin
+Hohen Sprenz
+Hohenfelde
+Hoppenrade
+Jördenstorf
+Jürgenshagen
+Kassow
+Kirch Mulsow
+Klein Belitz
+Klein Kussewitz
+Klein Upahl
+Krakow am See
+Kritzmow
+Kröpelin
+Kuchelmiß
+Kühlungsborn
+Kuhs
+Laage
+Lalendorf
+Lambrechtshagen
+Langhagen
+Lelkendorf
+Lohmen
+Lühburg
+Lüssow
+Mandelshagen
+Mistorf
+Mönchhagen
+Mühl Rosin
+Neubukow
+Nienhagen
+Nustrow
+Papendorf
+Penzin
+Plaaz
+Pölchow
+Poppendorf
+Prebberede
+Reddelich
+Reimershagen
+Rerik
+Retschow
+Rövershagen
+Rühn
+Rukieten
+Sanitz
+Sarmstorf
+Satow
+Schorssow
+Schwaan
+Schwasdorf
+Selpin
+Stäbelow
+Steffenshagen
+Steinfeld
+Steinhagen
+Stubbendorf
+Sukow-Levitzow
+Tarnow
+Tessin
+Teterow
+Thelkow
+Thulendorf
+Thürkow
+Vorbeck
+Walkendorf
+Wardow
+Warnkenhagen
+Warnow
+Wiendorf
+Wittenbeck
+Zarnewanz
+Zehna
+Zepelin
+Ziesendorf
+Ahrenshagen-Daskow
+Ahrenshoop
+Altefähr
+Altenkirchen
+Altenpleen
+Baabe
+Bad Sülze
+Bartelshagen II b. Barth
+Barth
+Bergen auf Rügen
+Binz
+Born a. Darß
+Breege
+Buschvitz
+Dettmannsdorf
+Deyelsdorf
+Dierhagen
+Divitz-Spoldershagen
+Dranske
+Drechow
+Dreschvitz
+Eixen
+Elmenhorst
+Franzburg
+Fuhlendorf
+Gager
+Garz/Rügen
+Gingst
+Glewitz
+Glowe
+Göhren
+Grammendorf
+Gransebieth
+Gremersdorf-Buchholz
+Grimmen
+Groß Kordshagen
+Groß Mohrdorf
+Gustow
+Hugoldsdorf
+Insel Hiddensee
+Jakobsdorf
+Karnin
+Kenz-Küstrow
+Klausdorf
+Kluis
+Kramerhof
+Lancken-Granitz
+Lietzow
+Lindholz
+Löbnitz
+Lohme
+Lüdershagen
+Marlow
+Middelhagen
+Millienhagen-Oebelitz
+Neu Bartelshagen
+Niepars
+Pantelitz
+Papenhagen
+Parchtitz
+Patzig
+Poseritz
+Preetz
+Prerow
+Prohn
+Pruchten
+Putbus
+Putgarten
+Ralswiek
+Rambin
+Rappin
+Ribnitz-Damgarten
+Richtenberg
+Saal
+Sagard
+Samtens
+Sassnitz
+Schaprode
+Schlemmin
+Sehlen
+Sellin
+Semlow
+Splietsdorf
+Stralsund
+Süderholz
+Sundhagen
+Thiessow
+Trent
+Tribsees
+Trinwillershagen
+Ummanz
+Velgast
+Weitenhagen
+Wendisch Baggendorf
+Wendorf
+Wieck a. Darß
+Wiek
+Wittenhagen
+Zarrendorf
+Zingst
+Zirkow
+Alt Meteln
+Bad Kleinen
+Barnekow
+Benz
+Bernstorf
+Bibow
+Blowatz
+Bobitz
+Boiensdorf
+Boltenhagen
+Börzow
+Brüsewitz
+Carlow
+Cramonshagen
+Dalberg-Wendelstorf
+Damshagen
+Dassow
+Dechow
+Dorf Mecklenburg
+Dragun
+Gadebusch
+Gägelow
+Glasin
+Gottesgabe
+Grambow
+Grevesmühlen
+Groß Molzahn
+Groß Siemz
+Groß Stieten
+Hohen Viecheln
+Hohenkirchen
+Holdorf
+Hornstorf
+Insel Poel
+Jesendorf
+Kalkhorst
+Klein Trebbow
+Klütz
+Kneese
+Königsfeld
+Krembz
+Krusenhagen
+Lockwisch
+Lübberstorf
+Lübow
+Lübstorf
+Lüdersdorf
+Lützow
+Mallentin
+Menzendorf
+Metelsdorf
+Mühlen Eichsen
+Nesow
+Neuburg
+Neukloster
+Niendorf
+Papenhusen
+Passee
+Perlin
+Pingelshagen
+Plüschow
+Pokrent
+Rehna
+Rieps
+Roduchelstorf
+Roggendorf
+Roggenstorf
+Rögnitz
+Rüting
+Schildetal
+Schlagsdorf
+Schönberg
+Seehof
+Selmsdorf
+Testorf-Steinfort
+Thandorf
+Upahl
+Utecht
+Veelböken
+Ventschow
+Vitense
+Warin
+Wismar
+Zickhusen
+Zierow
+Zurow
+Züsow
+Wedendorfersee
+Ahlbeck
+Alt Tellin
+Altwarp
+Altwigshagen
+Anklam
+Bandelin
+Bargischow
+Behrenhoff
+Bentzin
+Bergholz
+Blesewitz
+Blumenhagen
+Boldekow
+Boock
+Brietzig
+Brünzow
+Buddenhagen
+Bugewitz
+Buggenhagen
+Butzow
+Daberkow
+Damerow
+Dargelin
+Dargen
+Dersekow
+Diedrichshagen
+Ducherow
+Düvier
+Eggesin
+Fahrenwalde
+Ferdinandshof
+Garz
+Glasow
+Görmin
+Grambin
+Greifswald
+Gribow
+Groß Kiesow
+Groß Luckow
+Groß Polzin
+Gützkow
+Hammer a.d. Uecker
+Hanshagen
+Heinrichsruh
+Heinrichswalde
+Heringsdorf
+Hintersee
+Hohendorf
+Iven
+Jarmen
+Jatznick
+Kamminke
+Karlsburg
+Karlshagen
+Katzow
+Kemnitz
+Klein Bünzow
+Klein Luckow
+Koblentz
+Kölzin
+Korswandt
+Koserow
+Krackow
+Krien
+Kröslin
+Kruckow
+Krugsdorf
+Krummin
+Krusenfelde
+Lassan
+Leopoldshagen
+Levenhagen
+Liepen
+Liepgarten
+Löcknitz
+Loddin
+Loissin
+Loitz
+Lubmin
+Lübs
+Luckow
+Lühmannsdorf
+Lütow
+Medow
+Meiersberg
+Mellenthin
+Mesekenhagen
+Mölschow
+Mönkebude
+Murchin
+Nadrensee
+Neetzow
+Neu Boltenhagen
+Neu Kosenow
+Neuendorf A
+Neuendorf B
+Nieden
+Pasewalk
+Peenemünde
+Penkun
+Plöwen
+Polzow
+Postlow
+Pudagla
+Putzar
+Ramin
+Rankwitz
+Rollwitz
+Rossin
+Rossow
+Rothemühl
+Rothenklempenow
+Rubenow
+Rubkow
+Sarnow
+Sassen-Trantow
+Sauzin
+Schmatzin
+Schönwalde
+Spantekow
+Stolpe
+Stolpe auf Usedom
+Strasburg (Uckermark)
+Torgelow
+Torgelow-Holländerei
+Trassenheide
+Tutow
+Ückeritz
+Ueckermünde
+Usedom
+Viereck
+Vogelsang-Warsin
+Völschow
+Wackerow
+Wilhelmsburg
+Wolgast
+Wrangelsburg
+Wusterhusen
+Zemitz
+Zempin
+Zerrenthin
+Ziethen
+Zinnowitz
+Zirchow
+Züsedom
+Züssow
+Alt Krenzlin
+Alt Zachun
+Balow
+Bandenitz
+Banzkow
+Barkhagen
+Barnin
+Belsch
+Bengerstorf
+Besitz
+Blankenberg
+Blievenstorf
+Bobzin
+Boizenburg/ Elbe
+Borkow
+Brahlstorf
+Brenz
+Bresegard bei Eldena
+Bresegard bei Picher
+Brüel
+Brunow
+Buchberg
+Bülow
+Cambs
+Crivitz
+Dabel
+Dambeck
+Demen
+Dersenow
+Diestelow
+Dobbertin
+Dobin am See
+Dömitz
+Domsühl
+Dümmer
+Eldena
+Friedrichsruhe
+Gallin
+Gallin-Kuppentin
+Gammelin
+Ganzlin
+Gischow
+Gneven
+Godern
+Göhlen
+Goldberg
+Gorlosen
+Grabow
+Granzin
+Grebbin
+Grebs-Niendorf
+Gresse
+Greven
+Groß Godems
+Groß Krams
+Groß Laasch
+Groß Niendorf
+Hagenow
+Herzberg
+Hohen Pritz
+Holthusen
+Hoort
+Hülseburg
+Karbow-Vietlübbe
+Karenz
+Karrenzin
+Karstädt
+Kirch Jesar
+Klein Rogahn
+Kobrow
+Kogel
+Körchow
+Kreien
+Kremmin
+Kritzow
+Kuhlen-Wendorf
+Kuhstorf
+Langen Brütz
+Langen Jarchow
+Leezen
+Lehsen
+Leussow
+Lewitzrand
+Lübesse
+Lüblow
+Lübtheen
+Lübz
+Ludwigslust
+Lutheran
+Lüttow-Valluhn
+Malk Göhren
+Malliß
+Marnitz
+Mestlin
+Milow
+Moraas
+Muchow
+Mustin
+Neu Gülze
+Neu Kaliß
+Neu Poserin
+Neustadt-Glewe
+Nostorf
+Pampow
+Parchim
+Passow
+Pätow-Steegen
+Picher
+Pinnow
+Plate
+Plau am See
+Prislich
+Pritzier
+Raben Steinfeld
+Rastow
+Redefin
+Rom
+Schossin
+Schwanheide
+Setzin
+Severin
+Siggelkow
+Spornitz
+Steesow
+Sternberg
+Stralendorf
+Strohkirchen
+Suckow
+Sukow
+Sülstorf
+Techentin
+Teldau
+Tessenow
+Tessin b. Boizenburg
+Toddin
+Tramm
+Uelitz
+Vellahn
+Vielank
+Wahlstorf
+Warlitz
+Warlow
+Warsow
+Weitendorf
+Wendisch Priborn
+Wendisch Waren
+Wittenburg
+Wittendörp
+Wittenförden
+Witzin
+Wöbbelin
+Zahrensdorf
+Zapel
+Zarrentin am Schaalsee
+Ziegendorf
+Zierzow
+Zölkow
+Zülow

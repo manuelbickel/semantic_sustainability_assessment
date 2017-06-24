@@ -1,0 +1,1051 @@
+﻿!Analysis_Code_Start!
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pagerange | (start/stop word - it is assumed that the text to be analyzed has an "/f" at the beginning in order to use it for analyzing the structure) ~~~~~~~~~~~~~~~~~~~~~~~
+~PAGE~RANGE~START~
+~PAGE~RANGE~END~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+single_line_deletion_start | (esp. footnotes, etc.) - insert wording of single lines to be deleted, if needed ~~~~~~~~~
+!~delete_line_~!
+single_line_deletion_end |~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+desired_pattern_start | ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\f
+START_EXTRACTION
+END_EXTRACTION
+· 
+Stand:
+Potentiale und Ziele:
+Rolle der KSL:
+Aktivitäten:
+Indikator:
+desired_pattern_end | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+startextract | leave blank, will be filled in a later step within R~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+endextract | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+!Analysis_Code_End!
+﻿
+
+---------------------Page 1---------------------
+
+Klimaschutzaktivitäten	in	Hansestadt	
+
+und	Landkreis	Lüneburg	
+
+100 % Erneuerbare Energie Region Landkreis und Hansestadt 
+Lüneburg 
+Der  Landkreis  Lüneburg  hat  sich  zum  Ziel  gesetzt,  langfristig  energieautark  auf  der  Basis  von 
+erneuerbaren  Energien  zu  werden.  Dieser  Beschluss  ist  auch  Bestandteil  des  RROP  2010  in  der 
+Grundsatzfestlegung   Kap.   4.2   Ziff.   03.   Dementsprechend   strebt   der   Landkreis   in   2014   eine 
+Auszeichnung als 100%-Erneuerbare-Energie-Region (100ee-Region) an. 
+
+Die Fakultät Nachhaltigkeit der Leuphana Universität Lüneburg wurde damit beauftragt, eine Leitstudie 
+zur Erreichung dieses Zieles zu erarbeiten. Zentrales Ergebnis des 2012 vorgelegten Berichtes ist, dass 
+bereits  ein  Anteil  von  47  %  am  Gesamtstromverbrauch  im  Landkreis  durch  erneuerbare  Energien 
+bereitgestellt werden kann. Im Wärmebereich sind es allerdings erst 10 %.  
+
+Fazit ist, dass der Landkreis Lüneburg das Potential hat, Erneuerbare-Energie-Region zu werden. Eine 
+besondere    Herausforderung    liegt    dabei    im    Wärmebereich.    Die    Leitstudie    weist    sowohl 
+Verbrauchsszenarien  als  auch  Erzeugungspotenziale  für  jede  Form  der  Energieerzeugung  aus 
+Erneuerbaren Energien aus.  
+
+Auf dieser Grundlage stellen sich die Handlungsfelder im Klimaschutz grafisch wie folgt dar: 
+
+ 
+
+                        100 % Erneuerbare Energie - Region
+
+                Energiebilanz                         weitere Handlungsfelder
+
+                                                                                  komm. 
+                                                                     Öffent-
+   Erneuerbare Energien      Energie-                  Bildungs-                 Planung +    Koopera-
+                                         Mobilität                  lichkeits-
+    Strom          Wärme     effizienz                   arbeit                  Manage-       tionen
+                                                                      arbeit
+                                                                                   ment
+
+     Wind        Solar       Privathaus-  Umwelt-
+                               halte       verbund
+     Solar     Biomasse
+                             Unterneh-
+                                            PKW
+                               men
+   Biomasse   Geothermie
+
+    Wasser    Wärmenetze     Verwaltung  Infrastruktur
+                                                                                                          
+ 
+ 
+
+Hansestadt und Landkreis Lüneburg haben bereits 2008 eine Klimaschutzleitstelle (KSL) eingerichtet, 
+die aktuell mit zwei Stellen besetzt ist und organisatorisch als Stabsstelle der Kreisrätin dem Landkreis 
+Lüneburg zugeordnet ist. Die Prüfung und schrittweise Realisierung der in der Studie aufgezeigten 
+Potentiale      sind      nun      Ziel      der      Klimaschutzaktivitäten      der      Klimaschutzleitstelle.      Die 
+Handlungsmöglichkeiten dienen der KSL als Orientierungsrahmen für die Arbeit. 
+
+ 
+
+                                                                                               1 
+---------------------Page 2---------------------
+
+Um basierend auf den Ergebnissen der Leitstudie ein kontinuierliches Controlling für Energiewende und 
+Klimaschutz  aufzubauen,  wird  zurzeit  im  Rahmen  des  Projektes  MoDELL  100  an  der  Leuphana 
+Universität ein Indikatoren-Set entwickelt.  
+ 
+Der   vorliegende   Bericht   soll   einen   Überblick   über   die   Aktivitäten   und   Entwicklungen   in   den 
+Handlungsfeldern des Klimaschutzes im Landkreis Lüneburg im Jahr 2013 gegeben.  
+Dies umfasst sowohl Aktivitäten des Landkreises und der Kommunen als auch privater Akteure. Er ist 
+gegliedert anhand der auf Seite 1 dargestellten Handlungsfelder. Zu diesen werden jeweils die aktuelle 
+Sachlage der Entwicklungen (Stand), bestehende Potentiale und Ziele und die aktuellen Aktivitäten im 
+Handlungsfeld erläutert. Zur Information wird ergänzend auf die Rolle der Klimaschutzleitstelle bei den 
+Aktivitäten hingewiesen. Ebenso sind die im Projekt MoDELL 100 für die Handlungsfelder 1 bis 4 
+entwickelten Indikatoren dargestellt. Aufgrund des momentanen Arbeitsstandes sind jedoch noch nicht 
+in allen Bereichen konkrete und aktuelle Werte vorhanden! 
+Der  Bericht    erhebt  keinen  Anspruch  auf  Vollständigkeit.  Hinweise  auf  weitere  breitenwirksame 
+Aktivitäten schicken Sie gerne an ksl@landkreis.lueneburg.de 
+ 
+Aufbau:   
+Energiebilanz: Zusammenfassung ........................................................................................................... 3 
+1.    Erneuerbare Energien im Strombereich ........................................................................................... 4 
+         1.1 Stromerzeugung - Windkraft ................................................................................................. 4 
+         1.2 Stromerzeugung – Biomasse / Reststoffe ............................................................................. 4 
+         1.3 Stromerzeugung - Photovoltaik ............................................................................................. 5 
+         1.4 Stromerzeugung - Wasserkraft .............................................................................................. 6 
+         1.5 Übersicht der Stromerzeugungspotenziale ........................................................................... 6 
+2.    Erneuerbare Energien im Wärmebereich ......................................................................................... 7 
+         2.1 Wärmeerzeugung - Geothermie ............................................................................................ 7 
+         2.2 Wärmeerzeugung - Solarthermie .......................................................................................... 7 
+         2.3 Wärmeerzeugung - Biomasse / Reststoffe  ........................................................................... 8 
+         2.4 Wärme: Kommunale Wärmekonzepte und -netze ................................................................. 9   
+         2.5 Übersicht über die Potenziale der Erzeugung von Wärmeenergie  ....................................... 9         
+3.    Energieeffizienz und Energieeinsparung ........................................................................................ 10 
+         3.1 Handlungsfeld Privathaushalte ............................................................................................ 11 
+         3.2 Handlungsfeld Unternehmen  .............................................................................................. 11 
+         3.3 Handlungsfeld Kommunen  ................................................................................................. 12 
+4.    Mobilität .......................................................................................................................................... 13 
+5.    Bildungsarbeit ................................................................................................................................ 14 
+6.    Öffentlichkeitsarbeit ........................................................................................................................ 16 
+7.    Kommunale Planungen und Management ..................................................................................... 17 
+8.     Kooperation, Vernetzung und Mitwirkung von Bürgern .................................................................. 18 
+ 
+
+                                                                                                                           2 
+---------------------Page 3---------------------
+
+Energiebilanz: Zusammenfassung 
+ 
+Bereits heute wird ein Anteil von 47 % am Gesamtstromverbrauch im Landkreis durch erneuerbare 
+Energien bereitgestellt. Im Wärmebereich sind es allerdings erst 10 %. 
+ 
+                                                  Strom                     47  % 
+            Energiebilanz (2012) 
+                                                  Wärme                     10 %   
+
+                   Produktion EE                                        Energieeffizienz 
+
+Wind                               189 GWh              25 %                  Stromverbrauch (2009)                     759 GWh 
+
+Photovoltaik                  27 GWh                4 %                     Stromverbrauch/Einw.                      4.312 kWh 
+
+Biomasse                      ≈141 GWh           18 %                  Gasverbrauch (2009)                        2.013 GWh 
+
+Wasserkraft                  1,25 GWh             0,2 %                 Errechn. Wärmebedarf (2009)        3.600 GWh 
+
+Wärmenetze                 5 x Fernwärme                                Energet. Sanierung (KfW-Mittel)      
+
+ 
+ 
+ 
+ 
+
+                 Energieverbrauch und -erzeugung aus EE
+ GWh
+ 4000
+                    Strom                                  Wärme                    Geothermie
+ 3500
+                                                                                    Solarthermie
+
+ 3000                                                                               Biomasse
+                                                                                    Wasser
+ 2500
+                                                                                    Wind
+ 2000
+                                                                                    PV
+
+ 1500                                                                               Szenario BAU
+                                                                                    Szenario 100% 2050
+ 1000
+                                                                                    Szenario GC
+  500                                                                               Industrie
+                                                                                    GHD
+     0
+         Verbrauch   Verbrauch  Erzeugung  Verbrauch    Verbrauch   Erzeugung       private Haushalte
+           2009        2030     aus EE 2012    2009        2030    aus EE 2009
+                                                                                                           
+Hinweis: Die erzeugte Energie aus Solarthermie und Geothermie wurde nicht erhoben. Der Verbrauch 
+im Wärmebereich beruht stark auf Hochrechnungen und bundesdeutschen Durchschnittswerten. 
+Szenarien: BAU – Business As Usual gemäß WWF-Studie 2009; 100% 2050 – 100% Erneuerbare 
+Energien in 2050 gemäß UBA-Studie 2010; GC - Good Case gemäß WWF-Studie  2009 
+ 
+
+                                                                                                         3 
+---------------------Page 4---------------------
+
+~PAGE~RANGE~START~
+
+   1.  Erneuerbare Energien im Strombereich 
+
+1.1 Stromerzeugung - Windkraft 
+
+Stand: 
+                      Der       Landkreis       Lüneburg       hat       im       Entwurf       des       Regionalen 
+                      Raumordnungsprogramms     (RROP)      „Vorrangflächen     für     Windenergie“ 
+                      festgelegt. Nach momentanem Stand bestehen 8 Vorranggebiete, die einem 
+                      Flächenanteil von 0,6 % des Landkreises entsprechen. Bisher befinden sich im 
+                      Landkreis Lüneburg 69 Anlagen mit einer Gesamtleistung von 116 MW und 
+                      einem durchschnittlichen Ertrag von 189 GWh. 
+                      Für Kleinwindkraftanlagen wurden bisher fünf Anträge gestellt. 
+
+Potentiale und Ziele: 
+Durch die Gesamtgröße der im aktuellen Entwurf festgelegten Vorrangflächen können die darauf zu 
+errichtenden Windenergieanlagen anhand der Annahmen der Leitstudie eine Stromerzeugung von ca. 
+320 – 420 GWh pro Jahr bereitstellen. Dies entspricht einem Anteil von  40 – 53 % am gesamten 
+Stromverbrauch im Landkreis Lüneburg (2010). In der Leitstudie wird der Windenergie bei einer deutlich 
+größeren   Flächenausweisung   ein   theoretisches   Potential   von   ca.   1100   GWh   an   jährlicher 
+Stromerzeugung   zugerechnet.   Klein-Windkraftanlagen  können   darüber   hinaus   weitere,   kleinere 
+Potentiale erschließen.  
+
+Aktivitäten: 
+ START_EXTRACTION  ·  Ausweisung Vorranggebiete                                                      Landkreis Lüneburg  
+       Die Vorrangflächen wurden beim öffentlichen Erörterungsverfahren vorgestellt und die 
+       Einwände und Anregungen diskutiert. Für 2014 ist ein Beschluss über die Festlegung der 
+       Vorrangflächen geplant. 
+ END_EXTRACTION
+
+
+START_EXTRACTION  ·  Klein-Windkraftanlagen                                                         Landkreis Lüneburg  
+       Der Landkreis Lüneburg hat mit den Gemeinden und Samtgemeinden ein Konzept erarbeitet, 
+       das die rechtlichen Voraussetzungen für die Genehmigung bestimmter Kleinwindkraftanlagen 
+  festlegt. 
+ END_EXTRACTION
+
+Rolle der KSL:  
+   ·  Mitwirkung bei den Abwägungen zu den Stellungnahmen und dem Erörterungsverfahren 
+
+Indikator: Strom aus Wind 
+   ·  Einspeisung 2012: 189,56 GWh               25% Anteil am Stromverbrauch 
+   ·  Ziel 2030: ca. 320 – 420 GWh pro Jahr (je nach Realisierung der Vorrangflächen) 
+
+1.2 Stromerzeugung – Biomasse / Reststoffe 
+
+Stand:  
+                        In 2013 bestanden im Landkreis 31 Biogasanlagen (BGA), 2 Deponie- und 
+                        Klärgasanlagen  und  weitere  Biogas-Blockheizkraftwerke.  Zudem  bestehen 
+                        mit dem Neubau einer Anlage in der SG Gellersen und der bestehenden 
+                        Anlagen in der SG Amelinghausen zwei BGA, die das produzierte Biogas in 
+                        das Erdgasnetz einspeisen und selber vermarkten.  
+
+                                                                                                 4 
+---------------------Page 5---------------------
+
+Potentiale und Ziele: 
+Die  Leitstudie  geht  beim  Anbau  einer  Mischkultur  auf  20  bzw.  30  %  der  Fläche  von  einem 
+Gesamtpotential von 133 bzw. 200 GWh (el) aus. Die vollständige Nutzung von Wirtschaftsdünger 
+bietet zusätzlich ein Potenzial von gut 26 GWh (el) bei gleichzeitiger Reduktion klimaschädlicher Gase. 
+Da schon im Status Quo hohe Erträge aus Energiepflanzen und Wirtschaftsdünger gewonnen werden, 
+sind die zusätzlich zu nutzenden Potenziale begrenzt. In 2013 wurde auf ca. 7760 ha bzw. auf 12,7 % 
+der  landwirtschaftlichen  Fläche  Mais  als  Energiepflanze  für  BGA  angebaut.  Die  in  der  Studie 
+ausgewiesenen  Potenziale  im  Abfallbereich  wurden  aufgrund  eines  gesonderten  Gutachtens  nach 
+unten korrigiert, sollen jedoch weiter verfolgt werden. 
+
+Aktivitäten: 
+ START_EXTRACTION  ·  Strom- und Wärmeerzeugung aus Abfall/ Abwasser                               GfA/AGL/Mabagas  
+       Bei der AGL wurden 2013 die Blockheizkraftwerke eingeweiht, mit denen Strom und Wärme 
+       aus Klärschlamm für Eigenverbrauch und Einspeisung ins öffentliche Netz gewonnen wird.  
+       Die GfA betreibt ein BHKW aus Deponiegas. Weitere Potenziale zur Erzeugung von Strom und 
+       Wärme aus Rest- und Biomüll sowie Grünabfall werden untersucht. Die benachbarte Mabagas 
+       Bardowick GmbH & Co KG verwertet Lebensmittelreste in einer Biogasanlage. 
+ END_EXTRACTION
+
+
+START_EXTRACTION  ·  Wirtschaftsdünger/Reststoffe/Gülle 
+       In Südergellersen wird in einer besonderen Biogasanlage normalerweise schwer verwertbarer 
+       Pferdemist energetisch genutzt. Reststoffe aus der Viehmast werden häufig in 
+       landwirtschaftlichen Biogasanlagen verwertet. 
+END_EXTRACTION
+Rolle der KSL:  
+      ·  Beratung und Unterstützung 
+
+Indikator: Strom aus Biomasse/ (Gas aus Biomasse) 
+   ·  Einspeisung Strom 2012: ≈141,12 GWh (teilweise geschätzt – Abfrage läuft!) 
+   ·  Flächeninanspruchnahme Maisanbau im LK: 8700 ha/ 13,6% (2013); für BGA: ca. 7760  ha 
+       (entspricht 12,7 % der Anbaufläche) 
+
+1.3 Stromerzeugung - Photovoltaik 
+
+Stand: 
+                             Im Landkreis Lüneburg sind 36.000 kWp (2013) Leistung installiert. Der 
+                             Großteil   sind   kleinere   und   mittlere   Dachanlagen.   Darüber   hinaus 
+                             bestehen drei Freiflächenanlagen sowie einige nachgeführte Anlagen. 
+                             Das    Förderprogramm    der    Hansestadt    subventioniert    in    sechs 
+                             gebietsbezogenen Förderfonds u.a. auch Photovoltaik-Anlagen. 
+
+Potentiale und Ziele:  
+Aufgrund von Neigungswinkel und Verschattungsgrad stehen laut Leuphana-Studie als theoretisches 
+Potential auf Dächern im öffentlichen Einflussbereich rund 97.000 qm für die Installation von 9 MW zur 
+Verfügung   (inkl.   Dächer   mit   reiner   Ost-West-Ausrichtung).   Bei   einer   erfolgreichen   statischen 
+Eignungsprüfung könnten dort rund 8,2 GWh erzeugt werden. 
+Im Bereich Gewerbe- und Industriegebäude besteht auf einer Fläche von 513.000 qm ein theoretisches 
+Potential von 40 GWh (bei 51 MW installierter Leistung). 
+Bei den Privathaushalten stellen sich bei einer geschätzten Fläche von 2.200.000 qm Potentiale von 
+189 GWh bei einer Installation von 220 MW Anlagenleistung theoretisch als geeignet dar.  
+
+                                                                                                  5 
+---------------------Page 6---------------------
+
+Aktivitäten: 
+ START_EXTRACTION  ·  Installation neuer Anlagen                                                 u.a. Leuphana 
+       Trotz der gesunkenen Vergütungen wurden weiterhin Solaranlagen errichtet, es bestehen 
+       allerdings Einbrüche sowie die Notwendigkeit neuer Betreibermodell und Konzepte. So hat  z.B. 
+       die Leuphana Universität ein Contracting-Konzept entwickelt und umgesetzt. 
+ END_EXTRACTION
+
+
+START_EXTRACTION  ·  Solardachbörse                                                                     KSL/Liegenschaftsverwaltungen 
+       Die Solardachbörse als Plattform zur Verpachtung kommunaler Dachflächen bietet 
+       Informationen zu Photovoltaik, Solarthermie und den kommunalen Förderprogrammen. Ziel ist 
+       die weitere Ausschöpfung des Potentials zur Erzeugung von Solarstrom auf öffentlichen 
+       Dachflächen. Mit dem Muster-Pachtvertrag für Hansestadt und Landkreis Lüneburg werden in 
+       2014 weitere Solardächer (Bsp.: Zukunftsgenossen eG, St. Ursula Schule) realisiert werden. 
+END_EXTRACTION
+Rolle der KSL:  
+      ·  Aufbau und Betreuung der Solardachbörse, Beratung und Unterstützung 
+
+Indikator: Strom aus Solarenergie (Photovoltaik) 
+   ·  Einspeisung Strom 2012: 26,85 GWh     4 % Anteil am Stromverbrauch 
+   ·  Neuinstallation: 7803 kWp/ 298 Anlagen (2012), 2748 kWp/ 215 Anlagen (2013) 
+
+1.4 Stromerzeugung - Wasserkraft 
+Im Landkreis Lüneburg gibt es insgesamt 6 Wasserkraftanlagen mit einer installierten Gesamtleistung 
+von ca. 430 kW. Weitere Erzeugungs-Potentiale sind nicht in größerem Umfang vorhanden.  
+
+Indikator: Strom aus Wasserkraft 
+   ·  Einspeisung Strom 2012: 1,26 GWh       0,2 % Anteil am St  romverbrauch  
+
+1.5 Übersicht der Stromerzeugungspotenziale 
+Folgende Abbildung gibt eine Übersicht über die Potenziale zur Erzeugung Erneuerbarer Energien, wie 
+sie in der Leuphana-Studie ermittelt wurden.   
+
+                   Strom - Verbrauch und Potenziale
+ GWh  
+ 1200
+ 1000
+  800
+  600
+  400
+  200
+    0
+
+                             Erzeugung - Ist   Erzeugung - Potenzial
+                                                                                              
+Hinweis: Erzeugung - Potenzial bei Energiepflanzen bei Nutzung von 20% der Fläche zur 
+Energieproduktion 
+
+                                                                                                 6 
+
+                         BAU  
+                         100% 2050  
+                         GC  
+---------------------Page 7---------------------
+
+    2.   Erneuerbare Energien im Wärmebereich 
+
+2.1 Wärmeerzeugung - Geothermie 
+
+Stand:  
+Im Landkreis Lüneburg bestehen 405 Anlagen, die die oberflächennahe Geothermie nutzen. Diese sind 
+erfasst und werden ebenso wie die Geothermie-Potentialkarten im Energieportal dargestellt. 
+
+Potentiale und Ziele: 
+Für  die  Tiefen-Geothermie  berechnet  die  Leitstudie  auf  der  Gesamtfläche  des  Landkreises  ein 
+theoretisches    Potential    von    3.632    GWh    für    hydrothermale    Geothermie-Anlagen    bei    einer 
+Wärmeförderung aus 1.900 m zur Nutzung in Wärmenetzen. Die oberflächennahe Geothermie-Nutzung 
+in  Einzelhäusern  mittels  Wärmepumpe  weißt  lt.  Leitstudie  ein  ebenso  großes  Potential  auf,  geht 
+allerdings mit einem steigendem Stromverbrauch einher.  
+
+Aktivitäten: 
+ START_EXTRACTION  ·  Geothermie-Standorte                                                                       HS/LK/Betreiber 
+       Die bestehenden Geothermie Anlagen werden im Energieportal erfasst, sodass Interessenten 
+       Hinweise erhalten, wo sich in der Praxis Anlagen bewährt haben.  
+  END_EXTRACTION
+
+
+START_EXTRACTION    ·   Geothermie-Potentialkarten                                                         LK/LBEG 
+       Im Energieportal des Landkreises sind die Potentiale bzw. die Eignung eines Grundstückes für 
+       oberflächennahe Geothermie in Karten einsehbar. Genehmigungsbehörde ist jeweilige, untere 
+       Wasserbehörde. 
+END_EXTRACTION
+Rolle der KSL:  
+      ·   Einbindung der Potentialkarten des LBEG im Energieportal 
+
+Indikator: Geothermie-Anlagen  
+    ·   Anzahl oberflächennaher Geothermieanlagen im Landkreis: 325 (2013)  
+    ·   Anzahl oberflächennaher Geothermieanlagen im Gebiet der Hansestadt: 80 (2013) 
+
+2.2 Wärmeerzeugung - Solarthermie 
+
+Stand: 
+                     In 9 Kommunen gibt es Förderprogramme, die die Installation einer Solarthermie-
+                     Anlage finanziell unterstützen. Eine Einschätzung zur genauen Anzahl der im 
+                     Landkreis installierten Anlagen ist z.Z. nicht möglich.  
+                      
+
+Potentiale und Ziele: 
+Bei den Privathaushalten stellt sich nach Abzug der Flächen für die Photovoltaik eine geschätzte Fläche 
+von 550.000 qm als theoretisch geeignet zur Erzeugung von 589.050 MWh(th) dar.  
+
+Aktivitäten: 
+   ·  Solardachbörse                                                                                   KSL 
+       s. Punkt 1.3  
+   START_EXTRACTION·  Kommunale Förderprogramme                                                       Kommunen 
+       Die Hansestadt Lüneburg und weitere Kommunen im Landkreis Lüneburg bieten eigene 
+       Förderprogramme für solarthermische Anlagen an.  
+   END_EXTRACTION·  Installation und Bewerbung der Förderprogramme                   E.berater/ Installateure 
+
+                                                                                                    7 
+---------------------Page 8---------------------
+
+Rolle KSL:  
+      ·  Bewerbung der Potentialkarten u. Förderprogramme im Energieportal 
+
+Indikator: Wärme aus Solarenergie 
+   ·  Anlagen-Anzahl 2012: N.N. 
+   ·  Anzahl der Kommunen mit Förderprogramm: 9 
+
+2.3 Wärmeerzeugung - Biomasse / Reststoffe 
+
+Stand:  
+                          Biogasanlagen können grundsätzlich sowohl zur Stromproduktion als auch 
+                          zur Erzeugung von Wärmeenergie genutzt werden. Hier stehen theoretisch 
+                          die  unter  Punkt  1.2  aufgeführten  Biogasanlagen  zur  Verfügung.  Laut 
+                          Erhebung   der   KSL   von   2013   verfügt   nur   ein   Teil   der  BGA   über 
+                          Wärmenutzungskonzepte, bei einigen BGA sind entsprechende Konzepte 
+                          in Planung. 
+Holziges Landschaftspflegematerial wird als Hackschnitzel bereits in verschiedenen Holzheizwerken 
+eingesetzt (Bleckede, BVNON, Campus e.V., u.a.), weitere sind in Planung. 
+
+Potentiale und Ziele: 
+Entsprechend der Stromerzeugungspotenziale aus Biomasse und Reststoffen stellt die Leitstudie zur 
+Erzeugung von Wärmeenergie ein Potenzial in Höhe von gut 200.000 MWh (th) bzw. bei verstärkter 
+Flächennutzung   von   gut   300.000   MWh   (th)   fest,   sofern   bei   allen   Anlagen   angemessene 
+Wärmenutzungen gefunden werden können. Beim Wirtschaftsdünger liegt das theoretische Potenzial 
+bei  gut  45.000  MWh  (th).  Da  bisher  nur  bei  verhältnismäßig  wenigen  Anlagen  tatsächlich  eine 
+Wärmenutzung erfolgt, besteht hier weiterer Handlungsbedarf. 
+Holzartige Biomasse, Landschaftspflegematerial sowie Reststoffe weisen je nach Nutzungsszenario 
+und Verwertungsstoffströmen (Scheitholz, Hackgut, Grasschnitt) unterschiedliche Potentiale auf, die 
+auch in der Leitstudie nicht abschließend quantifiziert werden konnten. Der Landkreis ist bestrebt die 
+Verwendung  von  Landschaftspflegematerial  für  die Energiegewinnung  und/  oder  Kompostierung  zu 
+verbessern. Dieses gilt es gemeinsam mit den Kommunen  zu entwickeln. 
+Für die Nutzung von Abfall und Abwasser gilt das unter Punkt 1.2 gesagte. 
+
+Aktivitäten: 
+  START_EXTRACTION ·  Wärmekonzepte und Biogas-Einspeisung                                   KSL/Betreiber 
+       Die KSL und der FB Umwelt werden hier mögliche Potentiale ermitteln, Wärmeproduzenten 
+       (BGA) und Wärmenutzer (Gemeinde, Privathaushalte, Wirtschaft, etc.) zusammenbringen und 
+       so den Part „regenerative Wärmeversorgung“  i. S. d. Leitstudie voranbringen. 
+  END_EXTRACTION
+
+
+START_EXTRACTION ·  Strom- und Wärmeerzeugung aus Abfall/Abwasser                  GfA/AGL 
+       (s. Punkt 1.2 Stromerzeugung Biomasse/ Reststoffe) 
+  END_EXTRACTION
+
+
+START_EXTRACTION ·  Holz/Landschaftspflegematerial                                                     LK/Unternehmen 
+       Um eine höhere Wirtschaftlichkeit und Erschließung von Landschaftspflegematerial zu 
+       erreichen, ist die Erstellung einer Plattform zu Koordination der Hecken- und 
+       Landschaftspflegemaßnahmen in Vorbereitung. Zudem befindet sich die KSL in einem Teilraum 
+       des Landkreises in Abstimmung mit Kommunen und Unternehmen, um hier konkret die 
+       energetische Nutzung voranzubringen 
+END_EXTRACTION
+Rolle der KSL:  
+   ·  Koordination Landschaftspflegematerial 
+
+                                                                                                 8 
+---------------------Page 9---------------------
+
+   ·  Unterstützung und Beratung der BGA-Betreiber 
+
+Indikator:  
+   ·  Biogas-Anlagen: Anzahl der BGA mit Wärmenutzung: 24  
+
+2.4 Wärme: Kommunale Wärmekonzepte und -netze 
+
+Stand: 
+In einigen Kommunen bestehen kommunale oder privatwirtschaftliche Fern-/ Nahwärmenetze auf Basis 
+unterschiedlicher   Energieträger.   Zu   unterscheiden  sind   die  großen   städtischen   Wärmenetze  in 
+Lüneburg, die mit Erdgas- und Biogas-Blockheizkraftwerken ausgestattet sind (Bsp. Avacon Wärme) 
+und  die  kleineren  Nahwärmenetze  in  einzelnen  Kommunen  in  der  Nähe  von  Biogasanlagen  (Bsp. 
+Amelinghausen). 
+
+Potentiale und Ziele: 
+Um   energetische   Sanierungen   zu   fördern,   Klimaschutz-Ziele   im   Altbau   zu   erreichen   und   die 
+Wärmebedarfsentwicklung    in    Quartieren    abschätzen    zu    können,    eignen    sich    kommunale 
+Wärmekonzepte und –netze. 
+
+Aktivitäten: 
+  START_EXTRACTION ·  Ausbau der Fernwärme in Lüneburg, Biogas-Einsatz                    Avacon Natur 
+   END_EXTRACTION
+
+
+START_EXTRACTION·  Kommunale Wärmekonzepte                                                                        HS LG/Reppenstedt 
+       (s. Punkt 7: Energetische Quartiersentwicklung) 
+END_EXTRACTION
+Rolle der KSL:  
+     ·  Fördermittelakquise, Beratung und Unterstützung 
+
+Indikator: Wärmenetze 
+   ·  Anzahl 2012: 5 Fernwärme-Gebiete, # Nahwärmegebieten 
+   ·  Größe der Wärmenetze: # angeschlossene Haushalte 
+   ·  Zahl der Kommunen mit Wärmekonzepten: 3 
+
+2.5 Übersicht über die Potenziale der Erzeugung von Wärmeenergie 
+aus Erneuerbaren Energien 
+Die Potenziale zur Erzeugung von Wärmeenergie aus Erneuerbaren Energien und die prognostizierten 
+Verbrauchswerte entsprechend der Szenarien der Leuphana-Studie sind folgender Abbildung zu 
+entnehmen. 
+ 
+
+                                                                                              9 
+---------------------Page 10---------------------
+
+             Wärmeenergie - Verbrauch und Potenziale
+  GWh  
+ 4000
+ 3500
+ 3000
+ 2500
+ 2000
+ 1500
+ 1000
+  500
+    0
+
+                              Erzeugung - Ist   Erzeugung - Potenzial
+                                                                                                
+Hinweis: Energieerzeugung aus Solar- und Geothermie wurde nicht erhoben. Der Wärmeverbrauch 
+beruht stark auf Hochrechnungen und  bundesdt. Durchschnittswerten 
+
+   3.   Energieeffizienz und Energieeinsparung  
+ 
+Das Ziel eines 100% energieautarken Landkreises ist nicht nur über die Erzeugung von erneuerbaren 
+Energien, sondern auch über die Verringerung des Energieverbrauchs zu erreichen. Wie die Grafiken 
+zeigen, ist in allen Szenarien mittel- bis langfristig mit einem sinkenden Strom- und Wärmebedarf zu 
+rechnen. Dies beruht zum einen auf rückläufigen Bevölkerungszahlen, zum anderen auf Effizienz- und 
+Suffizienzgewinnen.  Dies  ist  jedoch  kein  Selbstläufer.  Technologische  Effizienzsteigerungen  oder 
+Sanierungstätigkeiten  u.  ä.  müssen  auch  durch  entsprechende  Anstrengungen  und  Maßnahmen 
+umgesetzt werden. 
+
+Stand: 
+Der  Stromverbrauch  im  Landkreis  teilt  sich  auf  die  Bereiche  Privathaushalte,  Gewerbe,  Handel, 
+Dienstleistung    und    Industrie    („Unternehmen“)    sowie  die    öffentlichen    Liegenschaften    der 
+Gebietskörperschaften   („Kommunen“   inkl.   Liegenschaften   des   Landes)   auf.   Für   die   einzelnen 
+Handlungsfelder  werden  die  Verbräuche  und  Einsparbemühungen  in  den  Punkten  Aktivitäten  und 
+Indikatoren beschrieben. Zu den Verbrauchsszenarien siehe Leitstudie. 
+Die Ermittlung des Wärmeverbrauchs in den genannten Sektoren ist nur durch Hochrechnungen über 
+den Gasverbrauch oder über Erhebungen möglich. Daher erfolgt hier die Angabe der Werte von 2009 
+aus der Leitstudie.  
+ 
+Der Status Quo des Verbrauchs im Strom- und Wärmebereich ist in den oben Grafiken dargestellt. 
+
+Indikatoren: Strom- und Wärmeverbrauch 
+   ·  Stromverbrauch: 759 GWh (2009) 
+   ·  Stromverbrauch pro Person: 4.312 kWh/ Einw. (2009, 176.000 Einw.) 
+   ·  Gasverbrauch: 2.013 GWh (2009)  
+   ·  Wärmeverbrauch: 3.600 GWh (2009, errechnet) 
+
+                                                                                               10 
+
+                                                                                                                      BAU
+                                                                                                                      100%  2050
+                                                                                                                      GC
+---------------------Page 11---------------------
+
+3.1 Handlungsfeld Privathaushalte 
+
+Aktivitäten: 
+  START_EXTRACTION ·  Serviceteam Stromsparen                                    neue Arbeit GmbH/KSL 
+                     Das Projekt „Serviceteam Stromsparen“ wird durch die „neue arbeit lueneburg-
+                     uelzen gGmbH“ durchgeführt und beinhaltet die Einspar-Beratung 
+                     einkommensschwacher Haushalte in den Bereichen Wasser, Heizung und 
+                     Energie durch Energiesparhelfer. Das vom Landkreis mit 10.000 € geförderte 
+                     Projekte führte zu Einsparungen bei den kommunalen Unterstützungszahlungen 
+                     für Energie in Höhe von 14.000 €. Langfristig ist durch die Beratungen in 2013 
+       von 330.000 kWh Energieeinsparung auszugehen.  
+ END_EXTRACTION
+
+
+START_EXTRACTION  ·  Energieberatungen                                                Verbraucherzentrale/div. Energieberater 
+       Qualifizierte Energieberatungen erhält man über die Verbraucherzentrale, welche zur Zeit eine 
+       vom BMWI geförderte und daher sehr kostengünstige Erstberatung anbieten kann, sowie durch 
+       die Energieberatungsagenturen und Energieberater (z.B. qualifizierte Architekten/Ingenieure, 
+       Handwerker, Schornsteinfeger, etc..,).  
+  END_EXTRACTION
+
+
+START_EXTRACTION ·  Messen/Aktionszeiträume                                    T.U.N./Klimawerk Energieagentur/KSL 
+                         Im   Landkreis   finden   jährlich   unterschiedliche   Messen   statt,   die   den 
+                         Klimaschutz im Fokus haben. Der Verein Technik, Umwelt und Natur (T.U.N.) 
+                         veranstaltete bislang jedes Jahr im Juni die Umweltmesse, zuletzt ergänzt 
+                         durch  die  Nachhaltigkeitstage  des  Dialog_N.  Die  Zielgruppe  waren  alle 
+                         EinwohnerInnen, die sich zu gutem, nachhaltigen Leben informieren wollten. 
+                         Aufgrund der rückläufigen Zahlen wird die Umweltmesse in 2014 nicht 
+                         stattfinden. Der T.U.N. arbeitet z.Zt. an einer konzeptionellen Überarbeitung.  
+                         Neben der im Sportpark am Kreideberg stattfindenden Messe „Schöner 
+       Bauen & Wohnen“ eines Celler Messeveranstalters, ist die Klimawerk-Messe der örtlichen 
+       Energieberatungs-agentur „Klimawerk“ die Adresse für alle, die sich zu den Themen 
+       energetische Sanierung, energiesparendes Bauen und gesundes Wohnen informieren 
+       möchten.  
+END_EXTRACTION
+Rolle der KSL:  
+      ·   Messeauftritte 
+      ·   Betreuung und Unterstützung des Serviceteams Stromsparen 
+
+Indikatoren: Privathaushalte 
+   ·   Stromverbrauch: 259.133 kWh/ Gesamtanteil 33% (2009) 
+   ·   Stromverbrauch pro Person: 1.471 kWh/ Einw.(2009) 
+   ·   Wärmeverbrauch: 1.517 GWh/ Gesamtanteil 43 % (2009) 
+   ·   Zahl der Fördermittelanträge bei der KfW für energetische Sanierung: # 
+
+3.2 Handlungsfeld Unternehmen  
+
+Aktivitäten: 
+  START_EXTRACTION ·  ÖKOPROFIT     ©                                                          Umweltberatungsunternehmen/KSL 
+                           Im Projekt Ökoprofit© werden Unternehmen über ein Jahr lang intensiv 
+                           dabei begleitet, Kosten senkende Umwelt- und Energieeinsparmaßnahmen 
+                           zu identifizieren und umzusetzen. Das Projekt wird von der Industrie- und 
+       Handelskammer Lüneburg-Wolfsburg, der Handwerkskammer Braunschweig-Lüneburg-Stade, 
+       der Wirtschaftsförderung Lüneburg und dem staatlichen Gewerbeaufsichtsamt Lüneburg 
+       unterstützt. Im ÖKOPROFIT  ©- KLUB treffen sich bereits ausgezeichnete Unternehmen zum 
+
+                                                                                                 11 
+---------------------Page 12---------------------
+
+       weiteren Erfahrungsaustausch in gemeinsamen Workshops zu Schwerpunktthemen. Im Jahr 
+       2013 fanden 3 Workshops statt: 1. Energiemanagement, Home-Office, IT-Aufbereitung; 2. 
+       Mobilität und Energiecontrolling; 3.Energieerzeugung, Arbeitssicherheit.  
+  END_EXTRACTION
+
+
+START_EXTRACTION ·  Beratungsangebote für Unternehmen                                           IHK/HWK/RKW/NBank 
+       Die Kreditanstalt für Wiederaufbau (KfW) bietet eine Effizienzberatung mit Förderung an. 
+       Dieses „Energie-Coaching“ wird von der IHK Lüneburg-Wolfsburg beworben, kostenfrei und 
+       anbieterneutral ist auch das Energieeffizienz-Impulsgespräch des Rationalisierungs- und 
+       Innovationszentrums der Deutschen Wirtschaft e.V. (RKW). Die NBank bietet sog. 
+       Beratungssprechtage an. In individuellen Gesprächen werden Unternehmern und 
+       Existenzgründern Informationen angeboten, ob und wie sich ein Vorhaben mit Mitteln von Land, 
+       Bund und EU unterstützen lässt. 
+  END_EXTRACTION
+
+
+START_EXTRACTION ·  Verbünde von Beratern, Anbietern und Handwerkern 
+       Berater, Anbieter und Handwerker im Landkreis Lüneburg haben sich vernetzt und z.T. zu 
+       Verbünden zusammengeschlossen. Dazu gehören die Klimawerk-Partner, die Lüneburger 
+       Energieplaner, das Ofenbauernetzwerk „Haus der Energie“ oder der Verein der 
+       Energieagenturen Deutschland e.V. (EAD). Darüber hinaus findet man die regionalen Anbieter 
+       auch über die Datenbank des Landes Niedersachsen aus der Kampagne „Heimspiel“. 
+       Das Innovationsnetzwerk für energieoptimiertes Sanieren und Bauen „innonet3E“ qualifiziert 
+       Planer, Berater und Handwerksbetriebe in den Landkreisen Lüneburg und Harburg, um 
+       Sanierungsmaßnahmen kompetent entwickeln und umsetzen zu können und damit die 
+       Sanierungsquote zu erhöhen. 
+END_EXTRACTION
+Rolle KSL:  
+      ·   Koordination ÖKOPROFIT   © 
+      ·   Begleitung innonet3E 
+
+Indikator:  
+      ·   Stromverbrauch: 500.000 kWh/ Gesamtanteil 67% (2009) 
+      ·   Wärmeverbrauch: 2.033 GWh/ Gesamtanteil 56 % (2009) 
+           
+
+3.3 Handlungsfeld Kommunen 
+
+Aktivitäten: 
+  START_EXTRACTION ·  Klimaschutzteilkonzepte Eigene Liegenschaften         KSL/Liegenschaftsverwaltungen 
+       Der Landkreis Lüneburg, die Samtgemeinden Ostheide, Ilmenau, Scharnebeck, das Amt 
+       Neuhaus, die Stadt Bleckede und der Flecken Dahlenburg haben unter Federführung und 
+       Begleitung der KSL die Erstellung von Klimaschutzteilkonzepten „Eigene Liegenschaften“ 
+       beauftragt, um ihre Gebäude bewerten zu lassen und Sanierungsempfehlungen zu erhalten.  
+  END_EXTRACTION
+
+
+START_EXTRACTION ·  Kommunale Energiemanager                                            HS Lüneburg/LK 
+       Der Landkreis Lüneburg und die Hansestadt haben in 2013 Energiemanager für die eigenen 
+       Liegenschaften eingestellt, die im Austausch mit der KSL das Energiemanagement ausbauen. 
+  END_EXTRACTION
+
+
+START_EXTRACTION ·  Energiecontrolling und energetische Sanierung          SG Gellersen 
+       Die SG Gellersen hat in 2013 ein Online-Energiemonitoring für ihre Liegenschaften aufgebaut 
+       sowie umfangreiche energetische Sanierungen durchgeführt.  
+  END_EXTRACTION
+
+
+START_EXTRACTION ·  Investive Maßnahmen                                                         Kommunen 
+       Die Kommunen im Landkreis investieren bei ihren Sanierungstätigkeiten in energetische 
+       Maßnahmen, bspw. bei den Schulsanierungen, sowie in weitere Bereiche wie die 
+       energieeffiziente Straßenbeleuchtung.  
+END_EXTRACTION
+
+START_EXTRACTION  ·   Bezug von Ökostrom                                                          Kommunen 
+       Im Zuge ihrer Ausschreibungen können die Kommunen den Bezug von Ökostrom verfolgen. 
+       Der Landkreis ist das erste mal im Bezugszeitraum 01.01.10 bis 31.12.11 für die 
+       Liegenschaften in Bleckede und Dahlenburg auf Ökostrom umgestiegen. Seit dem 01.01.12 
+       bezieht der Landkreis für alle seine Liegenschaften Ökostrom. Für den neuen Bezugszeitraum 
+       ab dem 01.01.15 sollen die Kriterien noch enger gefasst werden. Zielsetzung ist, möglichst 
+       regional erzeugten Strom zu beziehen und somit den Strombezug transparenten zu gestalten 
+       und die Wertschöpfung voran zu treiben.  
+    END_EXTRACTION
+
+
+START_EXTRACTION·   Fairtrade-Kampagne                                                           KSL /Kommunen 
+       Seit Oktober 2012 ist Die Hansestadt Lüneburg als Fairtrade-town ausgezeichnet. Fairtrade-
+       Aktivitäten werden über die Steuerungsgruppe organisiert, die aus Mitgliedern der Uni, der 
+       Verwaltung und engagierten Bürgern besteht. Projekte sind hier u.a.: Fairtrade-Lied, -
+       Workshop, fairer Stadtplan, Teilnahme an fairen Hansetagen in Lübeck 2014, etc. 
+   END_EXTRACTION
+
+
+START_EXTRACTION ·   Kommunale Förderprogramme                                      Kommunen 
+       Die Hansestadt Lüneburg fördert in ihren Neubaugebieten aus speziell dafür aufgelegten 
+       Förderfonds solarthermische Anlagen, Photovoltaikanlagen sowie Geothermieanlagen. Die 
+       Gemeinden Adendorf, Reppenstedt, Barendorf und Deutsch Evern sowie die Samtgemeinden 
+       Bardowick, Ilmenau, Ostheide und Scharnebeck fördern Solarthermieanlagen. 
+END_EXTRACTION
+Rolle der KSL:  
+      ·   Koordination der Klimaschutzteilkonzepte in den Kommunen 
+      ·   Beratung der Kommunen und Unterstützung der Energiemanager 
+      ·   Koordination der Fairtrade-Kampagne 
+
+Indikator:  
+      ·   Stromverbrauch der (kommunalen) Verwaltungen:44.569 kWh/ Gesamtanteil 6 % (2009) 
+      ·   Wärmeverbrauch der (kommunalen) Verwaltungen: 112 GWh/ Gesamtanteil 3 % (2009)  
+      ·   Zahl Kommunen mit Energiemanagement 
+      ·   Zahl der Kommunen mit Ökostrom 
+           
+
+    4.   Mobilität 
+
+Stand:  
+Das Handlungsfeld Mobilität ist ein wichtiges Thema im Klimaschutz. Im Bundesdurchschnitt gehen 
+etwa   30%   der   CO2-Emissionen   auf   den   gesamten   Mobilitätsbereich   zurück.   Klimaschutz   im 
+Mobilitätsbereich  betrifft  diverse  Themen  und  Projekte,  berührt  im  Einzelnen  dabei  verschiedene 
+Zuständigkeiten und bedarf unterschiedlicher Steuerungsansätze. Das Thema Mobilität war bisher nicht 
+Teil der Leuphana-Studie und nicht Teil der Klimaschutzbetrachtungen in der Arbeit der KSL. Ziel der 
+Aufnahme   dieses   Handlungsfeldes   in   diesen   Bericht   ist   es   daher,   einen   Überblick   über   die 
+unterschiedlichen  Aktivitäten  der  Akteure  und  die  Entwicklung  von  Mobilitätsinfrastrukturen  und 
+Verkehrsmitteln aus der Perspektive des Klimaschutzes zu bieten.  
+
+Aktivitäten: 
+   START_EXTRACTION ·   Nahverkehrsplan/ÖPNV                                                   LK 
+       Der Nahverkehrsplan ist das zentrale Steuerungsinstrument des Landkreises Lüneburg als 
+       Aufgabenträger für den ÖPNV zur Sicherstellung einer ausreichenden Bedienung der Bevölkerung mit 
+       Verkehrsleistungen im ÖPNV.   
+     
+
+                                                                                                    13 
+---------------------Page 14---------------------
+
+   END_EXTRACTION
+
+
+START_EXTRACTION ·   Ausbau der Radverkehrsinfrastruktur                              Kommunen/ LK 
+        Die Kommunen verfolgen den Ausbau der Infrastruktur für den Radverkehr, 2013 wurde bspw. 
+        das Fahrradparkhaus am Bahnhof mit über 800 Stellplätzen eröffnet  .  
+   END_EXTRACTION
+
+
+START_EXTRACTION ·   Ausbau des ZOB                                                                 HS Lüneburg 
+        In 2012 wurden der ZOB am Hauptbahnhof Lüneburg von 12 auf 18 Busstellplätze erweitert.  
+   END_EXTRACTION
+
+
+START_EXTRACTION ·   StadtRAD Lüneburg                                                             HS Lüneburg/Leuphana 
+        Seit August 2013 verfügt Lüneburg über ein eigenes Fahrradmietsystem. In Kooperation mit der 
+        Leuphana Universität ist das StadtRad Lüneburg mit 50 Leihrädern an 5 Stationen verfügbar.   
+   END_EXTRACTION
+
+
+START_EXTRACTION ·   cambio CarSharing Lüneburg                                           cambio 
+        Cambio CarSharing stellt an 9 Standorten in Lüneburg und Reppenstedt für 1170 Nutzer 27 
+        Autos bereit und ersetzt damit bis zu 270 Privat-PKW.   
+   END_EXTRACTION
+
+
+START_EXTRACTION ·   E-Tankstellen                                                                        Diverse 
+        Im Landkreis bestehen 8 E-Tankstellen sowie 12 E-Bike-Tankstellen und Verleihstationen im 
+        Biosphärenreservat Flusslandschaft Elbe.  
+  END_EXTRACTION
+
+
+START_EXTRACTION  ·   Gasfahrzeuge und E-Autos in Fuhrparks                       HS LG/LK/ AGL/Div. 
+        Über Kauf bzw. Leasingmodelle testen bereits verschiedene Akteure E-Mobile und 
+        Gasfahrzeuge.  
+   END_EXTRACTION
+
+
+START_EXTRACTION ·   Bike + Ride/Park + Ride- Stationen                                  Diverse 
+        Neben den beiden Rad-Parkhäusern und PKW-Parkhäusern am ZOB entstehen weitere 
+        Abstellanlagen entlang der Bahn- und Buslinien im Landkreis.  
+END_EXTRACTION
+Rolle der KSL:  
+      ·   Beratung und Unterstützung der Kommunen 
+
+Indikator: Umweltverbund und PKW 
+      ·   ÖPNV-Fahrgastzahlen: N.N. 
+      ·   Fahrrad: km Radwege: N.N., Nutzer StadtRAD: N.N: 
+      ·   PKW: Kfz-Dichte: N.N. 
+      ·   CarSharing: 1170 Nutzer 
+      ·   Anzahl E-Tankstellen: 8  
+
+    5.   Bildungsarbeit 
+START_EXTRACTION
+KITA21 – Die Zukunftsgestalter  
+ 
+                          „KITA21 – die Zukunftsgestalter“ ist eine Bildungsinitiative, die Bildung für 
+                         nachhaltige Entwicklung (BNE) in Kindertagesstätten unterstützt und 
+                         auszeichnet. Nach einem erfolgreichen ersten Durchgang wird das 
+                         Auszeichnungsverfahren – in Kooperation mit dem Landkreis Harburg – auch 
+                         2013/2014 angeboten. Die niedersächsische Bingo-Umweltstiftung unterstützt 
+                         das Projekt. Ab 2013/2014 geht die Verantwortung von der KSL auf den 
+Fachbereich Jugendhilfe und Sport über. 
+
+  END_EXTRACTION
+
+
+                                                                                                  14 
+---------------------Page 15---------------------
+
+ 
+START_EXTRACTION
+Energiesparen an Schulen  
+                  11 Schulen des Landkreises Lüneburg sowie der Samtgemeinden Dahlenburg und 
+                  Amelinghausen nehmen am Projekt „Energiesparen an Schulen“ teil. Ziel ist es, den 
+                  Energie- und Ressourcenverbrauch in den teilnehmenden Schulen durch 
+                  Verhaltensänderungen und gering-investive Maßnahmen zu verringern. Das Projekt 
+                  mit der Laufzeit von 2012 bis 2015 wird gefördert aus der Klimaschutzinitiative des 
+                  Bundesumweltministeriums; die Prämien werden zurzeit von der Sparkassenstiftung 
+                  Lüneburg finanziert. Die KSL hat das Projekt initiiert, die Finanzierung gesichert und 
+begleitet das Projekt gemeinsam mit der Gebäudewirtschaft. Die inhaltliche Durchführung liegt beim 
+SCHUBZ und der KLIMAWERK Energieagentur. 
+Die Hansestadt Lüneburg bietet ihren Schulen mit einem fifty-fifty-Ansatz ebenfalls einen finanziellen 
+Anreiz, durch ein entsprechendes Verbrauchsverhalten Energie einzusparen.  
+END_EXTRACTION
+
+START_EXTRACTION„Die Klimaweisen“  
+Im Projekt „Die Klimaweisen“, eine Kooperation zwischen Volkshochschule Lüneburg und der 
+Leuphana, werden Senioren und Freiwillige zu Klima-Fachleuten ausgebildet. Ab Sommer 2013 sollen 
+sie Kinder in Grundschulen und Kindertagesstätten für das Thema Klimawandel sensibilisieren. 
+END_EXTRACTION
+
+START_EXTRACTION
+Klimadetektive 
+              Die „Klimadetektive“ ist ein Umweltwettbewerb für dritte Klassen und wird 2013/2014 
+              zum siebten Mal von der Klimawerk Energieagentur durchgeführt. Die Schülerinnen und 
+              Schüler sollen mit Unterstützung der Lehrer mit Hilfe von Fragebögen und Messgeräten 
+              in der Schule und Zuhause Energieeinsparmöglichkeiten aufdecken. Der Wettbewerb 
+              läuft im Landkreis Lüneburg sowie in den Landkreisen Harburg und Stade. 2013/2014 
+              nehmen 260 Schülerinnen und Schüler teil. Hauptsponsor ist die GfA. Die KSL wirkt in 
+              der Jury sowie bei der Preisverleihung mit und koordiniert die Abrechnung der 
+              Preisvergabe mit der Sparkassenstiftung. 
+
+END_EXTRACTION
+
+START_EXTRACTION
+Kinder-Zukunftslabor 
+                                      Das KiZuLa bietet Kindern von 10 - 12 Jahren in den 
+                                      Schulferien die Möglichkeit,  zu den Themen Erneuerbare 
+                                      Energien, Verkehr & Umwelt oder Holz zu forschen und zu 
+                                      experimentieren. Als Bildungsprojekt des Agenda 21-Lüneburg 
+e.V. und der KLIMAWERK Energieagentur wurde es 2013 in Bleckede und in Lüneburg durchgeführt. 
+END_EXTRACTION
+
+
+START_EXTRACTION„Umweltschule in Europa/Internationale Agenda 21-Schule“ 
+                      Die Auszeichnung „Umweltschule" der Stiftung für Umwelterziehung F.E.E. 
+                      erhalten Schulen, die ein Konzept zur Verbesserung ihrer Umweltverträglichkeit 
+                      und zur Integration von Bildung für nachhaltige Entwicklung ins Curriculum 
+                      umgesetzt haben (u.a. Energie- und Ressourcenschutz). Beratung und 
+                      Koordination liegen bei der Landesschulbehörde. In  2011-2013 bzw. 2012-
+                      2014 nehmen 5 Schulen aus dem Landkreis Lüneburg teil. Weitere Schulen 
+                      werden anlässlich des Projektes Energiesparen an Schulen aktuell beraten. 
+END_EXTRACTION
+                                                                                                15 
+---------------------Page 16---------------------
+
+   6.   Öffentlichkeitsarbeit 
+
+START_EXTRACTION
+Aktion Klimabaum 
+                 Der Klimawandel bringt Veränderungen der Standortbedingungen mit sich, die bei 
+                 heutigen Pflanzungen bereits berücksichtigt werden sollten. Hansestadt und 
+                 Landkreise Lüneburg haben 2013 zwei Klima-Bäume am Reichenbachplatz und an 
+                 der Schule am Schiffshebewerk gepflanzt, um auf diese Zusammenhänge 
+                 hinzuweisen. Diese Klima-Bäume sind Baumarten, die sich diesen verändernden 
+                 klimatischen Bedingungen gut anpassen können. Die Pflanzungen sind Teil der 
+Aktion "Bäumchen wechsle dich - Klimawandel zum Anfassen". Die KSL hat insbesondere die 
+Pflanzung an der Schule am Schiffshebewerk initiiert und begleitet.  
+END_EXTRACTION
+
+
+
+START_EXTRACTION
+14. Umweltfilmtage 
+                        Die Umweltfilmtage (UFT) werden ausgerichtet vom Verein T.U.N.  und sollen 
+                        brisante und aktuelle Umweltthemen filmisch aufbereitet der Bevölkerung 
+                        nahebringen und informieren. Im Rahmen der UFT werden zu den 
+                        ausgewählten Filmblöcken Experten geladen, die für Diskussionen im 
+                        Anschluss zur Verfügung stehen. Sie beinhalten zahlreiche Beiträge auch  
+zum Klimaschutz. In 2013 erhielt Dr. Biederstedt den Freyja-Scholing-Preis für seine Verdienste um die 
+UFT. Edwin Germer übernimmt zukünftig seine Nachfolge im Organisationsteam der Umweltfilmtage. 
+Die KSL  ist  Teil des Organisationsteams der UFT und übernimmt regelmäßig die Moderation eines 
+Filmblocks.  
+END_EXTRACTION
+
+
+Öffentlichkeitsarbeit und Informationsvermittlung der KSL  
+Entsprechend   ihres   Auftrags   betreibt   die   KSL   die   Veröffentlichung   von   Pressemitteilungen, 
+Pressetermine bei öffentlichkeitswirksamen Projekten, die Ausweitung des Informationsangebotes der 
+KSL im Internet (Energieportal, Tool „Geothermie-geht das bei mir?“, Solardachbörse, etc.) und eine 
+gezielte Ansprache und Weiterleitung von relevanten Informationen an Bildungsträger, Unternehmen, 
+Kommunen und andere relevante Akteure z.B. zu Veranstaltungen, Förderprogrammen, Wettbewerben 
+etc.. Teil der Öffentlichkeitsarbeit ist auch die Beantwortung und Vermittlung von Ansprechpartnern bei 
+Bürgeranfragen z.B. in den Bereichen Nutzung erneuerbarer Energien, Förderung, Bildungsmaterialien 
+etc. und Beantwortung von Anfragen seitens der Projekte der Leuphana. 
+
+
+START_EXTRACTIONEnergieportal des Landkreises Lüneburg 
+                       Der Landkreis Lüneburg stellt seit 2013 unter www.lueneburg.de/energieportal 
+                       Informationen   zu   Energie-   und   Klimaschutzprojekten  in   einem   zentralen 
+                       Einstiegspunkt  für  die  individuelle  Internet-Recherche  zur  Verfügung.  Das 
+                       Energieportal   bietet   einerseits   einen   umfassenden   Überblick   über   die 
+                       bestehenden Energieanlagen einschließlich wichtiger Kennzahlen sowie einen 
+Überblick über die Potentiale der erneuerbaren Energien und die bestehenden Energieinfrastrukturen. 
+Andererseits möchte es auch die im Mobilitätsbereich bestehenden Angebote von ÖPNV, Radverkehr 
+und –verleih bis hin zu E-Tankstellen und CarSharing bekannter machen. Das Portal erleichtert die 
+Suche  nach  Energieberatungsstellen,  Klimaschutzprojekten  der  Kommunen  oder  Informationen  zu 
+laufenden  Modellvorhaben  und  sollte  auf  allen  mobilen  Geräten  laufen.  Weitere  Themen  werden 
+laufend ergänzt.  
+END_EXTRACTION
+
+                                                                                                16 
+---------------------Page 17---------------------
+
+Messen/ Aktionszeiträume 
+(s. Punkt 3.1 Handlungsfeld Privathaushalte) 
+ 
+
+   7.   Kommunale Planungen und Management 
+
+START_EXTRACTIONKommunale Klimaschutzkonzepte  
+                         Die SG Bardowick konnte in 2013 ihr Integriertes Klimaschutzkonzept 
+                         verabschieden. Das Konzept führt verschiedene Maßnahmen auf, damit bis 
+                         zum Jahr 2050 die Kommune außerdem zu 100 Prozent mit Strom aus 
+                         regenerativer, regional erzeugter Energie versorgt werden kann. 
+                         Weitere Informationen zum Klimaschutzkonzept gibt es im Internet unter 
+                         www.bardowick.de. 
+Weitere integrierte Klimaschutzkonzepte sind im Landkreis bislang nicht erstellt worden. 
+Wie unter Punkt 3.3. beschrieben, werden einige Klimaschutz-Teilkonzepte für die eigenen 
+Liegenschaften entwickelt. 
+END_EXTRACTION
+
+Energetische Quartiersentwicklung  
+Die Hansestadt Lüneburg hat für ihre Quartiere Hasenburger Berg, Kreideberg und Kaltenmoor 
+integrierte, energetische Quartierskonzepte entwickeln lassen. Weiteres Vorgehen ist nun das 
+Einsetzen von Quartiersmanagern zur Umsetzung der Konzepte. Die Konzepte sind dabei auch 
+Voraussetzung für diverse Förderungen zur Weiterentwicklung der Quartiere. Zur Evaluierung des 
+Sanierungsmanagements wird z. Z. ein Strategiepapier für das Controlling erarbeitet. 
+Die Gemeinde Reppenstedt hat ebenfalls für einen Teil ihres Gemeindegebietes ein integriertes, 
+energetisches Quartierskonzept entwickelt. Der Quartiersmanager ist zum 1. Quartal 2014 eingesetzt. 
+
+START_EXTRACTION
+Bioenergiedörfer und –regionen  
+Die Bioenergie-Region Wendland-Elbetal erstreckt sich im Landkreis Lüneburg auf die Samtgemeinden 
+Scharnebeck, Ostheide und Dahlenburg, das Amt Neuhaus und die Stadt Bleckede. Thomasburg ist 
+Bioeenergiedorf. Weitere Dörfer werden entsprechend beraten. Zum Ausbau der Bioenergie finden 
+verschiedene Veranstaltungen, Projekte und Beratungen statt. 
+END_EXTRACTION
+
+
+START_EXTRACTION
+Energieportal 
+Neben den Zielen, die Bedeutung der erneuerbaren Energien und Wärmeversorgung  im Landkreis 
+hervorzuheben und die bestehenden Angebote und Infrastrukturen bekannt zu machen, soll das 
+Energieportal zur Unterstützung der Kommunen u.a. bei Projekten und Konzepten durch gezielte 
+Vermittlung und Beratung oder die Entwicklung von Online-Diensten ausgebaut werden. 
+END_EXTRACTION
+
+START_EXTRACTION
+Klimaschutz-Monitoring der KSL 
+Die Klimaschutzleitstelle erfasst die Fortschritte im Klimaschutz im Landkreis Lüneburg auf der 
+Grundlage eines Indikatorensets, das im Rahmen eines studentischen Projektes MoDELL 100 an der 
+Leuphana-Universität entwickelt wird.  
+Dem externen Monitoring dient auch die angestrebte Bewerbung des Landkreises als 100ee-Region. 
+END_EXTRACTION
+                                                                                              17 
+---------------------Page 18---------------------
+
+   8. Weitere Akteure im Klimaschutz 
+ 
+START_EXTRACTION
+Die Umsetzung der Energiewende ist eine gesamtgesellschaftliche Aufgabe. Sie erfordert einerseits das 
+Engagement einer Vielzahl von Akteuren innerhalb des Landkreises. Andererseits kann der Landkreis 
+nicht isoliert betrachtet werden, sondern ist eingebettet in die Aktivitäten auf höheren räumlichen 
+Ebenen.  Darüber hinaus muss das bürgerschaftliche und zivilgesellschaftliche Engagement innerhalb 
+des Landkreises hervorgehoben werden. 
+END_EXTRACTION
+
+START_EXTRACTION
+Überregionale Vernetzung 
+Der Landkreis Lüneburg ist über die Klimaschutzleitstelle an der Facharbeitsgruppe Klima der 
+Metropolregion Hamburg  beteiligt. In 2013 wurde zum einen eine Studie zum Status Quo und den 
+Zielsetzungen der Länder, (Land-)Kreise und kreisfreien Städte erarbeitet. Ein zweiter Schwerpunkt war 
+die Durchführung einer Regionalkonferenz zum Thema „Umsetzung der Energiewende in der MRH“. 
+Innerhalb Niedersachsens erfolgt ein Informations- und Erfahrungsaustausch durch das Projekt 
+Klimawandel & Kommunen. Dies wird 2014 abgelöst durch die zu gründende niedersächsische 
+Klimaschutzagentur.  
+END_EXTRACTION
+
+START_EXTRACTION
+Bürgerschaftliches Engagement innerhalb des Landkreises Lüneburg  
+Innerhalb des Landkreises Lüneburg gibt es zahlreiche Aktivitäten, Initiativen und 
+Vernetzungsmöglichkeiten von Bürgern und zivilgesellschaftlichen Akteuren im Klimaschutz, die hier 
+nicht vollständig aufgeführt werden können. So werden v.a. größere Anlagen zur Erzeugung von 
+Erneuerbaren Energien wie (Bürger-)Solaranlagen auf kommunalen oder gewerblichen Gebäuden über 
+Genossenschaften u.a. errichtet und finanziert. In Planung ist auch die Errichtung von Bürgerwindparks 
+bspw. des Bauernverbandes Nordostniedersachsen. Volksbank und Sparkasse bieten verschiedene 
+Investitionsmöglichkeiten für Bürger an. Der Verein SunON e.V. engagiert sich für den Ausbau der 
+Photovoltaik. Energiewende und Klimaschutz werden neben anderen Nachhaltigkeitsthemen von 
+Vereinen und Zusammenschlüssen wie T.U.N., dem Nachhaltigkeitsrat oder der Initiative DialogN 
+thematisiert.  
+END_EXTRACTION
+ 
+~PAGE~RANGE~END~
+
+                                                                                              18 
+---------------------Page 19---------------------

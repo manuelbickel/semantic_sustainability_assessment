@@ -1,0 +1,8 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
+Vermittlung und Ueberlassung von Arbeitskraeften
+Vermittlung von Arbeitskraeften
+Befristete Ueberlassung von Arbeitskraeften
+Sonstige Ueberlassung von Arbeitskraeften
+Arbeitskraeften
+Befristete
+Ueberlassung

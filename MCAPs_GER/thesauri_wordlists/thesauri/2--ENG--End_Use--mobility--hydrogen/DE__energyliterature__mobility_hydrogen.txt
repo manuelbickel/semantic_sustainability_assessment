@@ -1,0 +1,10 @@
+﻿mobility_hydrogen_mobility
+Brennstoffzellen-Bus
+Brennstoffzellenfahrzeuge
+Brennstoffzellen-Fahrzeugs
+Wasserstoffauto
+Wasserstoffbus
+Wasserstofffahrzeug
+Wasserstofftankstelle
+Wasserstoffverbrennungsmotoren
+Wasserstoffverbrennungsmotorenweisen

@@ -1,0 +1,8 @@
+~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der gueter 2008
+Pelzwaren
+Bekleidung und Bekleidungszubehoer aus Pelzfellen, andere Waren aus Pelzfellen
+Bekleidung, Bekleidungszubehoer u.a. Waren, aus Pelzfellen
+Bekleidung und Bekleidungszubehoer aus Pelzfellen
+Bekleidung
+Bekleidungszubehoer
+Pelzfellen
