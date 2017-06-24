@@ -1,9 +1,0 @@
-<Resources><fossil>
-<Resources><nuclear>
-<Conversion><nuclear>
-<Distribution><gas_oil>
-<Sales_Contracts><coal_oil>
-<Technology_Option><fuel_cell_and_hydrogen>
-<End_Use><mobility><air_travel>
-<End_Use><mobility><biofuels>
-<End_Use><mobility><hydrogen>

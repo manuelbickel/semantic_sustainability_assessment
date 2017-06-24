@@ -1,7 +1,0 @@
-~~meta: ~~resource: Bundesagentur f?r Arbeit ~~additional_info: Bundesagentur für Arbeit, Klassifikation der Berufe
-Unteroffiziere mit Portepee
-Faehnrich
-Feldwebel
-Oberfaehnrich
-Oberstabsfeldwebel
-Stabsfeldwebel

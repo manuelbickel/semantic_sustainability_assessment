@@ -1,9 +1,0 @@
-﻿~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
-Fischerei und Aquakultur
-Fischerei
-Meeresfischerei
-Sueßwasserfischerei
-Aquakultur
-Meeresaquakultur
-Sueßwasseraquakultur
-Fischzucht
