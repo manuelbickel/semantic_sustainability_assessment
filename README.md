@@ -1,3 +1,5 @@
+#Note: The code is currently being improved and converted to an R package. I would kindly ask interested readers to contact me directly for the most recent version.
+
 # Semantic Sustainability Assessment via interpretation network analysis applied on Lower Saxionan Climate Action Plans to reveal transition patterns of the German Energy Transition (Energiewende) 
 
 ## Introduction
