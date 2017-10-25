@@ -1,4 +1,0 @@
-political_person
-Buergermeister
-BuergermeisterAnschreiben
-Oberbuergermeister

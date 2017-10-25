@@ -1,7 +1,0 @@
-~~meta: ~~resource: Destatis ~~additional_info: Klassifikation der Wirtschaftszweige 2008
-Wasserversorgung
-Wassergewinnung mit Fremdbezug zur Verteilung
-Wassergewinnung ohne Fremdbezug zur Verteilung
-Wasserverteilung ohne Gewinnung
-Wassergewinnung
-Wasserverteilung
