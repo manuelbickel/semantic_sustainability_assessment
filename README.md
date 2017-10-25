@@ -1,4 +1,4 @@
-#Semantic Sustainability Assessment
+##Semantic Sustainability Assessment
 
 #Note: The code is currently being improved and converted to an R package. I would kindly ask interested readers to contact me directly for the most recent version.
 
