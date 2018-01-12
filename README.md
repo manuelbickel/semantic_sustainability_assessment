@@ -4,7 +4,7 @@ This repository provides data and code to advance the field of semantic sustaina
 Currently the repository covers below approaches that are stored in separate subfolders:
 - MCAPs_GER
 
-Please note: The code is currently being improved and converted to an R package. I would kindly ask interested readers to contact me directly for the most recent version.
+**Please note:** The code is currently being improved and converted to an R package. I would kindly ask interested readers to contact me directly for the most recent version. The github version includes **major inefficienies**, which I am reworking using text2vec package. Current version is only kept for the sake of transparent scientific documentation.
 
 ## MCAPs_GER
 Code and data associated with below open access article
