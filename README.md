@@ -1,5 +1,5 @@
 # Semantic Sustainability Assessment
-This repository provides data and code to advance the field of semantic sustainablity assessment, i.e., the assessment of text documents via text mining or natural language processing methods from a sustainability perspective. The basic methods used are not "new" from a text mining or NLP perspective but represent an application of text mining for a specific use case. Hence, the code does not stand in competition to established R packages or text mining or NLP, but builds on them. Codewise only some helper functions and scaling options could be considered as an addition to established packages.
+This repository provides data and code to advance the field of semantic sustainablity assessment, i.e., the assessment of text documents via text mining or natural language processing methods from a sustainability perspective. The basic methods used are not "new" from a text mining or NLP perspective but represent an application of text mining for a specific use case. Hence, the code does not stand in competition to established R packages for text mining or NLP, but builds on them. Codewise only some helper functions and scaling options could be considered as an addition to established packages.
 
 Currently the repository covers below approaches that are stored in separate subfolders:
 - MCAPs_GER
