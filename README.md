@@ -6,9 +6,7 @@ Currently the repository covers below mentioned studies that are stored in separ
 ## MCAPs_GER
 Code and data associated with below open access article. **Please note:** The code for MCAPs is currently being improved. I would kindly ask interested readers to contact me directly for the most recent version. The current github version includes major inefficienies regarding one of the loops and is only kept for the sake of transparent scientific documentation.
 
-Author: Manuel W. Bickel
-Title: A new approach to semantic sustainability assessment: text mining via network analysis revealing transition patterns in German municipal climate action plans
-Journal: Energy, Sustainability and Society
+Manuel W. Bickel (2017): A new approach to semantic sustainability assessment: text mining via network analysis revealing transition patterns in German municipal climate action plans. In Energy, Sustainability and Society.
 DOI: 10.1186/s13705-017-0125-0
 
 stable short link: http://rdcu.be/ufdQ 
