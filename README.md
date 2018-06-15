@@ -1,4 +1,4 @@
-# Semantic Sustainability Assessment
+# Semantic Sustainability Assessment of Municipal Clima Action Plans
 This repository provides data and code associated with below menioned open access article that aims to advance the field of semantic sustainablity assessment, i.e., the assessment of text documents via text mining or natural language processing methods from a sustainability perspective.
 Manuel W. Bickel (2017): A new approach to semantic sustainability assessment: text mining via network analysis revealing transition patterns in German municipal climate action plans. In Energy, Sustainability and Society.
 DOI: 10.1186/s13705-017-0125-0
