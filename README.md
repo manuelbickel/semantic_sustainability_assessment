@@ -1,3 +1,5 @@
+<a href="https://zenodo.org/badge/latestdoi/71783422"><img src="https://zenodo.org/badge/71783422.svg" alt="DOI"></a>
+
 # Semantic Sustainability Assessment of Municipal Climate Action Plans
 This repository provides data and code associated with below menioned open access article that aims to advance the field of semantic sustainablity assessment, i.e., the assessment of text documents via text mining or natural language processing methods from a sustainability perspective.
 Manuel W. Bickel (2017): A new approach to semantic sustainability assessment: text mining via network analysis revealing transition patterns in German municipal climate action plans. In Energy, Sustainability and Society.
